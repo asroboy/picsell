@@ -1,4 +1,3 @@
-<%@ page import="com.picsell.banksoal.Jawaban" %>
 <!DOCTYPE html>
 <html>
 <head>
