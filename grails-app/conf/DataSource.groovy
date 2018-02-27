@@ -39,9 +39,9 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/picsell"
+            url = "jdbc:mysql://127.0.0.1:3306/picsell"
             username = "root"
-            password = ""
+            password = "Tempurs@r1"
 
 
              properties {// Documentation for Tomcat JDBC Pool
