@@ -41,7 +41,7 @@ environments {
             dbCreate = "update"
             url = "jdbc:mysql://127.0.0.1:3306/picsell"
             username = "root"
-            password = "Tempurs@r1"
+            password = ""
 
 
              properties {// Documentation for Tomcat JDBC Pool
