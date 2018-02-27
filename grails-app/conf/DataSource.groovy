@@ -39,7 +39,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://127.0.0.1:3306/picsell"
+            url = "jdbc:mysql://35.190.167.129:3306/picsell"
             username = "root"
             password = "Tempurs@r1"
 
