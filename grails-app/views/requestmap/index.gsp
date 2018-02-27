@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="layout" content="theme_sbadmin">
-    <g:set var="entityName" value="${message(code: 'jawaban.label', default: 'RequestMap')}"/>
+    <g:set var="entityName" value="Request Map"/>
     <title><g:message code="default.list.label" args="[entityName]"/></title>
 </head>
 
@@ -37,10 +37,10 @@
                         <thead>
                         <tr>
 
-                            <g:sortableColumn property="url" title="${message(code: 'jawaban.huruf.label', default: 'Url')}"/>
+                            <g:sortableColumn property="url" title="Url"/>
                             <g:sortableColumn property="url"
-                                              title="${message(code: 'jawaban.huruf.label', default: 'Config Attribute')}"/>
-                            <g:sortableColumn property="url" title="${message(code: 'jawaban.huruf.label', default: 'Http Method')}"/>
+                                              title="Config Attribute"/>
+                            <g:sortableColumn property="url" title="Http Method"/>
 
                         </tr>
                         </thead>
