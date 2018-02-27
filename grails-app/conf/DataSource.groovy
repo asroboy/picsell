@@ -42,7 +42,9 @@ environments {
             url = "jdbc:mysql://localhost:3306/picsell"
             username = "root"
             password = "Tempurs@r1"
+
             properties {
+
                // Documentation for Tomcat JDBC Pool
                // http://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html#Common_Attributes
                // https://tomcat.apache.org/tomcat-7.0-doc/api/org/apache/tomcat/jdbc/pool/PoolConfiguration.html
@@ -71,7 +73,9 @@ environments {
                removeAbandoned = true
                // use JMX console to change this setting at runtime
                logAbandoned = false // causes stacktrace recording overhead, use only for debugging
-               /*
+
+
+
                // JDBC driver properties
                // Mysql as example
                dbProperties {
@@ -105,7 +109,7 @@ environments {
                    // misc tuning
                    noDatetimeStringSync=true
                }
-               */
+
             }
         }
     }
