@@ -59,7 +59,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost/picsell"
+            url = "jdbc:mysql://localhost:3306/picsell"
             username = "root"
             password = "Tempursar_1"
 
