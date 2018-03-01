@@ -60,7 +60,7 @@ environments {
         dataSource {
             dbCreate = "update"
             url = "jdbc:mysql://instance-1:3306/picsell"
-            username = "ridho"
+            username = "root"
             password = "Tempursar_1"
 
 
