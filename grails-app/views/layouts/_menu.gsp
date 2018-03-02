@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="${createLink(uri: '/')}">Exam App</a>
+        <a class="navbar-brand" href="${createLink(uri: '/')}">picsell.com</a>
     </div>
     <!-- /.navbar-header -->
 

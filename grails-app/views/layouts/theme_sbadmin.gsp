@@ -16,8 +16,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" href="${resource(dir: 'images', file: 'favicon_test.ico')}">
-    <title>${title ?: 'Exam'}</title>
+    <link rel="icon" href="${resource(dir: 'images', file: 'favicon.ico')}">
+    <title>${title ?: 'picsell'}</title>
 
 
     <!-- Bootstrap Core CSS -->
