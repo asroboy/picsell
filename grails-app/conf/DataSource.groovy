@@ -3,8 +3,8 @@ dataSource {
     jmxExport = true
     pooled = true
     driverClassName = "com.mysql.jdbc.Driver"
-    dialect = "com.domain.mysql.dialect.MySQLUTF8InnoDBDialect"
-//    dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+//    dialect = "com.domain.mysql.dialect.MySQLUTF8InnoDBDialect"
+    dialect = org.hibernate.dialect.MySQL5InnoDBDialect
 //    driverClassName = "org.h2.Driver"
 //    username = "sa"
 //    password = ""
@@ -50,7 +50,7 @@ environments {
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost3306/picsell"
+            url = "jdbc:mysql://localhost:3306/picsell"
             username = "root"
             password = "root123"
         }
@@ -59,7 +59,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://::1:3306/picsell"
+            url = "jdbc:mysql://localhost:3306/picsell"
             username = "root"
             password = "Tempursar_1"
 
