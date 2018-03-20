@@ -42,7 +42,7 @@ class BootStrap {
         RoleMenu.findByUrlAndConfigAttribute('/item/*', 'ROLE_USER') ?: new RoleMenu(url: '/item/*', configAttribute: 'ROLE_USER').save()
         RoleMenu.findByUrlAndConfigAttribute('/item/**', 'ROLE_USER') ?: new RoleMenu(url: '/item/**', configAttribute: 'ROLE_USER').save()
         RoleMenu.findByUrlAndConfigAttribute('/item/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/item/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrlAndConfigAttribute('/fileItem/*', 'ROLE_ADMIN') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrlAndConfigAttribute('/fileItem/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrlAndConfigAttribute('/fileItem/**', 'ROLE_USER') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_USER').save()
         RoleMenu.findByUrlAndConfigAttribute('/fileItem/*', 'ROLE_USER') ?: new RoleMenu(url: '/fileItem/*', configAttribute: 'ROLE_USER').save()
         RoleMenu.findByUrlAndConfigAttribute('/fileItem/*', 'ROLE_ADMIN') ?: new RoleMenu(url: '/fileItem/*', configAttribute: 'ROLE_ADMIN').save()
