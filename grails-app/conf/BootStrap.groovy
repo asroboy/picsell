@@ -1,3 +1,4 @@
+import com.picsell.data.Category
 import com.picsell.security.Role
 import com.picsell.security.RoleMenu
 import com.picsell.security.User
@@ -31,17 +32,20 @@ class BootStrap {
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/requestmap/**') ?: new RoleMenu(url: '/requestmap/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/user/**') ?: new RoleMenu(url: '/user/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrl('/user/show/**') ?: new RoleMenu(url: '/user/show/**', configAttribute: 'ROLE_USER').save()
         RoleMenu.findByUrl('/role/**') ?: new RoleMenu(url: '/role/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/ujian/**') ?: new RoleMenu(url: '/ujian/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/pertemuan/**') ?: new RoleMenu(url: '/pertemuan/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/certificate/**') ?: new RoleMenu(url: '/certificate/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/ujianPunyaSoal/**') ?: new RoleMenu(url: '/ujianPunyaSoal/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/pertemuanPunyaUjian/**') ?: new RoleMenu(url: '/pertemuanPunyaUjian/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/soal/**') ?: new RoleMenu(url: '/soal/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/jawaban/**') ?: new RoleMenu(url: '/jawaban/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/penjelasanSoal/**') ?: new RoleMenu(url: '/penjelasanSoal/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/pengumuman/**') ?: new RoleMenu(url: '/pengumuman/**', configAttribute: 'ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/diskusiPengumuman/**') ?: new RoleMenu(url: '/diskusiPengumuman/**', configAttribute: 'ROLE_ADMIN').save()
+
+        RoleMenu.findByUrlAndConfigAttribute('/profileUser/**', 'ROLE_USER') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrlAndConfigAttribute('/profileUser/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrlAndConfigAttribute('/category/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/category/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrlAndConfigAttribute('/item/*', 'ROLE_ADMIN') ?: new RoleMenu(url: '/item/*', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrlAndConfigAttribute('/item/*', 'ROLE_USER') ?: new RoleMenu(url: '/item/*', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrlAndConfigAttribute('/item/**', 'ROLE_USER') ?: new RoleMenu(url: '/item/**', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrlAndConfigAttribute('/item/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/item/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrlAndConfigAttribute('/fileItem/*', 'ROLE_ADMIN') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrlAndConfigAttribute('/fileItem/**', 'ROLE_USER') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrlAndConfigAttribute('/fileItem/*', 'ROLE_USER') ?: new RoleMenu(url: '/fileItem/*', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrlAndConfigAttribute('/fileItem/*', 'ROLE_ADMIN') ?: new RoleMenu(url: '/fileItem/*', configAttribute: 'ROLE_ADMIN').save()
 
 
 
@@ -51,6 +55,7 @@ class BootStrap {
         def user = new User(username: 'admin', password: 'admin123')
         def ridho = new User(username: 'ridho', password: 'ridho123')
         def atuanda = new User(username: 'atuanda', password: 'atuanda123')
+
         user.save(flush: true)
         ridho.save(flush: true)
         atuanda.save(flush: true)
@@ -63,6 +68,12 @@ class BootStrap {
             it.flush()
             it.clear()
         }
+
+
+        Category.findByName('Nature') ?: new Category(name: 'Nature').save()
+        Category.findByName('Pets') ?: new Category(name: 'Pets').save()
+        Category.findByName('Otomotif') ?: new Category(name: 'Otomotif').save()
+        Category.findByName('Family') ?: new Category(name: 'Family').save()
 
     }
 

@@ -46,7 +46,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-8 col-md-offset-2">
             <div class="login-panel panel panel-default">
                 <div class="panel-heading" style="text-align: center">
                     <h3 class="panel-title"><a href="${createLink(controller: 'home', action: 'index')}">Picsell</a></h3>

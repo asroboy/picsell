@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<meta name="layout" content="${layoutRegister}"/>
+		%{--${layoutRegister}--}%
+		<meta name="layout" content="register"/>
 		<s2ui:title messageCode='spring.security.ui.register.title'/>
 	</head>
 	<body>
@@ -14,7 +15,7 @@
 				<br/>
 				<table>
 				<tbody>
-					<s2ui:textFieldRow name='username' size='40' labelCodeDefault='Username'/>
+					<s2ui:textFieldRow name='username' size='40' labelCodeDefault='Username' class="form-control"/>
 					<s2ui:textFieldRow name='email' size='40' labelCodeDefault='E-mail'/>
 					<s2ui:passwordFieldRow name='password' size='40' labelCodeDefault='Password'/>
 					<s2ui:passwordFieldRow name='password2' size='40' labelCodeDefault='Password (again)'/>

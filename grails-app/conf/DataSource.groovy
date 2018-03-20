@@ -4,7 +4,7 @@ dataSource {
     pooled = true
     driverClassName = "com.mysql.jdbc.Driver"
 //    dialect = "com.domain.mysql.dialect.MySQLUTF8InnoDBDialect"
-    dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
 //    driverClassName = "org.h2.Driver"
 //    username = "sa"
 //    password = ""

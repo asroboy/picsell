@@ -32,10 +32,13 @@
 %{--</form>--}%
 
 
-
+<div class="form-group">
+    <h4>Please Sign In</h4>
+</div>
 <s2ui:form role="form" type='login' focus='username'>
     <div class="sign-in">
         <fieldset>
+
             %{--<h2><g:message code='spring.security.ui.login.signin'/></h2>--}%
             <div class="form-group">
                 %{--<label for="username"><g:message code='spring.security.ui.login.username'/></label>--}%
@@ -75,10 +78,11 @@
             </div>
 
             <br/>
-            <div >
+
+            <div>
                 <input type="submit" value="Login" id="loginButton_submit" class="btn btn-lg btn-default btn-block""/>
 
-                %{--<s2ui:submitButton class="btn btn-lg btn-default btn-block" elementId='loginButton' messageCode='spring.security.ui.login.login'/>--}%
+            %{--<s2ui:submitButton class="btn btn-lg btn-default btn-block" elementId='loginButton' messageCode='spring.security.ui.login.login'/>--}%
             </div>
 
         </fieldset>

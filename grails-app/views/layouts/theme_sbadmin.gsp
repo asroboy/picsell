@@ -49,11 +49,10 @@
 <body>
 
 <div id="wrapper">
-
     <!-- Navigation -->
-    <g:include view="layouts/_menu.gsp"></g:include>
+    <g:render template="/layouts/menu"/>
+    %{--<g:include view="layouts/_menu.gsp"></g:include>--}%
     <div id="page-wrapper">
-
         <!-- /.row -->
         %{--<div class="row">--}%
         %{--<div class="col-lg-8">--}%
