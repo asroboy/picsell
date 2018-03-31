@@ -27,7 +27,7 @@ grails.project.fork = [
         //console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
 ]
 
-//grails.enable.native2ascii = false
+grails.enable.native2ascii = false
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
