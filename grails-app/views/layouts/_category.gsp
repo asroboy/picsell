@@ -27,6 +27,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="${createLink(controller: 'login', action: 'auth')}">Login</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="${createLink(controller: 'register', action: 'register')}">Sign up</a>
+            </li>
         </ul>
 
     </sec:ifNotLoggedIn>

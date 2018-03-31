@@ -64,7 +64,7 @@
                     </table>
 
                     <div class="pagination">
-                        <g:paginate total="${totalCount ?: 0}"/>
+                        <g:paginate class="paginateButtons" total="${totalCount ?: 0}"/>
                     </div>
                 </div>
             </div>

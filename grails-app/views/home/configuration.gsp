@@ -13,10 +13,11 @@
 </head>
 
 <body>
-<div class="row">
-    <div>
+<div class="row" >
+    %{--<div style="background: ${resource(dir: 'images', file: 'background.jpeg')}">--}%
 
-        <h1>Selamat datang di ${meta(name: "app.name")}</h1>
+        %{--<img src="${resource(dir: 'images', file: 'background.jpeg')}" style="height: 100%">--}%
+        %{--<h1>Selamat datang di ${meta(name: "app.name")}</h1>--}%
 
         %{--<p><b>Congratulations, you have successfully started your first Grails application!</b> <br/> At the moment--}%
         %{--this is the default page, feel free to modify it to either redirect to a controller or display whatever--}%
@@ -31,7 +32,7 @@
         %{--</g:each>--}%
         %{--</ul>--}%
         %{--</div>--}%
-    </div>
+    %{--</div>--}%
 </div>
 
 </body>

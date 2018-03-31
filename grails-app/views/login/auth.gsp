@@ -8,28 +8,6 @@
 
 <body>
 <p/>
-%{--<div class="login s2ui_center ui-corner-all" style='text-align:center;'>--}%
-%{--<div class="login-inner">--}%
-
-%{--<form role="form">--}%
-%{--<fieldset>--}%
-%{--<div class="form-group">--}%
-%{--<input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>--}%
-%{--</div>--}%
-
-%{--<div class="form-group">--}%
-%{--<input class="form-control" placeholder="Password" name="password" type="password" value="">--}%
-%{--</div>--}%
-
-%{--<div class="checkbox">--}%
-%{--<label>--}%
-%{--<input name="remember" type="checkbox" value="Remember Me">Remember Me--}%
-%{--</label>--}%
-%{--</div>--}%
-%{--<!-- Change this to a button or input when using this as a form -->--}%
-%{--<a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>--}%
-%{--</fieldset>--}%
-%{--</form>--}%
 
 
 <div class="form-group">
@@ -80,7 +58,7 @@
             <br/>
 
             <div>
-                <input type="submit" value="Login" id="loginButton_submit" class="btn btn-lg btn-default btn-block""/>
+                <input type="submit" value="Login" id="loginButton_submit" class="btn btn-lg btn-default btn-block"/>
 
             %{--<s2ui:submitButton class="btn btn-lg btn-default btn-block" elementId='loginButton' messageCode='spring.security.ui.login.login'/>--}%
             </div>

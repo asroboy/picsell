@@ -284,12 +284,13 @@ class SecurityUiTagLib {
 
 		out << """
 			<div class="ui-widget-content s2ui_form s2ui_center" id="formContainer" style="width: $width;$heightStyle">
-				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix s2ui_center" style='padding: 10px;'>
-					<span style="-moz-user-select: none;" unselectable="on" class="ui-dialog-title">$title</span>
-				</div>
 				${body()}
 			</div>"""
 
+
+//		<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix s2ui_center" style='padding: 10px;'>
+//		<span style="-moz-user-select: none;" unselectable="on" class="ui-dialog-title">$title</span>
+//				</div>
 		writeDocumentReady out, "\t\$('#formContainer').resizable();"
 
 		String focus = attrs.remove('focus')
@@ -659,7 +660,7 @@ class SecurityUiTagLib {
 		def out = getOut()
 		out << """<a id="$elementId" """
 		writeRemainingAttributes out, attrs
-		out << ">$text</a><input type='submit' value=' ' id='${elementId}_submit' class='s2ui_hidden_button'>"
+		out << ">$text</a><input type='submit' value=' ' id='${elementId}_submit'  class='btn btn-lg btn-default btn-block'>"
 
 		writeDocumentReady out, """\
 	\$("#$elementId").button();

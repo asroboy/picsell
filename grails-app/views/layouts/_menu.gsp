@@ -1,3 +1,4 @@
+<%@ page import="com.picsell.security.Role" %>
 <nav class="navbar  navbar-inverse  navbar-static-top" role="navigation"
      style="margin-bottom: 0; background-color: black">
     <div class="navbar-header ">
@@ -92,10 +93,11 @@
                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                <li><a href="${createLink(controller: 'profileUser', action: 'show', id: com.picsell.data.ProfileUser.findByUser(userObject)?.id)}"><i
+                        class="fa fa-user fa-fw"></i> User Profile</a>
                 </li>
-                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                </li>
+                %{--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>--}%
+                %{--</li>--}%
                 <li class="divider"></li>
                 <li><a href="${createLink(controller: 'logout')}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
@@ -111,21 +113,23 @@
             <ul class="nav" id="side-menu">
 
                 <li>
-                    <a href="#"><i class="fa fa-user fa-fw"></i> Pengaturan Pengguna<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-user fa-fw"></i> User Setting<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li>
-                            <a href="${createLink(controller: 'user', action: 'index')}">Pengguna</a>
-                        </li>
-                        <li>
-                            <a href="${createLink(controller: 'role', action: 'index')}">Role</a>
-                        </li>
-                        <li>
-                            <a href="${createLink(controller: 'requestmap', action: 'index')}">Role Menu</a>
-                        </li>
+                        <g:if test="${com.picsell.security.UserRole.findByUserAndRole(userObject, com.picsell.security.Role.findByAuthority('ROLE_ADMIN')) != null}">
+                            <li>
+                                <a href="${createLink(controller: 'user', action: 'index')}">Users</a>
+                            </li>
+                            <li>
+                                <a href="${createLink(controller: 'role', action: 'index')}">Role</a>
+                            </li>
+                            <li>
+                                <a href="${createLink(controller: 'requestmap', action: 'index')}">Role Menu</a>
+                            </li>
+                        </g:if>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Konfigurasi<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Master Setting<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="${createLink(controller: 'category', action: 'index')}">Category</a>
