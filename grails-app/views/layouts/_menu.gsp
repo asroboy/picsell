@@ -128,6 +128,8 @@
                         </g:if>
                     </ul>
                 </li>
+
+
                 <li>
                     <a href="#"><i class="fa fa-wrench fa-fw"></i> Master Setting<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -144,6 +146,16 @@
                     </ul>
                 </li>
 
+                <g:if test="${com.picsell.security.UserRole.findByUserAndRole(userObject, com.picsell.security.Role.findByAuthority('ROLE_ADMIN')) != null}">
+                    <li>
+                        <a href="#"><i class="fa fa-rocket fa-fw"></i> Configuration<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="${createLink(controller: 'termOfService', action: 'index')}">Term Of Service</a>
+                            </li>
+                        </ul>
+                    </li>
+                </g:if>
                 <li>
                     <a href="${createLink(controller: 'logout')}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>

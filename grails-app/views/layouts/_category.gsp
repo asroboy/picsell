@@ -25,6 +25,9 @@
     <sec:ifNotLoggedIn>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+                <a class="nav-link" href="${createLink(controller: 'subcribtion', action: 'index')}">Pricing</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="${createLink(controller: 'login', action: 'auth')}">Login</a>
             </li>
             <li class="nav-item">

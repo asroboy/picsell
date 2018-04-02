@@ -14,6 +14,7 @@
     <!-- Bootstrap core CSS -->
     %{--${resource(dir: 'portfolio-gh-pages', file: '')}--}%
     <link href="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/css/bootstrap.min.css')}"
+          rel="stylesheet">
     <link href="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/css/bootstrap.css')}"
           rel="stylesheet">
 
@@ -21,8 +22,8 @@
     <link href="${resource(dir: 'portfolio-gh-pages', file: 'css/3-col-portfolio.css')}" rel="stylesheet">
 
     <g:set var="categories" value="${com.picsell.data.Category.list()}"/>
-    <g:set var="userObject" value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field:'username'))}"/>
-
+    <g:set var="userObject"
+           value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
 
 </head>
 
