@@ -259,7 +259,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div style="height: 300px; overflow-y: scroll;">
-                        <pre style="white-space: pre-line; font-family: Arial">${raw(com.picsell.config.TermOfService.findAll().get(0)?.tos)}</pre>
+                        <pre style="white-space: pre-line; font-family: Arial">${raw(com.picsell.config.TermOfService.findAll()?.get(0)?.tos)}</pre>
 
                     </div>
                     <hr/>
@@ -279,7 +279,7 @@
 
 
 <script>
-    $('#check_read_tos').
+//    $('#check_read_tos').
 </script>
 </body>
 </html>
