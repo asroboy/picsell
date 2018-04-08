@@ -1,6 +1,6 @@
 package com.picsell.data
 
-
+import com.picsell.security.User
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -12,8 +12,20 @@ class ProfileUserController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond ProfileUser.list(params), model:[profileUserInstanceCount: ProfileUser.count()]
+        respond ProfileUser.list(params), model: [profileUserInstanceCount: ProfileUser.count()]
     }
+
+
+    def profile(ProfileUser profileUserInstance) {
+        if(profileUserInstance){
+            respond profileUserInstance
+        }else{
+            profileUserInstance = new ProfileUser(user: User.get(params.uid))
+            respond profileUserInstance
+        }
+
+    }
+
 
     def show(ProfileUser profileUserInstance) {
         respond profileUserInstance
@@ -23,6 +35,58 @@ class ProfileUserController {
         respond new ProfileUser(params)
     }
 
+
+    @Transactional
+    def saveProfileImage(ProfileUser profileUserInstance) {
+        if(!profileUserInstance.id){
+            profileUserInstance.save()
+
+            println("Save new profile === > " + profileUserInstance?.id)
+        }
+        if (params.file) {
+            def file = request.getFile('file')
+            if (file.empty) {
+                flash.message = "File cannot be empty"
+            } else {
+                def imageInstance = ImageFile.findByTableNameAndTableId(profileUserInstance.class.simpleName, profileUserInstance.id)?: new ImageFile()
+                imageInstance.tableName = profileUserInstance.class.simpleName
+                imageInstance.tableId = profileUserInstance.id
+                imageInstance.namaFile = file.originalFilename
+                imageInstance.lampiran = file.getBytes()
+                imageInstance.ukuranFile = file.getBytes().length
+                imageInstance.save()
+                print(imageInstance)
+            }
+        }
+
+        redirect(action: 'profile', id: profileUserInstance.id)
+    }
+
+    @Transactional
+    def saveProfile(ProfileUser profileUserInstance) {
+        if (profileUserInstance == null) {
+            notFound()
+            return
+        }
+
+        if (profileUserInstance.hasErrors()) {
+            respond profileUserInstance.errors, view: 'profile'
+            return
+        }
+
+        profileUserInstance.save flush: true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'profileUserInstance.label', default: 'ProfileUser'), profileUserInstance.id])
+                redirect action: "profile", id: profileUserInstance.id, method: "GET"
+            }
+            '*' { respond profileUserInstance, [status: CREATED] }
+        }
+    }
+
+
+
     @Transactional
     def save(ProfileUser profileUserInstance) {
         if (profileUserInstance == null) {
@@ -31,11 +95,11 @@ class ProfileUserController {
         }
 
         if (profileUserInstance.hasErrors()) {
-            respond profileUserInstance.errors, view:'create'
+            respond profileUserInstance.errors, view: 'create'
             return
         }
 
-        profileUserInstance.save flush:true
+        profileUserInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
@@ -58,18 +122,18 @@ class ProfileUserController {
         }
 
         if (profileUserInstance.hasErrors()) {
-            respond profileUserInstance.errors, view:'edit'
+            respond profileUserInstance.errors, view: 'edit'
             return
         }
 
-        profileUserInstance.save flush:true
+        profileUserInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'ProfileUser.label', default: 'ProfileUser'), profileUserInstance.id])
                 redirect profileUserInstance
             }
-            '*'{ respond profileUserInstance, [status: OK] }
+            '*' { respond profileUserInstance, [status: OK] }
         }
     }
 
@@ -81,14 +145,14 @@ class ProfileUserController {
             return
         }
 
-        profileUserInstance.delete flush:true
+        profileUserInstance.delete flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'ProfileUser.label', default: 'ProfileUser'), profileUserInstance.id])
-                redirect action:"index", method:"GET"
+                redirect action: "index", method: "GET"
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
 
@@ -98,7 +162,7 @@ class ProfileUserController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'profileUserInstance.label', default: 'ProfileUser'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
     }
 }

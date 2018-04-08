@@ -93,8 +93,12 @@
                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="${createLink(controller: 'profileUser', action: 'show', id: com.picsell.data.ProfileUser.findByUser(userObject)?.id)}"><i
-                        class="fa fa-user fa-fw"></i> User Profile</a>
+                <g:set var="profilePicture" value="${com.picsell.data.ProfileUser.findByUser(userObject)?.id}"></g:set>
+                <li>
+                    <a class="dropdown-item"
+                       href="${createLink(controller: 'profileUser', action: 'profile', id: profilePicture, params: [uid: userObject?.id])}"><i
+                            class="fa fa-user fa-fw"></i> My Profile</a>
+
                 </li>
                 %{--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>--}%
                 %{--</li>--}%

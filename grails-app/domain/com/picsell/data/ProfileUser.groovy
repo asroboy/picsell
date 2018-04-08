@@ -18,6 +18,8 @@ class ProfileUser {
     String tempatLahir
     Date tglLahir
 
+    byte[] fotoProfile
+
     static constraints = {
         namaDepan nullable: false
         namaBelakang nullable: false
@@ -31,5 +33,6 @@ class ProfileUser {
         noTelp nullable: true
         tempatLahir nullable: false
         tglLahir nullable: false
+        fotoProfile nullable: true, maxSize: 1073741824
     }
 }

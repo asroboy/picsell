@@ -46,14 +46,33 @@
             %{--</button>--}%
 
             <ul class="dropdown-menu dropdown-menu-right">
+                <g:set var="profilePicture" value="${com.picsell.data.ProfileUser.findByUser(userObject)?.id}"></g:set>
                 <li><a class="dropdown-item"
-                       href="${createLink(controller: 'profileUser', action: 'show', id: com.picsell.data.ProfileUser.findByUser(userObject)?.id)}">Profile</a>
+                       href="${createLink(controller: 'profileUser', action: 'profile', id: profilePicture, params: [uid: userObject?.id])}"><i class="fa fa-user fa-fw"></i> My Profile</a>
                 </li>
-                <li><a class="dropdown-item"
-                       href="${createLink(controller: 'home', action: 'configuration')}">Configuration</a></li>
 
+                <g:each in="${userRoles}" var="userRole">
+                    <g:if test="${userRole?.role?.authority.equals("ROLE_USER")}">
+                        <li><a class="dropdown-item"
+                               href="${createLink(controller: 'account', action: 'index')}"><i class="fa fa-at fa-fw"></i> My Account</a></li>
+
+                        <li><a class="dropdown-item"
+                               href="${createLink(controller: 'account', action: 'index')}"><i class="fa fa-rocket fa-fw"></i> My Items</a></li>
+
+                        <li><a class="dropdown-item"
+                               href="${createLink(controller: 'account', action: 'index')}"><i class="fa fa-shopping-basket fa-fw"></i> My Chart</a></li>
+                    </g:if>
+
+                    <g:if test="${userRole?.role?.authority.equals("ROLE_ADMIN")}">
+                        <li><a class="dropdown-item"
+                               href="${createLink(controller: 'home', action: 'configuration')}"><i class="fa fa-gear fa-fw"></i> Configuration</a></li>
+                    </g:if>
+
+                </g:each>
                 <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="${createLink(controller: 'logout', action: 'index')}">Logout</a>
+
+
+                <li><a class="dropdown-item" href="${createLink(controller: 'logout', action: 'index')}"><i class="fa fa-lock fa-fw"></i> Logout</a>
                 </li>
             </ul>
         </div>

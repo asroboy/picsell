@@ -27,6 +27,16 @@ class BootStrap {
         RoleMenu.findByUrl('/forgotPassword/**') ?: new RoleMenu(url: '/forgotPassword/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/register/**') ?: new RoleMenu(url: '/register/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/home/**') ?: new RoleMenu(url: '/home/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/image/download/**') ?: new RoleMenu(url: '/image/download/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/account/**') ?: new RoleMenu(url: '/account/**', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrlAndConfigAttribute('/profileUser/profile', 'permitAll') ?: new RoleMenu(url: '/profileUser/profile', configAttribute: 'permitAll').save()
+//        RoleMenu.findByUrlAndConfigAttribute('/profileUser/profile/**', 'ROLE_USER') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_USER').save()
+//        RoleMenu.findByUrlAndConfigAttribute('/profileUser/profile', 'ROLE_ADMIN') ?: new RoleMenu(url: '/profileUser/profile', configAttribute: 'ROLE_ADMIN').save()
+//        RoleMenu.findByUrlAndConfigAttribute('/profileUser/profile/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_ADMIN').save()
+//        RoleMenu.findByUrlAndConfigAttribute('/profileUser/saveProfileImage', 'ROLE_USER') ?: new RoleMenu(url: '/profileUser/saveProfileImage', configAttribute: 'ROLE_USER').save()
+//        RoleMenu.findByUrlAndConfigAttribute('/profileUser/saveProfileImage/**', 'ROLE_USER') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER').save()
+//        RoleMenu.findByUrlAndConfigAttribute('/profileUser/saveProfileImage/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrlAndConfigAttribute('/profileUser/saveProfileImage', 'permitAll') ?: new RoleMenu(url: '/profileUser/saveProfileImage', configAttribute: 'permitAll').save()
 
         //ADMIN
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()

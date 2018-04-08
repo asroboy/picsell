@@ -101,4 +101,9 @@ class ItemController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+
+    def itemDetail(){
+
+    }
 }

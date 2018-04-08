@@ -13,10 +13,12 @@
 
     <!-- Bootstrap core CSS -->
     %{--${resource(dir: 'portfolio-gh-pages', file: '')}--}%
-    <link href="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/css/bootstrap.min.css')}"
+    <link href="${resource(dir: 'portfolio-item-gh', file: 'vendor/bootstrap/css/bootstrap.min.css')}"
           rel="stylesheet">
-    %{--<link href="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/css/bootstrap.css')}"--}%
-          %{--rel="stylesheet">--}%
+
+    <!-- Custom styles for this template -->
+    <link href="${resource(dir: 'portfolio-item-gh', file: 'css/portfolio-item.css')}" rel="stylesheet">
+
 
     <!-- Custom Fonts -->
     <link href="${resource(dir: 'sbadmin', file: '/vendor/font-awesome/css/font-awesome.min.css')}" rel="stylesheet"
@@ -28,16 +30,17 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Custom styles for this template -->
-    <link href="${resource(dir: 'portfolio-gh-pages', file: 'css/3-col-portfolio.css')}" rel="stylesheet">
+
 
     <g:set var="categories" value="${com.picsell.data.Category.list()}"/>
     <g:set var="userObject"
            value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
+    <g:layoutHead/>
 </head>
 
 <body>
+
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -49,8 +52,11 @@
         </button>
         <g:render template="/layouts/category"></g:render>
 
+
     </div>
 </nav>
+
+
 <g:layoutBody/>
 <!-- Footer -->
 <footer class="py-5 bg-dark">
@@ -61,9 +67,8 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/jquery/jquery.min.js')}"></script>
-<script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
-%{--<script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/js/bootstrap.js')}"></script>--}%
+<script src="${resource(dir: 'portfolio-item-gh', file: 'vendor/jquery/jquery.min.js')}"></script>
+<script src="${resource(dir: 'portfolio-item-gh', file: 'vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
 
 </body>
 
