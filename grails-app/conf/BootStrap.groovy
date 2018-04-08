@@ -37,6 +37,7 @@ class BootStrap {
 //        RoleMenu.findByUrlAndConfigAttribute('/profileUser/saveProfileImage/**', 'ROLE_USER') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER').save()
 //        RoleMenu.findByUrlAndConfigAttribute('/profileUser/saveProfileImage/**', 'ROLE_ADMIN') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrlAndConfigAttribute('/profileUser/saveProfileImage', 'permitAll') ?: new RoleMenu(url: '/profileUser/saveProfileImage', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrlAndConfigAttribute('/item/itemDetail', 'permitAll') ?: new RoleMenu(url: '/item/itemDetail', configAttribute: 'permitAll').save()
 
         //ADMIN
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
