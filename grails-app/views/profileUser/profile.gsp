@@ -56,7 +56,7 @@
         %{--</a>--}%
 
             <div class="button-change">
-                <button type="button" class="btn btn-sm btn-block btn-outline btn-success" data-toggle="modal"
+                <button type="button" class="btn btn-sm btn-block btn-outline-danger" data-toggle="modal"
                         data-target="#myModal">
                     Change
                 </button>
@@ -117,8 +117,8 @@
 
                             <fieldset class="buttons">
                                 <br/>
-                                <g:submitButton name="create" class="save btn btn-success"
-                                                value="${message(code: 'default.button.create.label', default: 'Upload')}"/>
+                                <g:submitButton name="create" class="save btn btn-block btn-outline-success"
+                                                value="${message(code: 'default.button.save.label', default: 'Save')}"/>
                             </fieldset>
                         </g:form>
                     </div>

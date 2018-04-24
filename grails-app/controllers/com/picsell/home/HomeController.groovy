@@ -9,4 +9,8 @@ class HomeController {
     def configuration(){
 
     }
+
+    def itemDetail(){
+
+    }
 }

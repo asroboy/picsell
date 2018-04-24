@@ -1,6 +1,7 @@
 package com.picsell.test
 
 
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -11,23 +12,7 @@ class TestFileController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond TestFile.list(params), model: [testFileInstanceCount: TestFile.count()]
-    }
-
-
-    def download(long id) {
-        TestFile documentInstance = TestFile.get(id)
-        if (documentInstance == null) {
-            flash.message = "Document not found."
-            redirect(action: 'list')
-        } else {
-            response.setContentType("APPLICATION/OCTET-STREAM")
-            response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.nama}\"")
-            def outputStream = response.getOutputStream()
-            outputStream << documentInstance.foto
-            outputStream.flush()
-            outputStream.close()
-        }
+        respond TestFile.list(params), model:[testFileInstanceCount: TestFile.count()]
     }
 
     def show(TestFile testFileInstance) {
@@ -46,11 +31,11 @@ class TestFileController {
         }
 
         if (testFileInstance.hasErrors()) {
-            respond testFileInstance.errors, view: 'create'
+            respond testFileInstance.errors, view:'create'
             return
         }
 
-        testFileInstance.save flush: true
+        testFileInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
@@ -73,18 +58,18 @@ class TestFileController {
         }
 
         if (testFileInstance.hasErrors()) {
-            respond testFileInstance.errors, view: 'edit'
+            respond testFileInstance.errors, view:'edit'
             return
         }
 
-        testFileInstance.save flush: true
+        testFileInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'TestFile.label', default: 'TestFile'), testFileInstance.id])
                 redirect testFileInstance
             }
-            '*' { respond testFileInstance, [status: OK] }
+            '*'{ respond testFileInstance, [status: OK] }
         }
     }
 
@@ -96,14 +81,14 @@ class TestFileController {
             return
         }
 
-        testFileInstance.delete flush: true
+        testFileInstance.delete flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'TestFile.label', default: 'TestFile'), testFileInstance.id])
-                redirect action: "index", method: "GET"
+                redirect action:"index", method:"GET"
             }
-            '*' { render status: NO_CONTENT }
+            '*'{ render status: NO_CONTENT }
         }
     }
 
@@ -113,7 +98,7 @@ class TestFileController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'testFileInstance.label', default: 'TestFile'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*' { render status: NOT_FOUND }
+            '*'{ render status: NOT_FOUND }
         }
     }
 }

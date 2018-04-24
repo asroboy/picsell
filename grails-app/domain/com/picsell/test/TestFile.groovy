@@ -2,6 +2,8 @@ package com.picsell.test
 
 class TestFile {
 
+    static scaffold = true
+
     byte[] foto
     String nama
     static constraints = {

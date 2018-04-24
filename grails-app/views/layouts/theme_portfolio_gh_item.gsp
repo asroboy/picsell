@@ -42,29 +42,13 @@
 <body>
 
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="${createLink(controller: 'home', action: 'index')}">Picsell</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <g:render template="/layouts/category"></g:render>
-
-
-    </div>
-</nav>
+<g:render template="/layouts/navigation"/>
 
 
 <g:layoutBody/>
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; picsell.com 2018</p>
-    </div>
-    <!-- /.container -->
-</footer>
+
+
+<g:render template="/layouts/footer"/>
 
 <!-- Bootstrap core JavaScript -->
 <script src="${resource(dir: 'portfolio-item-gh', file: 'vendor/jquery/jquery.min.js')}"></script>

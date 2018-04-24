@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="theme_sbadmin">
+    <meta name="layout" content="theme_sbadmin_gh">
     <g:set var="entityName" value="${message(code: 'termOfService.label', default: 'TermOfService')}"/>
     <title><g:message code="default.list.label" args="[entityName]"/></title>
 </head>

@@ -119,6 +119,6 @@
     </table>
 
 
-    <g:submitButton name="create" class="btn btn-sm btn-block btn-outline btn-success"
+    <g:submitButton name="create" class="btn btn-sm btn-block btn-outline-success"
                     value="${message(code: 'default.button.update.label', default: 'Update')}"/>
 </g:form>

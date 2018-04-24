@@ -11,7 +11,7 @@ class FileItem {
     Item item
 
     static constraints = {
-        file nullable: false
+        file nullable: false, maxSize:1073741824
         fileName nullable: true
         formatExtention nullable: true
         contentType nullable:  true

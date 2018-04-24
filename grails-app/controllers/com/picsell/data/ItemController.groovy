@@ -1,7 +1,6 @@
 package com.picsell.data
 
 
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -12,7 +11,7 @@ class ItemController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Item.list(params), model:[itemInstanceCount: Item.count()]
+        respond Item.list(params), model: [itemInstanceCount: Item.count()]
     }
 
     def show(Item itemInstance) {
@@ -23,6 +22,25 @@ class ItemController {
         respond new Item(params)
     }
 
+
+    @Transactional
+    def saveItem(Item mItemInstance) {
+        if (mItemInstance == null) {
+            notFound()
+            return
+        }
+
+        if (mItemInstance.hasErrors()) {
+            respond mItemInstance.errors, view: 'addItem'
+            return
+        }
+
+        mItemInstance.save flush: true
+
+        redirect(controller: 'userItem', action: "index")
+    }
+
+
     @Transactional
     def save(Item itemInstance) {
         if (itemInstance == null) {
@@ -31,11 +49,11 @@ class ItemController {
         }
 
         if (itemInstance.hasErrors()) {
-            respond itemInstance.errors, view:'create'
+            respond itemInstance.errors, view: 'create'
             return
         }
 
-        itemInstance.save flush:true
+        itemInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
@@ -58,18 +76,18 @@ class ItemController {
         }
 
         if (itemInstance.hasErrors()) {
-            respond itemInstance.errors, view:'edit'
+            respond itemInstance.errors, view: 'edit'
             return
         }
 
-        itemInstance.save flush:true
+        itemInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Item.label', default: 'Item'), itemInstance.id])
                 redirect itemInstance
             }
-            '*'{ respond itemInstance, [status: OK] }
+            '*' { respond itemInstance, [status: OK] }
         }
     }
 
@@ -81,14 +99,14 @@ class ItemController {
             return
         }
 
-        itemInstance.delete flush:true
+        itemInstance.delete flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Item.label', default: 'Item'), itemInstance.id])
-                redirect action:"index", method:"GET"
+                redirect action: "index", method: "GET"
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
 
@@ -98,12 +116,7 @@ class ItemController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'itemInstance.label', default: 'Item'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
-    }
-
-
-    def itemDetail(){
-
     }
 }

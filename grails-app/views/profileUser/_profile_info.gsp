@@ -170,4 +170,4 @@
 
 </table>
 
-<button id="btn-edit" onclick="changeProfile()" name="edit" class="btn btn-sm btn-block btn-outline btn-warning"><i class="fa-edit"></i> Change</button>
+<button id="btn-edit" onclick="changeProfile()" name="edit" class="btn btn-sm btn-block btn-outline-danger">Change Profile</button>

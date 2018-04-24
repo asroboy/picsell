@@ -14,6 +14,8 @@ class RoleMenu implements Serializable {
 	String configAttribute
 	HttpMethod httpMethod
 	String url
+	String name
+
 
 	RoleMenu(String url, String configAttribute, HttpMethod httpMethod = null) {
 		this()
@@ -26,6 +28,7 @@ class RoleMenu implements Serializable {
 		configAttribute blank: false
 		httpMethod nullable: true
 		url blank: false, unique: 'httpMethod'
+		name nullable: true
 	}
 
 	static mapping = {

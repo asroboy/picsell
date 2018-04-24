@@ -1,6 +1,6 @@
 <%@ page import="com.picsell.security.Role" %>
 <nav class="navbar  navbar-inverse  navbar-static-top" role="navigation"
-     style="margin-bottom: 0; background-color: black">
+     style="margin-bottom: 0; background-color: #00796B;">
     <div class="navbar-header ">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -146,6 +146,10 @@
 
                         <li>
                             <a href="${createLink(controller: 'fileItem', action: 'index')}">File Item</a>
+                        </li>
+
+                        <li>
+                            <a href="${createLink(controller: 'account', action: 'index')}"> Account</a>
                         </li>
                     </ul>
                 </li>

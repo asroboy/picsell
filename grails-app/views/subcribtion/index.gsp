@@ -88,24 +88,29 @@
 
                     <form>
                         <ul class="list-group text-center">
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 10 images <b>49 USD</b>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 50 images <b>125 USD</b>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 350 images <b>199 USD</b>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 750 images <b>249 USD</b>
-                            </li>
+                            <g:each in="${com.picsell.config.Account.findAllByType('Subscription')}" var="ac"
+                                    status="i">
+                                <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio"
+                                                                                               name="image1"
+                                                                                               value="${ac?.id}"> ${ac?.maxImages} images<b>${ac?.price} ${ac?.inCurrency}</b>
+                                </li>
+                            </g:each>
+
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"--}%
+                        %{--value=""> 50 images <b>125 USD</b>--}%
+                        %{--</li>--}%
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"--}%
+                        %{--value=""> 350 images <b>199 USD</b>--}%
+                        %{--</li>--}%
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"--}%
+                        %{--value=""> 750 images <b>249 USD</b>--}%
+                        %{--</li>--}%
                         </ul>
                     </form>
 
                     <div class="panel-footer">
                         <button type="button" class="btn btn-lg btn-block btn-danger" data-toggle="modal"
-                                data-target="#myModal">
+                                data-target="#myModal" onclick="test_click(1)">
                             BUY NOW!
                         </button>
                         %{--<a class="btn btn-lg btn-block btn-danger" href="#">BUY NOW!</a>--}%
@@ -129,12 +134,16 @@
 
                     <form>
                         <ul class="list-group text-center">
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 5 images <b>49 USD</b>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 25 images <b>229 USD</b>
-                            </li>
+                            <g:each in="${com.picsell.config.Account.findAllByType('On Demand')}" var="ac" status="i">
+                                <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio"
+                                                                                               name="image2"
+                                                                                               value="${ac?.id}"> ${ac?.maxImages} images <b>${ac?.price} ${ac?.inCurrency}</b>
+                                </li>
+                            </g:each>
+
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"--}%
+                        %{--value=""> 25 images <b>229 USD</b>--}%
+                        %{--</li>--}%
                             <li class="list-group-item">
                                 <br/>
                             </li>
@@ -146,7 +155,7 @@
 
                     <div class="panel-footer">
                         <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal"
-                                data-target="#myModal">
+                                data-target="#myModal" onclick="test_click(2)">
                             BUY NOW!
                         </button>
                         %{--<a class="btn btn-lg btn-block btn-warning" href="#">BUY NOW!</a>--}%
@@ -170,15 +179,22 @@
 
                     <form>
                         <ul class="list-group text-center">
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 2 users <b>379 USD</b>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 3 users <b>479 USD</b>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image1"
-                                                                                           value=""> 4 or more users <b>579 USD</b>
-                            </li>
+                            <g:each in="${com.picsell.config.Account.findAllByType('Team')}" var="ac" status="i">
+                                <li class="list-group-item"><i class="fa fa-check"></i> <input type="radio"
+                                                                                               name="image3"
+                                                                                               value="${ac?.id}"> ${ac?.maxTeamUser} users <b>${ac?.price} ${ac?.inCurrency}</b>
+                                </li>
+
+                            </g:each>
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image3"--}%
+                        %{--value=""> 2 users <b>379 USD</b>--}%
+                        %{--</li>--}%
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image3"--}%
+                        %{--value=""> 3 users <b>479 USD</b>--}%
+                        %{--</li>--}%
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> <input type="radio" name="image3"--}%
+                        %{--value=""> 4 or more users <b>579 USD</b>--}%
+                        %{--</li>--}%
                             <li class="list-group-item">
                                 <br/>
                             </li>
@@ -188,7 +204,7 @@
 
                     <div class="panel-footer">
                         <button type="button" class="btn btn-lg btn-block btn-success" data-toggle="modal"
-                                data-target="#myModal">
+                                data-target="#myModal" onclick="test_click(3)">
                             BUY NOW!
                         </button>
                         %{--<a class="btn btn-lg btn-block btn-success" href="#">BUY NOW!</a>--}%
@@ -201,37 +217,42 @@
         <br/>
 
         %{--<div style="margin-left: auto; max-width: 600px;">--}%
-            <div class="row">
+        <div class="row">
 
-                <!-- item -->
-                <div class="col-md-12 text-center">
-                    <div class="panel panel-success panel-pricing">
-                        <div class="panel-heading">
-                            <i class="fa fa-desktop"></i>
+            <!-- item -->
+            <div class="col-md-12 text-center">
+                <div class="panel panel-success panel-pricing">
+                    <div class="panel-heading">
+                        <i class="fa fa-desktop"></i>
 
-                            <h3>Enterprice Plan</h3>
-                        </div>
+                        <h3>Enterprice Plan</h3>
+                    </div>
 
-                        %{--<div class="panel-body text-center">--}%
-                            %{--<p><strong>Special for company design / communication that need service provision of image based on custom, requirement, special case, etc</strong></p>--}%
-                        %{--</div>--}%
-                        <ul class="list-group text-center">
-                        <li class="list-group-item"><i class="fa fa-check"></i>Special for company design / communication that need service provision of image based on custom, requirement, special case, etc.</li>
-                            %{--<li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>--}%
-                            %{--<li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>--}%
-                        </ul>
+                    %{--<div class="panel-body text-center">--}%
+                    %{--<p><strong>Special for company design / communication that need service provision of image based on custom, requirement, special case, etc</strong></p>--}%
+                    %{--</div>--}%
+                    <ul class="list-group text-center">
+                        <g:each in="${com.picsell.config.Account.findAllByType('Enterprice plan')}" var="ac" status="i">
+                            <li class="list-group-item"><i
+                                    class="fa fa-check"></i>Special for company design / communication that need service provision of image based on custom, requirement, special case, etc.
+                            </li>
+                        </g:each>
 
-                        <div class="panel-footer">
-                            <button type="button" class="btn btn-lg btn-block btn-outline btn-success" data-toggle="modal"
-                                    data-target="#myModal">
-                                Bussiness Solution
-                            </button>
-                            %{--<a class="btn btn-lg btn-block btn-outline btn-warning" href="#">BUY NOW!</a>--}%
-                        </div>
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>--}%
+                        %{--<li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>--}%
+                    </ul>
+
+                    <div class="panel-footer">
+                        <button type="button" class="btn btn-lg btn-block btn-outline btn-success" data-toggle="modal"
+                                data-target="#myModal" onclick="test_click(4)">
+                            Bussiness Solution
+                        </button>
+                        %{--<a class="btn btn-lg btn-block btn-outline btn-warning" href="#">BUY NOW!</a>--}%
                     </div>
                 </div>
-                <!-- /item -->
             </div>
+            <!-- /item -->
+        </div>
         %{--</div>--}%
 
         <br/>
@@ -248,30 +269,66 @@
     <!-- The Modal -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <sec:ifLoggedIn>
+                <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Term of Service</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div style="height: 300px; overflow-y: scroll;">
-                        <pre style="white-space: pre-line; font-family: Arial">${raw(com.picsell.config.TermOfService.findAll()?.get(0)?.tos)}</pre>
-
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Term of Service</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <hr/>
-                    <input id="check_read_tos" type="checkbox" value=""/> I have read Term of Servie
-                </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 100%">Agree</button>
-                </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div style="height: 300px; overflow-y: scroll;">
+                            <pre style="white-space: pre-line; font-family: Arial">${raw(com.picsell.config.TermOfService.findAll()?.get(0)?.tos)}</pre>
 
-            </div>
+                        </div>
+                        <hr/>
+                        <input id="check_read_tos" type="checkbox" value=""/> I have read Term of Servie
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="test_click_2()"
+                                style="width: 100%">Agree</button>
+                    </div>
+
+                </div>
+            </sec:ifLoggedIn>
+            <sec:ifNotLoggedIn>
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Register or Sign Up</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-body">
+                        <div>
+                            <a class="btn btn-info" href="${createLink(controller: 'login', action: 'index')}"
+                               style="width: 100%">Login</a>
+                        </div>
+
+                        <div>
+
+                            <p>
+                            <h5>Don't have an account?</h5>
+                        </p>
+
+                            <a class="btn btn-info"
+                               href="${createLink(controller: 'register', action: 'register')}"
+                               style="width: 100%">Sign up</a>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer"></div>
+
+                </div>
+            </sec:ifNotLoggedIn>
+
         </div>
     </div>
 
@@ -279,7 +336,22 @@
 
 
 <script>
-//    $('#check_read_tos').
+
+    var subsId;
+    function test_click(data) {
+        if (data === 1) {
+            subsId = document.querySelector('input[name="image1"]:checked').value;
+            console.log("DATA " + subsId);
+        }
+        if (data === 2) {
+            subsId = document.querySelector('input[name="image2"]:checked').value;
+            console.log("DATA " + subsId);
+        }
+    }
+    function test_click_2() {
+        console.log("DATA 2 " + subsId);
+    }
+
 </script>
 </body>
 </html>

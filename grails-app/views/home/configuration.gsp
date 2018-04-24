@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="theme_sbadmin"/>
+    <meta name="layout" content="theme_sbadmin_gh"/>
     <title></title>
 
 

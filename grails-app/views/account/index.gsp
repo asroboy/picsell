@@ -1,79 +1,72 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Ridho
-  Date: 4/8/2018
-  Time: 2:13 PM
---%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="com.picsell.config.Account" %>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta name="layout" content="theme_portfolio_gh_item"/>
-    <title>Account</title>
-</head>
+	<head>
+		<meta name="layout" content="theme_sbadmin_gh">
+		<g:set var="entityName" value="${message(code: 'account.label', default: 'Account')}" />
+		<title><g:message code="default.list.label" args="[entityName]" /></title>
+	</head>
+	<body>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<p>
+				<g:link class="create btn btn-info" action="create"><i class="fa fa-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+			</p>
 
-<body>
-<!-- Page Content -->
-<div class="container">
-    <!-- Portfolio Item Heading -->
-    <h1 class="my-4">My Account
-    %{--<small>The item sub name or category</small>--}%
-    </h1>
+			<g:if test="${flash.message}">
+				<div class="message" role="status">${flash.message}</div>
+			</g:if>
+			<table class="table table-bordered">
+				<thead>
+				<tr>
+					
+					<g:sortableColumn property="name" title="${message(code: 'account.name.label', default: 'Name')}" />
+					
+					<g:sortableColumn property="type" title="${message(code: 'account.type.label', default: 'Type')}" />
+					
+					<g:sortableColumn property="lisence" title="${message(code: 'account.lisence.label', default: 'Lisence')}" />
+					
+					<g:sortableColumn property="inCurrency" title="${message(code: 'account.inCurrency.label', default: 'In Currency')}" />
+					
+					<g:sortableColumn property="info" title="${message(code: 'account.info.label', default: 'Info')}" />
+					
+					<g:sortableColumn property="allowMoreUser" title="${message(code: 'account.allowMoreUser.label', default: 'Allow More User')}" />
+					
+				</tr>
+				</thead>
+				<tbody>
+				<g:each in="${accountInstanceList}" status="i" var="accountInstance">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+						
+						<td><g:link action="show" id="${accountInstance.id}">${fieldValue(bean: accountInstance, field: "name")}</g:link></td>
+						
+						<td>${fieldValue(bean: accountInstance, field: "type")}</td>
+						
+						<td>${fieldValue(bean: accountInstance, field: "lisence")}</td>
+						
+						<td>${fieldValue(bean: accountInstance, field: "inCurrency")}</td>
+						
+						<td>${fieldValue(bean: accountInstance, field: "info")}</td>
+						
+						<td><g:formatBoolean boolean="${accountInstance.allowMoreUser}" /></td>
+						
+					</tr>
+				</g:each>
+				</tbody>
+			</table>
+			<div class="pagination">
+				<g:paginate total="${accountInstanceCount ?: 0}" />
+			</div>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
 
-    <!-- Portfolio Item Row -->
-    <div class="row">
-
-        %{--<div class="col-md-3">--}%
-        %{--<a href="${createLink(controller: 'profileUser', action: '')}">--}%
-        %{--<g:if test="${profilePicture}">--}%
-        %{--<img class="profile-pic"--}%
-        %{--src="${createLink(controller: 'image', action: 'download', id: profilePicture?.id)}"--}%
-        %{--alt="">--}%
-        %{--</g:if>--}%
-        %{--<g:else>--}%
-        %{--<img class="profile-pic"--}%
-        %{--src="${resource(dir: 'images', file: 'profile_dmy.png')}"--}%
-        %{--alt="">--}%
-        %{--</g:else>--}%
-
-        %{--</a>--}%
-
-        %{--<div class="button-change">--}%
-        %{--<button type="button" class="btn btn-sm btn-block btn-outline btn-success" data-toggle="modal"--}%
-        %{--data-target="#myModal">--}%
-        %{--Change--}%
-        %{--</button>--}%
-        %{--</div>--}%
-
-        %{--</div>--}%
-
-        <div class="col-md-12">
-            <h3>You're registered as general user</h3>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu tellus, semper non feugiat eget, lacinia aliquet massa. Maecenas egestas rutrum dolor eget sagittis. Proin tempor, ante vitae tincidunt volutpat, nunc ante cursus massa, et sodales neque felis eget nulla. Praesent vitae nibh lectus. Duis consequat condimentum ipsum, non ornare felis auctor vitae. Aliquam a augue hendrerit, pharetra risus id, ullamcorper orci. Integer nec dictum dui.
-            </p>
-
-            <p>
-                Nunc dolor tortor, tempor non justo at, blandit malesuada lorem. Donec tristique nunc ac enim volutpat, ut ultricies ante venenatis. Morbi feugiat mauris ac nibh commodo pharetra. Suspendisse potenti. Aliquam eu vehicula est. Donec massa tortor, lobortis eget pellentesque id, facilisis in urna. Curabitur ornare, massa sed lobortis rhoncus, ex neque pulvinar nunc, in facilisis mauris enim dictum dui. Aliquam ipsum metus, congue eu libero aliquet, mollis egestas libero. Pellentesque sit amet sem vel lacus molestie pulvinar pretium id sem.
-            </p>
-
-            <p>
-                Aliquam hendrerit dignissim orci, non dignissim tellus lacinia ac. Etiam ornare ipsum sed augue dapibus consectetur. Donec egestas lectus at ex tempor pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin sed est orci. Nunc vulputate, elit vel efficitur pulvinar, dui odio euismod lectus, a lobortis libero sem ac arcu. Sed ultrices consequat efficitur.
-            </p>
-
-            <p>
-                Nullam quis ex vel neque posuere porttitor sit amet sed dolor. Curabitur quis tristique turpis. Fusce ac massa libero. Duis iaculis enim vel aliquam sagittis. Morbi sit amet eleifend leo, ut condimentum lacus. Duis et leo et quam consequat scelerisque quis tempor elit. In fermentum posuere felis. Duis sit amet enim a justo vehicula vehicula et eget quam. Nam imperdiet cursus sagittis. Morbi commodo non neque sed scelerisque. Nullam vulputate sed leo vel maximus. Ut eu ipsum felis.
-            </p>
-
-            <p>
-                Nam vitae tortor faucibus, pulvinar leo et, finibus velit. Suspendisse potenti. Cras blandit sodales tellus fringilla rutrum. Pellentesque a magna id nisi accumsan dignissim ut sed nulla. Proin rutrum orci id erat accumsan, eu convallis risus iaculis. In hendrerit pellentesque accumsan. Vestibulum ullamcorper viverra pellentesque.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</body>
+	</body>
 </html>
