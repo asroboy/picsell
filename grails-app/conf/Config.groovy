@@ -91,8 +91,10 @@ environments {
         uploadFolder = "c:/temp/upload/"
     }
     production {
+
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+        uploadFolder = "/tmp/upload/"
     }
 }
 
