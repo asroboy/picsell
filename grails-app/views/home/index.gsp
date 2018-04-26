@@ -43,7 +43,7 @@
 
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="${createLink(action: 'itemDetail')}">${item?.name}</a>
+                            <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">${item?.name}</a>
                         </h4>
 
                         <p>Price : ${item?.price} ${item?.currency}</p>

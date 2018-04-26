@@ -11,6 +11,11 @@ class User implements Serializable {
 
 	transient springSecurityService
 
+
+	// regular generated code should still be included
+	boolean beforeInsertRunOnce = false
+	boolean beforeUpdateRunOnce = false
+
 	String username
 	String password
 	boolean enabled = true
@@ -29,17 +34,32 @@ class User implements Serializable {
 	}
 
 	def beforeInsert() {
-		encodePassword()
+		if (! beforeInsertRunOnce) {
+			beforeInsertRunOnce = true
+			encodePassword()
+		}
+
 	}
 
 	def beforeUpdate() {
-		if (isDirty('password')) {
+		if (isDirty('password') && ! beforeUpdateRunOnce ) {
+			beforeUpdateRunOnce = true
 			encodePassword()
 		}
 	}
 
+	def afterInsert() {
+		beforeInsertRunOnce = false
+	}
+
+	def afterUpdate() {
+		beforeUpdateRunOnce = false
+	}
+
+
 	protected void encodePassword() {
 		password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
+
 	}
 
 	static transients = ['springSecurityService']
@@ -53,4 +73,6 @@ class User implements Serializable {
         table 'tbmuser'
 		password column: '`password`'
 	}
+
+
 }
