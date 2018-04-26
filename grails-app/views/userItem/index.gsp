@@ -5,7 +5,7 @@
   Time: 9:10 AM
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="com.picsell.data.ImageFile" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="theme_portfolio_gh">
@@ -30,7 +30,8 @@
 
         <div class="col-lg-2">
             <div style="margin-bottom: 2rem">
-                <a href="${createLink(action: 'addItem')}" class="btn btn-block btn-outline-primary" style="text-align: left"><i
+                <a href="${createLink(action: 'addItem')}" class="btn btn-block btn-outline-primary"
+                   style="text-align: left"><i
                         class="fa fa-plus"></i> Add Item</a>
                 <a href="#" class="btn btn-block btn-outline-danger" style="text-align: left"><i
                         class="fa fa-dollar"></i>  Pricing</a>
@@ -51,14 +52,17 @@
                 <g:each in="${items}" var="item">
                     <div class="col-lg-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
-                            <a href="${createLink(controller: 'userItem', action: 'itemDetail')}"><img class="card-img-top"
-                                                                                                       src="https://www.pets4homes.co.uk/images/articles/771/large/cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg"
-                                                                                                       alt=""></a>
+                            <a href="${createLink(controller: 'userItem', action: 'itemDetail')}">
+                                <img class="card-img-top"
+                                     src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id, params: [s: '238h9uhh3'])}"
+                                     alt=""></a>
+
 
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="#">${item?.name}</a>
                                 </h4>
+
                                 <p>
                                     ${item?.price} ${item?.currency}
                                 </p>
@@ -68,8 +72,6 @@
                         </div>
                     </div>
                 </g:each>
-
-
 
             </div>
             <!-- /.row -->

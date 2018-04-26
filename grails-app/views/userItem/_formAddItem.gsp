@@ -11,16 +11,6 @@
 
 </div>
 
-
-<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'currency', 'error')} ">
-    <label for="currency">
-        <g:message code="item.currency.label" default="Currency" />
-
-    </label>
-    <g:select name="currency" from="${itemInstance.constraints.currency.inList}" value="${itemInstance?.currency}" valueMessagePrefix="item.currency" noSelection="['': '']" class="form-control" />
-
-</div>
-
 <div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'description', 'error')} ">
     <label for="description">
         <g:message code="item.description.label" default="Description" />
@@ -46,6 +36,17 @@
         <span class="required-indicator">*</span>
     </label>
     <g:field name="price" value="${fieldValue(bean: itemInstance, field: 'price')}" required="" class="form-control" />
+
+</div>
+
+
+
+<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'currency', 'error')} ">
+    <label for="currency">
+        <g:message code="item.currency.label" default="Currency" />
+
+    </label>
+    <g:select name="currency" from="${itemInstance.constraints.currency.inList}" value="${itemInstance?.currency}" valueMessagePrefix="item.currency" noSelection="['': '']" class="form-control" />
 
 </div>
 

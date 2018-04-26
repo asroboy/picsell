@@ -9,6 +9,7 @@ class ImageFile {
     String tipeFile
     String namaFile
     Long ukuranFile
+    String path
 
     String tableName
     Long tableId
@@ -21,9 +22,11 @@ class ImageFile {
         ukuranFile(nullable: true, display: false)
 
         lampiran(nullable: true, maxSize: MAX_IMAGE_FILE)
+        path(blank:false,nullable:false)
 
-        tableName nullable: false
-        tableId nullable: false
+        tableName nullable: true
+        tableId nullable: true
+        lampiran nullable: true
 
     }
 }

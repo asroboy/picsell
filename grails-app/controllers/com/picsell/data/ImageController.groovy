@@ -1,8 +1,28 @@
 package com.picsell.data
 
 import com.picsell.test.TestFile
+import org.springframework.web.multipart.MultipartFile
 
 class ImageController {
+
+
+    def uploadToSpecifiedPath(MultipartFile uploadFile, String fileUploadDir){
+        String uploadDir = !fileUploadDir.equals('') ?: 'C:/temp' //You define the path where the file will be saved
+        File newFile = new File("$uploadDir/${uploadFile.originalFilename}"); //You create the destination file
+        uploadFile.transferTo(newFile); //Transfer the data
+    }
+
+    def image(){
+        File  downloadFile = new File(yourFileDomain?.pathProperty) //get the file using the data you saved in your domain
+        if(downloadFile){ //Set your response properties
+            response.characterEncoding = "UTF-8"
+            response.setHeader "Content-disposition", "attachment; filename=\"${yourFileDomain?.fileNameProperty}\"" //add the header with the filename you saved in your domain you could also set a default filename
+            //response.setHeader "Content-disposition", "attachment; filename=\"myfile.txt\""
+            response.outputStream << new FileInputStream(downloadFile)
+            response.outputStream.flush()
+            return
+        }
+    }
 
     def upload() {
         def file = request.getFile('file')

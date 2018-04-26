@@ -49,9 +49,10 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-//        mavenRepo "http://repository.codehaus.org"
-//        mavenRepo "http://download.java.net/maven/2/"
-//        mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "http://repository.codehaus.org"
+        mavenRepo "http://download.java.net/maven/2/"
+        mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "https://repository.jboss.org/maven2/"
     }
 
     dependencies {
@@ -91,5 +92,8 @@ grails.project.dependency.resolution = {
         //compile ":less-asset-pipeline:1.5.0"
         //compile ":coffee-asset-pipeline:1.5.0"
         //compile ":handlebars-asset-pipeline:1.0.0.3"
+
+        compile "org.grails.plugins:burning-image:0.5.2"
+        compile "org.grails.plugins:email-confirmation:2.0.8"
     }
 }

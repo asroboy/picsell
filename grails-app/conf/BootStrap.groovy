@@ -32,7 +32,8 @@ class BootStrap {
         RoleMenu.findByUrl('/register/**') ?: new RoleMenu(url: '/register/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/home/**') ?: new RoleMenu(url: '/home/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/image/download/**') ?: new RoleMenu(url: '/image/download/**', configAttribute: 'permitAll').save()
-        RoleMenu.findByUrl('/item/itemDetail') ?: new RoleMenu(url: '/item/itemDetail', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/item/itemDetail/**') ?: new RoleMenu(url: '/item/itemDetail/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/document/download/**') ?: new RoleMenu(url: '/document/download/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrlAndConfigAttribute('/subcribtion/*', 'permitAll') ?: new RoleMenu(url: '/subcribtion/*', configAttribute: 'permitAll').save()
 
         //USER
@@ -40,6 +41,7 @@ class BootStrap {
         RoleMenu.findByUrl('/profileUser/saveProfile/**') ?: new RoleMenu(url: '/profileUser/saveProfile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/profileUser/saveProfileImage/**') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'ROLE_USER').save()
 
         //ADMIN
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
@@ -61,16 +63,19 @@ class BootStrap {
         RoleMenu.findByUrl('/fileItem/**') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
 
 
-        def adminRole = new Role(authority: 'ROLE_ADMIN').save()
-        def userRole = new Role(authority: 'ROLE_USER').save()
+        def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save()
+        def userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save()
+        def contributorRole = Role.findByAuthority('ROLE_CONTRIBUTOR') ?: new Role(authority: 'ROLE_CONTRIBUTOR').save()
 
-        def user = new User(username: 'admin', password: 'admin123')
-        def ridho = new User(username: 'ridho', password: 'ridho123')
-        def atuanda = new User(username: 'atuanda', password: 'atuanda123')
+        def user = User.findByUsername('admin') ?: new User(username: 'admin', password: 'admin123')
+        def ridho = User.findByUsername('ridho') ?: new User(username: 'ridho', password: 'ridho123')
+        def atuanda = User.findByUsername('atuanda') ?: new User(username: 'atuanda', password: 'atuanda123')
+        def contributor = User.findByUsername('contributor') ?: new User(username: 'contributor', password: 'contributor123')
 
         user.save(flush: true)
         ridho.save(flush: true)
         atuanda.save(flush: true)
+        contributor.save(flush: true)
 
         UserRole.create user, adminRole
         UserRole.create ridho, adminRole
@@ -98,7 +103,6 @@ class BootStrap {
         Account.findByName('Team 2') ?: new Account(maxTeamUser: 3, name: 'Team 2', type: 'Team', lisence: 'Standard Lisence', maxImages: 0, price: 479, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: false).save(flush: true)
         Account.findByName('Team 3') ?: new Account(maxTeamUser: 4, name: 'Team 3', type: 'Team', lisence: 'Standard Lisence', maxImages: 0, price: 579, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
         Account.findByName('Enterprice') ?: new Account(maxTeamUser: 4, name: 'Enterprice', type: 'Enterprice Plan', lisence: 'Enterprice', maxImages: 0, price: 700, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
-
 
         //Items
         def item1 = Item.findByName("Item 1") ?: new Item(name: "Item 1", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 20, currency: "USD", userOwner: atuanda).save(flush: true)

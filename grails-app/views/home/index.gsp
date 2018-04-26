@@ -35,9 +35,11 @@
         <g:each in="${com.picsell.data.Item.findAll()}" var="item" status="i">
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="${createLink(action: 'itemDetail')}"><img class="card-img-top"
-                                                                                           src="https://www.pets4homes.co.uk/images/articles/771/large/cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg"
-                                                                                           alt=""></a>
+                    <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
+                        <img class="card-img-top"
+                             src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
+                             alt="">
+                    </a>
 
                     <div class="card-body">
                         <h4 class="card-title">

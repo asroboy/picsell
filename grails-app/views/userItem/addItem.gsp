@@ -39,23 +39,37 @@
         </div>
         <!-- /.col-lg-3 -->
 
-        <div class="col-lg-10">
+
+        <div class="col-lg-5">
 
             <div class="row">
-                <div style="margin-left: 10px; margin-bottom: 50px">
-                    <g:form url="[resource: itemInstance, action: 'saveItem']">
+                <div style="margin-left: 20px; margin-bottom: 50px">
+                    <g:uploadForm url="[action: 'mSaveItem']">
                         <fieldset class="form">
+                            <g:render template="formAddImageItem"/>
                             <g:render template="formAddItem"/>
                         </fieldset>
                         <fieldset class="buttons">
                             <g:submitButton name="create" class="save btn btn-info"
                                             value="${message(code: 'default.button.create.label', default: 'Create')}"/>
                         </fieldset>
-                    </g:form>
+                    </g:uploadForm>
                 </div>
 
             </div>
 
+        </div>
+
+        <div class="col-lg-5">
+            <div class="row">
+                <div style="margin-left: 20px; margin-bottom: 50px">
+
+                    %{--<img src="${resource(dir: 'images', file: 'background.jpeg')}" style="width: 100%"/>--}%
+                    %{--<br/>--}%
+
+                </div>
+
+            </div>
         </div>
         <!-- /.row -->
 

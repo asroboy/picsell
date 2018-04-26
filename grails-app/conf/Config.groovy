@@ -87,6 +87,8 @@ environments {
     development {
         grails.logging.jul.usebridge = false
 //        grails.serverURL =  "http://localhost:8081/${appName}"
+
+        uploadFolder = "c:/temp/upload/"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -151,3 +153,4 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':  ['permitAll']
 ]
 
+plugin.platformCore.events.catchFlushExceptions = true
