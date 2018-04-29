@@ -12,10 +12,11 @@ class Account {
     int price
     String inCurrency
     String info
+
     static constraints = {
-        name nullable: false
-        type inList: ['Subscription', 'On Demand', 'Team', 'Enterpricce Plan']
-        lisence inList: ['Annual/Monthly', 'Standard/Enhance', 'Standard License', 'Enterpricce']
+        name nullable: false, unique: true
+        type inList: ['Subscription', 'On Demand', 'Team', 'Enterprice Plan']
+        lisence inList: ['Annual/Monthly', 'Standard/Enhance', 'Standard License', 'Enterprice']
         inCurrency inList: ['IDR', 'USD', 'SGD']
         info nullable: true
     }

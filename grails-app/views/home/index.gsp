@@ -5,18 +5,20 @@
   Time: 10:25 AM
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="com.picsell.security.Role; com.picsell.security.User" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="theme_portfolio_gh"/>
     <title></title>
+    <g:set var="userObject"
+           value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
+    %{--<g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>--}%
+    <g:set var="userAccounts" value="${com.picsell.data.UserAccount.findAllByUser(userObject)}"/>
 </head>
 
 <body>
-
 <!-- Page Content -->
 <div class="container">
-
     <!-- Page Heading -->
     <div>
         <h1 class="my-2">
@@ -26,12 +28,9 @@
         <div style="margin-bottom: 20px">
             <h4><small><i>${com.picsell.data.Category.findByName(params.cat)?.description}</i></small></h4>
         </div>
-
     </div>
 
-
     <div class="row">
-
         <g:each in="${com.picsell.data.Item.findAll()}" var="item" status="i">
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
@@ -53,84 +52,8 @@
                 </div>
             </div>
         </g:each>
-
-
-    %{--<div class="col-lg-4 col-sm-6 portfolio-item">--}%
-    %{--<div class="card h-100">--}%
-    %{--<a href="#"><img class="card-img-top"--}%
-    %{--src="https://www.pets4homes.co.uk/images/articles/4039/large/the-10-longest-lived-cat-breeds-58f9e54fa0aa0.jpg"--}%
-    %{--alt=""></a>--}%
-
-    %{--<div class="card-body">--}%
-    %{--<h4 class="card-title">--}%
-    %{--<a href="#">Project Two</a>--}%
-    %{--</h4>--}%
-
-    %{--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-
-    %{--<div class="col-lg-4 col-sm-6 portfolio-item">--}%
-    %{--<div class="card h-100">--}%
-    %{--<a href="#"><img class="card-img-top"--}%
-    %{--src="https://www.pets4homes.co.uk/images/breeds/41/large/b00ec15d7e8513d5c9bdd8a81934792b.jpg"--}%
-    %{--alt=""></a>--}%
-
-    %{--<div class="card-body">--}%
-    %{--<h4 class="card-title">--}%
-    %{--<a href="#">Project Three</a>--}%
-    %{--</h4>--}%
-
-    %{--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-
-    %{--<div class="col-lg-4 col-sm-6 portfolio-item">--}%
-    %{--<div class="card h-100">--}%
-    %{--<a href="#"><img class="card-img-top" src="https://www.pets4homes.co.uk/images/articles/771/large/cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg" alt=""></a>--}%
-
-    %{--<div class="card-body">--}%
-    %{--<h4 class="card-title">--}%
-    %{--<a href="#">Project Four</a>--}%
-    %{--</h4>--}%
-
-    %{--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-
-    %{--<div class="col-lg-4 col-sm-6 portfolio-item">--}%
-    %{--<div class="card h-100">--}%
-    %{--<a href="#"><img class="card-img-top" src="https://www.pets4homes.co.uk/images/articles/771/large/cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg" alt=""></a>--}%
-
-    %{--<div class="card-body">--}%
-    %{--<h4 class="card-title">--}%
-    %{--<a href="#">Project Five</a>--}%
-    %{--</h4>--}%
-
-    %{--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-
-    %{--<div class="col-lg-4 col-sm-6 portfolio-item">--}%
-    %{--<div class="card h-100">--}%
-    %{--<a href="#"><img class="card-img-top" src="https://www.pets4homes.co.uk/images/articles/771/large/cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg" alt=""></a>--}%
-
-    %{--<div class="card-body">--}%
-    %{--<h4 class="card-title">--}%
-    %{--<a href="#">Project Six</a>--}%
-    %{--</h4>--}%
-
-    %{--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>--}%
-    %{--</div>--}%
-    %{--</div>--}%
-    %{--</div>--}%
     </div>
     <!-- /.row -->
-
     <!-- Pagination -->
     <ul class="pagination justify-content-center">
         <li class="page-item">
@@ -155,9 +78,82 @@
             </a>
         </li>
     </ul>
-
 </div>
-<!-- /.container -->
 
+<sec:ifLoggedIn>
+
+    <g:if test="${userAccounts.size() == 0}">
+
+        <div class="container">
+            %{--<button id="button_popup_register" type="button" class="btn btn-lg btn-block btn-outline btn-success" data-toggle="modal"--}%
+            %{--data-target="#myModal">--}%
+            %{--SET ROLE--}%
+            %{--</button>--}%
+
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">What are you will be?</h4>
+                            %{--<button type="button" class="close" data-dismiss="modal">&times;</button>--}%
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-info" data-dismiss="modal"
+                                        onclick="register_as_general_user()"
+                                        style="width: 100%">a General user</button>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="button" class="btn btn-warning" data-dismiss="modal"
+                                        onclick="register_as_contributor()"
+                                        style="width: 100%">a Contributor</button>
+                            </div>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="application/javascript">
+
+            $('#myModal').modal({backdrop: 'static', keyboard: false})
+
+            function register_as_general_user() {
+
+                var URL = "${createLink(controller: 'subcribtion', action: 'saveUsrRole')}";
+
+                $.ajax({
+                    url: URL,
+                    data: {id: '${sec.loggedInUserInfo(field: 'id')}', role_name: 'ROLE_USER'},
+                    success: function (resp) {
+                        console.log(resp);
+                        window.location = "${createLink(controller: 'subcribtion', action: 'index')}";
+                    }
+                });
+            }
+
+            function register_as_contributor() {
+                var URL = "${createLink(controller: 'subcribtion', action: 'saveUsrRole')}";
+
+                $.ajax({
+                    url: URL,
+                    data: {id: '${sec.loggedInUserInfo(field: 'id')}', role_name: 'ROLE_CONTRIBUTOR'},
+                    success: function (resp) {
+                        console.log(resp);
+                    }
+                });
+
+            }
+        </script>
+    </g:if>
+
+</sec:ifLoggedIn>
 </body>
+
 </html>

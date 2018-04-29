@@ -40,8 +40,8 @@ class BootStrap {
         RoleMenu.findByUrl('/profileUser/profile/**') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/profileUser/saveProfile/**') ?: new RoleMenu(url: '/profileUser/saveProfile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/profileUser/saveProfileImage/**') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_USER').save()
-        RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
 
         //ADMIN
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
@@ -80,6 +80,7 @@ class BootStrap {
         UserRole.create user, adminRole
         UserRole.create ridho, adminRole
         UserRole.create atuanda, userRole
+        UserRole.create contributor, contributorRole
 
         UserRole.withSession {
             it.flush()
@@ -100,9 +101,9 @@ class BootStrap {
         Account.findByName('On Demand 1') ?: new Account(maxTeamUser: 1, name: 'On Demand 1', type: 'On Demand', lisence: 'Standard/Enhance', maxImages: 5, price: 49, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
         Account.findByName('On Demand 2') ?: new Account(maxTeamUser: 1, name: 'On Demand 2', type: 'On Demand', lisence: 'Standard/Enhance', maxImages: 25, price: 229, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
         Account.findByName('Team 1') ?: new Account(maxTeamUser: 2, name: 'Team 1', type: 'Team', lisence: 'Standard License', maxImages: 0, price: 379, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: false).save(flush: true)
-        Account.findByName('Team 2') ?: new Account(maxTeamUser: 3, name: 'Team 2', type: 'Team', lisence: 'Standard Lisence', maxImages: 0, price: 479, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: false).save(flush: true)
-        Account.findByName('Team 3') ?: new Account(maxTeamUser: 4, name: 'Team 3', type: 'Team', lisence: 'Standard Lisence', maxImages: 0, price: 579, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
-        Account.findByName('Enterprice') ?: new Account(maxTeamUser: 4, name: 'Enterprice', type: 'Enterprice Plan', lisence: 'Enterprice', maxImages: 0, price: 700, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+        Account.findByName('Team 2') ?: new Account(maxTeamUser: 3, name: 'Team 2', type: 'Team', lisence: 'Standard License', maxImages: 0, price: 479, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: false).save(flush: true)
+        Account.findByName('Team 3') ?: new Account(maxTeamUser: 4, name: 'Team 3', type: 'Team', lisence: 'Standard License', maxImages: 0, price: 579, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+        Account.findByName('Enterprice') ?: new Account(maxTeamUser: 1000, name: 'Enterprice', type: 'Enterprice Plan', lisence: 'Enterprice', maxImages: 0, price: 700, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
 
         //Items
         def item1 = Item.findByName("Item 1") ?: new Item(name: "Item 1", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 20, currency: "USD", userOwner: atuanda).save(flush: true)

@@ -39,7 +39,8 @@
 
     <sec:ifLoggedIn>
         <div class="navbar-nav ml-auto  dropdown ">
-            <img src="${resource(dir: 'images', file: 'profile_dmy.png')}" style="height: 30px; margin: 5px; border-radius: 50%;"/>
+            <img src="${resource(dir: 'images', file: 'profile_dmy.png')}"
+                 style="height: 30px; margin: 5px; border-radius: 50%;"/>
             <a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                aria-expanded="false">Hi, ${userObject?.username}<span class="caret"></span></a>
             %{--<button type="button" class="nav-link dropdown-toggle">--}%
@@ -59,10 +60,11 @@
                                href="${createLink(controller: 'userAccount', action: 'myAccount')}"><i
                                     class="fa fa-at fa-fw"></i> My Account</a></li>
 
-                        <li><a class="dropdown-item"
-                               href="${createLink(controller: 'userItem', action: 'index')}"><i
-                                    class="fa fa-rocket fa-fw"></i> My Items</a></li>
-
+                        <g:if test="${userRole?.role?.authority.equals("ROLE_CONTRIBUTOR")}">
+                            <li><a class="dropdown-item"
+                                   href="${createLink(controller: 'userItem', action: 'index')}"><i
+                                        class="fa fa-rocket fa-fw"></i> My Items</a></li>
+                        </g:if>
                         <li><a class="dropdown-item"
                                href="${createLink(controller: 'myChart', action: 'index')}"><i
                                     class="fa fa-shopping-basket fa-fw"></i> My Chart</a></li>
