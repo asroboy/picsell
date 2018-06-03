@@ -10,6 +10,8 @@
 <head>
     <meta name="layout" content="theme_portfolio_gh">
     <title></title>
+    <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
+          rel="stylesheet">
 </head>
 
 <body>
@@ -17,36 +19,38 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-lg-2">
-
-        </div>
-
-        <div class="col-lg-10">
-            <h1 class="my-4">My Items</h1>
+        <div class="col-lg-12">
+            <div class="label-red" style="margin-bottom: 50px">
+                <b>My Items</b>
+            </div>
         </div>
     </div>
 
     <div class="row">
 
-        <div class="col-lg-2">
-            <div style="margin-bottom: 2rem">
-                <a href="${createLink(action: 'addItem')}" class="btn btn-block btn-outline-primary"
-                   style="text-align: left"><i
-                        class="fa fa-plus"></i> Add Item</a>
-                <a href="#" class="btn btn-block btn-outline-danger" style="text-align: left"><i
-                        class="fa fa-dollar"></i>  Pricing</a>
-                <a href="#" class="btn btn-block btn-outline-danger" style="text-align: left"><i
-                        class="fa fa-recycle"></i> All Items</a>
-                <a href="#" class="btn btn-block btn-outline-info" style="text-align: left"><i
-                        class="fa fa-anchor"></i> Active Items</a>
-                <a href="#" class="btn btn-block btn-outline-info" style="text-align: left"><i
-                        class="fa fa-lemon-o"></i> Not Active Items</a>
-            </div>
+        %{--<div class="col-lg-2">--}%
+        %{--<div style="margin-bottom: 2rem">--}%
+        %{----}%
+        %{--<a href="#" class="btn btn-block btn-outline-danger" style="text-align: left"><i--}%
+        %{--class="fa fa-dollar"></i>  Pricing</a>--}%
+        %{--<a href="#" class="btn btn-block btn-outline-danger" style="text-align: left"><i--}%
+        %{--class="fa fa-recycle"></i> All Items</a>--}%
+        %{--<a href="#" class="btn btn-block btn-outline-info" style="text-align: left"><i--}%
+        %{--class="fa fa-anchor"></i> Active Items</a>--}%
+        %{--<a href="#" class="btn btn-block btn-outline-info" style="text-align: left"><i--}%
+        %{--class="fa fa-lemon-o"></i> Not Active Items</a>--}%
+        %{--</div>--}%
 
-        </div>
+        %{--</div>--}%
         <!-- /.col-lg-3 -->
 
-        <div class="col-lg-10">
+        <div class="col-lg-12">
+            <div style="margin-bottom: 15px; width: 200px">
+                <a href="${createLink(action: 'addItem')}" class="btn btn-block btn-outline-danger"
+                   style="text-align: left"><i
+                        class="fa fa-plus"></i> Add Item</a>
+
+            </div>
 
             <div class="row">
                 <g:each in="${items}" var="item">
@@ -63,11 +67,13 @@
                                     <a href="#">${item?.name}</a>
                                 </h4>
 
-                                <p>
-                                    ${item?.price} ${item?.currency}
-                                </p>
+                                <div>Price : ${item?.price} ${item?.currency}</div>
 
-                                <p class="card-text">${item?.description}</p>
+                                <div>Description : ${item?.description}</div>
+
+                                <div>Approval status : ${item?.status}</div>
+
+                                <div>Status info : ${item?.statusInfo}</div>
                             </div>
                         </div>
                     </div>

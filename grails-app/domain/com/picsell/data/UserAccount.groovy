@@ -7,6 +7,7 @@ class UserAccount {
 
     User user
     Account account
+
     static constraints = {
         user nullable: false
         account nullable: false

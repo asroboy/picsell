@@ -1,0 +1,82 @@
+
+a {
+    color: #d00006;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #d00006;
+}
+
+a.white_link:hover {
+    background-color: white;
+}
+
+.white_link {
+    color: white;
+}
+
+.black_link {
+    color: black;
+}
+
+.footer_black_link {
+    color: black;
+}
+
+a.footer_black_link:hover {
+    color: white;
+}
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+}
+
+div.bottomright_social {
+    position: absolute;
+    bottom: 5px;
+    right: 120px;
+    width: 200px;
+    height: 80px;
+}
+
+input.search {
+    /*background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');*/
+    /*background-repeat: no-repeat;*/
+    text-indent: 20px;
+    width: 300px;
+}
+
+div.bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+.login_form {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 50em;
+    height: 18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    /*border: 1px solid #ccc;*/
+    background-color: #ffffff;
+}
+
+.login_panel_body {
+    text-align: center;
+    color: #d00006;
+    background-color: #e4e4e4;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+

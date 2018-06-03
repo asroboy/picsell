@@ -4,25 +4,27 @@
 
 <div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'name', 'error')} ">
     <label for="name">
-        <g:message code="item.name.label" default="Name" />
+        <g:message code="item.name.label" default="Name"/>
 
     </label>
-    <g:textField name="name" value="${itemInstance?.name}" class="form-control" />
+    <g:textField name="name" value="${itemInstance?.name}" class="form-control"/>
 
 </div>
 
 <div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'description', 'error')} ">
     <label for="description">
-        <g:message code="item.description.label" default="Description" />
+        <g:message code="item.description.label" default="Description"/>
 
     </label>
-    <g:textArea name="description" cols="40" rows="5" maxlength="1000" value="${itemInstance?.description}" class="form-control" />
+    <g:textArea name="description" cols="40" rows="5" maxlength="1000" value="${itemInstance?.description}"
+                class="form-control"/>
 
 </div>
 
-<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'userOwner', 'error')} required" style="display: none">
+<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'userOwner', 'error')} required"
+     style="display: none">
     <label for="userOwner">
-        <g:message code="item.userOwner.label" default="User Owner" />
+        <g:message code="item.userOwner.label" default="User Owner"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="userOwner.id" value="${sec.loggedInUserInfo(field: 'id')}" class="form-control"/>
@@ -30,23 +32,49 @@
 
 </div>
 
-<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'price', 'error')} required">
-    <label for="price">
-        <g:message code="item.price.label" default="Price" />
-        <span class="required-indicator">*</span>
+
+
+%{--<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'price', 'error')} required">--}%
+%{--<label for="price">--}%
+%{--<g:message code="item.tag.label" default="Tags"/>--}%
+%{--</label>--}%
+%{--<g:textField name="tags" value="" class="form-control"/>--}%
+
+%{--</div>--}%
+
+<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'category', 'error')} ">
+    <label for="category">
+        <g:message code="item.category.label" default="Category"/>
+
     </label>
-    <g:field name="price" value="${fieldValue(bean: itemInstance, field: 'price')}" required="" class="form-control" />
+    <g:select name="category" from="${com.picsell.data.Category.list()}" optionKey="id" optionValue="name"
+              value="${itemInstance?.category?.id}" noSelection="['': '']"
+              class="form-control"/>
 
 </div>
 
-
-
-<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'currency', 'error')} ">
-    <label for="currency">
-        <g:message code="item.currency.label" default="Currency" />
-
+<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'category', 'error')} ">
+    <label for="tags">
+        <g:message code="item.tags.label" default="Tags - (Separate with comma)"/>
     </label>
-    <g:select name="currency" from="${itemInstance.constraints.currency.inList}" value="${itemInstance?.currency}" valueMessagePrefix="item.currency" noSelection="['': '']" class="form-control" />
+    <g:textField name="tags"  class="form-control"/>
+
+</div>
+
+<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'price', 'error')} required">
+    <label for="price">
+        <g:message code="item.price.label" default="Price"/>
+        <span class="required-indicator">*</span>
+    </label>
+    <table width="100%">
+        <tr>
+            <td><g:textField name="price" value="${fieldValue(bean: itemInstance, field: 'price')}" required=""
+                             class="form-control"/></td>
+            <td><g:select name="currency" from="${itemInstance.constraints.currency.inList}"
+                          value="${itemInstance?.currency}"
+                          valueMessagePrefix="item.currency" noSelection="['': '']" class="form-control"/></td>
+        </tr>
+    </table>
 
 </div>
 

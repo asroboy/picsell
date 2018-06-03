@@ -16,7 +16,7 @@
     <link href="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/css/bootstrap.min.css')}"
           rel="stylesheet">
     %{--<link href="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/css/bootstrap.css')}"--}%
-          %{--rel="stylesheet">--}%
+    %{--rel="stylesheet">--}%
 
     <!-- Custom Fonts -->
     <link href="${resource(dir: 'sbadmin', file: '/vendor/font-awesome/css/font-awesome.min.css')}" rel="stylesheet"
@@ -37,6 +37,9 @@
            value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
 
+    <link href="${resource(dir: 'css', file: 'picsell_custom.css')}"
+          rel="stylesheet">
+
     <g:layoutHead/>
 </head>
 
@@ -52,6 +55,13 @@
 
 
 %{--<script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/js/bootstrap.js')}"></script>--}%
+<script>
+    function search() {
+        var search_text = document.getElementById('search_text');
+        var key = search_text.value;
+        window.location = '${createLink(controller: 'home', action: 'index')}' + '?key=' + key;
+    }
+</script>
 
 </body>
 

@@ -1,6 +1,7 @@
 package com.picsell.data
 
 import com.picsell.security.User
+import grails.converters.JSON
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -17,9 +18,11 @@ class ProfileUserController {
 
 
     def profile(ProfileUser profileUserInstance) {
-        if(profileUserInstance){
+        if (profileUserInstance) {
+
+
             respond profileUserInstance
-        }else{
+        } else {
             profileUserInstance = new ProfileUser(user: User.get(params.uid))
             respond profileUserInstance
         }
@@ -38,7 +41,7 @@ class ProfileUserController {
 
     @Transactional
     def saveProfileImage(ProfileUser profileUserInstance) {
-        if(!profileUserInstance.id){
+        if (!profileUserInstance.id) {
             profileUserInstance.save()
 
             println("Save new profile === > " + profileUserInstance?.id)
@@ -48,14 +51,21 @@ class ProfileUserController {
             if (file.empty) {
                 flash.message = "File cannot be empty"
             } else {
-                def imageInstance = ImageFile.findByTableNameAndTableId(profileUserInstance.class.simpleName, profileUserInstance.id)?: new ImageFile()
+                def imageInstance = ImageFile.findByTableNameAndTableId(profileUserInstance.class.simpleName, profileUserInstance.id) ?: new ImageFile()
                 imageInstance.tableName = profileUserInstance.class.simpleName
                 imageInstance.tableId = profileUserInstance.id
                 imageInstance.namaFile = file.originalFilename
                 imageInstance.lampiran = file.getBytes()
+                imageInstance.path = "-"
                 imageInstance.ukuranFile = file.getBytes().length
-                imageInstance.save()
-                print(imageInstance)
+                print(file.getBytes().length)
+                imageInstance.save(flush: true)
+                if (imageInstance.hasErrors()) {
+                    print(imageInstance.errors)
+                } else {
+                    print(imageInstance)
+                }
+
             }
         }
 
@@ -84,7 +94,6 @@ class ProfileUserController {
             '*' { respond profileUserInstance, [status: CREATED] }
         }
     }
-
 
 
     @Transactional

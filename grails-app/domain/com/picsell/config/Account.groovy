@@ -15,8 +15,8 @@ class Account {
 
     static constraints = {
         name nullable: false, unique: true
-        type inList: ['Subscription', 'On Demand', 'Team', 'Enterprice Plan']
-        lisence inList: ['Annual/Monthly', 'Standard/Enhance', 'Standard License', 'Enterprice']
+        type inList: ['Individual', 'On Demand', 'Team', 'Enterprice']
+        lisence inList: ['Annually', 'Monthly', 'Daily', 'Standard', 'Enhance', 'Enterprice']
         inCurrency inList: ['IDR', 'USD', 'SGD']
         info nullable: true
     }

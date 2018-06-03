@@ -35,12 +35,13 @@ class BootStrap {
         RoleMenu.findByUrl('/item/itemDetail/**') ?: new RoleMenu(url: '/item/itemDetail/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/document/download/**') ?: new RoleMenu(url: '/document/download/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrlAndConfigAttribute('/subcribtion/*', 'permitAll') ?: new RoleMenu(url: '/subcribtion/*', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/api/**') ?: new RoleMenu(url: '/api/**', configAttribute: 'permitAll').save()
 
         //USER
         RoleMenu.findByUrl('/profileUser/profile/**') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/profileUser/saveProfile/**') ?: new RoleMenu(url: '/profileUser/saveProfile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/profileUser/saveProfileImage/**') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_CONTRIBUTOR,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
 
         //ADMIN
@@ -61,6 +62,7 @@ class BootStrap {
         RoleMenu.findByUrl('/profileUser/**') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
         RoleMenu.findByUrl('/item/**') ?: new RoleMenu(url: '/item/*', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
         RoleMenu.findByUrl('/fileItem/**') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
+        RoleMenu.findByUrl('/tos/**') ?: new RoleMenu(url: '/tos/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
 
 
         def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save()
@@ -94,27 +96,45 @@ class BootStrap {
         def lifestyle = Category.findByName('Lifestyle') ?: new Category(name: 'Lifestyle').save()
 
         //Account
-        Account.findByName('Subscription 1') ?: new Account(maxTeamUser: 1, name: 'Subscription 1', type: 'Subscription', lisence: 'Annual/Monthly', maxImages: 10, price: 49, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
-        Account.findByName('Subscription 2') ?: new Account(maxTeamUser: 1, name: 'Subscription 2', type: 'Subscription', lisence: 'Annual/Monthly', maxImages: 50, price: 125, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
-        Account.findByName('Subscription 3') ?: new Account(maxTeamUser: 1, name: 'Subscription 3', type: 'Subscription', lisence: 'Annual/Monthly', maxImages: 350, price: 199, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
-        Account.findByName('Subscription 4') ?: new Account(maxTeamUser: 1, name: 'Subscription 4', type: 'Subscription', lisence: 'Annual/Monthly', maxImages: 750, price: 249, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
-        Account.findByName('On Demand 1') ?: new Account(maxTeamUser: 1, name: 'On Demand 1', type: 'On Demand', lisence: 'Standard/Enhance', maxImages: 5, price: 49, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
-        Account.findByName('On Demand 2') ?: new Account(maxTeamUser: 1, name: 'On Demand 2', type: 'On Demand', lisence: 'Standard/Enhance', maxImages: 25, price: 229, inCurrency: 'USD', unlimitedImages: false, allowMoreUser: false).save(flush: true)
-        Account.findByName('Team 1') ?: new Account(maxTeamUser: 2, name: 'Team 1', type: 'Team', lisence: 'Standard License', maxImages: 0, price: 379, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: false).save(flush: true)
-        Account.findByName('Team 2') ?: new Account(maxTeamUser: 3, name: 'Team 2', type: 'Team', lisence: 'Standard License', maxImages: 0, price: 479, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: false).save(flush: true)
-        Account.findByName('Team 3') ?: new Account(maxTeamUser: 4, name: 'Team 3', type: 'Team', lisence: 'Standard License', maxImages: 0, price: 579, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
-        Account.findByName('Enterprice') ?: new Account(maxTeamUser: 1000, name: 'Enterprice', type: 'Enterprice Plan', lisence: 'Enterprice', maxImages: 0, price: 700, inCurrency: 'USD', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+        Account.findByName('Subscription 1') ?: new Account(maxTeamUser: 1, name: 'Individual 1', type: 'Individual', lisence: 'Monthly', maxImages: 10, price: 10000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 2') ?: new Account(maxTeamUser: 1, name: 'Individual 2', type: 'Individual', lisence: 'Monthly', maxImages: 50, price: 50000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 3') ?: new Account(maxTeamUser: 1, name: 'Individual 3', type: 'Individual', lisence: 'Monthly', maxImages: 100, price: 100000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 4') ?: new Account(maxTeamUser: 1, name: 'Individual 4', type: 'Individual', lisence: 'Monthly', maxImages: 500, price: 500000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 5') ?: new Account(maxTeamUser: 1, name: 'Individual 5', type: 'Individual', lisence: 'Monthly', maxImages: 1000, price: 1000000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+
+        Account.findByName('Subscription 6') ?: new Account(maxTeamUser: 1, name: 'Individual 6', type: 'Individual', lisence: 'Annually', maxImages: 10, price: 100000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 7') ?: new Account(maxTeamUser: 1, name: 'Individual 7', type: 'Individual', lisence: 'Annually', maxImages: 50, price: 500000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 8') ?: new Account(maxTeamUser: 1, name: 'Individual 8', type: 'Individual', lisence: 'Annually', maxImages: 100, price: 1000000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 9') ?: new Account(maxTeamUser: 1, name: 'Individual 9', type: 'Individual', lisence: 'Annually', maxImages: 500, price: 5000000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+        Account.findByName('Subscription 10') ?: new Account(maxTeamUser: 1, name: 'Individual 10', type: 'Individual', lisence: 'Annually', maxImages: 1000, price: 10000000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)
+
+
+
+
+        Account.findByName('Team 1') ?: new Account(maxTeamUser: 10, name: 'Team 1', type: 'Team', lisence: 'Annually', maxImages: 0, price: 100000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: false).save(flush: true)
+        Account.findByName('Team 2') ?: new Account(maxTeamUser: 50, name: 'Team 2', type: 'Team', lisence: 'Annually', maxImages: 0, price: 500000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: false).save(flush: true)
+        Account.findByName('Team 3') ?: new Account(maxTeamUser: 100, name: 'Team 3', type: 'Team', lisence: 'Annually', maxImages: 0, price: 1000000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+        Account.findByName('Team 4') ?: new Account(maxTeamUser: 500, name: 'Team 4', type: 'Team', lisence: 'Annually', maxImages: 0, price: 5000000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+        Account.findByName('Team 5') ?: new Account(maxTeamUser: 1000, name: 'Team 5', type: 'Team', lisence: 'Annually', maxImages: 0, price: 10000000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+
+        Account.findByName('Team 1') ?: new Account(maxTeamUser: 10, name: 'Team 6', type: 'Team', lisence: 'Monthly', maxImages: 0, price: 10000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: false).save(flush: true)
+        Account.findByName('Team 2') ?: new Account(maxTeamUser: 50, name: 'Team 7', type: 'Team', lisence: 'Monthly', maxImages: 0, price: 50000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: false).save(flush: true)
+        Account.findByName('Team 3') ?: new Account(maxTeamUser: 100, name: 'Team 8', type: 'Team', lisence: 'Monthly', maxImages: 0, price: 100000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+        Account.findByName('Team 4') ?: new Account(maxTeamUser: 500, name: 'Team 9', type: 'Team', lisence: 'Monthly', maxImages: 0, price: 500000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+        Account.findByName('Team 5') ?: new Account(maxTeamUser: 1000, name: 'Team 10', type: 'Team', lisence: 'Monthly', maxImages: 0, price: 1000000, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
+
+        Account.findByName('Enterprice') ?: new Account(maxTeamUser: 1000, name: 'Enterprice', type: 'Enterprice', lisence: 'Enterprice', maxImages: 0, price: 700, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
 
         //Items
-        def item1 = Item.findByName("Item 1") ?: new Item(name: "Item 1", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 20, currency: "USD", userOwner: atuanda).save(flush: true)
-        def item2 = Item.findByName("Item 2") ?: new Item(name: "Item 2", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 25, currency: "USD", userOwner: atuanda).save(flush: true)
-        def item3 = Item.findByName("Item 3") ?: new Item(name: "Item 3", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 30, currency: "USD", userOwner: atuanda).save(flush: true)
-        def item4 = Item.findByName("Item 4") ?: new Item(name: "Item 4", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 33, currency: "USD", userOwner: atuanda).save(flush: true)
-
-        ItemHasCategory.findByItem(item1) ?: new ItemHasCategory(item: item1, category: environtment).save(flush: true)
-        ItemHasCategory.findByItem(item2) ?: new ItemHasCategory(item: item2, category: building).save(flush: true)
-        ItemHasCategory.findByItem(item3) ?: new ItemHasCategory(item: item3, category: transport).save(flush: true)
-        ItemHasCategory.findByItem(item4) ?: new ItemHasCategory(item: item4, category: outfit).save(flush: true)
+//        def item1 = Item.findByName("Item 1") ?: new Item(name: "Item 1", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 20, currency: "USD", userOwner: atuanda).save(flush: true)
+//        def item2 = Item.findByName("Item 2") ?: new Item(name: "Item 2", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 25, currency: "USD", userOwner: atuanda).save(flush: true)
+//        def item3 = Item.findByName("Item 3") ?: new Item(name: "Item 3", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 30, currency: "USD", userOwner: atuanda).save(flush: true)
+//        def item4 = Item.findByName("Item 4") ?: new Item(name: "Item 4", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 33, currency: "USD", userOwner: atuanda).save(flush: true)
+//
+//        ItemHasCategory.findByItem(item1) ?: new ItemHasCategory(item: item1, category: environtment).save(flush: true)
+//        ItemHasCategory.findByItem(item2) ?: new ItemHasCategory(item: item2, category: building).save(flush: true)
+//        ItemHasCategory.findByItem(item3) ?: new ItemHasCategory(item: item3, category: transport).save(flush: true)
+//        ItemHasCategory.findByItem(item4) ?: new ItemHasCategory(item: item4, category: outfit).save(flush: true)
 
 
         TermOfService.findByTos("Terms of Service (\"Terms\")\n" +

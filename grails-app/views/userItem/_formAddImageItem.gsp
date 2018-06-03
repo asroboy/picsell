@@ -1,6 +1,4 @@
 <div class="form-group">
-    <label for="file">
-        <g:message code="item.image.label" default="Image" />
-    </label>
-    <input type="file" name="file" class="form-control" />
+    <img id="blah" src="${resource(dir: 'images', file: 'blank_image.png')}" style="width: 100%; height: auto"/>
+    <input type="file" name="file" id="imgInp" class="form-control" />
 </div>

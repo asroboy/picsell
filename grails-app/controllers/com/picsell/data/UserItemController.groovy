@@ -12,8 +12,17 @@ class UserItemController {
         [items: items]
     }
 
+    def addFirstItem() {
+        respond new Item(params)
+    }
+
     def addItem() {
         respond new Item(params)
+    }
+
+    def contributorItems(){
+        def items = params.status? Item.findAllByStatus(params.status) : Item.findAll()
+        [items: items]
     }
 
     def itemDetail() {
@@ -27,7 +36,11 @@ class UserItemController {
         mItemInstance.description = request.getParameter("description")
         mItemInstance.price = Double.parseDouble(request.getParameter("price"))
         mItemInstance.currency = request.getParameter("currency")
+        def category = Category.get(request.getParameter("category"))
+        mItemInstance.category = category
+        mItemInstance.createdDate = new Date()
         mItemInstance.userOwner = User.get(request.getParameter("userOwner.id"))
+        mItemInstance.status = "pending"
 
         def file = request.getFile('file')
         if (file.empty) {

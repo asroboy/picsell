@@ -1,0 +1,219 @@
+
+.label-red {
+    background: #d00006;
+    width: 240px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.label-red-no-topmargin {
+    background: #d00006;
+    width: 240px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.plans {
+    padding-left: 30%;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin: 10px;
+    font-size: 14pt;
+    color: #d00006;
+}
+
+.plans-end {
+    text-align: center;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin: 10px;
+    font-size: 18pt;
+    color: white;
+}
+
+.plans-small-font {
+    padding-left: 30%;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin: 10px;
+    font-size: 11pt;
+    color: #d00006;
+}
+
+.plans-table-left {
+    width: 25%;
+    border-left: 0px solid white;
+    border-top: 0px solid white;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+    background-image: url("../images/bg-plans.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.plans-table-middle {
+    width: 25%;
+    border-left: 0px solid white;
+    border-top: 0px solid white;
+    border-right: 10px solid white;
+    border-bottom: 10px solid white;
+    background-image: url("../images/bg-plans.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.plans-table-right {
+    width: 25%;
+    border-left: 0px solid white;
+    border-top: 0px solid white;
+    border-right: 0px solid white;
+    border-bottom: 10px solid white;
+    background-image: url("../images/bg-plans.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.plans-table-end {
+    width: 25%;
+    border-left: 0px solid white;
+    border-top: 0px solid white;
+    border-right: 0px solid white;
+    border-bottom: 10px solid white;
+    background-color: #d00006;
+}
+
+tr {
+
+}
+
+.sub-part1 {
+    font-size: 18pt;
+    color: #d00006;
+    background-image: url("../images/bg-strip-left-right.jpg");
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    padding-left: 15px;
+    margin-left: -15px;
+}
+
+.sub-part2 {
+    font-size: 12pt;
+    color: #d00006;
+    background-image: url("../images/bg-strip-left-right.jpg");
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    padding-left: 15px;
+    margin-left: -15px;
+}
+
+.header-table-plans {
+    background-image: url("../images/bg-table-price-sm.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    color: #d00006;
+}
+
+.body-table-plans {
+    padding-left: 30px;
+    padding-bottom: 10px
+}
+
+.table-plans {
+    background-color: #e4e4e4;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+
+.right-option {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 40px;
+}
+
+.button-red {
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 1px 3px rgba(102, 102, 102, 0.33);
+    -moz-box-shadow: 0px 1px 3px rgba(102, 102, 102, 0.34);
+    box-shadow: 0px 1px 3px rgba(123, 123, 123, 0.18);
+    color: #ffffff;
+    background: #db1b21;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.button-red:hover {
+    background: #e3545b;
+    text-decoration: none;
+}
+
+.button-dark-red {
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 1px 3px rgba(102, 102, 102, 0.33);
+    -moz-box-shadow: 0px 1px 3px rgba(102, 102, 102, 0.34);
+    box-shadow: 0px 1px 3px rgba(123, 123, 123, 0.18);
+    color: #ffffff;
+    background: #8c1115;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.button-dark-red:hover {
+    background: #982e3a;
+    text-decoration: none;
+}
+
+.gray-box {
+    background-color: #dedede;
+    margin-top: 20px;
+    color: #c90000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.white-box {
+    background-color: #ffffff;
+    margin-top: 20px;
+    color: #c90000;
+    border-style: solid solid;
+    border-color: rgba(197, 197, 197, 0.78);
+    border-width: 1.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.label-under-icon-big {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 10pt;
+}

@@ -10,6 +10,8 @@
 <head>
     <meta name="layout" content="theme_portfolio_gh">
     <title></title>
+    <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
+          rel="stylesheet">
 </head>
 
 <body>
@@ -17,50 +19,59 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-lg-2">
-
+        <div class="col-lg-4">
+            <div class="my-4 label-red">New Item</div>
         </div>
 
-        <div class="col-lg-10">
-            <h1 class="my-4">New Item</h1>
-        </div>
     </div>
 
     <div class="row">
 
-        <div class="col-lg-2">
-            <div style="margin-bottom: 2rem">
-                <a href="${createLink(action: 'index')}" class="btn btn-block btn-outline-primary"
-                   style="text-align: left"><i
-                        class="fa fa-close"></i> Cancel</a>
+        <div class="col-lg-12">
+            <g:uploadForm url="[action: 'mSaveItem']">
+                <div class="row">
+                    <div class="col-lg-4">
+                        %{--<div style="margin-bottom: 2rem">--}%
+                        %{--<fieldset class="form">--}%
+                        <g:render template="formAddImageItem"/>
+                        %{--</fieldset>--}%
+                        %{--</div>--}%
+                    </div>
 
-            </div>
+                    <div class="col-lg-1"></div>
 
+                    <div class="col-lg-7">
+                        <div><p><b>Please fill the column correctly, or we can't process the upload to gallery</b></p>
+                        </div>
+                        <g:render template="formAddItem"/>
+                        <fieldset class="buttons">
+                            <g:submitButton name="create" class="save btn button-red"
+                                            value="${message(code: 'default.button.submit_now.label', default: 'Submit now')}"/>
+                            <a href="${createLink(action: 'index')}" class="btn button-dark-red"
+                               style="text-align: left">Cancel</a>
+                        </fieldset>
+
+                    </div>
+                </div>
+
+            </g:uploadForm>
         </div>
         <!-- /.col-lg-3 -->
 
 
         <div class="col-lg-5">
 
-            <div class="row">
-                <div style="margin-left: 20px; margin-bottom: 50px">
-                    <g:uploadForm url="[action: 'mSaveItem']">
-                        <fieldset class="form">
-                            <g:render template="formAddImageItem"/>
-                            <g:render template="formAddItem"/>
-                        </fieldset>
-                        <fieldset class="buttons">
-                            <g:submitButton name="create" class="save btn btn-info"
-                                            value="${message(code: 'default.button.create.label', default: 'Create')}"/>
-                        </fieldset>
-                    </g:uploadForm>
-                </div>
+            %{--<div style="margin-left: 20px; margin-bottom: 50px">--}%
 
-            </div>
+            %{--<fieldset class="form">--}%
+
+            %{--</fieldset>--}%
+
+            %{--</div>--}%
 
         </div>
 
-        <div class="col-lg-5">
+        <div class="col-lg-2">
             <div class="row">
                 <div style="margin-left: 20px; margin-bottom: 50px">
 
@@ -81,6 +92,23 @@
 
 </div>
 <!-- /.container -->
+<script>
+    function readURL(input) {
 
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#imgInp").change(function () {
+        readURL(this);
+    });
+</script>
 </body>
 </html>

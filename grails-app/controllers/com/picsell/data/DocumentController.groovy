@@ -32,7 +32,7 @@ class DocumentController {
         if (documentInstance == null) {
             response.setContentType("APPLICATION/OCTET-STREAM")
             response.setHeader("Content-Disposition", "Attachment;Filename=\"cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg\"")
-            def file = new File(grailsApplication.config.uploadFolder + "\\default\\" + "cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg" )
+            def file = new File(grailsApplication.config.uploadFolder + "\\default\\" + "cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg")
             def fileInputStream = new FileInputStream(file)
             def outputStream = response.getOutputStream()
             byte[] buffer = new byte[4096];
@@ -64,14 +64,7 @@ class DocumentController {
 
                 response.setContentType("APPLICATION/OCTET-STREAM")
                 response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
-
-                def outPath = grailsApplication.config.uploadFolder + 'watermark/out/'
-
-                burningImageService.doWith(documentInstance.path, outPath).execute {
-                    it.watermark(grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png')
-                }
-
-                def file = new File(outPath + documentInstance.namaFile)
+                def file = new File(documentInstance.path)
                 def fileInputStream = new FileInputStream(file)
                 def outputStream = response.getOutputStream()
                 byte[] buffer = new byte[4096];
@@ -82,7 +75,35 @@ class DocumentController {
                 outputStream.flush()
                 outputStream.close()
                 fileInputStream.close()
+
+
             }
         }
+    }
+
+    def photoWithWatermaark() {
+        /**
+         * MENGGUNAKAN WATERMARK
+         */
+        response.setContentType("APPLICATION/OCTET-STREAM")
+        response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
+
+        def outPath = grailsApplication.config.uploadFolder + 'watermark/out/'
+
+        burningImageService.doWith(documentInstance.path, outPath).execute {
+            it.watermark(grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png')
+        }
+
+        def file = new File(outPath + documentInstance.namaFile)
+        def fileInputStream = new FileInputStream(file)
+        def outputStream = response.getOutputStream()
+        byte[] buffer = new byte[4096];
+        int len;
+        while ((len = fileInputStream.read(buffer)) > 0) {
+            outputStream.write(buffer, 0, len);
+        }
+        outputStream.flush()
+        outputStream.close()
+        fileInputStream.close()
     }
 }
