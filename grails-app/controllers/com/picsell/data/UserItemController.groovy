@@ -4,6 +4,7 @@ import com.picsell.security.User
 import grails.transaction.Transactional
 
 class UserItemController {
+    def grailsApplication
 
     def index() {
         def user = User.get(sec.loggedInUserInfo(field: "id"))
