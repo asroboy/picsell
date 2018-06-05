@@ -41,7 +41,7 @@
                     <tr>
                         <td>${item?.id}</td>
                         <td><img class="card-img-top"
-                                 src="${createLink(controller: 'document', action: 'download', id: item?.id, params: [s: '238h9uhh3'])}"
+                                 src="${createLink(controller: 'document', action: 'download_', params: [s: '238h9uhh3', table_id: item?.id, table_name: 'Item'])}"
                                  alt=""></td>
                         <td>${item?.userOwner?.username}</td>
                         <td>${item?.price} ${item?.currency}</td>
