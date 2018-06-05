@@ -53,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentController.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DocumentController.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="52">
               <caret line="31" column="88" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="88" />
               <folding />
             </state>
@@ -96,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contributorItems.gsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contributorItems.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/contributorItems.gsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
-              <caret line="43" column="190" selection-start-line="43" selection-start-column="190" selection-end-line="43" selection-end-column="190" />
+              <caret line="43" column="214" selection-start-line="43" selection-start-column="200" selection-end-line="43" selection-end-column="214" />
               <folding>
                 <marker date="1528235703835" expanded="true" signature="4830:4863" ph="..." />
                 <marker date="1528235703835" expanded="true" signature="5069:5102" ph="..." />
@@ -1051,12 +1051,12 @@
       <workItem from="1527406130651" duration="21948000" />
       <workItem from="1527517076135" duration="22937000" />
       <workItem from="1527861704514" duration="61796000" />
-      <workItem from="1528192922431" duration="6115000" />
+      <workItem from="1528192922431" duration="6166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445204000" />
+    <option name="totallyTimeSpent" value="445255000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1069,7 +1069,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="746" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1081,7 +1081,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.488746" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5546624" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5546624" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24810892" sideWeight="0.51272726" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1538,22 +1538,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="31" column="88" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/contributorItems.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
-          <caret line="43" column="190" selection-start-line="43" selection-start-column="190" selection-end-line="43" selection-end-column="190" />
+          <caret line="43" column="214" selection-start-line="43" selection-start-column="200" selection-end-line="43" selection-end-column="214" />
           <folding>
             <marker date="1528235703835" expanded="true" signature="4830:4863" ph="..." />
             <marker date="1528235703835" expanded="true" signature="5069:5102" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="31" column="88" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
