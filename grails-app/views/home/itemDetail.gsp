@@ -173,7 +173,7 @@
             %{--<div class="col-md-3 col-sm-6 mb-4">--}%
                 <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
                     <img class="img-fluid"
-                         src="${createLink(controller: 'document', action: 'download', id: item?.id)}"
+                         src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
                          alt="">
                 </a>
             %{--</div>--}%
