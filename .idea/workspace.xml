@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05554060-e85d-49a5-aa5a-4cd12ae7d52d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/UserItemController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/UserItemController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.slcache/.index" afterPath="$PROJECT_DIR$/.slcache/.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userItem/addItem.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userItem/addItem.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
     </list>
     <ignored path="exam.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,45 +38,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="295" column="53" selection-start-line="295" selection-start-column="53" selection-end-line="295" selection-end-column="53" />
-              <folding>
-                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#1917#2558#0#HTML" expanded="false" />
-                <element signature="e#2597#3622#0#HTML" expanded="false" />
-                <element signature="n#g:if#0;n#gsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#g:each#0;n#g:if#0;n#gsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#g:each#0;n#g:if#0;n#g:else#0;n#gsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#g:each#1;n#g:else#0;n#g:else#0;n#gsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="132" column="98" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Banner.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/picsell/data/Banner.groovy">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,16 +48,6 @@
           </provider>
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/banner/edit.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -116,31 +71,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/banner/show.gsp">
+      <file leaf-file-name="addItem.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/addItem.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+            <state relative-caret-position="85">
+              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserItemController.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_formAddItem.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/_formAddItem.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="itemDetail.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/itemDetail.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-561">
+              <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/user/create.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="27" column="26" selection-start-line="18" selection-start-column="12" selection-end-line="27" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserItemController.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-767">
-              <caret line="112" column="8" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+            <state relative-caret-position="-273">
+              <caret line="166" column="8" selection-start-line="166" selection-start-column="8" selection-end-line="166" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentController.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_formAddImageItem.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="35" column="102" selection-start-line="35" selection-start-column="102" selection-end-line="35" selection-end-column="102" />
+            <state relative-caret-position="798">
+              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -180,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web-app/ckeditor/samples/index.html" />
         <option value="$PROJECT_DIR$/web-app/ckeditor/skins/moono-lisa/editor.css" />
         <option value="$PROJECT_DIR$/web-app/ckeditor/ckeditor.js" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/picsell/data/Category.groovy" />
@@ -206,7 +200,6 @@
         <option value="$PROJECT_DIR$/grails-app/views/category/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/userItem/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/profileUser/_add_profile_info.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/ProfileUserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/profileUser/profile.gsp" />
@@ -231,6 +224,8 @@
         <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/userItem/addItem.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy" />
       </list>
     </option>
   </component>
@@ -318,11 +313,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unitegallery" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,15 +327,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web-app" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="unitegallery" />
+              <option name="myItemId" value="work" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="picsell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="picsell" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,6 +394,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="userItem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="picsell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="picsell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="picsell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="picsell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="register" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1129,12 +1182,12 @@
       <workItem from="1531329290401" duration="1190000" />
       <workItem from="1531722608066" duration="62000" />
       <workItem from="1531784093564" duration="5767000" />
-      <workItem from="1532006220381" duration="63098000" />
+      <workItem from="1532006220381" duration="66029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="549668000" />
+    <option name="totallyTimeSpent" value="552599000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1166,11 +1219,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.495114" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.495114" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5537459" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24810892" sideWeight="0.51272726" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21613394" sideWeight="0.48727274" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32115677" sideWeight="0.48727274" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24810892" sideWeight="0.51272726" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736155" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1204,29 +1257,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/picsell/data/ItemTags.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/addFirstItem.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/addItem.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1309,14 +1343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/_formAddItem.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/item/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1394,14 +1420,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/taglib/grails/plugin/springsecurity/ui/SecurityUiTagLib.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1454">
-          <caret line="283" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/home/mychart.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -1410,26 +1428,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/register/register.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/register.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/controllers/grails/plugin/springsecurity/ui/RegisterController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="63" column="122" selection-start-line="63" selection-start-column="122" selection-end-line="63" selection-end-column="122" />
           <folding />
         </state>
       </provider>
@@ -1477,7 +1479,7 @@
         <state relative-caret-position="765">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#26#58#0" expanded="true" />
+            <element signature="e#26#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1546,30 +1548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/itemDetail.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-767">
-          <caret line="112" column="8" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/banner/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -1586,10 +1564,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/BannerController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="126" column="82" selection-start-line="126" selection-start-column="82" selection-end-line="126" selection-end-column="82" />
+        <state relative-caret-position="113">
+          <caret line="295" column="53" selection-start-line="295" selection-start-column="53" selection-end-line="295" selection-end-column="53" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#1917#2558#0#HTML" expanded="false" />
+            <element signature="e#2597#3622#0#HTML" expanded="false" />
+            <element signature="n#g:if#0;n#gsp:root#0;n#!!top" expanded="false" />
+            <element signature="n#g:each#0;n#g:if#0;n#gsp:root#0;n#!!top" expanded="false" />
+            <element signature="n#g:each#0;n#g:if#0;n#g:else#0;n#gsp:root#0;n#!!top" expanded="false" />
+            <element signature="n#g:each#1;n#g:else#0;n#g:else#0;n#gsp:root#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="132" column="98" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/taglib/grails/plugin/springsecurity/ui/SecurityUiTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3477">
+          <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/controllers/grails/plugin/springsecurity/ui/RegisterController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="63" column="60" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/register/register.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="98" column="64" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -1613,43 +1639,66 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/BannerController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="295" column="53" selection-start-line="295" selection-start-column="53" selection-end-line="295" selection-end-column="53" />
-          <folding>
-            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#1917#2558#0#HTML" expanded="false" />
-            <element signature="e#2597#3622#0#HTML" expanded="false" />
-            <element signature="n#g:if#0;n#gsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#g:each#0;n#g:if#0;n#gsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#g:each#0;n#g:if#0;n#g:else#0;n#gsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#g:each#1;n#g:else#0;n#g:else#0;n#gsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="132" column="98" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
+        <state relative-caret-position="2125">
+          <caret line="126" column="82" selection-start-line="126" selection-start-column="82" selection-end-line="126" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+        <state relative-caret-position="357">
+          <caret line="27" column="26" selection-start-line="18" selection-start-column="12" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/itemDetail.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="35" column="102" selection-start-line="35" selection-start-column="102" selection-end-line="35" selection-end-column="102" />
+        <state relative-caret-position="798">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/addItem.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/_formAddItem.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-273">
+          <caret line="166" column="8" selection-start-line="166" selection-start-column="8" selection-end-line="166" selection-end-column="8" />
           <folding />
         </state>
       </provider>

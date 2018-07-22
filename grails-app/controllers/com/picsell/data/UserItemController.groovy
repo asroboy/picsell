@@ -42,17 +42,20 @@ class UserItemController {
 
         Item mItemInstance = new Item()
 
-
         mItemInstance.name = request.getParameter("name")
         mItemInstance.description = request.getParameter("description")
         mItemInstance.price = Double.parseDouble(request.getParameter("price"))
         mItemInstance.currency = request.getParameter("currency")
         mItemInstance.tags = request.getParameter("tags")
+        def mdeiaType = MediaType.get(request.getParameter("mediaType"))
+        mItemInstance.mediaType = mdeiaType
         def category = Category.get(request.getParameter("category"))
         mItemInstance.category = category
         mItemInstance.createdDate = new Date()
         mItemInstance.userOwner = User.get(request.getParameter("userOwner.id"))
         mItemInstance.status = "pending"
+
+        print("mSaveItem")
 
         def file = request.getFile('file')
         if (file.empty) {
@@ -60,25 +63,16 @@ class UserItemController {
             print("file empty")
             return
         } else {
+            print("file not empty")
             mItemInstance.save()
             if (mItemInstance.hasErrors()) {
-                respond mItemInstance.errors, view: 'addItem'
+                print("mSaveItem ERROR" + mItemInstance.errors)
+                respond mItemInstance, view: 'addItem'
                 return
             }
 
             print("File name " + file.originalFilename)
-            def imageFile = new ImageFile()
-            imageFile.namaFile = file.originalFilename
-            imageFile.path = grailsApplication.config.uploadFolder + imageFile.namaFile
-            imageFile.ukuranFile = file.size
-            imageFile.tipeFile = file.contentType
-            imageFile.tableId = mItemInstance?.id
-            imageFile.tableName = mItemInstance.class.simpleName
-
-            file.transferTo(new File(imageFile.path))
-            imageFile.save()
-            print("ID " + imageFile?.id)
-            redirect(action: "index")
+            saveFile(file, mItemInstance)
         }
     }
 
