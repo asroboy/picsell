@@ -177,6 +177,21 @@ class ApiController {
     }
 
 
+    def chart_staus_paid() {
+        def itemChart
+        if (params.chart_id) {
+            itemChart = ItemChart.get(params.chart_id)
+            itemChart.status = "paid"
+        } else {
+            def user = User.get(params.user_id)
+            def item = Item.get(params.item_id)
+            itemChart = new ItemChart(user: user, item: item, status: "paid")
+        }
+
+        itemChart.save(flush: true)
+        def result = [code: 1, data: itemChart]
+        render result as JSON
+    }
 
     def delete_from_chart() {
         def itemChart = ItemChart.get(params.id)

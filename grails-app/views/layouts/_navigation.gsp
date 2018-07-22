@@ -80,7 +80,7 @@
                     <a href="${createLink(controller: 'Home', action: 'mychart')}"
                        class="btn   my-2 my-sm-0"><i
                             class="fa  fa-shopping-basket"></i> My Chart
-                        <g:set var="chart_count" value="${com.picsell.data.ItemChart.countByUser(userObject)}"/>
+                        <g:set var="chart_count" value="${com.picsell.data.ItemChart.countByUserAndStatusNotEqual(userObject, "paid")}"/>
                         <g:if test="${chart_count > 0}">
                             <span class="badge" style="background: #d53b31; color: white">${chart_count}</span>
                         </g:if>

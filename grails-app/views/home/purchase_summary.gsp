@@ -194,6 +194,7 @@
                                     <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)?.id)}"
                                          alt="" width="100%">
                                 </div>
+
                                 <div style="text-align: center">
                                     <u>ID ${itemInstance?.id}</u>
                                 </div>
@@ -205,11 +206,14 @@
                             <div style="background: #d00006; color: white;text-align: center;padding: 5px;margin-bottom: 10px;">
                                 Item Title
                             </div>
+
                             <div style="margin-top: 8px">
                                 <a href="#"
                                    style="font-size: 24px; color:  white; background-color:   #c90000; border: 3px; border-color: #c90000;border-style: solid; border-width: 1.5px; margin-right: 5px">&nbsp;L&nbsp;</a>
                             </div>
+
                             <div style="margin-top: 8px">124 x 321 dpi</div>
+
                             <div style="margin-top: 8px">124 x 321 dpi JPEG</div>
                         </div>
                     </div>
@@ -248,7 +252,15 @@
                     </div>
 
                     <div style="margin-top: 15px; text-align: right">
-                        <button class="btn button-dark-red">COMPLETE CHECKOUT</button>
+                        <g:if test="${params.chart_id}">
+                            <button class="btn button-dark-red"
+                                    onclick="pay_chart_id(${params.chart_id})">COMPLETE CHECKOUT</button>
+                        </g:if>
+                        <g:else>
+                            <button class="btn button-dark-red"
+                                    onclick="pay_chart(${itemInstance?.id}, ${userObject?.id})">COMPLETE CHECKOUT</button>
+                        </g:else>
+
                     </div>
                 </div>
             </div>
@@ -261,6 +273,41 @@
 
 </div>
 <!-- /.container -->
+
+<script>
+    function pay_chart(item_id, user_id) {
+        var URL = "${createLink(controller: 'api', action: 'chart_staus_paid')}";
+        $.ajax({
+            type: "GET",
+            url: URL,
+            data: {
+                item_id: item_id,
+                user_id: user_id,
+            },
+            success: function (resp) {
+                console.log(resp);
+                window.location =
+                        "${createLink(controller: 'home', action: 'mychart')}";
+            }
+        });
+    }
+
+    function pay_chart_id(chart_id) {
+        var URL = "${createLink(controller: 'api', action: 'chart_staus_paid')}";
+        $.ajax({
+            type: "GET",
+            url: URL,
+            data: {
+                chart_id: chart_id
+            },
+            success: function (resp) {
+                console.log(resp);
+                window.location =
+                        "${createLink(controller: 'home', action: 'mychart')}";
+            }
+        });
+    }
+</script>
 
 </body>
 

@@ -55,7 +55,7 @@
                                 <td>
                                     <a onclick="delete_from_chart(${itemChart.id})" class="btn btn-danger"
                                        style="color: white;"><i class="fa fa-trash"></i> Delete</a>
-                                    <a href="${createLink(controller: 'home', action: 'purchase_summary', id: itemChart?.item?.id)}"
+                                    <a href="${createLink(controller: 'home', action: 'purchase_summary', id: itemChart?.item?.id, params:[chart_id: itemChart?.id])}"
                                        class="btn btn-danger"><i class="fa fa-money"></i> Buy</a>
                                 </td>
                             </tr>
@@ -67,29 +67,29 @@
 
 
                 <!-- Pagination -->
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
+                %{--<ul class="pagination justify-content-center">--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#" aria-label="Previous">--}%
+                            %{--<span aria-hidden="true">&laquo;</span>--}%
+                            %{--<span class="sr-only">Previous</span>--}%
+                        %{--</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#">1</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#">2</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#">3</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#" aria-label="Next">--}%
+                            %{--<span aria-hidden="true">&raquo;</span>--}%
+                            %{--<span class="sr-only">Next</span>--}%
+                        %{--</a>--}%
+                    %{--</li>--}%
+                %{--</ul>--}%
 
                 <div class="sub-part1">
                     Paid Item
@@ -103,44 +103,44 @@
                         <th width="20%">Price</th>
 
                     </tr>
-                    <g:each in="${items}" var="item">
+                    <g:each in="${itemCharts}" var="item">
                         <g:if test="${item?.status?.equals("paid")}">
                             <tr>
-                                <td>${itemChart?.id}</td>
+                                <td>${item?.id}</td>
                                 <td><img class="card-img-top"
-                                         src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemChart.item?.id, itemChart.item.class.simpleName)?.id, params: [s: '238h9uhh3', table_id: itemChart.item?.id, table_name: 'Item'])}"
+                                         src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item.item?.id, item.item.class.simpleName)?.id, params: [s: '238h9uhh3', table_id: item.item?.id, table_name: 'Item'])}"
                                          alt=""></td>
-                                <td>${itemChart.item?.userOwner?.username}</td>
-                                <td>${itemChart.item?.price} ${itemChart.item?.currency}</td>
+                                <td>${item.item?.userOwner?.username}</td>
+                                <td>${item.item?.price} ${item.item?.currency}</td>
                             </tr>
                         </g:if>
 
                     </g:each>
                 </table>
                 <!-- Pagination -->
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
+                %{--<ul class="pagination justify-content-center">--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#" aria-label="Previous">--}%
+                            %{--<span aria-hidden="true">&laquo;</span>--}%
+                            %{--<span class="sr-only">Previous</span>--}%
+                        %{--</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#">1</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#">2</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#">3</a>--}%
+                    %{--</li>--}%
+                    %{--<li class="page-item">--}%
+                        %{--<a class="page-link" href="#" aria-label="Next">--}%
+                            %{--<span aria-hidden="true">&raquo;</span>--}%
+                            %{--<span class="sr-only">Next</span>--}%
+                        %{--</a>--}%
+                    %{--</li>--}%
+                %{--</ul>--}%
             </div>
         </div>
 
