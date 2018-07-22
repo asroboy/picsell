@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="theme_sbadmin_gh">
+    <meta name="layout" content="theme_portfolio_gh"/>
     <g:set var="entityName" value="${message(code: 'termOfService.label', default: 'TermOfService')}"/>
     <title><g:message code="default.create.label" args="[entityName]"/></title>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

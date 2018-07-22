@@ -2,9 +2,12 @@ package com.picsell.global
 
 import com.picsell.config.Account
 import com.picsell.data.Item
+import com.picsell.data.ItemChart
 import com.picsell.data.ItemTags
+import com.picsell.data.ItemViewed
 import com.picsell.data.ProfileUser
 import com.picsell.data.UserAccount
+import com.picsell.data.UserLikeItem
 import com.picsell.security.Role
 import com.picsell.security.User
 import com.picsell.security.UserRole
@@ -17,7 +20,8 @@ class ApiController {
 
     @Transactional
     def createProfile() {
-        def profile = new ProfileUser(namaDepan: params.first_name,
+        def profile = new ProfileUser(
+                namaDepan: params.first_name,
                 namaBelakang: params.last_name,
                 jenisKartuIdentitas: 'KTP',
                 alamat: params.address,
@@ -126,8 +130,66 @@ class ApiController {
         render result as JSON
     }
 
-    def getCategories(){
+    def getCategories() {
         def cat = Item.executeQuery("select distinct  category from Item ")
         render cat as JSON
+    }
+
+
+    def like() {
+        def user = User.get(params.user_id)
+        def item = Item.get(params.item_id)
+        def userLikeItem = UserLikeItem.findByItemAndUser(item, user)
+        String status = "";
+        if (userLikeItem) {
+            userLikeItem.delete(flush: true)
+            status = "dislike"
+        } else {
+            userLikeItem = new UserLikeItem(user: user, item: item)
+            userLikeItem.save(flush: true)
+            status = "like"
+        }
+        def result = [status: 1, data: status]
+        render result as JSON
+    }
+
+    def is_like() {
+        def user = User.get(params.user_id)
+        def item = Item.get(params.item_id)
+        def userLikeItem = UserLikeItem.findByItemAndUser(item, user)
+        String status = "";
+        if (userLikeItem) {
+            status = "like"
+        } else {
+            status = "dislike"
+        }
+        def result = [status: 1, data: status]
+        render result as JSON
+    }
+
+    def add_to_chart() {
+        def user = User.get(params.user_id)
+        def item = Item.get(params.item_id)
+        def itemChart = new ItemChart(user: user, item: item)
+        itemChart.save(flush: true)
+        def result = [code: 1, data: itemChart]
+        render result as JSON
+    }
+
+
+
+    def delete_from_chart() {
+        def itemChart = ItemChart.get(params.id)
+        itemChart.delete(flush: true)
+        def result = [code: 1, data: "ok"]
+        render result as JSON
+    }
+
+    def view_count() {
+        def itemView = new ItemViewed()
+        itemView.item = Item.get(params.item_id)
+        itemView.save(flush: true)
+        def result = [code: 1, data: "ok"]
+        render result as JSON
     }
 }

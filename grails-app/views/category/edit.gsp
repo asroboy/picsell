@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="theme_sbadmin_gh">
+    <meta name="layout" content="theme_portfolio_gh"/>
     <g:set var="entityName" value="${message(code: 'category.label', default: 'Category')}"/>
     <title><g:message code="default.edit.label" args="[entityName]"/></title>
 </head>
@@ -29,7 +29,7 @@
                 </g:eachError>
             </ul>
         </g:hasErrors>
-        <g:form url="[resource: propertyName, action: 'update']"
+        <g:form url="[resource: categoryInstance, action: 'update']"
                 method="PUT" >
         <g:hiddenField name="version" value="${categoryInstance?.version}"/>
         <fieldset class="form">

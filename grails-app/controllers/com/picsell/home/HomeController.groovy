@@ -1,17 +1,36 @@
 package com.picsell.home
 
+import com.picsell.data.Category
 import com.picsell.data.Item
+import com.picsell.data.MediaType
 
 class HomeController {
 
     def index() {
-        if(params.key){
+        if (params.key) {
             def c = Item.createCriteria()
-            def results = c.list () {
+            def items = []
+            def results = c.list() {
                 like("name", "%" + params.key + "%")
+                and {
+                    eq("status", "approved")
+                }
+            }
+            def d = Item.createCriteria()
+            def results_tag = d.list() {
+                like("tags", "%" + params.key + "%")
+                and {
+                    eq("status", "approved")
+                }
+            }
+            results.each {
+                items.add(it)
+            }
+            results_tag.each {
+                items.add(it)
             }
 
-            [items: results]
+            [items: items]
         }
     }
 
@@ -22,45 +41,48 @@ class HomeController {
     }
 
     def itemDetail(Item itemInstance) {
-        respond itemInstance
+        [itemInstance: itemInstance]
     }
 
-    def mychart(){
-
-    }
-
-    def packages(){
+    def mychart() {
 
     }
 
-    def aboutUs(){}
+    def packages() {
 
-    def policy(){}
+    }
 
-    def agreement(){}
+    def aboutUs() {}
 
-    def contributors(){}
+    def policy() {}
 
-    def tos(){}
+    def agreement() {}
 
-    def hotItems(){
+    def contributors() {}
+
+    def tos() {}
+
+    def hotItems() {
         def cat = Item.executeQuery("select distinct  category from Item ")
         def items = Item.list()
 
-        [categories : cat, items: items]
+        [categories: cat, items: items]
     }
 
-    def helpCenter(){
-
-    }
-
-    def setting(){
+    def helpCenter() {
 
     }
 
-    def purchase_summary(Item itemInstance){
+    def setting() {
+
+    }
+
+    def purchase_summary(Item itemInstance) {
         respond itemInstance
     }
 
-    def subscribe_summary(){}
+    def subscribe_summary() {}
+
+
+    def ui_development() {}
 }

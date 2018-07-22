@@ -35,8 +35,47 @@
         height: auto !important;
     }
 
-
     </style>
+    <g:set var="userObject"
+           value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
+    <script>
+        var URL = "${createLink(controller: 'api', action: 'view_count')}";
+        $.ajax({
+            type: "GET",
+            url: URL,
+            data: {
+                item_id: ${itemInstance?.id}
+            },
+            success: function (resp) {
+                if (resp.code == 1) {
+                }
+            }
+        });
+
+        function islike(item_id) {
+            var URL = "${createLink(controller: 'api', action: 'is_like', params: [user_id: userObject?.id])}" + "&item_id=" + item_id;
+            $.ajax({
+                type: "GET",
+                url: URL,
+                data: {
+                    user_id: '${userObject?.id}'
+                },
+                success: function (resp) {
+//                        console.log(resp)
+                    if (resp.data == "like") {
+                        var id = "like_" + item_id;
+                        document.getElementById(id).innerHTML =
+                                "<i class=\"fa fa-heart\"></i>";
+                    }
+                    if (resp.data == "dislike") {
+                        var id = "like_" + item_id;
+                        document.getElementById(id).innerHTML =
+                                "<i class=\"fa fa-heart-o\"></i>";
+                    }
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -53,30 +92,53 @@
     <div class="row">
 
         <div class="col-md-6" style="margin-top: 50px">
-            <img class="card-img-top"
-                 src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)?.id)}"
-                 alt="">
+            <div class="image_container">
+                <img class="card-img-top"
+                     src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)?.id)}"
+                     alt="">
+                <div class="overlay">
+                    <sec:ifLoggedIn>
+                        <a id="like_${itemInstance?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
+                           title="Like"
+                           style="color: white" onclick="like(${itemInstance?.id})">
+                            <script>
+                                islike(${itemInstance?.id});
+                            </script></a>
+                        <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
+                           style="color: white"><i class="fa fa-shopping-basket" onclick="add_to_chart(${itemInstance?.id})"></i></a>
+                    </sec:ifLoggedIn>
+                    <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
+                       style="color: white"><i class="fa fa-download"></i></a>
+                    <a href="${createLink(cotroller: 'home', action: 'index', params: [cat: itemInstance?.category?.name])}"
+                       class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
+                       style="color: white"><i class="fa fa-th-large"></i></a>
+
+                </div>
+            </div>
+
+
         </div>
 
         <div class="col-md-6">
             <div id="item_page">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="label-red" style="width: 100%">
+                        <div class="label-red" style="margin-top: 55px;width: 100%">
                             ${itemInstance?.name}
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div style="margin-top: 55px; font-size: 16pt">
-                            <i class="fa fa-eye" style="color: #c90000"></i> 123
+                            <i class="fa fa-eye" style="color: #c90000"></i> ${com.picsell.data.ItemViewed.countByItem(itemInstance)}
+                            <i class="fa fa-heart-o" style="color: #c90000; margin-left: 10px"></i> ${com.picsell.data.UserLikeItem.countByItem(itemInstance)}
                         </div>
 
                     </div>
 
                     <div class="col-md-4">
                         <div style="margin-top: 55px; font-size: 16pt; text-align: right; color: #c90000;">
-                            <b><u>ID 9992012</u></b>
+                            <b><u>ID ${itemInstance?.id}</u></b>
                         </div>
                     </div>
                 </div>
@@ -86,7 +148,7 @@
                 </div>
 
                 <div style="color: gray;">
-                    <i>TAGS : cat, lorem, ipsum, dolor</i>
+                    <i>TAGS : ${itemInstance?.tags}</i>
                 </div>
 
                 <div style="align-items: center;">
@@ -101,7 +163,7 @@
 
                 <div class="gray-box">
                     Large  2310 x 1298, 150 mdpi, 18x22 in @300 dpi, JPEG <a href="#" style="margin-left: 50px;"><i
-                        class="fa fa-shopping-basket" style="color: #c90000"></i></a>
+                        class="fa fa-shopping-basket" data-toggle="tooltip" data-placement="bottom" title="Add to chart" style="color: #c90000" onclick="add_to_chart(${itemInstance?.id})"></i></a>
                 </div>
 
                 <div>
@@ -169,13 +231,37 @@
 
     <div class="row">
         <section id="photos">
-            <g:each in="${com.picsell.data.Item.findAllByCategory(itemInstance?.category)}" var="item">
+            <g:each in="${com.picsell.data.Item.findAllByCategoryAndStatus(itemInstance?.category, "approved")}" var="item">
             %{--<div class="col-md-3 col-sm-6 mb-4">--}%
-                <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
-                    <img class="img-fluid"
-                         src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
-                         alt="">
-                </a>
+                <g:if test="${item != itemInstance}">
+                    <div class="image_container">
+                        <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
+                            <img class="img-fluid"
+                                 src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
+                                 alt="">
+                        </a>
+                        <div class="overlay">
+                            <sec:ifLoggedIn>
+                                <a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
+                                   title="Like"
+                                   style="color: white" onclick="like(${item?.id})">
+                                    <script>
+                                        islike(${item?.id});
+                                    </script></a>
+                                <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
+                                   style="color: white"><i class="fa fa-shopping-basket" onclick="add_to_chart(${item?.id})"></i></a>
+                            </sec:ifLoggedIn>
+                            <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
+                               style="color: white"><i class="fa fa-download"></i></a>
+                            <a href="${createLink(cotroller: 'home', action: 'index', params: [cat: item?.category?.name])}"
+                               class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
+                               style="color: white"><i class="fa fa-th-large"></i></a>
+
+                        </div>
+                    </div>
+
+                </g:if>
+
             %{--</div>--}%
             </g:each>
 

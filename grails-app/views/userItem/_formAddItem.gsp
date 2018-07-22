@@ -42,6 +42,17 @@
 
 %{--</div>--}%
 
+<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'mediaType', 'error')} ">
+    <label for="category">
+        <g:message code="item.mediaType.label" default="Meia Type"/>
+
+    </label>
+    <g:select name="mediaType" from="${com.picsell.data.MediaType.list()}" optionKey="id" optionValue="name"
+              value="${itemInstance?.mediaType?.id}" noSelection="['': '']"
+              class="form-control"/>
+
+</div>
+
 <div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'category', 'error')} ">
     <label for="category">
         <g:message code="item.category.label" default="Category"/>
@@ -57,8 +68,7 @@
     <label for="tags">
         <g:message code="item.tags.label" default="Tags - (Separate with comma)"/>
     </label>
-    <g:textField name="tags"  class="form-control"/>
-
+    <g:textField name="tags" value="${fieldValue(bean: itemInstance, field: 'tags')}" class="form-control"/>
 </div>
 
 <div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'price', 'error')} required">
@@ -68,11 +78,12 @@
     </label>
     <table width="100%">
         <tr>
-            <td><g:textField name="price" value="${fieldValue(bean: itemInstance, field: 'price')}" required=""
-                             class="form-control"/></td>
-            <td><g:select name="currency" from="${itemInstance.constraints.currency.inList}"
+            <td style="width: 15%"><g:select  name="currency" from="${itemInstance.constraints.currency.inList}"
                           value="${itemInstance?.currency}"
                           valueMessagePrefix="item.currency" noSelection="['': '']" class="form-control"/></td>
+            <td style="width: 85%"><g:textField  name="price" value="${fieldValue(bean: itemInstance, field: 'price')}" required=""
+                             class="form-control"/></td>
+
         </tr>
     </table>
 

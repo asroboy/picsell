@@ -8,12 +8,14 @@ class Item {
     double price
     String currency
     User userOwner
+    MediaType mediaType
     Category category
     String status
     String statusInfo
     Date createdDate
     Date statusCgDate
     String statusCgBy
+    String tags
 
     static constraints = {
         name nullable: false
@@ -25,10 +27,12 @@ class Item {
         createdDate nullable: true
         statusCgDate nullable: true
         statusCgBy nullable: true
+        tags nullable: true
     }
 
     static mapping = {
         price defaultValue: 0.0
+        currency defaultValue: "'IDR'"
     }
 
 

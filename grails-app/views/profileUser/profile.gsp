@@ -25,8 +25,6 @@
     </style>
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
-    <g:set var="profilePicture"
-           value="${com.picsell.data.ImageFile.findByTableNameAndTableId(profileUserInstance.class.simpleName, profileUserInstance?.id)}"></g:set>
 </head>
 
 <body>
@@ -77,6 +75,8 @@
                 <div class="row" style="margin: 15px;">
                     <div class="col-md-5">
                     %{--<a href="${createLink(controller: 'profileUser', action: '')}">--}%
+                        <g:set var="profilePicture"
+                               value="${com.picsell.data.ImageFile.findByTableNameAndTableId("ProfileUser", profileUserInstance?.id)}"></g:set>
                         <g:if test="${profilePicture}">
                             <img class="profile-pic"
                                  src="${createLink(controller: 'image', action: 'download', id: profilePicture?.id)}"
@@ -100,6 +100,16 @@
                     </div>
 
                     <div class="col-md-7">
+                        <g:if test="${flash.message}">
+                            <div class="message" role="status">${flash.message}</div>
+                        </g:if>
+                        <g:hasErrors bean="${profileUserInstance}">
+                            <ul class="errors" role="alert">
+                                <g:eachError bean="${profileUserInstance}" var="error">
+                                    <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+                                </g:eachError>
+                            </ul>
+                        </g:hasErrors>
                     %{--<h3 class="my-3">Item Description</h3>--}%
                         <g:if test="${profileUserInstance.id}">
                             <div id="info">

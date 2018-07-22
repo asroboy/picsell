@@ -45,15 +45,19 @@
 <body>
 
 <div class="container">
+
     <div class="row">
-        <div class="col-md-12">
-            <div class="label-red">
-                <b>Hot Items & Special Promo</b>
-            </div>
-            <b>Get images you need with special prices for several periods from categories on below</b>
+        <div class="col-lg-4">
+            <div class="my-4 label-red">Hot Items & Special Promo</div>
 
         </div>
+
+        <div class="col-md-12">
+            <b>Get images you need with special prices for several periods from categories on below</b>
+        </div>
+
     </div>
+
     <g:each in="${categories}" var="category">
         <div class="row">
             <div class="col-md-12">
@@ -75,6 +79,7 @@
             </div>
         </div>
     </g:each>
+
 </div>
 
 </body>

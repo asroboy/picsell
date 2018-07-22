@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="layout" content="theme_portfolio_gh">
-    <title></title>
+    <title>picsell.id</title>
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
 </head>
@@ -19,11 +19,10 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-lg-12">
-            <div class="label-red" style="margin-bottom: 50px">
-                <b>My Items</b>
-            </div>
+        <div class="col-lg-4">
+            <div class="my-4 label-red">My Items</div>
         </div>
+
     </div>
 
     <div class="row">
@@ -46,7 +45,7 @@
 
         <div class="col-lg-12">
             <div style="margin-bottom: 15px; width: 200px">
-                <a href="${createLink(action: 'addItem')}" class="btn btn-block btn-outline-danger"
+                <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-danger"
                    style="text-align: left"><i
                         class="fa fa-plus"></i> Add Item</a>
 
@@ -54,7 +53,7 @@
 
             <div class="row">
                 <g:each in="${items}" var="item">
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-bottom: 15px">
                         <div class="card h-100">
                             <a href="${createLink(controller: 'userItem', action: 'itemDetail')}">
                                 <img class="card-img-top"
@@ -64,14 +63,21 @@
 
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">${item?.name}</a>
+                                    <a href="${createLink(controller: 'userItem',action: 'itemDetail', id: item?.id)}">${item?.name}</a>
                                 </h4>
 
                                 <div>Price : ${item?.price} ${item?.currency}</div>
 
                                 <div>Description : ${item?.description}</div>
 
-                                <div>Approval status : ${item?.status}</div>
+                                <div>Approval status :
+                                    <g:if test="${item?.status.equals("approved")}">
+                                        <font color="#006400"><b>${item?.status}</b></font>
+                                    </g:if>
+                                    <g:else>
+                                        <font color="#8b0000"><b>${item?.status}</b></font>
+                                    </g:else>
+                                </div>
 
                                 <div>Status info : ${item?.statusInfo}</div>
                             </div>

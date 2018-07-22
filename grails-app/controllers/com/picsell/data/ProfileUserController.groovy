@@ -16,11 +16,9 @@ class ProfileUserController {
         respond ProfileUser.list(params), model: [profileUserInstanceCount: ProfileUser.count()]
     }
 
-
+    @Transactional
     def profile(ProfileUser profileUserInstance) {
         if (profileUserInstance) {
-
-
             respond profileUserInstance
         } else {
             profileUserInstance = new ProfileUser(user: User.get(params.uid))
@@ -42,7 +40,7 @@ class ProfileUserController {
     @Transactional
     def saveProfileImage(ProfileUser profileUserInstance) {
         if (!profileUserInstance.id) {
-            profileUserInstance.save()
+            profileUserInstance.save(flush: true)
 
             println("Save new profile === > " + profileUserInstance?.id)
         }

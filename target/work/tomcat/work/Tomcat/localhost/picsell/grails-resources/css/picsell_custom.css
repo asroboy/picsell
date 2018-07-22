@@ -80,3 +80,53 @@ div.bottomright {
     padding-right: 100px;
 }
 
+.login_panel_body_2{
+    text-align: center;
+    color: #d00006;
+}
+
+
+.linkred {
+    color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.custom-navbar-nav {
+    display: flex;
+    /*flex-direction: column;*/
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+}
+
+
+.custom_container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+    .custom_container {
+        width: 600px;
+    }
+}
+@media (min-width: 992px) {
+    .custom_container {
+        width: 800px;
+    }
+}
+@media (min-width: 1200px) {
+    .custom_container {
+        width: 1000px;
+    }
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}

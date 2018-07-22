@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="theme_sbadmin_gh">
+		<meta name="layout" content="theme_portfolio_gh"/>
 		<g:set var="entityName" value="${message(code: 'category.label', default: 'Category')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>

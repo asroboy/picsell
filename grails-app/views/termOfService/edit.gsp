@@ -2,18 +2,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="theme_sbadmin_gh">
+    <meta name="layout" content="theme_portfolio_gh"/>
     <g:set var="entityName" value="${message(code: 'termOfService.label', default: 'TermOfService')}"/>
     <title><g:message code="default.edit.label" args="[entityName]"/></title>
+    <!-- include libraries(jQuery, bootstrap) -->
+    %{--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">--}%
+    %{--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>--}%
+    %{--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>--}%
+
+    <!-- include summernote css/js -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+
+
+    <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
+          rel="stylesheet">
+
+
 
 </head>
 
 <body>
 <div class="container">
     <div class="row">
+        <div class="col-lg-4">
+            <div class="my-4 label-red">Edit Term Of Service content</div>
+        </div>
+
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <div id="edit-termOfService" class="content scaffold-edit" role="main" style="margin-bottom: 50px">
-                <h1>Edit Term Of Service</h1>
                 <g:if test="${flash.message}">
                     <div class="message" role="status">${flash.message}</div>
                 </g:if>
@@ -44,13 +63,11 @@
 
 </div>
 
-
 <script>
-    var data = "";
-    $('#summernote').summernote({
-        placeholder: data,
-        tabsize: 2,
-        height: 400
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 400
+        });
     });
 </script>
 </body>

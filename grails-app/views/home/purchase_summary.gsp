@@ -191,7 +191,7 @@
                         <div class="col-md-5">
                             <div class="white-box" style="margin: 0px; padding: 0px">
                                 <div>
-                                    <img src="${createLink(controller: 'document', action: 'download', id: itemInstance?.id)}"
+                                    <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)?.id)}"
                                          alt="" width="100%">
                                 </div>
                                 <div style="text-align: center">

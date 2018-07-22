@@ -38,26 +38,31 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/jquery/jquery.min.js')}"></script>
+    <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
+    <link href="${resource(dir: 'css', file: 'picsell_custom.css')}"
+          rel="stylesheet">
     <g:layoutHead/>
     <r:layoutResources/>
 </head>
 
-<body style="background-image: url(${resource(dir: 'images', file: 'background.jpeg')}); background-size: auto; background-repeat: no-repeat">
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="login-panel panel panel-default">
-                <div class="panel-heading" style="text-align: center">
-                    <h3 class="panel-title"><a href="${createLink(controller: 'home', action: 'index')}">Picsell</a></h3>
-                </div>
-                <div class="panel-body">
-                    <g:layoutBody/>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<body>
+<g:render template="/layouts/navigation"/>
+<g:layoutBody/>
+%{--<div class="container">--}%
+    %{--<div class="row">--}%
+        %{--<div class="col-md-4 col-md-offset-4">--}%
+            %{--<div class="login-panel panel panel-default">--}%
+                %{--<div class="panel-heading" style="text-align: center">--}%
+                    %{--<h3 class="panel-title"><a href="${createLink(controller: 'home', action: 'index')}">Picsell</a></h3>--}%
+                %{--</div>--}%
+                %{--<div class="panel-body">--}%
+                   %{----}%
+                %{--</div>--}%
+            %{--</div>--}%
+        %{--</div>--}%
+    %{--</div>--}%
+%{--</div>--}%
 
 <!-- jQuery -->
 <script src="${resource(dir: 'sbadmin', file: '/vendor/jquery/jquery.min.js')}" ></script>

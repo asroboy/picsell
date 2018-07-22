@@ -50,10 +50,6 @@ class RegisterController extends AbstractS2UiController {
 		}
 
 		def user = uiRegistrationCodeStrategy.createUser(registerCommand)
-
-		print("first name, last name : " +params.first_name + " " + params.last_name)
-		print("role " + params.role);
-
 		String salt = saltSource instanceof NullSaltSource ? null : registerCommand.username
 		RegistrationCode registrationCode = uiRegistrationCodeStrategy.register(user, registerCommand.password, salt)
 
@@ -63,12 +59,12 @@ class RegisterController extends AbstractS2UiController {
 			return [registerCommand: registerCommand]
 		}
 
-		String url = sendVerifyRegistrationMail registrationCode, user, registerCommand.email
-
-		[emailSent: true, registerCommand: registerCommand, activateUrl: url, first_name: params.first_name, last_name: params.last_name, user_id: user?.id, role: params.role]
+		sendVerifyRegistrationMail registrationCode, user, registerCommand.email
+		String activateUrl = generateLink('verifyRegistration', [t: registrationCode.token])
+		[emailSent: true, registerCommand: registerCommand, activateUrl: activateUrl, user_id: user?.id, role: params.role]
 	}
 
-	protected String sendVerifyRegistrationMail(RegistrationCode registrationCode, user, String email) {
+	protected void sendVerifyRegistrationMail(RegistrationCode registrationCode, user, String email) {
 		String url = generateLink('verifyRegistration', [t: registrationCode.token])
 
 		def body = registerEmailBody
@@ -81,7 +77,6 @@ class RegisterController extends AbstractS2UiController {
 			from: registerEmailFrom,
 			subject: registerEmailSubject,
 			html: body.toString())
-		return url;
 	}
 
 	def verifyRegistration() {

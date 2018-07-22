@@ -38,9 +38,9 @@ class BootStrap {
         RoleMenu.findByUrl('/api/**') ?: new RoleMenu(url: '/api/**', configAttribute: 'permitAll').save()
 
         //USER
-        RoleMenu.findByUrl('/profileUser/profile/**') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/profileUser/saveProfile/**') ?: new RoleMenu(url: '/profileUser/saveProfile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/profileUser/saveProfileImage/**') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER,ROLE_ADMIN').save()
+        RoleMenu.findByUrl('/profileUser/profile/**') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN,ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/profileUser/saveProfile/**') ?: new RoleMenu(url: '/profileUser/saveProfile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN, ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/profileUser/saveProfileImage/**') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER,ROLE_ADMIN, ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_CONTRIBUTOR,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
 
@@ -57,9 +57,11 @@ class BootStrap {
         RoleMenu.findByUrl('/category/**') ?: new RoleMenu(url: '/category/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/testFile/**') ?: new RoleMenu(url: '/testFile/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/account/**') ?: new RoleMenu(url: '/account/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrl('/mediaType/**') ?: new RoleMenu(url: '/mediaType/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrl('/banner/**') ?: new RoleMenu(url: '/banner/**', configAttribute: 'ROLE_ADMIN').save()
 
-        //ADMIN AND USER
-        RoleMenu.findByUrl('/profileUser/**') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
+        //ADMIN CONTRIBUTOR AND USER
+        RoleMenu.findByUrl('/profileUser/**') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/item/**') ?: new RoleMenu(url: '/item/*', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
         RoleMenu.findByUrl('/fileItem/**') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
         RoleMenu.findByUrl('/tos/**') ?: new RoleMenu(url: '/tos/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
