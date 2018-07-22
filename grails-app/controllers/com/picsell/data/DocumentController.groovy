@@ -33,7 +33,7 @@ class DocumentController {
         if (documentInstance == null) {
             response.setContentType("APPLICATION/OCTET-STREAM")
             response.setHeader("Content-Disposition", "Attachment;Filename=\"cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg\"")
-            def file = new File(grailsApplication.config.uploadFolder + "\\default\\" + "cat-lifespan-the-life-expectancy-of-cats-568e40723c336.jpg")
+            def file = new File(grailsApplication.config.uploadFolder + "/default/" + "blank_image.png")
             def fileInputStream = new FileInputStream(file)
             def outputStream = response.getOutputStream()
             byte[] buffer = new byte[4096];
@@ -88,7 +88,7 @@ class DocumentController {
         if (documentInstance == null) {
             response.setContentType("APPLICATION/OCTET-STREAM")
             response.setHeader("Content-Disposition", "Attachment;Filename=\"blank_image.png\"")
-            def file = new File(grailsApplication.config.uploadFolder + "\\default\\" + "blank_image.png")
+            def file = new File(grailsApplication.config.uploadFolder + "/default/" + "blank_image.png")
             def fileInputStream = new FileInputStream(file)
             def outputStream = response.getOutputStream()
             byte[] buffer = new byte[4096];

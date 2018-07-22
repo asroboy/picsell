@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="05554060-e85d-49a5-aa5a-4cd12ae7d52d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" />
     </list>
     <ignored path="exam.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
+            <state relative-caret-position="640">
               <caret line="132" column="98" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -126,21 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="itemDetail.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/itemDetail.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentController.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DocumentController.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+            <state relative-caret-position="340">
+              <caret line="35" column="102" selection-start-line="35" selection-start-column="102" selection-end-line="35" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -224,13 +224,13 @@
         <option value="$PROJECT_DIR$/grails-app/views/layouts/theme_portfolio_gh.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/home/HomeController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/home/itemDetail.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/banner/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/BannerController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/banner/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/banner/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" />
       </list>
     </option>
   </component>
@@ -1129,12 +1129,12 @@
       <workItem from="1531329290401" duration="1190000" />
       <workItem from="1531722608066" duration="62000" />
       <workItem from="1531784093564" duration="5767000" />
-      <workItem from="1532006220381" duration="61723000" />
+      <workItem from="1532006220381" duration="63098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548293000" />
+    <option name="totallyTimeSpent" value="549668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1242,14 +1242,6 @@
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1128">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1578,14 +1570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/banner/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -1648,8 +1632,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
+        <state relative-caret-position="640">
           <caret line="132" column="98" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="102" selection-start-line="35" selection-start-column="102" selection-end-line="35" selection-end-column="102" />
           <folding />
         </state>
       </provider>
