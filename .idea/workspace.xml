@@ -2,998 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05554060-e85d-49a5-aa5a-4cd12ae7d52d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/button-close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/cover-grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/icon-link32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/icon-play32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/icon-zoom32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/lightbox-arrow-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/lightbox-arrow-right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/lightbox-icon-close-compact.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/lightbox-icon-close-compact2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/lightbox-icon-close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-black1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-black2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-black3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-black4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-black5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-black6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-black7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-white1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-white2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-white3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-white4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-white5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-white6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader-white7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader_bright.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/loader_skype_trans.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/not_loaded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/play-button-round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/play-button-square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/images/transparent.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/button_zoom_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/button_zoom_minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/button_zoom_plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_arrow_left_hortype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_arrow_right_hortype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_handle_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_handle_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_handle_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/grid_handle_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/slider_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/slider_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/images/slider_bullets.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/arrow_grid_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/arrow_grid_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/arrows_strip_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/arrows_strip_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/grid_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/grid_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/grid_handle_black_bottom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/grid_handle_black_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/grid_handle_black_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/grid_handle_black_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/icon_zoom_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/icon_zoom_minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/icon_zoom_plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/slider_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/slider_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/slider_bullets.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_bullets_blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_bullets_brown.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_bullets_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_bullets_green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_bullets_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_button_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_button_play_pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/default/tile_button_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/images/arrow_down_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/images/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/images/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/images/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/images/button_fullscreen_single.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/images/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/images/button_playpause_single.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/video/images/arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/video/images/arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/image4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/sound_cloud.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/tile9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/big/wistia_video.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/html5_video.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/sound_cloud.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/thumb1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/thumb2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/thumb3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/thumb4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/tile9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/video9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/images/thumbs/wistia_video.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/button-close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/cover-grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/icon-link32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/icon-play32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/icon-zoom32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/lightbox-arrow-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/lightbox-arrow-right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/lightbox-icon-close-compact.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/lightbox-icon-close-compact2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/lightbox-icon-close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-black1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-black2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-black3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-black4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-black5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-black6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-black7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-white1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-white2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-white3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-white4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-white5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-white6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader-white7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader_bright.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/loader_skype_trans.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/not_loaded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/play-button-round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/play-button-square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/images/transparent.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/button_zoom_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/button_zoom_minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/button_zoom_plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_arrow_left_hortype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_arrow_right_hortype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_handle_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_handle_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_handle_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/grid_handle_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/slider_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/slider_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/images/slider_bullets.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/arrow_grid_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/arrow_grid_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/arrows_strip_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/arrows_strip_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/grid_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/grid_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/grid_handle_black_bottom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/grid_handle_black_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/grid_handle_black_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/grid_handle_black_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/icon_zoom_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/icon_zoom_minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/icon_zoom_plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/slider_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/slider_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/slider_bullets.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_bullets_blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_bullets_brown.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_bullets_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_bullets_green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_bullets_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_button_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_button_play_pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/default/tile_button_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/images/arrow_down_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/images/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/images/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/images/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/images/button_fullscreen_single.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/images/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/images/button_playpause_single.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/video/images/arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/video/images/arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/big/image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/big/image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/big/image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/big/image4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/big/sound_cloud.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/big/wistia_video.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/thumbs/html5_video.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/thumbs/sound_cloud.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/thumbs/thumb1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/thumbs/thumb2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/thumbs/thumb3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/thumbs/thumb4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/images/thumbs/wistia_video.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/button-close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/cover-grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/icon-link32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/icon-play32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/icon-zoom32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/lightbox-arrow-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/lightbox-arrow-right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/lightbox-icon-close-compact.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/lightbox-icon-close-compact2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/lightbox-icon-close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-black1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-black2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-black3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-black4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-black5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-black6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-black7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-white1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-white2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-white3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-white4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-white5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-white6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader-white7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader_bright.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/loader_skype_trans.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/not_loaded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/play-button-round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/play-button-square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/images/transparent.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/button_zoom_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/button_zoom_minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/button_zoom_plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_arrow_left_hortype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_arrow_right_hortype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_handle_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_handle_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_handle_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/grid_handle_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/slider_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/slider_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/images/slider_bullets.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/arrow_grid_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/arrow_grid_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/arrows_strip_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/arrows_strip_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/grid_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/grid_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/grid_handle_black_bottom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/grid_handle_black_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/grid_handle_black_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/grid_handle_black_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/icon_zoom_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/icon_zoom_minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/icon_zoom_plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/slider_arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/slider_arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/slider_bullets.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_bullets_blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_bullets_brown.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_bullets_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_bullets_green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_bullets_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_button_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_button_play_pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/default/tile_button_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/images/arrow_down_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/images/arrows_strip_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/images/arrows_strip_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/images/button_fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/images/button_fullscreen_single.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/images/button_playpause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/images/button_playpause_single.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/video/images/arrow_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/video/images/arrow_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/home/ui_development.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/layouts/theme_portfolio_gh.gsp.bk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/css/unite-gallery.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/js/jquery-11.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/js/unitegallery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/js/unitegallery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/release_log.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/skins/alexis/alexis.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/carousel/ug-theme-carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/compact/ug-theme-compact.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/ug-theme-default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/default/ug-theme-default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/grid/ug-theme-grid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/slider/ug-theme-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/tiles/ug-theme-tiles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/tilesgrid/ug-theme-tilesgrid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/video/skin-bottom-text.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/video/skin-right-no-thumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/video/skin-right-thumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/video/skin-right-title-only.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/dist/themes/video/ug-theme-video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/alter_images.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/api.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/carousel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/carousel_video.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/compact_bottom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/compact_left.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/compact_right.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/compact_top.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/default.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/default_no_panel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/default_options.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/grid_bottom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/grid_horizontal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/grid_left.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/grid_right.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/grid_top.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/skin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/slider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tiles_columns.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tiles_columns_links.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tiles_columns_video.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tiles_justified.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tiles_justified_links.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tiles_nested.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tiles_nested_size.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tilesgrid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tilesgrid_arrows.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/tilesgrid_video.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/css/unite-gallery.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/js/jquery-11.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/js/unitegallery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/js/unitegallery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/release_log.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/skins/alexis/alexis.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/carousel/ug-theme-carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/compact/ug-theme-compact.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/ug-theme-default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/default/ug-theme-default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/grid/ug-theme-grid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/slider/ug-theme-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/tiles/ug-theme-tiles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/video/skin-bottom-text.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/video/skin-right-no-thumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/video/skin-right-thumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/video/skin-right-title-only.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/unitegallery/themes/video/ug-theme-video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/video_both.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/video_bottom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/video_icon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/package/video_title.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/css/unite-gallery.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/jquery-11.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-avia.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-common-libraries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-functions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-gallery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-gridpanel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-lightbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-loadmore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-panelsbase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-sliderassets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-strippanel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-tabs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-thumbsgeneral.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-thumbsgrid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-thumbsstrip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-tiledesign.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-tiles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-touchslider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-touchthumbs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/js/ug-zoomslider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/release_log.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/skins/alexis/alexis.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/carousel/ug-theme-carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/compact/ug-theme-compact.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/ug-theme-default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/default/ug-theme-default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/grid/ug-theme-grid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/slider/ug-theme-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/tiles/ug-theme-tiles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/video/skin-bottom-text.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/video/skin-right-no-thumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/video/skin-right-thumb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/video/skin-right-title-only.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/unitegallery/source/unitegallery/themes/video/ug-theme-video.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure7_closure10_closure11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure7_closure10_closure11_closure12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/DocumentController$_download_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__delete_closure16.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__saveProfile_closure13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__save_closure14.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__update_closure15.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_createProfile_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_create_closure5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_delete_closure11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_edit_closure9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure12_closure17.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure12_closure18.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_profile_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_saveProfileImage_closure6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_saveProfile_closure7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_save_closure8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_show_closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__delete_closure16_closure25.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__delete_closure16_closure26.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__saveProfile_closure13_closure19.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__saveProfile_closure13_closure20.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__save_closure14_closure21.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__save_closure14_closure22.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__update_closure15_closure23.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__update_closure15_closure24.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_update_closure10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_$tt__saveItemTag_closure6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_$tt__saveItemTag_closure7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_$tt__saveItemTag_closure9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_getCategories_closure8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_saveItemTag_closure5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_save_user_pack_acc_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_save_user_pack_acc_closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/home/HomeController$_hotItems_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/picsell/home/HomeController$_hotItems_closure2_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/GenerateAll$_run_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/GenerateAll.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/GenerateController$_run_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/GenerateController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy$_run_closure8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsBootstrap_groovy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsGenerate_groovy$_run_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsGenerate_groovy$_run_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsGenerate_groovy$_run_closure2_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsGenerate_groovy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/picsell/grails-resources/images/logo/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/picsell/grails-resources/images/logo/logo_small.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/picsell/grails-resources/portfolio-gh-pages/css/3-col-portfolio.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ApplicationResources.class" afterPath="$PROJECT_DIR$/target/classes/ApplicationResources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BuildConfig.class" afterPath="$PROJECT_DIR$/target/classes/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config.class" afterPath="$PROJECT_DIR$/target/classes/Config.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataSource.class" afterPath="$PROJECT_DIR$/target/classes/DataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/UrlMappings.class" afterPath="$PROJECT_DIR$/target/classes/UrlMappings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/config/Account.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/config/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/config/AccountController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/config/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/config/TermOfService.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/config/TermOfService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/config/TermOfServiceController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/config/TermOfServiceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/AccountController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/Category.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/Category.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/CategoryController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/CategoryController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ContributorController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ContributorController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/DocumentController$_photoWithWatermaark_closure1.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/DocumentController$_photoWithWatermaark_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/DocumentController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/DocumentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/FavoriteCategories.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/FavoriteCategories.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/FileItem.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/FileItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/FileItemController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/FileItemController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ImageController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ImageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ImageFile.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ImageFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/Item$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/Item$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/Item$__clinit__closure2.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/Item$__clinit__closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/Item.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/Item.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ItemController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ItemController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ItemHasCategory.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ItemHasCategory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ItemTags.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ItemTags.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/MyChartController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/MyChartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUser.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__delete_closure15.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__delete_closure15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__saveProfile_closure12.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__saveProfile_closure12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__save_closure13.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__save_closure13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__update_closure14.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_$tt__update_closure14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure11.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure11_closure16.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure11_closure16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure11_closure17.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_notFound_closure11_closure17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__delete_closure15_closure24.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__delete_closure15_closure24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__delete_closure15_closure25.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__delete_closure15_closure25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__saveProfile_closure12_closure18.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__saveProfile_closure12_closure18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__saveProfile_closure12_closure19.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__saveProfile_closure12_closure19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__save_closure13_closure20.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__save_closure13_closure20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__save_closure13_closure21.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__save_closure13_closure21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__update_closure14_closure22.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__update_closure14_closure22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__update_closure14_closure23.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController$_tt__update_closure14_closure23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/ProfileUserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/UserAccount.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/UserAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/UserAccountController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/UserAccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/UserChart.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/UserChart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/data/UserItemController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/data/UserItemController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_$tt__saveItemTag_closure8.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_$tt__saveItemTag_closure8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_check_contrib_has_subs_acc_closure3.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_check_contrib_has_subs_acc_closure3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_cheeck_user_items_closure4.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController$_cheeck_user_items_closure4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/global/ApiController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/home/HomeController$_index_closure1.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/home/HomeController$_index_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/home/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/home/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/home/SubcribtionController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/home/SubcribtionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/home/TosController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/home/TosController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/LogoutController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/LogoutController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/RegisterController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/RequestmapController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/RequestmapController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/Role.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/Role.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/RoleMenu.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/RoleMenu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/User.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/security/UserRole.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/security/UserRole.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/test/TestFile.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/test/TestFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/picsell/test/TestFileController.class" afterPath="$PROJECT_DIR$/target/classes/com/picsell/test/TestFileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/resources.class" afterPath="$PROJECT_DIR$/target/classes/resources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/TomcatGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/TomcatGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatLoader.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/ForkedTomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/ForkedTomcatServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatDevelopmentRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatDevelopmentRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatExecutionContext.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatExecutionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineBootStrap.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineBootStrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/BurningImageGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/BurningImageGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/CacheGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/CacheGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DbdocUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DbdocUrlMappings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultCacheConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultCacheConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultQuartzConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultQuartzConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultSecurityConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultUiSecurityConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultUiSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultWebXmlConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultWebXmlConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/EmailConfirmationEvents.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/EmailConfirmationEvents.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/EmailConfirmationGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/EmailConfirmationGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/EmailConfirmationUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/EmailConfirmationUrlMappings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/HibernateGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/HibernateGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryPluginResources.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryPluginResources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryResourceTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryResourceTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JqueryGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JqueryGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/MailGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/MailGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreBootStrap.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreBootStrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreFilters.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreFilters.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreResources.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreResources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/PlatformCoreUrlMappings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/QuartzBootStrap.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/QuartzBootStrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/QuartzGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/QuartzGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/ResourcesBootStrap.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/ResourcesBootStrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/ResourcesGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/ResourcesGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/SpringSecurityCoreGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/SpringSecurityCoreGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/SpringSecurityUiGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/SpringSecurityUiGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetMethodTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetMethodTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetPipelineFilter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetPipelineFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetProcessorService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetProcessorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetsTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetsTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/CachingLinkGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/CachingLinkGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/LinkGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/LinkGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/fs/EmptyResource.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/fs/EmptyResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/fs/SpringAssetCache.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/fs/SpringAssetCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/fs/SpringResourceAssetResolver.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/fs/SpringResourceAssetResolver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/Base62Codec.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/Base62Codec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/EmailConfirmationController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/EmailConfirmationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/EmailConfirmationService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/EmailConfirmationService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/EmailConfirmationTestToolsController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/EmailConfirmationTestToolsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/PendingEmailConfirmation.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/PendingEmailConfirmation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/StaleEmailConfirmationJob.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/com/grailsrocks/emailconfirmation/StaleEmailConfirmationJob.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/CacheTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/CacheTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/GrailsCacheAdminService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/GrailsCacheAdminService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ChangelogXml2Groovy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ChangelogXml2Groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DbdocController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DbdocController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormColumn.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormColumn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabase.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseSnapshotGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseSnapshotGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseTypeConverter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseTypeConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDiff.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDiff.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange$1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChangeLogParser.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChangeLogParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsClassLoaderResourceAccessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsClassLoaderResourceAccessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsDiffStatusListener.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsDiffStatusListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition$1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GroovyAwareStringChangeLogSerializer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GroovyAwareStringChangeLogSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/HibernateAwareTypeConverter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/HibernateAwareTypeConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MySQLCompatibleChangeLogSerializer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MySQLCompatibleChangeLogSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MysqlAwareCreateTableGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MysqlAwareCreateTableGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/NoopVisitor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/NoopVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ColumnWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ColumnWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/MemoryDocVisitor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/MemoryDocVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/hibernate3/HibernatePluginSupport.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/hibernate3/HibernatePluginSupport.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/GrailsMailException.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/GrailsMailException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageBuilderFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageBuilderFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageContentRender.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageContentRender.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageContentRenderer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageContentRenderer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/PlainTextMailTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/PlainTextMailTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/InterceptedUrl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/InterceptedUrl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LoginController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LogoutController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LogoutController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ReflectionUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ReflectionUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SecurityTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SecurityTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SpringSecurityService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SpringSecurityService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AbstractS2UiController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AbstractS2UiController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AbstractS2UiDomainController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AbstractS2UiDomainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclClassController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclClassController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclEntryController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclEntryController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclObjectIdentityController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclObjectIdentityController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclSidController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/AclSidController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/Constants.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/ForgotPasswordCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/ForgotPasswordCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/InvalidValueException.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/InvalidValueException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/PersistentLoginController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/PersistentLoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterCommand$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterCommand$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterCommand$__clinit__closure1_closure2.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterCommand$__clinit__closure1_closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController$__clinit__closure2.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController$__clinit__closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController$__clinit__closure3.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController$__clinit__closure3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController$_forgotPassword_closure1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController$_forgotPassword_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegistrationCode.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegistrationCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegistrationCodeController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RegistrationCodeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RequestmapController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RequestmapController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/ResetPasswordCommand$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/ResetPasswordCommand$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/ResetPasswordCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/ResetPasswordCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RoleController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityInfoController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityInfoController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure10.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure11.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure12.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure13.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure13_closure32.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure13_closure32.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure14.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure15.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure16.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure17.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure17_closure33.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure17_closure33.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure18.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure18_closure34.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure18_closure34.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure19.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure20.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure21.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure22.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure22_closure35.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure22_closure35.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure23.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure24.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure25.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure26.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure27.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_closure27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_fieldErrors_closure30.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_fieldErrors_closure30.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_writeDocumentReady_closure28.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_writeDocumentReady_closure28.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_writeRemainingAttributes_closure29.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib$_writeRemainingAttributes_closure29.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SecurityUiTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SpringSecurityUiFilters.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SpringSecurityUiFilters.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SpringSecurityUiService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/SpringSecurityUiService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/UserController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultAclStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultAclStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultErrorsStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultErrorsStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultPersistentLoginStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultPersistentLoginStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultPropertiesStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultPropertiesStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultQueryStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultQueryStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultRegistrationCodeStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultRegistrationCodeStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultRequestmapStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultRequestmapStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultRoleStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultRoleStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultUserStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/DefaultUserStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/MailPluginMailStrategy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ui/strategy/MailPluginMailStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/userdetails/GormUserDetailsService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/userdetails/GormUserDetailsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/web/authentication/rememberme/GormPersistentTokenRepository.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/web/authentication/rememberme/GormPersistentTokenRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/webxml/FilterManager.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/webxml/FilterManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/JobDescriptor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/JobDescriptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/JobManagerService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/JobManagerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/TriggerDescriptor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/TriggerDescriptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/config/TriggersConfigBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugins/quartz/config/TriggersConfigBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryProvider.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/DefaultGrailsTemplateGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/DefaultGrailsTemplateGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/NavigationTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/NavigationTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/PlatformTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/PlatformTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/SecurityTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/SecurityTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/SystemTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/SystemTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/UiExtensionsTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/UiExtensionsTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/ConfigBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/ConfigBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/ConfigOptionsBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/ConfigOptionsBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/PluginConfigurationEntry.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/PluginConfigurationEntry.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/PluginConfigurationFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/PluginConfigurationFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/PluginConfigurationImpl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/config/PluginConfigurationImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/controllers/PlatformToolsController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/controllers/PlatformToolsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/ConventionsImpl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/ConventionsImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLBlockCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLBlockCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLCallCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLCallCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLEvaluator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLEvaluator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLGetValueCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLGetValueCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLNamedArgsBlockCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLNamedArgsBlockCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLNamedArgsCallCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLNamedArgsCallCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLSetValueCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/DSLSetValueCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/StandardDSLBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/StandardDSLBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/StandardDSLDelegate.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/StandardDSLDelegate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/UnsupportedDSLOperationException.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/conventions/UnsupportedDSLOperationException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/EventDefinition.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/EventDefinition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/EventsImpl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/EventsImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/dispatcher/GormTopicSupport1X.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/dispatcher/GormTopicSupport1X.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/dispatcher/GormTopicSupport2X.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/events/dispatcher/GormTopicSupport2X.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectedMethod.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectedMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionBuilderArtefactTypeDelegate.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionBuilderArtefactTypeDelegate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionBuilderMethodDelegate.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionBuilderMethodDelegate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionImpl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/injection/InjectionImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/navigation/NavigationImpl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/navigation/NavigationImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/navigation/NavigationItem.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/navigation/NavigationItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/navigation/NavigationScope.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/navigation/NavigationScope.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/security/NotPermittedException.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/security/NotPermittedException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/security/SecurityImpl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/security/SecurityImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/ui/UiConstants.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/ui/UiConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/ui/UiExtensions.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/ui/UiExtensions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/ClosureInvokingScript.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/ClosureInvokingScript.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/PluginUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/PluginUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/PropertyNamespacer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/PropertyNamespacer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/TagLibUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/TagLibUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/ViewCallbackDelegate.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/platform/util/ViewCallbackDelegate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/AggregatedResourceMeta.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/AggregatedResourceMeta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/BaseUrlResourceMapper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/BaseUrlResourceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/BundleResourceMapper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/BundleResourceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSBundleResourceMeta.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSBundleResourceMeta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSLinkProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSLinkProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSPreprocessorResourceMapper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSPreprocessorResourceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSRewriterResourceMapper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/CSSRewriterResourceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/DevModeSanityFilter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/DevModeSanityFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/JavaScriptBundleResourceMeta.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/JavaScriptBundleResourceMeta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ProcessingFilter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ProcessingFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceMeta.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceMeta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceModule.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceProcessorBatch.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceProcessorBatch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/ResourceTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/URLUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/URLUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/mapper/MapperPhase.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/mapper/MapperPhase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/mapper/ResourceMapper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/mapper/ResourceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/mapper/ResourceMappersFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/mapper/ResourceMappersFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/module/ModuleBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/module/ModuleBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/module/ModuleDeclarationsFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/module/ModuleDeclarationsFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/module/ModulesBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/module/ModulesBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/DispositionsUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/DispositionsUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/HalfBakedLegacyLinkGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/HalfBakedLegacyLinkGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/ResourceMetaStore.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/ResourceMetaStore.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/StatsManager.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/grails/plugin/resource/util/StatsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/BurningImageService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/BurningImageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/BurningImageTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/BurningImageTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ConfigUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ConfigUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/DbContainerImageController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/DbContainerImageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ImageUploadService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ImageUploadService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ResourcePathProvider.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ResourcePathProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ast/Image.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ast/Image.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ast/ImageService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/ast/ImageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/ContainerUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/ContainerUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/ContainerWorker.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/ContainerWorker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/ContainerWorkerFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/ContainerWorkerFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/DbContainerWorker.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/DbContainerWorker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/DeleteDbImageCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/DeleteDbImageCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/FileContainerWorker.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/FileContainerWorker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/SaveToDbCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/SaveToDbCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/SaveToFileCommand.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/container/SaveToFileCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/Action.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/Action.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/RenderingEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/RenderingEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/Worker.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/Worker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/crop/CropEngineFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/crop/CropEngineFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/crop/ImageMagickCropEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/crop/ImageMagickCropEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/crop/JaiCropEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/crop/JaiCropEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ImageMagickAccurateScaleEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ImageMagickAccurateScaleEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ImageMagickApproximateScaleEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ImageMagickApproximateScaleEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ImageMagickScaleEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ImageMagickScaleEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/JaiAccurateScaleEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/JaiAccurateScaleEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/JaiApproximateScaleEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/JaiApproximateScaleEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/JaiScaleEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/JaiScaleEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ScaleEngineFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ScaleEngineFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ScaleType.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/scale/ScaleType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/DefaultTextEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/DefaultTextEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/ImageMagickTextEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/ImageMagickTextEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/JaiTextEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/JaiTextEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/TextEngineFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/text/TextEngineFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/DefaultWatermarkEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/DefaultWatermarkEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/ImageMagickWatermarkEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/ImageMagickWatermarkEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/JaiWatermarkEngine.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/JaiWatermarkEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/WatermarkEngineFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/engines/watermark/WatermarkEngineFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/ImageFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/ImageFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/ImageFileFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/ImageFileFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/LocalImageFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/LocalImageFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/MultipartImageFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/file/MultipartImageFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/test/FileUploadUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/test/FileUploadUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/validator/ImageValidator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/pl/burningice/plugins/image/validator/ImageValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/IdeaPrintProjectSettings.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/IdeaPrintProjectSettings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/LinkedProperties.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/LinkedProperties.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/ListEnumeration.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/ListEnumeration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsArgParsing_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsArgParsing_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsClasspath_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsClasspath_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsClean_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsClean_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsCompile_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsCompile_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsCreateArtifacts_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsCreateArtifacts_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsEvents_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsEvents_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsInit_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsInit_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsPackage_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsPackage_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsProxy_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsProxy_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsRun_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsRun_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsSettings_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsSettings_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsWar_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsWar_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_PackagePlugins_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_PackagePlugins_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_PluginDependencies_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_PluginDependencies_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9912d06f-6839-494d-9b99-2de55f609fb9.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9912d06f-6839-494d-9b99-2de55f609fb9.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.slcache/.index" afterPath="$PROJECT_DIR$/.slcache/.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/DocumentController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/ProfileUserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/ProfileUserController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/global/ApiController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/global/ApiController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/picsell/home/HomeController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/picsell/home/HomeController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/picsell/data/Item.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/picsell/data/Item.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/category/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/category/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/category/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/category/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/category/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/category/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/category/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/category/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/aboutUs.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/aboutUs.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/helpCenter.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/helpCenter.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/hotItems.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/hotItems.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/itemDetail.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/itemDetail.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/mychart.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/mychart.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/purchase_summary.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/purchase_summary.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/setting.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/setting.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/test.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/test.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/tos.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/tos.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_navigation.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_navigation.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/login.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/login.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/register.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/register.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/theme_portfolio_gh.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/theme_portfolio_gh.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/profileUser/profile.gsp" afterPath="$PROJECT_DIR$/grails-app/views/profileUser/profile.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/register/register.gsp" afterPath="$PROJECT_DIR$/grails-app/views/register/register.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/termOfService/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/termOfService/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/termOfService/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/termOfService/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/termOfService/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/termOfService/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/termOfService/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/termOfService/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/termOfService/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/termOfService/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/tos/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/tos/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userItem/_formAddItem.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userItem/_formAddItem.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userItem/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userItem/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userItem/itemDetail.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userItem/itemDetail.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/LICENSE.txt" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_globalnav.gsp" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_globalnav.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_index.gsp" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_overview-summary.gsp" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_overview-summary.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_stylesheet.gsp" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/grails-app/views/dbdoc/_stylesheet.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmChangelogSync.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmChangelogSync.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmChangelogSyncSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmChangelogSyncSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmClearChecksums.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmClearChecksums.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmCreateChangelog.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmCreateChangelog.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmDbDoc.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmDbDoc.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmDropAll.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmDropAll.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmFutureRollbackSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmFutureRollbackSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmGenerateChangelog.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmGenerateChangelog.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmGenerateGormChangelog.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmGenerateGormChangelog.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmGormDiff.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmGormDiff.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmListLocks.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmListLocks.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmListTags.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmListTags.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmMarkNextChangesetRan.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmMarkNextChangesetRan.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmPreviousChangesetSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmPreviousChangesetSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRegisterChangelog.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRegisterChangelog.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmReleaseLocks.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmReleaseLocks.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollback.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollback.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackCount.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackCount.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackCountSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackCountSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackToDate.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackToDate.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackToDateSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmRollbackToDateSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmStatus.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmStatus.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmTag.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmTag.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdate.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdate.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdateCount.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdateCount.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdateCountSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdateCountSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdateSql.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmUpdateSql.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmValidate.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/scripts/DbmValidate.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/AuthorListWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/AuthorListWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/AuthorWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/AuthorWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/ColumnWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/ColumnWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/HTMLListWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/HTMLListWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/HTMLWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/HTMLWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/TableListWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/TableListWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/TableWriter.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/database-migration-1.3.8/src/groovy/grails/plugin/databasemigration/dbdoc/TableWriter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0.0/LICENSE.txt" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0.0/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0.0/grails-app/controllers/grails/plugin/springsecurity/LoginController.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0.0/grails-app/controllers/grails/plugin/springsecurity/LoginController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0.0/grails-app/controllers/grails/plugin/springsecurity/LogoutController.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0.0/grails-app/controllers/grails/plugin/springsecurity/LogoutController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/LICENSE.txt" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/META-INF/assets/reset.css" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/META-INF/assets/reset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/assets/stylesheets/reset.css" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/assets/stylesheets/reset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/controllers/grails/plugin/springsecurity/ui/RegisterController.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/controllers/grails/plugin/springsecurity/ui/RegisterController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/taglib/grails/plugin/springsecurity/ui/SecurityUiTagLib.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-ui-1.0-RC3/grails-app/taglib/grails/plugin/springsecurity/ui/SecurityUiTagLib.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/webxml-1.4.1/LICENSE.txt" afterPath="$PROJECT_DIR$/target/work/plugins/webxml-1.4.1/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/webxml-1.4.1/grails-app/conf/DefaultWebXmlConfig.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/webxml-1.4.1/grails-app/conf/DefaultWebXmlConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/webxml-1.4.1/src/samples/_WebXmlConfig.groovy" afterPath="$PROJECT_DIR$/target/work/plugins/webxml-1.4.1/src/samples/_WebXmlConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/picsell/grails-resources/css/picsell_custom.css" afterPath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/picsell/grails-resources/css/picsell_custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/picsell_custom.css" afterPath="$PROJECT_DIR$/web-app/css/picsell_custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/picsell_custom_red.css" afterPath="$PROJECT_DIR$/web-app/css/picsell_custom_red.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/portfolio-gh-pages/css/3-col-portfolio.css" afterPath="$PROJECT_DIR$/web-app/portfolio-gh-pages/css/3-col-portfolio.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/sb-admin-gh-pages/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/web-app/sb-admin-gh-pages/vendor/bootstrap/css/bootstrap-grid.min.css" />
     </list>
     <ignored path="exam.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1024,7 +34,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="113">
@@ -1040,6 +50,29 @@
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="132" column="98" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Banner.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/picsell/data/Banner.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1083,16 +116,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_formAddImageItem.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserItemController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy">
           <provider selected="true" editor-type-id="text-editor">
@@ -1108,16 +131,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/ItemController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1003">
-              <caret line="9" column="75" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -1194,7 +207,6 @@
         <option value="$PROJECT_DIR$/grails-app/views/userItem/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/userItem/_formAddImageItem.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/UserItemController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/profileUser/_add_profile_info.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/picsell/data/ProfileUserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/profileUser/profile.gsp" />
@@ -1218,6 +230,7 @@
         <option value="$PROJECT_DIR$/grails-app/views/banner/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/banner/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
       </list>
     </option>
   </component>
@@ -2116,12 +1129,12 @@
       <workItem from="1531329290401" duration="1190000" />
       <workItem from="1531722608066" duration="62000" />
       <workItem from="1531784093564" duration="5767000" />
-      <workItem from="1532006220381" duration="61330000" />
+      <workItem from="1532006220381" duration="61723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="547900000" />
+    <option name="totallyTimeSpent" value="548293000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2155,7 +1168,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.495114" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5546624" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5537459" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24810892" sideWeight="0.51272726" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21613394" sideWeight="0.48727274" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -2191,14 +1204,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/category/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/picsell/data/ItemTags.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -2259,14 +1264,6 @@
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-376">
-          <caret line="42" column="176" selection-start-line="42" selection-start-column="176" selection-end-line="42" selection-end-column="176" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/picsell/data/ImageController.groovy">
@@ -2621,6 +1618,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/picsell/data/Banner.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -2635,6 +1643,14 @@
             <element signature="n#g:each#1;n#g:else#0;n#g:else#0;n#gsp:root#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="132" column="98" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,6 @@
 import com.picsell.config.Account
 import com.picsell.config.TermOfService
+import com.picsell.data.Banner
 import com.picsell.data.Category
 import com.picsell.data.Item
 import com.picsell.data.ItemHasCategory
@@ -127,6 +128,9 @@ class BootStrap {
 
         Account.findByName('Enterprice') ?: new Account(maxTeamUser: 1000, name: 'Enterprice', type: 'Enterprice', lisence: 'Enterprice', maxImages: 0, price: 700, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
 
+
+        Banner.findByType("big") ?: new Banner(type: "big", isActive: false).save(flush: true)
+        Banner.findByType("small") ?: new Banner(type: "small", isActive: false).save(flush: true)
         //Items
 //        def item1 = Item.findByName("Item 1") ?: new Item(name: "Item 1", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 20, currency: "USD", userOwner: atuanda).save(flush: true)
 //        def item2 = Item.findByName("Item 2") ?: new Item(name: "Item 2", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!", price: 25, currency: "USD", userOwner: atuanda).save(flush: true)
