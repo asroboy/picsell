@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container" >
     <div class="row">
         <div class="col-lg-4">
             <div class="my-4 label-red">Term of Use</div>

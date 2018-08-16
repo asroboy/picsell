@@ -66,7 +66,7 @@
 
 <div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'category', 'error')} ">
     <label for="tags">
-        <g:message code="item.tags.label" default="Tags - (Separate with comma)"/>
+        <g:message code="item.tags.label" default="Tags - (Separate with comma, maximum allowed 7 tags)"/>
     </label>
     <g:textField name="tags" value="${fieldValue(bean: itemInstance, field: 'tags')}" class="form-control"/>
 </div>

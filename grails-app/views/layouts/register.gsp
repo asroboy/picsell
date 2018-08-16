@@ -47,7 +47,7 @@
 </head>
 
 <body>
-<g:render template="/layouts/navigation"/>
+<g:render template="/layouts/navigation_s"/>
 <g:layoutBody/>
 %{--<div class="container">--}%
     %{--<div class="row">--}%

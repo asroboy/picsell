@@ -9,7 +9,7 @@
 
 <body>
 
-<div class="container" style="max-width: 700px">
+<div class="container" style="max-width: 700px; margin-bottom: 50px">
     <div class="row">
         <div class="col-md-12">
             <div class="card card-register mx-auto mt-3">

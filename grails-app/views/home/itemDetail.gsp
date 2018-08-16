@@ -82,30 +82,25 @@
 
 <!-- Page Content -->
 <div class="container">
-
-    %{--<!-- Portfolio Item Heading -->--}%
-    %{--<h1 class="my-4">${itemInstance?.name}--}%
-    %{--<small>The item sub name or category</small>--}%
-    %{--</h1>--}%
-
-    <!-- Portfolio Item Row -->
     <div class="row">
-
         <div class="col-md-6" style="margin-top: 50px">
             <div class="image_container">
                 <img class="card-img-top"
                      src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)?.id)}"
                      alt="">
+
                 <div class="overlay">
                     <sec:ifLoggedIn>
-                        <a id="like_${itemInstance?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
+                        <a id="like_${itemInstance?.id}" class="btn btn-sm" data-toggle="tooltip"
+                           data-placement="bottom"
                            title="Like"
                            style="color: white" onclick="like(${itemInstance?.id})">
                             <script>
                                 islike(${itemInstance?.id});
                             </script></a>
                         <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
-                           style="color: white"><i class="fa fa-shopping-basket" onclick="add_to_chart(${itemInstance?.id})"></i></a>
+                           style="color: white"><i class="fa fa-shopping-basket"
+                                                   onclick="add_to_chart(${itemInstance?.id})"></i></a>
                     </sec:ifLoggedIn>
                     <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
                        style="color: white"><i class="fa fa-download"></i></a>
@@ -115,7 +110,6 @@
 
                 </div>
             </div>
-
 
         </div>
 
@@ -130,8 +124,10 @@
 
                     <div class="col-md-4">
                         <div style="margin-top: 55px; font-size: 16pt">
-                            <i class="fa fa-eye" style="color: #c90000"></i> ${com.picsell.data.ItemViewed.countByItem(itemInstance)}
-                            <i class="fa fa-heart-o" style="color: #c90000; margin-left: 10px"></i> ${com.picsell.data.UserLikeItem.countByItem(itemInstance)}
+                            <i class="fa fa-eye"
+                               style="color: #c90000"></i> ${com.picsell.data.ItemViewed.countByItem(itemInstance)}
+                            <i class="fa fa-heart-o"
+                               style="color: #c90000; margin-left: 10px"></i> ${com.picsell.data.UserLikeItem.countByItem(itemInstance)}
                         </div>
 
                     </div>
@@ -163,7 +159,8 @@
 
                 <div class="gray-box">
                     Large  2310 x 1298, 150 mdpi, 18x22 in @300 dpi, JPEG <a href="#" style="margin-left: 50px;"><i
-                        class="fa fa-shopping-basket" data-toggle="tooltip" data-placement="bottom" title="Add to chart" style="color: #c90000" onclick="add_to_chart(${itemInstance?.id})"></i></a>
+                        class="fa fa-shopping-basket" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
+                        style="color: #c90000" onclick="add_to_chart(${itemInstance?.id})"></i></a>
                 </div>
 
                 <div>
@@ -231,7 +228,8 @@
 
     <div class="row">
         <section id="photos">
-            <g:each in="${com.picsell.data.Item.findAllByCategoryAndStatus(itemInstance?.category, "approved")}" var="item">
+            <g:each in="${com.picsell.data.Item.findAllByCategoryAndStatus(itemInstance?.category, "approved")}"
+                    var="item">
             %{--<div class="col-md-3 col-sm-6 mb-4">--}%
                 <g:if test="${item != itemInstance}">
                     <div class="image_container">
@@ -240,16 +238,19 @@
                                  src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
                                  alt="">
                         </a>
+
                         <div class="overlay">
                             <sec:ifLoggedIn>
-                                <a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
+                                <a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip"
+                                   data-placement="bottom"
                                    title="Like"
                                    style="color: white" onclick="like(${item?.id})">
                                     <script>
                                         islike(${item?.id});
                                     </script></a>
                                 <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
-                                   style="color: white"><i class="fa fa-shopping-basket" onclick="add_to_chart(${item?.id})"></i></a>
+                                   style="color: white"><i class="fa fa-shopping-basket"
+                                                           onclick="add_to_chart(${item?.id})"></i></a>
                             </sec:ifLoggedIn>
                             <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
                                style="color: white"><i class="fa fa-download"></i></a>

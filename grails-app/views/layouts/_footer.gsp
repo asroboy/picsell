@@ -12,11 +12,11 @@
         <div class="row">
             <div class="col-sm-2">
                 <label class="white_link"><h7>Picsell.ID</h7></label><br/>
-                <a class="footer_black_link" href="${createLink(controller: 'home', action: 'index')}">Home</a><br/>
+                <a class="footer_black_link" href="${createLink(controller: 'home', action: 'main')}">Home</a><br/>
                 <a class="footer_black_link"
                    href="${createLink(controller: 'home', action: 'aboutUs')}">About Us</a><br/>
                 <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'index')}">Picsell Image</a><br/>
+                   href="${createLink(controller: 'home', action: 'main')}">Picsell Image</a><br/>
                 <a class="footer_black_link"
                    href="${createLink(controller: 'home', action: 'policy')}">Privacy Policy</a><br/>
                 <a class="footer_black_link"
@@ -36,14 +36,14 @@
             <div class="col-sm-2">
                 <label class="white_link"><h7>Help</h7></label><br/>
                 <a class="footer_black_link" href="#">Support Center</a><br/>
-                <a class="footer_black_link" href="#">Contact Us <br/>(+62)8567228886</a><br/>
+                <a class="footer_black_link" href="tel:+628567228886">Contact Us <br/>(+62)8567228886</a><br/>
 
             </div>
 
             <div class="col-sm-2">
                 <label class="white_link"><h7>Sales & Mareketing</h7></label><br/>
-                <a class="footer_black_link" href="#">sales@picsell.id</a><br/>
-                <a class="footer_black_link" href="#">(+62)8567228886</a><br/>
+                <a class="footer_black_link" href="mailto:sales@picsell.id">sales@picsell.id</a><br/>
+                <a class="footer_black_link" href="tel:628567228886">(+62)8567228886</a><br/>
 
             </div>
 

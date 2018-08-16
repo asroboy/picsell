@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container" style="margin-top: 80px; margin-bottom: 80px">
     <div class="row">
         <div class="col-lg-4">
             <div class="my-4 label-red">Banner Configuration</div>

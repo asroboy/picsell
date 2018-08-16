@@ -73,6 +73,14 @@
                     <a class="btn btn-danger"
                        href="${createLink(controller: 'banner', action: 'index')}">Banner Config.</a>
                 </div>
+                <div class="sub-part1">
+                    Package Setting
+                </div>
+                <div style="margin-bottom: 20px">
+                    <p>To manage available package for users</p>
+                    <a class="btn btn-danger"
+                       href="${createLink(controller: 'account', action: 'index')}">Package Setting</a>
+                </div>
             </div>
         </div>
 

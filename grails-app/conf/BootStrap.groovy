@@ -14,7 +14,7 @@ class BootStrap {
     def init = { servletContext ->
 
         for (String url in [
-                '/', '/error', '/index', '/index.gsp', '/**/favicon.ico', '/shutdown',
+                '/', '/error', '/index', '/index_bk.gsp', '/**/favicon.ico', '/shutdown',
                 '/assets/**', '/**/js/**', '/**/css/**', '/**/images/**',
                 '/login', '/login.*', '/login/*',
                 '/logout', '/logout.*', '/logout/*']) {
@@ -63,9 +63,13 @@ class BootStrap {
 
         //ADMIN CONTRIBUTOR AND USER
         RoleMenu.findByUrl('/profileUser/**') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
-        RoleMenu.findByUrl('/item/**') ?: new RoleMenu(url: '/item/*', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
+        RoleMenu.findByUrl('/item/**') ?: new RoleMenu(url: '/item/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
         RoleMenu.findByUrl('/fileItem/**') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
         RoleMenu.findByUrl('/tos/**') ?: new RoleMenu(url: '/tos/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
+
+        RoleMenu.findByUrl('/dashboard/admin') ?: new RoleMenu(url: '/dashboard/admin', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrl('/dashboard/contributor') ?: new RoleMenu(url: '/dashboard/contributor', configAttribute: 'ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/dashboard/user') ?: new RoleMenu(url: '/dashboard/user', configAttribute: 'ROLE_USER').save()
 
 
         def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save()

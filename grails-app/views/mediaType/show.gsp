@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container"  style="margin-top: 80px; margin-bottom: 180px">
     <div class="row">
         <div class="col-lg-4">
             <div class="my-4 label-red">Media Type Detail</div>
@@ -19,7 +19,7 @@
     </div>
 
 
-    <div class="row" style="margin-bottom: 20px">
+    <div class="row">
         <div class="col-lg-12">
             <p>
                 <g:link class="create btn btn-danger" action="create">Add Type</g:link>

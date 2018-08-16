@@ -23,7 +23,7 @@
 
 <body>
 
-<div class="container">
+<div class="container" style="margin-top: 15px">
     <div class="row">
         <div class="col-md-12">
             <div class="label-red">
@@ -87,8 +87,8 @@
                             <b>Company / Multiple User Package</b>
                         </div>
 
-                        <div class="box-body body-table-plans">
-                            <div class="panel-body">
+                        %{--<div class="box-body body-table-plans">--}%
+                            <div class="panel-body body-table-plans">
                                 <table id="table_multi" style="width: 100%; padding-bottom: 10px"
                                        cellpadding="5px">
                                     <col width="130">
@@ -120,7 +120,7 @@
                                 </sec:ifNotLoggedIn>
 
                             </div>
-                        </div>
+                        %{--</div>--}%
                     </div>
                     %{--</div>--}%
 

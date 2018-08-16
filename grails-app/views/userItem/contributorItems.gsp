@@ -15,8 +15,7 @@
 </head>
 
 <body>
-<div class="container">
-
+<div class="container" style="margin-bottom: 90px">
     <div class="row">
         <div class="col-lg-4">
             <div class="my-4 label-red">Contributor Items</div>
@@ -37,11 +36,11 @@
                     %{--<th>Appr/Rejected by</th>--}%
                     <th>Action</th>
                 </tr>
-                <g:each in="${items}" var="item">
+                <g:each in="${itemInstanceList}" var="item">
                     <tr>
                         <td>${item?.id}</td>
                         <td><img class="card-img-top"
-                                 src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id,  params: [s: '238h9uhh3', table_id: item?.id, table_name: 'Item'])}"
+                                 src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id, params: [s: '238h9uhh3', table_id: item?.id, table_name: 'Item'])}"
                                  alt=""></td>
                         <td>${item?.userOwner?.username}</td>
                         <td>${item?.price} ${item?.currency}</td>
@@ -65,29 +64,51 @@
                 </g:each>
             </table>
 
+            %{--<div class="pagination justify-content-center">--}%
+            %{--<g:paginate total="${itemInstanceCount ?: 0}"/>--}%
+            %{--</div>--}%
+
             <!-- Pagination -->
             <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
+                <% def mod = itemInstanceCount % params.max %>
+                <% Integer page = itemInstanceCount / params.max %>
+                <% def offsetNow = params.offset ? Integer.parseInt(params.offset) : 0 %>
+
+                <g:if test="${offsetNow > 0}">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'contributorItems', params: [offset: (offsetNow - params.max), max: params.max])}"
+                           aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                </g:if>
+
+
+                <g:each in="${(1..page).toList()}" var="i">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'contributorItems', params: [offset: ((i - 1) * params.max), max: params.max])}">${i}</a>
+                    </li>
+                </g:each>
+                <g:if test="${mod > 0}">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'contributorItems', params: [offset: page * params.max, max: params.max])}">${page + 1}</a>
+                    </li>
+                </g:if>
+
+                <g:if test="${offsetNow < page * params.max}">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'contributorItems', params: [offset: offsetNow + params.max, max: params.max])}"
+                           aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </g:if>
             </ul>
         </div>
     </div>

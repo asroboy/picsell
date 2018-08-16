@@ -128,7 +128,7 @@ grails.plugin.springsecurity.securityConfigType = "Requestmap"
 //grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 //	'/':                ['permitAll'],
 //	'/index':           ['permitAll'],
-//	'/index.gsp':       ['permitAll'],
+//	'/index_bk.gsp':       ['permitAll'],
 //	'/assets/**':       ['permitAll'],
 //	'/**/js/**':        ['permitAll'],
 //	'/**/css/**':       ['permitAll'],
@@ -147,7 +147,7 @@ grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                ['permitAll'],
 	'/index':           ['permitAll'],
-	'/index.gsp':       ['permitAll'],
+	'/index_bk.gsp':       ['permitAll'],
 	'/assets/**':       ['permitAll'],
 	'/**/js/**':        ['permitAll'],
 	'/**/css/**':       ['permitAll'],

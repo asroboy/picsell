@@ -11,6 +11,8 @@
 
     <title>Picsell.ID</title>
 
+
+
     <!-- Bootstrap core CSS -->
     %{--${resource(dir: 'portfolio-gh-pages', file: '')}--}%
     <link href="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/css/bootstrap.min.css')}"
@@ -32,64 +34,35 @@
     %{--<link href="${resource(dir: 'portfolio-gh-pages', file: 'css/3-col-portfolio.css')}" rel="stylesheet">--}%
     <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/jquery/jquery.min.js')}"></script>
     <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
+
+    <!-- Libraries CSS Files -->
+    <link href="${resource(dir: 'ebusiness_theme', file: 'lib/nivo-slider/css/nivo-slider.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'ebusiness_theme', file: 'lib/owlcarousel/owl.carousel.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'ebusiness_theme', file: 'lib/owlcarousel/owl.transitions.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'ebusiness_theme', file: 'lib/font-awesome/css/font-awesome.min.css')}"
+          rel="stylesheet">
+    <link href="${resource(dir: 'ebusiness_theme', file: 'lib/animate/animate.min.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'ebusiness_theme', file: 'lib/venobox/venobox.css')}" rel="stylesheet">
+
+    <!-- Nivo Slider Theme -->
+    <link href="${resource(dir: 'ebusiness_theme', file: 'css/nivo-slider-theme.css')}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="${resource(dir: 'ebusiness_theme', file: 'css/style.css')}" rel="stylesheet">
+
+    <!-- Responsive Stylesheet File -->
+    <link href="${resource(dir: 'ebusiness_theme', file: 'css/responsive.css')}" rel="stylesheet">
+
+    <link href="${resource(dir: 'css', file: 'picsell_custom.css')}"
+          rel="stylesheet">
+
+
     <g:set var="categories" value="${com.picsell.data.Category.list()}"/>
     <g:set var="mediaTypes" value="${com.picsell.data.MediaType.list()}"/>
     <g:set var="userObject"
            value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
     <g:set var="profileUser" value="${com.picsell.data.ProfileUser.findByUser(userObject)}"/>
-
-
-    <link href="${resource(dir: 'css', file: 'picsell_custom.css')}"
-          rel="stylesheet">
-
-    <style>
-    #photos {
-        /* Prevent vertical gaps */
-        line-height: 0;
-        -webkit-column-count: 3;
-        -webkit-column-gap: 0px;
-        -moz-column-count: 3;
-        -moz-column-gap: 0px;
-        column-count: 4;
-        column-gap: 2px;
-    }
-
-    #photos img {
-        /* Just in case there are inline attributes */
-        width: 100% !important;
-        margin: 2px;
-        height: auto !important;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    .image_container {
-        position: relative;
-    }
-
-    .overlay {
-        position: absolute;
-        bottom: 0;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5); /* Black see-through */
-        color: #f1f1f1;
-        width: 100%;
-        transition: .5s ease;
-        opacity: 0;
-        color: white;
-        font-size: 20px;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .image_container:hover .overlay {
-        opacity: 1;
-    }
-    </style>
-
     <g:layoutHead/>
 </head>
 
@@ -172,6 +145,20 @@
 
 
 </script>
+
+
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/owlcarousel/owl.carousel.min.js')}"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/venobox/venobox.min.js')}"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/knob/jquery.knob.js')}"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/wow/wow.min.js')}"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/parallax/parallax.js')}"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/easing/easing.min.js')}"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/nivo-slider/js/jquery.nivo.slider.js')}"
+        type="text/javascript"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/appear/jquery.appear.js')}"></script>
+<script src="${resource(dir: 'ebusiness_theme', file: 'lib/isotope/isotope.pkgd.min.js')}"></script>
+%{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>--}%
+<script src="${resource(dir: 'ebusiness_theme', file: 'js/main.js')}"></script>
 
 </body>
 

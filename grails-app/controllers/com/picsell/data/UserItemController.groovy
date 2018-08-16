@@ -13,11 +13,12 @@ import static org.springframework.http.HttpStatus.OK
 class UserItemController {
     def grailsApplication
 
-    def index() {
+    def index(Integer max) {
+        params.max = Math.min(max ?: 9, 100)
         def user = User.get(sec.loggedInUserInfo(field: "id"))
         println(user?.username)
-        def items = Item.findAllByUserOwner(user)
-        [items: items]
+        def items = Item.findAllByUserOwner(user, params)
+        [items: items, itemInstanceCount: Item.findAllByUserOwner(user).size()]
     }
 
     def addFirstItem() {
@@ -28,9 +29,12 @@ class UserItemController {
         respond new Item(params)
     }
 
-    def contributorItems() {
-        def items = params.status ? Item.findAllByStatus(params.status) : Item.findAll()
-        [items: items]
+    def contributorItems(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+
+        def items = params.status ? Item.findAllByStatus(params.status, params) : Item.list(params)
+        print("size : " + items.size());
+        respond items, model: [itemInstanceCount: Item.count()]
     }
 
     def itemDetail(Item itemInstance) {
@@ -137,8 +141,8 @@ class UserItemController {
             String fileName = file.originalFilename;
             if (!fileName.trim().equals("")) {
                 saveFile(file, mItemInstance)
-            }else{
-                redirect(action: "index")
+            } else {
+                redirect(action: "index", params: [item_id: mItemInstance?.id])
             }
 
 
@@ -159,7 +163,7 @@ class UserItemController {
                 respond mItemInstance.errors, view: 'itemDetail'
                 return
             }
-            redirect(action: "index")
+            redirect(action: "index", params: [item_id: mItemInstance?.id])
         }
 
     }
@@ -187,8 +191,8 @@ class UserItemController {
             }
 
         }
-
-        redirect(action: "index")
+        redirect(action: "index", params: [item_id: mItemInstance?.id])
+//        redirect(action: "index")
     }
 
 

@@ -37,6 +37,7 @@
     <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/jquery/jquery.min.js')}"></script>
     <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
     <g:set var="categories" value="${com.picsell.data.Category.list()}"/>
+    <g:set var="mediaTypes" value="${com.picsell.data.MediaType.list()}"/>
     %{--<g:set var="userObject"--}%
            %{--value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>--}%
     %{--<g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>--}%

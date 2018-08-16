@@ -20,7 +20,7 @@
 
     <div class="row">
         <div class="col-lg-4">
-            <div class="my-4 label-red">New Item</div>
+            <div class="my-4 label-red" style="width: 100%">New Item</div>
         </div>
 
     </div>
@@ -34,7 +34,8 @@
             <g:hasErrors bean="${mItemInstance}">
                 <ul class="errors" role="alert">
                     <g:eachError bean="${mItemInstance}" var="error">
-                        <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+                        <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message
+                                error="${error}"/></li>
                     </g:eachError>
                 </ul>
             </g:hasErrors>
@@ -56,9 +57,9 @@
                         </div>
                         <g:render template="formAddItem"/>
                         <fieldset class="buttons">
-                            <g:submitButton name="create" class="save btn button-red"
+                            <g:submitButton name="create" class="save btn btn-sm btn-danger"
                                             value="${message(code: 'default.button.submit_now.label', default: 'Submit now')}"/>
-                            <a href="${createLink(action: 'index')}" class="btn button-dark-red"
+                            <a href="${createLink(action: 'index')}" class="btn btn-sm btn-danger"
                                style="text-align: left">Cancel</a>
                         </fieldset>
 
@@ -120,6 +121,41 @@
     $("#imgInp").change(function () {
         readURL(this);
     });
+
+    function AlertFilesize() {
+        if (window.ActiveXObject) {
+            var fso = new ActiveXObject("Scripting.FileSystemObject");
+            var filepath = document.getElementById('imgInp').value;
+            var thefile = fso.getFile(filepath);
+            var sizeinbytes = thefile.size;
+        } else {
+            var sizeinbytes = document.getElementById('imgInp').files[0].size;
+        }
+
+        var fSExt = new Array('Bytes', 'KB', 'MB', 'GB');
+        fSize = sizeinbytes;
+        var currentSize = fSize;
+        i = 0;
+        while (fSize > 900) {
+            fSize /= 1024;
+            console.log("fsize : " + fSize);
+            i++;
+        }
+
+        console.log(i);
+        var size = (Math.round(fSize * 100) / 100);
+//        if (i < 2) {
+//            alert(size + ' ' + fSExt[i]);
+//            document.getElementById("imgInp").value = "";
+//        } else {
+//            if (size < 4) {
+//                alert('Your file size must be at least 4 MB, your current size is ' + size + ' ' + fSExt[i]);
+//                document.getElementById("imgInp").value = "";
+//            }
+//        }
+
+    }
+
 </script>
 </body>
 </html>

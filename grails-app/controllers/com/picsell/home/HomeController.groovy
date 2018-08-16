@@ -6,7 +6,41 @@ import com.picsell.data.MediaType
 
 class HomeController {
 
+    def springSecurityService
+
     def index() {
+        if (springSecurityService.isLoggedIn()) {
+            print("is login")
+            def user = com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))
+            def userRoles = com.picsell.security.UserRole.findAllByUser(user)
+            def userType = ""
+            userRoles.each {
+                if (it?.role?.authority.equalsIgnoreCase("ROLE_ADMIN")) {
+                    userType += "ADMIN "
+                }
+                if (it?.role?.authority.equalsIgnoreCase("ROLE_CONTRIBUTOR")) {
+                    userType += "CONTRIBUTOR "
+                }
+                if (it?.role?.authority.equalsIgnoreCase("ROLE_USER")) {
+                    userType += "USER "
+                }
+            }
+            print(userType)
+            if (userType.contains("ADMIN")) {
+                redirect controller: 'dashboard', action: 'admin'
+            } else if (userType.contains("CONTRIBUTOR")) {
+                redirect controller: 'dashboard', action: 'contributor'
+            } else if (userType.contains("USER")) {
+                redirect controller: 'dashboard', action: 'user'
+            }
+
+            [userType: userType]
+        } else {
+            redirect action: 'main'
+        }
+    }
+
+    def main() {
         if (params.key) {
             def c = Item.createCriteria()
             def items = []
@@ -31,10 +65,50 @@ class HomeController {
             }
 
             [items: items]
+        } else if (params.media) {
+            def c = Item.createCriteria()
+            def mediaType = MediaType.findByName(params.media)
+            def items = []
+            def results = c.list() {
+                eq("mediaType", mediaType)
+                and {
+                    eq("status", "approved")
+                }
+            }
+
+            results.each {
+                items.add(it)
+            }
+
+            [items: items]
+        } else if (params.media && params.cat) {
+            def c = Item.createCriteria()
+            def mediaType = MediaType.findByName(params.media)
+            def category = MediaType.findByName(params.cat)
+            def items = []
+            def results = c.list() {
+                eq("mediaType", mediaType)
+                and {
+                    eq("status", "approved")
+                }
+                and {
+                    eq("category", category)
+                }
+            }
+
+            results.each {
+                items.add(it)
+            }
+
+            [items: items]
         }
     }
 
     def test() {}
+
+    def grid_test() {
+
+    }
 
     def configuration() {
 
@@ -83,6 +157,10 @@ class HomeController {
 
     def subscribe_summary() {}
 
-
     def ui_development() {}
+
+    def download_page(Item itemInstance) {
+
+        [itemInstance: itemInstance]
+    }
 }

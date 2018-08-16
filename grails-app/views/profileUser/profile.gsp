@@ -40,39 +40,33 @@
     <!-- Portfolio Item Row -->
     <div class="row">
 
-        <div class="col-md-4">
-            <div class="white-box">
-                <div class="label-red" style="margin-top: 5px">
-                    Summary
-                </div>
+        <div class="col-md-3">
+            <div class="label-red" style="width: 100%">
+                Summary
+            </div>
 
-
-                <div style="margin: 15px;">
-                    Approved (Active) : ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "approved")} images
-                </div>
-
-                <div style="margin: 15px;">
-                    Pending approval : ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "pending")} images
-                </div>
-
-                <div style="margin: 15px;">
-                    Rejected  : ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "rejected")} images
-                </div>
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Uploaded : ${com.picsell.data.Item.countByUserOwner(profileUserInstance?.user)} images</li>
+                    <li class="list-group-item">Approved : ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "approved")} images</li>
+                    <li class="list-group-item">Pending :  ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "pending")} images</li>
+                    <li class="list-group-item">Rejected :${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "rejected")} images</li>
+                </ul>
             </div>
 
             <div style="width: 100%; margin-top: 15px">
-                <button class="btn button-red" style="width: 100%;" onclick="go_to_my_item()">My Items</button>
+                <button class="btn btn-sm btn-danger" style="width: 100%;" onclick="go_to_my_item()">My Items</button>
             </div>
 
         </div>
 
-        <div class="col-md-8">
-            <div class="white-box">
-                <div class="label-red" style="margin-top: 5px">
+        <div class="col-md-9">
+            <div class="card">
+                <div class="label-red">
                     Profile
                 </div>
 
-                <div class="row" style="margin: 15px;">
+                <div class="row" style="margin: 20px;">
                     <div class="col-md-5">
                     %{--<a href="${createLink(controller: 'profileUser', action: '')}">--}%
                         <g:set var="profilePicture"
@@ -106,7 +100,8 @@
                         <g:hasErrors bean="${profileUserInstance}">
                             <ul class="errors" role="alert">
                                 <g:eachError bean="${profileUserInstance}" var="error">
-                                    <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+                                    <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message
+                                            error="${error}"/></li>
                                 </g:eachError>
                             </ul>
                         </g:hasErrors>

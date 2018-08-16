@@ -16,40 +16,45 @@
 
 <body>
 <!-- Page Content -->
-<div class="container">
+<div class="container" style="margin-bottom: 50px">
 
     <div class="row">
-        <div class="col-lg-4">
-            <div class="my-4 label-red">My Items</div>
+        <div class="col-lg-3">
+            <div class="my-4 label-red" style="width: 100%">My Items</div>
         </div>
-
     </div>
 
     <div class="row">
+        <div class="col-lg-3">
+            <div class="card">
+                <div style="margin: 5px">
+                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                       style="text-align: left; width: 100%">Upload item</a>
+                </div>
 
-        %{--<div class="col-lg-2">--}%
-        %{--<div style="margin-bottom: 2rem">--}%
-        %{----}%
-        %{--<a href="#" class="btn btn-block btn-outline-danger" style="text-align: left"><i--}%
-        %{--class="fa fa-dollar"></i>  Pricing</a>--}%
-        %{--<a href="#" class="btn btn-block btn-outline-danger" style="text-align: left"><i--}%
-        %{--class="fa fa-recycle"></i> All Items</a>--}%
-        %{--<a href="#" class="btn btn-block btn-outline-info" style="text-align: left"><i--}%
-        %{--class="fa fa-anchor"></i> Active Items</a>--}%
-        %{--<a href="#" class="btn btn-block btn-outline-info" style="text-align: left"><i--}%
-        %{--class="fa fa-lemon-o"></i> Not Active Items</a>--}%
-        %{--</div>--}%
+                <div style="margin: 5px">
+                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                       style="text-align: left; width: 100%">Approved items</a>
+                </div>
 
-        %{--</div>--}%
-        <!-- /.col-lg-3 -->
+                <div style="margin: 5px">
+                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                       style="text-align: left;  width: 100%">Rejected items</a>
+                </div>
 
-        <div class="col-lg-12">
-            <div style="margin-bottom: 15px; width: 200px">
-                <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-danger"
-                   style="text-align: left"><i
-                        class="fa fa-plus"></i> Add Item</a>
+                <div style="margin: 5px">
+                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                       style="text-align: left;  width: 100%">Pending items</a>
+                </div>
 
             </div>
+
+            <div style="margin-bottom: 15px; width: 200px">
+
+            </div>
+        </div>
+
+        <div class="col-lg-9">
 
             <div class="row">
                 <g:each in="${items}" var="item">
@@ -58,17 +63,21 @@
                             <a href="${createLink(controller: 'userItem', action: 'itemDetail')}">
                                 <img class="card-img-top"
                                      src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id, params: [s: '238h9uhh3'])}"
-                                     alt=""></a>
-
+                                     alt="">
+                            </a>
 
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="${createLink(controller: 'userItem',action: 'itemDetail', id: item?.id)}">${item?.name}</a>
+                                    <a href="${createLink(controller: 'userItem', action: 'itemDetail', id: item?.id)}">${item?.name}</a>
                                 </h4>
+
+                                <div>Item ID : ${item?.id}</div>
 
                                 <div>Price : ${item?.price} ${item?.currency}</div>
 
                                 <div>Description : ${item?.description}</div>
+
+                                <div>Tags : ${item?.tags}</div>
 
                                 <div>Approval status :
                                     <g:if test="${item?.status.equals("approved")}">
@@ -90,27 +99,45 @@
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
+                <% def mod = itemInstanceCount % params.max %>
+                <% Integer page = itemInstanceCount / params.max %>
+                <% def offsetNow = params.offset ? Integer.parseInt(params.offset) : 0 %>
+
+                <g:if test="${offsetNow > 0}">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'index', params: [offset: (offsetNow - params.max), max: params.max])}"
+                           aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                </g:if>
+
+
+                <g:each in="${(1..page).toList()}" var="i">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'index', params: [offset: ((i - 1) * params.max), max: params.max])}">${i}</a>
+                    </li>
+                </g:each>
+                <g:if test="${mod > 0}">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'index', params: [offset: page * params.max, max: params.max])}">${page + 1}</a>
+                    </li>
+                </g:if>
+
+                <g:if test="${offsetNow < page * params.max}">
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="${createLink(action: 'index', params: [offset: offsetNow + params.max, max: params.max])}"
+                           aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </g:if>
             </ul>
 
         </div>
@@ -121,9 +148,41 @@
 
 </div>
 <!-- /.row -->
-
 </div>
 <!-- /.container -->
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Notice</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div id="modal_content">
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                %{--<button type="button" class="btn btn-primary">Save changes</button>--}%
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var itemId = '${params.item_id}';
+    if (itemId !== '') {
+        var content = document.getElementById('modal_content');
+        content.innerHTML = 'Thanks for submitting item, our team will review your submission within 1-3 business days.';
+        $('#infoModal').modal('toggle')
+    }
+</script>
 
 </body>
 </html>
