@@ -37,6 +37,7 @@ class BootStrap {
         RoleMenu.findByUrl('/document/download/**') ?: new RoleMenu(url: '/document/download/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrlAndConfigAttribute('/subcribtion/*', 'permitAll') ?: new RoleMenu(url: '/subcribtion/*', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/api/**') ?: new RoleMenu(url: '/api/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/billing/**') ?: new RoleMenu(url: '/billing/**', configAttribute: 'permitAll').save()
 
         //USER
         RoleMenu.findByUrl('/profileUser/profile/**') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN,ROLE_CONTRIBUTOR').save()
@@ -61,7 +62,9 @@ class BootStrap {
         RoleMenu.findByUrl('/mediaType/**') ?: new RoleMenu(url: '/mediaType/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/banner/**') ?: new RoleMenu(url: '/banner/**', configAttribute: 'ROLE_ADMIN').save()
 
+
         //ADMIN CONTRIBUTOR AND USER
+        RoleMenu.findByUrl('/bankAccount/**') ?: new RoleMenu(url: '/bankAccount/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/profileUser/**') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/item/**') ?: new RoleMenu(url: '/item/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()
         RoleMenu.findByUrl('/fileItem/**') ?: new RoleMenu(url: '/fileItem/**', configAttribute: 'ROLE_ADMIN,ROLE_USER').save()

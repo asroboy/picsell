@@ -25,13 +25,14 @@
     </style>
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
+
+    <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(profileUserInstance?.user)}"/>
 </head>
 
 <body>
 
 <!-- Page Content -->
 <div class="container">
-
     <!-- Portfolio Item Heading -->
     <div class="my-4 ">
         %{--<small>The item sub name or category</small>--}%
@@ -41,22 +42,74 @@
     <div class="row">
 
         <div class="col-md-3">
-            <div class="label-red" style="width: 100%">
-                Summary
-            </div>
+            <g:each in="${userRoles}" var="role" status="i">
+                <g:if test="${role?.role?.authority.equals("ROLE_CONTRIBUTOR")}">
+                    <div class="label-red" style="width: 100%">
+                        Summary
+                    </div>
 
-            <div class="card">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Uploaded : ${com.picsell.data.Item.countByUserOwner(profileUserInstance?.user)} images</li>
-                    <li class="list-group-item">Approved : ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "approved")} images</li>
-                    <li class="list-group-item">Pending :  ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "pending")} images</li>
-                    <li class="list-group-item">Rejected :${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "rejected")} images</li>
+                    <div class="card" style="margin-bottom: 15px">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Uploaded : ${com.picsell.data.Item.countByUserOwner(profileUserInstance?.user)} images</li>
+                            <li class="list-group-item">Approved : ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "approved")} images</li>
+                            <li class="list-group-item">Pending :  ${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "pending")} images</li>
+                            <li class="list-group-item">Rejected :${com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "rejected")} images</li>
+                        </ul>
+                    </div>
+
+                    <div class="label-red" style="width: 100%">
+                        Bank Account
+                    </div>
+
+                    <div class="card" style="margin-bottom: 15px; ">
+                        <ul class="list-group list-group-flush">
+                            <g:set var="bankAccount"
+                                   value="${com.picsell.data.BankAccount.findByUser(profileUserInstance?.user)}"/>
+                            <g:if test="${bankAccount}">
+                                <li class="list-group-item">Account No ${bankAccount?.accountNo}</li>
+                                <li class="list-group-item">Name ${bankAccount?.accountName}</li>
+                                <li class="list-group-item">Bank Name ${bankAccount?.bankName}</li>
+                                <li class="list-group-item">Bank Code ${bankAccount?.bankCode}</li>
+                                <li class="list-group-item"><a
+                                        href="${createLink(controller: 'bankAccount', action: 'show', id: bankAccount?.id)}"
+                                        class="card-link">Change Bank Account</a></li>
+
+                            </g:if>
+                            <g:else>
+                                <li class="list-group-item">You don't have bank account related to your account</li>
+                                <li class="list-group-item"><a
+                                        href="${createLink(controller: 'bankAccount', action: 'create')}"
+                                        class="card-link">Add Bank</a></li>
+
+                            </g:else>
+                        </ul>
+                    </div>
+
+                    <div style="width: 100%; margin-top: 15px">
+                        <button class="btn btn-sm btn-outline-danger" style="width: 100%;"
+                                onclick="go_to_my_item()">My Items</button>
+                    </div>
+                </g:if>
+                <g:if test="${role?.role?.authority.equals("ROLE_USER")}">
+                    <div class="card">
+                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
+                                                style="text-align: left;width: 100%">Dashboard</a></div>
+
+                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
+                                                style="text-align: left;width: 100%">Plans</a></div>
+
+                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
+                                                style="text-align: left;width: 100%">Billing</a></div>
+
+                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
+                                                style="text-align: left;width: 100%">Purchase History</a></div>
+
+                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
+                                                style="text-align: left;width: 100%">Preferences</a></div>
                 </ul>
-            </div>
-
-            <div style="width: 100%; margin-top: 15px">
-                <button class="btn btn-sm btn-danger" style="width: 100%;" onclick="go_to_my_item()">My Items</button>
-            </div>
+                </div>
+                </g:if>
+            </g:each>
 
         </div>
 

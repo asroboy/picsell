@@ -17,7 +17,9 @@
 
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
-
+    <link rel="stylesheet" href="${resource(dir: 'justified_gallery', file: 'dist/css/justifiedGallery.min.css')}"/>
+    <script src="${resource(dir: 'justified_gallery', file: 'dist/js/jquery.justifiedGallery.min.js')}"></script>
+    %{--<script src="${resource(dir: 'justified_gallery', file: 'src/js/justifiedGallery.js')}"></script>--}%
     <style>
     #photos {
         /* Prevent vertical gaps */
@@ -65,15 +67,41 @@
                     <div class="sub-part1">
                         <b>${category?.name.toUpperCase()}</b>
                     </div>
-                    <section id="photos">
-                        <g:each in="${items}" var="item" status="i">
-                            <g:if test="${item.category == category}">
-                                <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
-                                    <img src="${createLink(controller: 'document', action: 'download', id: item?.id)}"
-                                         alt="">
-                                </a>
-                            </g:if>
-                        </g:each>
+
+                    <section>
+                        %{--<g:render template="photos"/>--}%
+                        <div class="gallery_justify">
+                            <g:each in="${items}" var="item" status="i">
+                                <g:if test="${item.category == category}">
+                                    <div class="image_container">
+                                        <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
+                                            <img src="${createLink(controller: 'document', action: 'download', id: item?.id)}"
+                                                 alt="" style="border-radius: 10px;">
+                                        </a>
+
+                                        <div class="overlay">
+                                            <sec:ifLoggedIn>
+                                                <a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
+                                                   title="Like"
+                                                   style="color: white" onclick="like(${item?.id})">
+                                                    <script>
+                                                        islike(${item?.id});
+                                                    </script></a>
+                                                <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
+                                                   style="color: white" onclick="add_to_chart(${item?.id})"><i
+                                                        class="fa fa-shopping-basket"></i></a>
+                                            </sec:ifLoggedIn>
+                                            <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
+                                               style="color: white"><i class="fa fa-download"></i></a>
+                                            <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"
+                                               class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
+                                               style="color: white"><i class="fa fa-th-large"></i></a>
+
+                                        </div>
+                                    </div>
+                                </g:if>
+                            </g:each>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -81,7 +109,14 @@
     </g:each>
 
 </div>
-
+%{--<script src="${resource(dir: 'justified_gallery', file: 'test/webpack/dist/bundle.js')}"></script>--}%
+<script>
+    jQuery(".gallery_justify").justifiedGallery(
+            {
+                margins: 10,
+                rowHeight: 130
+            })
+</script>
 </body>
 
 </html>

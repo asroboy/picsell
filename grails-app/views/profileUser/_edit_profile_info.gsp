@@ -17,7 +17,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'namaDepan', 'error')} form-group">
             <label for="namaDepan">
-                <g:message code="profileUser.namaDepan.label" default="Nama Depan"/>
+                First Name
 
             </label>
             <g:textField name="namaDepan" value="${profileUserInstance?.namaDepan}" class="form-control"/>
@@ -26,7 +26,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'namaBelakang', 'error')} form-group">
             <label for="namaBelakang">
-                <g:message code="profileUser.namaBelakang.label" default="Nama Belakang"/>
+               Last Name
 
             </label>
             <g:textField name="namaBelakang" value="${profileUserInstance?.namaBelakang}" class="form-control"/>
@@ -35,7 +35,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'alamat', 'error')} form-group">
             <label for="alamat">
-                <g:message code="profileUser.alamat.label" default="Alamat"/>
+              Address
 
             </label>
             <g:textField name="alamat" value="${profileUserInstance?.alamat}" class="form-control"/>
@@ -44,7 +44,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'kecamatan', 'error')} form-group">
             <label for="kecamatan">
-                <g:message code="profileUser.kecamatan.label" default="Kecamatan"/>
+                District
 
             </label>
             <g:textField name="kecamatan" value="${profileUserInstance?.kecamatan}" class="form-control"/>
@@ -53,7 +53,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'kotaKabupaten', 'error')} form-group">
             <label for="kotaKabupaten">
-                <g:message code="profileUser.kotaKabupaten.label" default="Kota Kabupaten"/>
+               City
 
             </label>
             <g:textField name="kotaKabupaten" value="${profileUserInstance?.kotaKabupaten}" class="form-control"/>
@@ -62,7 +62,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'provinsi', 'error')} form-group">
             <label for="provinsi">
-                <g:message code="profileUser.provinsi.label" default="Provinsi"/>
+               Province
 
             </label>
             <g:textField name="provinsi" value="${profileUserInstance?.provinsi}" class="form-control"/>
@@ -71,7 +71,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'jenisKartuIdentitas', 'error')} form-group">
             <label for="jenisKartuIdentitas">
-                <g:message code="profileUser.jenisKartuIdentitas.label" default="Jenis Kartu Identitas"/>
+                ID Card Type
 
             </label>
             <g:select name="jenisKartuIdentitas" from="${profileUserInstance.constraints.jenisKartuIdentitas.inList}"
@@ -82,7 +82,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'nomorIdIdentitas', 'error')} form-group">
             <label for="nomorIdIdentitas">
-                <g:message code="profileUser.nomorIdIdentitas.label" default="Nomor Id Identitas"/>
+                ID Card Number
 
             </label>
             <g:textField name="nomorIdIdentitas" value="${profileUserInstance?.nomorIdIdentitas}" class="form-control"/>
@@ -91,7 +91,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'noTelp', 'error')} form-group">
             <label for="noTelp">
-                <g:message code="profileUser.noTelp.label" default="No Telp"/>
+                Phone
 
             </label>
             <g:textField name="noTelp" value="${profileUserInstance?.noTelp}" class="form-control"/>
@@ -100,7 +100,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'tempatLahir', 'error')} form-group">
             <label for="tempatLahir">
-                <g:message code="profileUser.tempatLahir.label" default="Tempat Lahir"/>
+                Birth Place
 
             </label>
             <g:textField name="tempatLahir" value="${profileUserInstance?.tempatLahir}" class="form-control"/>
@@ -109,7 +109,7 @@
 
         <div class="fieldcontain ${hasErrors(bean: profileUserInstance, field: 'tglLahir', 'error')} required form-group">
             <label for="tglLahir">
-                <g:message code="profileUser.tglLahir.label" default="Tgl Lahir"/>
+                Birth Date
                 <span class="required-indicator">*</span>
             </label>
             <g:datePicker name="tglLahir" precision="day" value="${profileUserInstance?.tglLahir}"/>

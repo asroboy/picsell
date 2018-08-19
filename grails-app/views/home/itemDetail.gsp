@@ -15,6 +15,7 @@
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
 
+
     <style>
     #photos {
         /* Prevent vertical gaps */
@@ -76,6 +77,10 @@
             });
         }
     </script>
+
+
+    <link rel="stylesheet" href="${resource(dir: 'justified_gallery', file: 'dist/css/justifiedGallery.min.css')}"/>
+    <script src="${resource(dir: 'justified_gallery', file: 'dist/js/jquery.justifiedGallery.min.js')}"></script>
 </head>
 
 <body>
@@ -85,8 +90,9 @@
     <div class="row">
         <div class="col-md-6" style="margin-top: 50px">
             <div class="image_container">
+                <g:set var="image" value="${com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)}"/>
                 <img class="card-img-top"
-                     src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)?.id)}"
+                     src="${createLink(controller: 'document', action: 'download', id: image?.id)}"
                      alt="">
 
                 <div class="overlay">
@@ -102,9 +108,9 @@
                            style="color: white"><i class="fa fa-shopping-basket"
                                                    onclick="add_to_chart(${itemInstance?.id})"></i></a>
                     </sec:ifLoggedIn>
-                    <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
+                    <a href="${createLink(controller:'document', action:'photoWithWatermaark', id: image?.id)}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
                        style="color: white"><i class="fa fa-download"></i></a>
-                    <a href="${createLink(cotroller: 'home', action: 'index', params: [cat: itemInstance?.category?.name])}"
+                    <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: itemInstance?.category?.name])}"
                        class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
                        style="color: white"><i class="fa fa-th-large"></i></a>
 
@@ -143,11 +149,11 @@
                     <p>${itemInstance?.description}</p>
                 </div>
 
-                <div style="color: gray;">
+                <div style="color: grey;">
                     <i>TAGS : ${itemInstance?.tags}</i>
                 </div>
 
-                <div style="align-items: center;">
+                <div style="align-items: center; margin-top: 10px">
                     <a href="#"
                        style="font-size: 24px; color:  #c90000; border: 3px; border-color: #c90000;border-style: solid; border-width: 1.5px; margin-right: 5px">&nbsp;S&nbsp;</a>
                     <a href="#"
@@ -168,7 +174,7 @@
                 </div>
 
                 <div style="margin-top: 20px">
-                    <button class="btn button-red" onclick="readyDownload()">Download</button>
+                    <button class="btn btn-sm btn-danger" onclick="readyDownload()">Download</button>
                 </div>
 
             </div>
@@ -184,19 +190,21 @@
                             It's simple. Be ready to explore your project once you choose payment method. Or, choose our free worries that cover thee page rights
                         </div>
 
-                        <div class="gray-box" style=" width: 100%">
+                        <div class="gray-box" style=" width: 100%; padding: 10px">
                             <div style="margin-left: 20px; padding-right: 30px; font-size: 18pt; width: 100%; text-align: justify; color:#c90000">
                                 <table style="width: 100%;">
                                     <tr>
                                         <td style="vertical-align: bottom; font-size: 24pt"><b>1</b></td>
                                         <td style="vertical-align: bottom; border-bottom: 3px solid #c90000;"><b>images</b>
                                         </td>
-                                        <td style="text-align: right; vertical-align: bottom; border-bottom: 3px solid #c90000;"><b>12000 IDR</b>
+                                        <td style="text-align: right; vertical-align: bottom; border-bottom: 3px solid #c90000;"><b>${itemInstance?.price} ${itemInstance?.currency}</b>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="3"
-                                            style="font-size: 14pt; color: gray"><i>see our price and package</i></td>
+                                            style="color: gray">
+                                            <a href="${createLink(controller: 'home', action: 'packages')}" style="margin: 5px; font-size: 11pt; "><i>see our price and package</i></a>
+                                        </td>
 
                                     </tr>
                                 </table>
@@ -205,10 +213,10 @@
                         </div>
 
                         <div style="margin-top: 40px">
-                            <a class="btn button-dark-red"
+                            <a class="btn btn-sm btn-danger"
                                href="${createLink(controller: 'home', action: 'purchase_summary', id: itemInstance?.id)}">Buy now</a>
                             %{--<button class="btn button-dark-red">More Images</button>--}%
-                            <button class="btn button-dark-red" onclick="viewDetails()">Back</button>
+                            <button class="btn btn-sm btn-info" onclick="viewDetails()">Back</button>
                         </div>
                     </div>
 
@@ -227,16 +235,15 @@
 
 
     <div class="row">
-        <section id="photos">
+
+        <div class="gallery_justify">
             <g:each in="${com.picsell.data.Item.findAllByCategoryAndStatus(itemInstance?.category, "approved")}"
                     var="item">
-            %{--<div class="col-md-3 col-sm-6 mb-4">--}%
                 <g:if test="${item != itemInstance}">
                     <div class="image_container">
                         <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
-                            <img class="img-fluid"
-                                 src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
-                                 alt="">
+                            <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
+                                 alt="" style="border-radius: 10px;">
                         </a>
 
                         <div class="overlay">
@@ -248,13 +255,15 @@
                                     <script>
                                         islike(${item?.id});
                                     </script></a>
-                                <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
+                                <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
+                                   title="Add to chart"
                                    style="color: white"><i class="fa fa-shopping-basket"
                                                            onclick="add_to_chart(${item?.id})"></i></a>
                             </sec:ifLoggedIn>
-                            <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
+                            <a href="${createLink(controller:'document', action:'photoWithWatermaark', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
+                               title="Download preview"
                                style="color: white"><i class="fa fa-download"></i></a>
-                            <a href="${createLink(cotroller: 'home', action: 'index', params: [cat: item?.category?.name])}"
+                            <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"
                                class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
                                style="color: white"><i class="fa fa-th-large"></i></a>
 
@@ -262,11 +271,8 @@
                     </div>
 
                 </g:if>
-
-            %{--</div>--}%
             </g:each>
-
-        </section>
+        </div>
 
     </div>
 
@@ -277,7 +283,7 @@
                 <td style="width: 90%;vertical-align: middle"><div
                         style="height: 3px; width: 100%; background-color: #d53b31"></div></td>
                 <td style="text-align: center; vertical-align: middle"><a
-                        href="${createLink(controller: 'home', action: 'index', params: [cat: itemInstance?.category?.name])}"><b>View all</b>
+                        href="${createLink(controller: 'home', action: 'main', params: [cat: itemInstance?.category?.name])}"><b>View all</b>
                 </a></td>
             </tr>
         </table>
@@ -287,9 +293,13 @@
     <!-- /.row -->
 
 </div>
-<!-- /.container -->
-
-
+<script>
+    jQuery(".gallery_justify").justifiedGallery(
+            {
+                margins: 10,
+                rowHeight: 130
+            })
+</script>
 <script>
 
     function readyDownload() {
@@ -297,9 +307,12 @@
         var downloadPage = document.getElementById("download_page");
         var detailItemPage = document.getElementById("item_page");
         detailItemPage.style.height = 0;
-        detailItemPage.style.visibility = "hidden";
+        jQuery("#item_page").hide();
+        jQuery("#download_page").show();
+//        detailItemPage.style.height = auto;
+//        detailItemPage.style.visibility = "hidden";
         downloadPage.style.visibility = "visible";
-        detailItemPage.style.height = auto;
+
 
     }
     function viewDetails() {
@@ -307,8 +320,12 @@
         var downloadPage = document.getElementById("download_page");
         var detailItemPage = document.getElementById("item_page");
         downloadPage.style.height = 0;
-        detailItemPage.style.visibility = "visible";
-        downloadPage.style.visibility = "hidden";
+//        downloadPage.style.visibility = "hidden";
+        detailItemPage.style.display = "block";
+        jQuery("#download_page").hide();
+//        jQuery("#item_page").show();
+
+
 //        detailItemPage.style.height = auto;
 
     }

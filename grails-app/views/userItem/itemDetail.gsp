@@ -57,10 +57,20 @@
                         </g:hasErrors>
                         %{--<g:textField name="id" value="${fieldValue(bean: itemInstance, field: 'id')}" class="form-control" hidden="true"/>--}%
                         <g:render template="formAddItem"/>
+
+
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Attention!</strong> Updating item will changed approval status, and it will need 1-3 days business day to review.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+
                         <fieldset class="buttons">
-                            <g:submitButton name="updateItem" class="update btn button-red"
+                            <g:submitButton name="updateItem" class="update btn btn-sm btn-danger"
                                             value="${message(code: 'default.button.submit_now.label', default: 'Submit now')}"/>
-                            <a href="${createLink(action: 'index')}" class="btn button-dark-red"
+                            <a href="${createLink(action: 'index')}" class="btn btn-sm btn-danger"
                                style="text-align: left">Cancel</a>
                         </fieldset>
 

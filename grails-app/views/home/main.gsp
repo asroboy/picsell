@@ -95,114 +95,45 @@
 
 <body>
 
-<g:if  test="${params.media && params.cat}" >
-
-    <div id="simpletest">
-    %{--<div class="image_container" style="padding: 5px;">--}%
-        <g:each in="${com.picsell.data.Item.findAllByStatusAndCategory("approved", com.picsell.data.Category.findByName(params.cat))}"
-                var="item" status="i">
-            <div class="image_container">
-                <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
-                    <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
-                         style="border-radius: 10px;"/>
-                </a>
-
-                <div class="overlay">
-                    <sec:ifLoggedIn>
-                        <a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
-                           title="Like"
-                           style="color: white" onclick="like(${item?.id})">
-                            <script>
-                                islike(${item?.id});
-                            </script></a>
-                        <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
-                           style="color: white" onclick="add_to_chart(${item?.id})"><i
-                                class="fa fa-shopping-basket"></i></a>
-                    </sec:ifLoggedIn>
-                    <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
-                       style="color: white"><i class="fa fa-download"></i></a>
-                    <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"
-                       class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
-                       style="color: white"><i class="fa fa-th-large"></i></a>
-
-                </div>
-            </div>
-
-        </g:each>
-    </div>
-
-
-
-    %{--<section id="photos">--}%
-        %{--<g:each in="${com.picsell.data.Item.findAllByStatusAndCategory("approved", com.picsell.data.Category.findByName(params.cat))}"--}%
-                %{--var="item" status="i">--}%
-
-            %{--<div class="image_container">--}%
-                %{--<a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">--}%
-                    %{--<img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"--}%
-                         %{--alt="">--}%
-                %{--</a>--}%
-
-                %{--<div class="overlay">--}%
-                    %{--<sec:ifLoggedIn>--}%
-                        %{--<a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"--}%
-                           %{--title="Like"--}%
-                           %{--style="color: white" onclick="like(${item?.id})">--}%
-                            %{--<script>--}%
-                                %{--islike(${item?.id});--}%
-                            %{--</script>--}%
-                        %{--</a>--}%
-                        %{--<a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"--}%
-                           %{--style="color: white" onclick="add_to_chart(${item?.id})"><i--}%
-                                %{--class="fa fa-shopping-basket"></i></a>--}%
-                    %{--</sec:ifLoggedIn>--}%
-                    %{--<a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"--}%
-                       %{--style="color: white"><i class="fa fa-download"></i></a>--}%
-                    %{--<a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"--}%
-                       %{--class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"--}%
-                       %{--style="color: white"><i class="fa fa-th-large"></i></a>--}%
-
-                %{--</div>--}%
-            %{--</div>--}%
-
-        %{--</g:each>--}%
-    %{--</section>--}%
-
-    <!-- Page Content -->
-    <div style="padding-left: 20px; padding-right: 20px; margin-top: 30px; margin-bottom: 30px;">
-
-        <div class="row" style=" margin-bottom: 20px">
-        </div>
-        <!-- /.row -->
-        <!-- Pagination -->
-        <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+<g:if test="${params.media}">
+    <g:render template="photos"/>
 </g:if>
 <g:elseif test="${params.cat}">
+    <g:render template="photos"/>
+</g:elseif>
+<g:elseif test="${params.key}">
+    <g:render template="photos"/>
+</g:elseif>
+<g:elseif test="${params.top}">
+    <g:render template="photos"/>
+</g:elseif>
+<g:else>
+    <g:render template="video_banner"/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                %{--<div style="color: red; text-align: center; margin: 20px">--}%
+                %{--<h2>Popular Items</h2>--}%
+                %{--</div>--}%
+            </div>
+        </div>
+    </div>
 
-    <div id="simpletest">
+    <div class="gallery_container">
+        <div id="gallery" style="margin-bottom: 5px; padding-left: 3px; padding-right: 3px">
+            <g:each in="${com.picsell.data.Item.findAllByStatus("approved")}" var="item" status="i">
+                <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
+                    <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
+                         alt="">
+                </a>
+            </g:each>
+        </div>
+    </div>
+%{--<button class="btn btn-default"> ></button>--}%
+%{--</div>--}%
+
+
+    <div id="simpletest" class="gallery_justify">
     %{--<div class="image_container" style="padding: 5px;">--}%
         <g:each in="${items}" var="item" status="i">
             <div class="image_container">
@@ -234,205 +165,6 @@
 
         </g:each>
     </div>
-
-    <!-- Page Content -->
-    <div style="padding-left: 20px; padding-right: 20px; margin-top: 30px; margin-bottom: 30px;">
-
-        <div class="row" style=" margin-bottom: 20px">
-
-        </div>
-        <!-- /.row -->
-        <!-- Pagination -->
-        <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</g:elseif>
-<g:else>
-    <g:if test="${params.key}">
-
-        <div id="simpletest">
-        %{--<div class="image_container" style="padding: 5px;">--}%
-            <g:each in="${items}" var="item" status="i">
-                <div class="image_container">
-                    <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
-                        <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
-                             style="border-radius: 10px;"/>
-                    </a>
-
-                    <div class="overlay">
-                        <sec:ifLoggedIn>
-                            <a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
-                               title="Like"
-                               style="color: white" onclick="like(${item?.id})">
-                                <script>
-                                    islike(${item?.id});
-                                </script></a>
-                            <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
-                               style="color: white" onclick="add_to_chart(${item?.id})"><i
-                                    class="fa fa-shopping-basket"></i></a>
-                        </sec:ifLoggedIn>
-                        <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
-                           style="color: white"><i class="fa fa-download"></i></a>
-                        <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"
-                           class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
-                           style="color: white"><i class="fa fa-th-large"></i></a>
-
-                    </div>
-                </div>
-
-            </g:each>
-        </div>
-
-        <!-- Page Content -->
-        <div style="padding-left: 20px; padding-right: 20px; margin-top: 30px; margin-bottom: 30px;">
-
-            <div class="row" style=" margin-bottom: 20px">
-
-            </div>
-            <!-- /.row -->
-            <!-- Pagination -->
-            <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </g:if>
-    <g:else>
-        <g:render template="video_banner"/>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    %{--<div style="color: red; text-align: center; margin: 20px">--}%
-                    %{--<h2>Popular Items</h2>--}%
-                    %{--</div>--}%
-                </div>
-            </div>
-        </div>
-
-    %{--<div class="d-flex justify-content-between">--}%
-    %{--<button class="btn btn-default">< </button>--}%
-        <div class="gallery_container">
-
-            <div id="gallery" style="margin-bottom: 5px; padding-left: 3px; padding-right: 3px">
-                <g:each in="${com.picsell.data.Item.findAllByStatus("approved")}" var="item" status="i">
-                    <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
-                        <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
-                             alt="">
-                    </a>
-                </g:each>
-            </div>
-        </div>
-    %{--<button class="btn btn-default"> ></button>--}%
-    %{--</div>--}%
-
-
-        <div id="simpletest">
-        %{--<div class="image_container" style="padding: 5px;">--}%
-            <g:each in="${com.picsell.data.Item.findAllByStatus("approved")}" var="item" status="i">
-                <div class="image_container">
-                    <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
-                        <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
-                             style="border-radius: 10px;"/>
-                    </a>
-
-                    <div class="overlay">
-                        <sec:ifLoggedIn>
-                            <a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
-                               title="Like"
-                               style="color: white" onclick="like(${item?.id})">
-                                <script>
-                                    islike(${item?.id});
-                                </script></a>
-                            <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"
-                               style="color: white" onclick="add_to_chart(${item?.id})"><i
-                                    class="fa fa-shopping-basket"></i></a>
-                        </sec:ifLoggedIn>
-                        <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
-                           style="color: white"><i class="fa fa-download"></i></a>
-                        <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"
-                           class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
-                           style="color: white"><i class="fa fa-th-large"></i></a>
-
-                    </div>
-                </div>
-
-            </g:each>
-        </div>
-
-
-
-    %{--<section id="photos" style="margin-bottom: 20px">--}%
-    %{--<g:each in="${com.picsell.data.Item.findAllByStatus("approved")}" var="item" status="i">--}%
-    %{--<div class="image_container" style="padding: 5px;">--}%
-    %{--<a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">--}%
-    %{--<img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"--}%
-    %{--alt="" style="border-radius: 20px;">--}%
-    %{--</a>--}%
-
-    %{--<div class="overlay">--}%
-    %{--<sec:ifLoggedIn>--}%
-    %{--<a id="like_${item?.id}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"--}%
-    %{--title="Like"--}%
-    %{--style="color: white" onclick="like(${item?.id})">--}%
-    %{--<script>--}%
-    %{--islike(${item?.id});--}%
-    %{--</script></a>--}%
-    %{--<a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add to chart"--}%
-    %{--style="color: white"><i class="fa fa-shopping-basket"--}%
-    %{--onclick="add_to_chart(${item?.id})"></i></a>--}%
-    %{--</sec:ifLoggedIn>--}%
-    %{--<a href="${createLink(cotroller: 'home', action: 'download_page', params: [id: item?.id])}"--}%
-    %{--class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"--}%
-    %{--style="color: white"><i class="fa fa-download"></i></a>--}%
-    %{--<a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"--}%
-    %{--class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"--}%
-    %{--style="color: white"><i class="fa fa-th-large"></i></a>--}%
-
-    %{--</div>--}%
-    %{--</div>--}%
-    %{--</g:each>--}%
-    %{--</section>--}%
-    </g:else>
 </g:else>
 
 <script src="${resource(dir: 'justified_gallery', file: 'test/webpack/dist/bundle.js')}"></script>

@@ -17,8 +17,17 @@ class UserItemController {
         params.max = Math.min(max ?: 9, 100)
         def user = User.get(sec.loggedInUserInfo(field: "id"))
         println(user?.username)
-        def items = Item.findAllByUserOwner(user, params)
-        [items: items, itemInstanceCount: Item.findAllByUserOwner(user).size()]
+        def items
+        def itemInstanceCount
+        if (params.status) {
+            items = Item.findAllByUserOwnerAndStatus(user, params.status, params)
+            itemInstanceCount = Item.findAllByUserOwnerAndStatus(user, params.status).size()
+        } else {
+            items = Item.findAllByUserOwner(user, params)
+            itemInstanceCount = Item.findAllByUserOwner(user).size()
+        }
+
+        [items: items, itemInstanceCount: itemInstanceCount]
     }
 
     def addFirstItem() {

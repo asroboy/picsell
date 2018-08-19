@@ -2806,7 +2806,13 @@
 }, function (e, t, n) {
     var i = n(0);
     n(1);
-    i("#simpletest").justifiedGallery(
+    // i("#simpletest").justifiedGallery(
+    //     {
+    //         margins: 10,
+    //         rowHeight: 150
+    //     })
+
+    i(".gallery_justify").justifiedGallery(
         {
             margins: 10,
             rowHeight: 150

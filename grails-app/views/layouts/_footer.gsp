@@ -20,7 +20,7 @@
                 <a class="footer_black_link"
                    href="${createLink(controller: 'home', action: 'policy')}">Privacy Policy</a><br/>
                 <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'index')}">Picsell Music</a><br/>
+                   %{--href="${createLink(controller: 'home', action: 'index')}">Picsell Music</a><br/>--}%
                 <a class="footer_black_link"
                    href="${createLink(controller: 'home', action: 'index')}">Picsell Footage</a><br/>
                 <a class="footer_black_link"
@@ -41,7 +41,7 @@
             </div>
 
             <div class="col-sm-2">
-                <label class="white_link"><h7>Sales & Mareketing</h7></label><br/>
+                <label class="white_link"><h7>Sales & Marketing</h7></label><br/>
                 <a class="footer_black_link" href="mailto:sales@picsell.id">sales@picsell.id</a><br/>
                 <a class="footer_black_link" href="tel:628567228886">(+62)8567228886</a><br/>
 

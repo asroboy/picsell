@@ -12,9 +12,7 @@
         </td>
     </tr>
     <tr>
-        <td><span id="namaDepan-label" class="property-label"><g:message
-                code="profileUser.namaDepan.label"
-                default="Nama Depan"/></span></td>
+        <td><span id="namaDepan-label" class="property-label">First Name</span></td>
         <td>
             <g:if test="${profileUserInstance?.namaDepan}">
                 <b><span class="property-value" aria-labelledby="namaDepan-label"><g:fieldValue
@@ -27,9 +25,7 @@
 
 
     <tr>
-        <td><span id="namaBelakang-label" class="property-label"><g:message
-                code="profileUser.namaBelakang.label"
-                default="Nama Belakang"/></span></td>
+        <td><span id="namaBelakang-label" class="property-label">Last Name</span></td>
         <td>
             <g:if test="${profileUserInstance?.namaBelakang}">
                 <b><span class="property-value" aria-labelledby="namaBelakang-label"><g:fieldValue
@@ -41,8 +37,7 @@
 
 
     <tr>
-        <td><span id="alamat-label" class="property-label"><g:message code="profileUser.alamat.label"
-                                                                      default="Alamat"/></span></td>
+        <td><span id="alamat-label" class="property-label">Address</span></td>
         <td>
             <g:if test="${profileUserInstance?.alamat}">
                 <span class="property-value" aria-labelledby="alamat-label"><g:fieldValue
@@ -56,9 +51,7 @@
 
 
     <tr>
-        <td><span id="kecamatan-label" class="property-label"><g:message
-                code="profileUser.kecamatan.label"
-                default="Kecamatan"/></span></td>
+        <td><span id="kecamatan-label" class="property-label">District</span></td>
         <td>
             <g:if test="${profileUserInstance?.kecamatan}">
                 <span class="property-value" aria-labelledby="kecamatan-label"><g:fieldValue
@@ -70,9 +63,7 @@
 
 
     <tr>
-        <td><span id="kotaKabupaten-label" class="property-label"><g:message
-                code="profileUser.kotaKabupaten.label"
-                default="Kota Kabupaten"/></span>
+        <td><span id="kotaKabupaten-label" class="property-label">City</span>
         </td>
         <td>
             <g:if test="${profileUserInstance?.kotaKabupaten}">
@@ -85,9 +76,7 @@
 
 
     <tr>
-        <td><span id="provinsi-label" class="property-label"><g:message
-                code="profileUser.provinsi.label"
-                default="Provinsi"/></span>
+        <td><span id="provinsi-label" class="property-label">Province</span>
         </td>
         <td>
             <g:if test="${profileUserInstance?.provinsi}">
@@ -101,8 +90,7 @@
 
 
     <tr>
-        <td><span id="jenisKartuIdentitas-label" class="property-label"><g:message
-                code="profileUser.jenisKartuIdentitas.label" default="Jenis Kartu Identitas"/></span>
+        <td><span id="jenisKartuIdentitas-label" class="property-label">ID Card Type</span>
         </td>
         <td>
             <g:if test="${profileUserInstance?.jenisKartuIdentitas}">
@@ -115,8 +103,7 @@
 
 
     <tr>
-        <td><span id="nomorIdIdentitas-label" class="property-label"><g:message
-                code="profileUser.nomorIdIdentitas.label" default="Nomor Id Identitas"/></span></td>
+        <td><span id="nomorIdIdentitas-label" class="property-label">ID Card Number</span></td>
         <td>
             <g:if test="${profileUserInstance?.nomorIdIdentitas}">
                 <span class="property-value" aria-labelledby="nomorIdIdentitas-label"><g:fieldValue
@@ -129,8 +116,7 @@
 
 
     <tr>
-        <td><span id="noTelp-label" class="property-label"><g:message code="profileUser.noTelp.label"
-                                                                      default="No Telp"/></span>
+        <td><span id="noTelp-label" class="property-label">Phone</span>
         </td>
         <td><g:if test="${profileUserInstance?.noTelp}">
             <span class="property-value" aria-labelledby="noTelp-label"><g:fieldValue
@@ -143,9 +129,7 @@
 
 
     <tr>
-        <td><span id="tempatLahir-label" class="property-label"><g:message
-                code="profileUser.tempatLahir.label"
-                default="Tempat Lahir"/></span></td>
+        <td><span id="tempatLahir-label" class="property-label">Birth Place</span></td>
         <td>
             <g:if test="${profileUserInstance?.tempatLahir}">
                 <span class="property-value" aria-labelledby="tempatLahir-label"><g:fieldValue
@@ -157,9 +141,7 @@
 
 
     <tr>
-        <td><span id="tglLahir-label" class="property-label"><g:message
-                code="profileUser.tglLahir.label"
-                default="Tgl Lahir"/></span></td>
+        <td><span id="tglLahir-label" class="property-label">Birth Date</span></td>
         <td>
             <g:if test="${profileUserInstance?.tglLahir}">
                 <span class="property-value" aria-labelledby="tglLahir-label"><g:formatDate

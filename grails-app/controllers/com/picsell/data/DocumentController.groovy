@@ -117,7 +117,6 @@ class DocumentController {
                 outputStream.close()
                 fileInputStream.close()
             } else {
-
                 response.setContentType("APPLICATION/OCTET-STREAM")
                 response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
                 def file = new File(documentInstance.path)
@@ -131,8 +130,6 @@ class DocumentController {
                 outputStream.flush()
                 outputStream.close()
                 fileInputStream.close()
-
-
             }
         }
     }
@@ -157,7 +154,8 @@ class DocumentController {
 
     }
 
-    def photoWithWatermaark() {
+    def photoWithWatermaark(long id) {
+        ImageFile documentInstance = ImageFile.get(id)
         /**
          * MENGGUNAKAN WATERMARK
          */
@@ -167,7 +165,7 @@ class DocumentController {
         def outPath = grailsApplication.config.uploadFolder + 'watermark/out/'
 
         burningImageService.doWith(documentInstance.path, outPath).execute {
-            it.watermark(grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png')
+            it.watermark(grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png',  ['right':10, 'bottom': 10])
         }
 
         def file = new File(outPath + documentInstance.namaFile)

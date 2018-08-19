@@ -144,15 +144,15 @@
 
         console.log(i);
         var size = (Math.round(fSize * 100) / 100);
-//        if (i < 2) {
-//            alert(size + ' ' + fSExt[i]);
-//            document.getElementById("imgInp").value = "";
-//        } else {
-//            if (size < 4) {
-//                alert('Your file size must be at least 4 MB, your current size is ' + size + ' ' + fSExt[i]);
-//                document.getElementById("imgInp").value = "";
-//            }
-//        }
+        if (i < 2) {
+            alert(size + ' ' + fSExt[i]);
+            document.getElementById("imgInp").value = "";
+        } else {
+            if (size < 4) {
+                alert('Your file size must be at least 4 MB, your current size is ' + size + ' ' + fSExt[i]);
+                document.getElementById("imgInp").value = "";
+            }
+        }
 
     }
 

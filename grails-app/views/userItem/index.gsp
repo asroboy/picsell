@@ -28,29 +28,36 @@
         <div class="col-lg-3">
             <div class="card">
                 <div style="margin: 5px">
-                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-info"
                        style="text-align: left; width: 100%">Upload item</a>
                 </div>
 
                 <div style="margin: 5px">
-                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                    <a href="${createLink(action: 'index', params: [status: 'approved'])}"
+                       class="btn btn-sm btn-outline-success"
                        style="text-align: left; width: 100%">Approved items</a>
                 </div>
 
                 <div style="margin: 5px">
-                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                    <a href="${createLink(action: 'index', params: [status: 'rejected'])}"
+                       class="btn btn-sm btn-outline-danger"
                        style="text-align: left;  width: 100%">Rejected items</a>
                 </div>
 
                 <div style="margin: 5px">
-                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-danger"
+                    <a href="${createLink(action: 'index', params: [status: 'pending'])}"
+                       class="btn btn-sm btn-outline-warning"
                        style="text-align: left;  width: 100%">Pending items</a>
                 </div>
 
             </div>
 
-            <div style="margin-bottom: 15px; width: 200px">
-
+            <div style="margin-bottom: 15px; margin-top: 50px; width: 100%">
+                <div style="margin: 5px">
+                    <a href="${createLink(action: 'index', params: [status: 'pending'])}"
+                       class="btn btn-sm btn-danger"
+                       style="text-align: left;  width: 100%">Earnings</a>
+                </div>
             </div>
         </div>
 
@@ -63,32 +70,71 @@
                             <a href="${createLink(controller: 'userItem', action: 'itemDetail')}">
                                 <img class="card-img-top"
                                      src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id, params: [s: '238h9uhh3'])}"
-                                     alt="">
+                                     alt="" style="width auto; height: 160px; overflow: hidden">
                             </a>
 
                             <div class="card-body">
-                                <h4 class="card-title">
+                                <h5 class="card-title">
                                     <a href="${createLink(controller: 'userItem', action: 'itemDetail', id: item?.id)}">${item?.name}</a>
-                                </h4>
+                                </h5>
+                                <hr style="color: red; height: 1.5px"/>
+                                %{--<div>ID: ${item?.id}</div>--}%
+                                <table>
+                                    <tr>
+                                        <td valign="top" style="width: 80px">Up Date</td>
+                                        <td valign="top">:</td>
+                                        <td valign="top"><g:formatDate format="dd MMM yyyy"
+                                                                       date="${item?.createdDate}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Price</td>
+                                        <td valign="top">:</td>
+                                        <td valign="top"><strong>${item?.price} ${item?.currency}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Desc.</td>
+                                        <td valign="top">:</td>
+                                        <td valign="top">${item?.description}</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Tags</td>
+                                        <td valign="top">:</td>
+                                        <td valign="top">${item?.tags}</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Status</td>
+                                        <td valign="top">:</td>
+                                        <td valign="top">
+                                            <g:if test="${item?.status.equals("approved")}">
+                                                <font color="#3ec1d3"><b>${item?.status}</b></font>
+                                            </g:if>
+                                            <g:elseif test="${item?.status.equals("pending")}">
+                                                <font color="#ff9a00"><b>${item?.status}</b></font>
+                                            </g:elseif>
+                                            <g:else>
+                                                <font color="#ff165d"><b>${item?.status}</b></font>
+                                            </g:else>
+                                        </td>
+                                    </tr>
+                                    <g:if test="${!item?.status.equals("pending")}">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
 
-                                <div>Item ID : ${item?.id}</div>
-
-                                <div>Price : ${item?.price} ${item?.currency}</div>
-
-                                <div>Description : ${item?.description}</div>
-
-                                <div>Tags : ${item?.tags}</div>
-
-                                <div>Approval status :
-                                    <g:if test="${item?.status.equals("approved")}">
-                                        <font color="#006400"><b>${item?.status}</b></font>
+                                                <p class="font-italic" style="color: darkgray; font-size: 11pt">
+                                                    <g:formatDate format="dd MMM yyyy" date="${item?.statusCgDate}"/>
+                                                </p>
+                                            </td>
+                                        </tr>
                                     </g:if>
-                                    <g:else>
-                                        <font color="#8b0000"><b>${item?.status}</b></font>
-                                    </g:else>
-                                </div>
+                                    <g:if test="${item?.statusInfo}">
+                                        <tr>
+                                            <td colspan="3">${item?.statusInfo}</td>
+                                        </tr>
+                                    </g:if>
+                                </table>
 
-                                <div>Status info : ${item?.statusInfo}</div>
                             </div>
                         </div>
                     </div>
@@ -99,44 +145,47 @@
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center">
-                <% def mod = itemInstanceCount % params.max %>
-                <% Integer page = itemInstanceCount / params.max %>
-                <% def offsetNow = params.offset ? Integer.parseInt(params.offset) : 0 %>
+                <g:if test="${itemInstanceCount > params.max}">
+                    <% def mod = itemInstanceCount % params.max %>
+                    <% Integer page = itemInstanceCount / params.max %>
+                    <% def offsetNow = params.offset ? Integer.parseInt(params.offset) : 0 %>
 
-                <g:if test="${offsetNow > 0}">
-                    <li class="page-item">
-                        <a class="page-link"
-                           href="${createLink(action: 'index', params: [offset: (offsetNow - params.max), max: params.max])}"
-                           aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                </g:if>
+                    <g:if test="${offsetNow > 0}">
+                        <li class="page-item">
+                            <a class="page-link"
+                               href="${createLink(action: 'index', params: [status: params.status, offset: (offsetNow - params.max), max: params.max])}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                    </g:if>
 
 
-                <g:each in="${(1..page).toList()}" var="i">
-                    <li class="page-item">
-                        <a class="page-link"
-                           href="${createLink(action: 'index', params: [offset: ((i - 1) * params.max), max: params.max])}">${i}</a>
-                    </li>
-                </g:each>
-                <g:if test="${mod > 0}">
-                    <li class="page-item">
-                        <a class="page-link"
-                           href="${createLink(action: 'index', params: [offset: page * params.max, max: params.max])}">${page + 1}</a>
-                    </li>
-                </g:if>
+                    <g:each in="${(1..page).toList()}" var="i">
+                        <li class="page-item">
+                            <a class="page-link"
+                               href="${createLink(action: 'index', params: [status: params.status, offset: ((i - 1) * params.max), max: params.max])}">${i}</a>
+                        </li>
+                    </g:each>
+                    <g:if test="${mod > 0}">
+                        <li class="page-item">
+                            <a class="page-link"
+                               href="${createLink(action: 'index', params: [status: params.status, offset: page * params.max, max: params.max])}">${page + 1}</a>
+                        </li>
+                    </g:if>
 
-                <g:if test="${offsetNow < page * params.max}">
-                    <li class="page-item">
-                        <a class="page-link"
-                           href="${createLink(action: 'index', params: [offset: offsetNow + params.max, max: params.max])}"
-                           aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
+                    <g:if test="${offsetNow < page * params.max}">
+                        <li class="page-item">
+                            <a class="page-link"
+                               href="${createLink(action: 'index', params: [status: params.status, offset: offsetNow + params.max, max: params.max])}"
+                               aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </g:if>
+
                 </g:if>
             </ul>
 

@@ -225,7 +225,8 @@
      style="border-top: 1px solid red; background-color: #ffffff;">
     <ul class="navbar-nav ml-auto" style="flex-direction: row">
         <li class="nav-item" style="margin-left: 10px">
-            <a class="linkred" href="${createLink(controller: 'home', action: 'main')}">Show top search</a>
+            <a class="linkred"
+               href="${createLink(controller: 'home', action: 'main', params: [top: 1])}">Show top search</a>
         </li>
         <li class="nav-item" style="margin-left: 10px">
             <a class="linkred" href="${createLink(controller: 'home', action: 'packages')}">Package and pricing</a>

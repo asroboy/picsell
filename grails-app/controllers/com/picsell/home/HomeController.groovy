@@ -41,65 +41,124 @@ class HomeController {
     }
 
     def main() {
+        params.max = 20
         if (params.key) {
+            print('key')
             def c = Item.createCriteria()
             def items = []
-            def results = c.list() {
+            def results = c.list(max: params.max, offset: params.offset?:0) {
                 like("name", "%" + params.key + "%")
                 and {
                     eq("status", "approved")
                 }
             }
-            def d = Item.createCriteria()
-            def results_tag = d.list() {
-                like("tags", "%" + params.key + "%")
+//            def d = Item.createCriteria()
+//            def results_tag = d.list() {
+//                like("tags", "%" + params.key + "%")
+//                and {
+//                    eq("status", "approved")
+//                }
+//            }
+            results.each {
+                items.add(it)
+            }
+//            results_tag.each {
+//                items.add(it)
+//            }
+
+            def e = Item.createCriteria()
+            def resultsCount = e.list() {
+                like("name", "%" + params.key + "%")
                 and {
                     eq("status", "approved")
                 }
             }
-            results.each {
-                items.add(it)
-            }
-            results_tag.each {
-                items.add(it)
-            }
 
-            [items: items]
+            [items: items, itemInstanceCount: resultsCount.size()]
         } else if (params.media) {
-            def c = Item.createCriteria()
-            def mediaType = MediaType.findByName(params.media)
-            def items = []
-            def results = c.list() {
-                eq("mediaType", mediaType)
-                and {
-                    eq("status", "approved")
+            if (params.cat) {
+                print('media and cat')
+                def c = Item.createCriteria()
+                def mediaType
+                if(!params.media.equals("All media")){
+                    mediaType = MediaType.findByName(params.media)
                 }
-            }
+                def items = [];
+                def category;
+                if (!params.cat.equals("All category") || !params.cat.equals("")) {
+                    print("cat " + params.cat)
+                    category = Category.findByName(params.cat)
+                }
+                def results = c.list(max: params.max, offset: params.offset?:0) {
+                    if(mediaType){
+                        eq("mediaType", mediaType)
+                    }
+                    and {
+                        eq("status", "approved")
+                    }
+                    if (category) {
+                        print("has category" + category)
+                        and {
+                            eq("category", category)
+                        }
+                    }
+                }
 
-            results.each {
-                items.add(it)
-            }
+                //provide count
+                def d = Item.createCriteria()
+                def resultCount = d.list() {
+                    if(mediaType){
+                        eq("mediaType", mediaType)
+                    }
+                    and {
+                        eq("status", "approved")
+                    }
+                    if (category) {
+                        print("has category" + category)
+                        and {
+                            eq("category", category)
+                        }
+                    }
+                }
+                print("results " + results.size())
+                print("result counts " + resultCount.size())
+                results.each {
+                    items.add(it)
+                }
 
+                [items: items, itemInstanceCount: resultCount.size()]
+            }else{
+                print('media')
+                def c = Item.createCriteria()
+                def mediaType = MediaType.findByName(params.media)
+                def items = []
+
+                def results = c.list(max: params.max, offset: params.offset?:0) {
+                    eq("mediaType", mediaType)
+                    and {
+                        eq("status", "approved")
+                    }
+                }
+                print("results " + results.size())
+                results.each {
+                    items.add(it)
+                }
+
+                def d = Item.createCriteria()
+                def resultCount = d.list() {
+                    eq("mediaType", mediaType)
+                    and {
+                        eq("status", "approved")
+                    }
+                }
+
+                [items: items, itemInstanceCount: resultCount.size()]
+            }
+        } else if (params.top) {
+            def items = Item.findAllByStatus("approved");
             [items: items]
-        } else if (params.media && params.cat) {
-            def c = Item.createCriteria()
-            def mediaType = MediaType.findByName(params.media)
-            def category = MediaType.findByName(params.cat)
-            def items = []
-            def results = c.list() {
-                eq("mediaType", mediaType)
-                and {
-                    eq("status", "approved")
-                }
-                and {
-                    eq("category", category)
-                }
-            }
-
-            results.each {
-                items.add(it)
-            }
-
+        } else {
+            def items = Item.findAllByStatus("approved", [max: 30]);
             [items: items]
         }
     }

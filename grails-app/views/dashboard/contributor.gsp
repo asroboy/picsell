@@ -146,12 +146,12 @@
                                 <div class="row">
                                     <div class="col-sm-5 text-center">
                                         <div style="margin-bottom: 15px">Unpaid Earning</div>
-                                        <h6 class="linkred">IDR 500.000</h6>
-                                        <a href="#" class="btn btn-danger">Claim now!</a>
+                                        <h6 class="linkred"><strong>IDR 500.000</strong></h6>
+                                        <a href="#" class="btn btn-md btn-danger">Claim now!</a>
                                     </div>
 
                                     <div class="col-sm-7">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula aliquet dolor.
+                                        You have some amount that can be claimed to <strong>Picsell.ID</strong>. Click on claim now and get your values
                                     </div>
                                 </div>
                             </div>

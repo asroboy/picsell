@@ -16,12 +16,14 @@
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
     <g:set var="userAccounts" value="${com.picsell.data.UserAccount.findAllByUser(userObject)}"/>
 
+
+    <g:set var="billingInfo" value="${com.picsell.data.BillingAddress.findByUser(userObject)}"/>
+    <g:set var="paymentMethod" value="${com.picsell.data.PaymentMethod.findByUser(userObject)}"/>
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
 </head>
 
 <body>
-
 <!-- Page Content -->
 <div class="container">
 
@@ -40,93 +42,200 @@
     <div class="row">
         <div class="col-md-6">
             <div class="gray-box" style="margin-bottom: 30px; padding: 15px;">
-                <div style="margin-bottom: 15px">Billing address</div>
 
-                <form>
+                <g:if test="${billingInfo}">
+                    <div style="margin-bottom: 15px">Billing address</div>
+
                     <table style="width: 100%; color: black; font-style: italic">
                         <colgroup>
                             <col style="width: 40%"/>
                             <col style="width: 40%"/>
                             <col style="width: 18%"/>
-                            <col style="width: 2%"/>
                         </colgroup>
 
                         <tr>
                             <td>Country</td>
-                            <td colspan="2"><input class="form-control" type="text" name="country"/></td>
-                            <td style="color: red">*</td>
+                            <td>${billingInfo?.country}</td>
                         </tr>
                         <tr>
                             <td>Address 1</td>
-                            <td colspan="2"><input class="form-control" type="text" name="address_1"/></td>
-                            <td></td>
+                            <td>${billingInfo?.address1}</td>
                         </tr>
                         <tr>
                             <td>Address 2</td>
-                            <td colspan="2"><input class="form-control" type="text" name="address_2"/></td>
-                            <td style="color: red">*</td>
+                            <td>${billingInfo?.address2}</td>
+
                         </tr>
                         <tr>
                             <td>City</td>
-                            <td colspan="2"><input class="form-control" type="text" name="city"/></td>
-                            <td></td>
+                            <td>${billingInfo?.city}</td>
+
                         </tr>
                         <tr>
                             <td>State/Province</td>
-                            <td><input class="form-control" type="text" name="state"/></td>
-                            <td><input class="form-control" type="text" name="postal_code"/></td>
-                            <td></td>
+                            <td>${billingInfo?.stateProvince} Postal Code ${billingInfo?.postalCode}</td>
+
                         </tr>
 
                     </table>
-                </form>
 
-                <div style="margin-bottom: 15px;margin-top: 15px">Payment Method</div>
+                    <div style="margin-bottom: 15px;margin-top: 15px">Payment Method</div>
 
-                <form>
+
                     <table style="width: 100%; color: black; font-style: italic">
-                        <colgroup>
-                            <col style="width: 40%"/>
-                            <col style="width: 40%"/>
-                            <col style="width: 18%"/>
-                            <col style="width: 2%"/>
-                        </colgroup>
-
                         <tr>
                             <td>First Name</td>
-                            <td colspan="2"><input class="form-control" type="text" name="firt_name"/></td>
-                            <td style="color: red">*</td>
+                            <td>${paymentMethod?.firstName}</td>
+
                         </tr>
                         <tr>
                             <td>Last Name</td>
-                            <td colspan="2"><input class="form-control" type="text" name="last_name"/></td>
-                            <td style="color: red">*</td>
+                            <td colspan="2">${paymentMethod?.lastName}</td>
+
                         </tr>
                         <tr>
+                            %{--CC NUMBER--}%
                             <td>Creadit Card Number</td>
-                            <td colspan="2"><input class="form-control" type="text" name="cc_number"/></td>
-                            <td style="color: red">*</td>
+                            <td>${paymentMethod?.creaditCardNumber}</td>
+
                         </tr>
                         <tr>
+                            %{--VCC--}%
                             <td>Security Code</td>
-                            <td colspan="2"><input class="form-control" type="text" name="vcs"/></td>
-                            <td style="color: red">*</td>
+                            <td>${paymentMethod?.securityCode}</td>
+
                         </tr>
                         <tr>
                             <td>Expire Date</td>
-                            <td><input class="form-control" type="text" name="month"/></td>
-                            <td><input class="form-control" type="text" name="year"/></td>
-                            <td style="color: red">*</td>
+                            <td>${paymentMethod?.expiredDate}</td>
+
                         </tr>
 
                     </table>
-                </form>
 
-                <div style="color: #c90000; font-style: italic; margin-top: 15px; margin-bottom: 15px">") required field</div>
+                    <div style=" margin-top: 30px">
 
-                <div style="color: black;font-style: italic; margin-top: 15px; margin-bottom: 15px">I agree with term and condition <input
-                        type="checkbox"/> <a href="#"><b>read here</b></a></div>
+                        <div class="text-right">
+                            <button class="btn btn-sm btn-danger">
+                                Change Info</button>
+                            %{--</g:submitButton>--}%
+                        </div>
+
+                    </div>
+                </g:if>
+                <g:else>
+                    <div style="margin-bottom: 15px">Billing address</div>
+                    <g:form controller="billing" action="saveBillingPayment">
+                        <input class="form-control" type="text" name="item_id" value="${itemInstance?.id}"
+                               style="display: none"/>
+                        <input class="form-control" type="text" name="user_id" value="${userObject?.id}"
+                               style="display: none"/>
+                        <table style="width: 100%; color: black; font-style: italic">
+                            <colgroup>
+                                <col style="width: 40%"/>
+                                <col style="width: 40%"/>
+                                <col style="width: 18%"/>
+                                <col style="width: 2%"/>
+                            </colgroup>
+
+                            <tr>
+                                <td>Country</td>
+                                <td colspan="2"><input class="form-control" type="text" name="country"/></td>
+                                <td style="color: red">*</td>
+                            </tr>
+                            <tr>
+                                <td>Address 1</td>
+                                <td colspan="2"><input class="form-control" type="text" name="address_1"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Address 2</td>
+                                <td colspan="2"><input class="form-control" type="text" name="address_2"/></td>
+                                <td style="color: red">*</td>
+                            </tr>
+                            <tr>
+                                <td>City</td>
+                                <td colspan="2"><input class="form-control" type="text" name="city"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>State/Province</td>
+                                <td><input class="form-control" type="text" name="state"/></td>
+                                <td><input class="form-control" type="text" name="postal_code"/></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+
+                        <div style="margin-bottom: 15px;margin-top: 15px">Payment Method</div>
+
+
+                        <table style="width: 100%; color: black; font-style: italic">
+                            <colgroup>
+                                <col style="width: 40%"/>
+                                <col style="width: 40%"/>
+                                <col style="width: 18%"/>
+                                <col style="width: 2%"/>
+                            </colgroup>
+
+                            <tr>
+                                <td>First Name</td>
+                                <td colspan="2"><input class="form-control" type="text" name="firt_name"/></td>
+                                <td style="color: red">*</td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td colspan="2"><input class="form-control" type="text" name="last_name"/></td>
+                                <td style="color: red">*</td>
+                            </tr>
+                            <tr>
+                                <td>Creadit Card Number</td>
+                                <td colspan="2"><input class="form-control" type="text" name="cc_number"/></td>
+                                <td style="color: red">*</td>
+                            </tr>
+                            <tr>
+                                <td>Security Code</td>
+                                <td colspan="2"><input class="form-control" type="text" name="vcs"/></td>
+                                <td style="color: red">*</td>
+                            </tr>
+                            <tr>
+                                <td>Expire Date</td>
+                                <td><input class="form-control" type="text" name="month"/></td>
+                                <td><input class="form-control" type="text" name="year"/></td>
+                                <td style="color: red">*</td>
+                            </tr>
+
+                        </table>
+
+
+                        <div style="color: #c90000; font-style: italic; margin-top: 15px; margin-bottom: 15px">") required field</div>
+
+                        <div style="color: black;font-style: italic; margin-top: 15px; margin-bottom: 15px">I agree with term and condition <input
+                                type="checkbox"/> <a href="#"><b>read here</b></a></div>
+
+                        <div>
+
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                Submit your billing informastion including payment method before completing checkout
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="text-right">
+                                <g:submitButton name="submit" class="btn btn-sm btn-danger" title="Submit"/>
+                                %{--</g:submitButton>--}%
+                            </div>
+
+                        </div>
+                    </g:form>
+                </g:else>
+
             </div>
+
+        </div>
+
+        <div id="test">
 
         </div>
 
@@ -204,7 +313,7 @@
 
                         <div class="col-md-7" style="text-align: left">
                             <div style="background: #d00006; color: white;text-align: center;padding: 5px;margin-bottom: 10px;">
-                                Item Title
+                                ${itemInstance?.name}
                             </div>
 
                             <div style="margin-top: 8px">
@@ -212,7 +321,7 @@
                                    style="font-size: 24px; color:  white; background-color:   #c90000; border: 3px; border-color: #c90000;border-style: solid; border-width: 1.5px; margin-right: 5px">&nbsp;L&nbsp;</a>
                             </div>
 
-                            <div style="margin-top: 8px">124 x 321 dpi</div>
+                            <div style="margin-top: 8px">${itemInstance?.description}</div>
 
                             <div style="margin-top: 8px">124 x 321 dpi JPEG</div>
                         </div>
@@ -224,7 +333,8 @@
                     <div class="row">
                         <div class="col-md-6"><b>1 IMAGE</b></div>
 
-                        <div class="col-md-6" style="text-align: right"><b>10000 IDR</b></div>
+                        <div class="col-md-6"
+                             style="text-align: right"><b>${itemInstance.price} ${itemInstance?.currency}</b></div>
                     </div>
 
                 </div>
@@ -234,34 +344,38 @@
                     <div class="row">
                         <div class="col-md-6"><b>TOTAL AMOUNT</b></div>
 
-                        <div class="col-md-6" style="text-align: right"><b>10000 IDR</b></div>
+                        <div class="col-md-6"
+                             style="text-align: right"><b>${itemInstance.price * 1} ${itemInstance?.currency}</b></div>
                     </div>
 
                 </div>
 
                 <div style="border-top: solid 1px gray; padding-left: 5px; padding-right: 5px; padding-top: 15px">
-                    <div>
-                        <div class="row">
-                            <div class="col-md-6" style="color: black; text-align: right"><b>Do you have coupon code</b>
-                            </div>
+                    <g:if test="${billingInfo}">
+                        <div>
+                            <div class="row">
+                                <div class="col-md-6"
+                                     style="color: black; text-align: right"><b>Do you have coupon code</b>
+                                </div>
 
-                            <div class="col-md-6" style="text-align: right">
-                                <input class="form-control" type="text"/>
+                                <div class="col-md-6" style="text-align: right">
+                                    <input class="form-control" type="text"/>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div style="margin-top: 15px; text-align: right">
-                        <g:if test="${params.chart_id}">
-                            <button class="btn button-dark-red"
-                                    onclick="pay_chart_id(${params.chart_id})">COMPLETE CHECKOUT</button>
-                        </g:if>
-                        <g:else>
-                            <button class="btn button-dark-red"
-                                    onclick="pay_chart(${itemInstance?.id}, ${userObject?.id})">COMPLETE CHECKOUT</button>
-                        </g:else>
+                        <div style="margin-top: 15px; text-align: right">
+                            <g:if test="${params.chart_id}">
+                                <button class="btn button-dark-red"
+                                        onclick="pay_chart_id(${params.chart_id})">COMPLETE CHECKOUT</button>
+                            </g:if>
+                            <g:else>
+                                <button class="btn button-dark-red"
+                                        onclick="pay_chart(${itemInstance?.id}, ${userObject?.id})">COMPLETE CHECKOUT</button>
+                            </g:else>
 
-                    </div>
+                        </div>
+                    </g:if>
                 </div>
             </div>
         </div>
