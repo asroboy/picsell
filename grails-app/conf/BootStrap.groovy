@@ -3,6 +3,7 @@ import com.picsell.config.TermOfService
 import com.picsell.data.Banner
 import com.picsell.data.Category
 import com.picsell.data.Item
+import com.picsell.data.ItemGroupSize
 import com.picsell.data.ItemHasCategory
 import com.picsell.security.Role
 import com.picsell.security.RoleMenu
@@ -35,9 +36,13 @@ class BootStrap {
         RoleMenu.findByUrl('/image/download/**') ?: new RoleMenu(url: '/image/download/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/item/itemDetail/**') ?: new RoleMenu(url: '/item/itemDetail/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/document/download/**') ?: new RoleMenu(url: '/document/download/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/document/photoWithWatermaarkPreview/**') ?: new RoleMenu(url: '/document/photoWithWatermaarkPreview/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/document/photoWithWatermaark/**') ?: new RoleMenu(url: '/document/photoWithWatermaark/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/document/downloadVideo/**') ?: new RoleMenu(url: '/document/downloadVideo/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/document/picsell_image/**') ?: new RoleMenu(url: '/document/picsell_image/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrlAndConfigAttribute('/subcribtion/*', 'permitAll') ?: new RoleMenu(url: '/subcribtion/*', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/api/**') ?: new RoleMenu(url: '/api/**', configAttribute: 'permitAll').save()
-        RoleMenu.findByUrl('/billing/**') ?: new RoleMenu(url: '/billing/**', configAttribute: 'permitAll').save()
+//        RoleMenu.findByUrl('/billing/**') ?: new RoleMenu(url: '/billing/**', configAttribute: 'permitAll').save()
 
         //USER
         RoleMenu.findByUrl('/profileUser/profile/**') ?: new RoleMenu(url: '/profileUser/profile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN,ROLE_CONTRIBUTOR').save()
@@ -45,6 +50,10 @@ class BootStrap {
         RoleMenu.findByUrl('/profileUser/saveProfileImage/**') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER,ROLE_ADMIN, ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_CONTRIBUTOR,ROLE_ADMIN').save()
         RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/billing/saveBillingPayment/**') ?: new RoleMenu(url: '/billing/saveBillingPayment/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/home/purchase_summary/**') ?: new RoleMenu(url: '/home/purchase_summary/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/purchaseHistory/**') ?: new RoleMenu(url: '/purchaseHistory/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
+
 
         //ADMIN
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
@@ -62,7 +71,6 @@ class BootStrap {
         RoleMenu.findByUrl('/mediaType/**') ?: new RoleMenu(url: '/mediaType/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/banner/**') ?: new RoleMenu(url: '/banner/**', configAttribute: 'ROLE_ADMIN').save()
 
-
         //ADMIN CONTRIBUTOR AND USER
         RoleMenu.findByUrl('/bankAccount/**') ?: new RoleMenu(url: '/bankAccount/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/profileUser/**') ?: new RoleMenu(url: '/profileUser/**', configAttribute: 'ROLE_ADMIN,ROLE_USER,ROLE_CONTRIBUTOR').save()
@@ -73,26 +81,36 @@ class BootStrap {
         RoleMenu.findByUrl('/dashboard/admin') ?: new RoleMenu(url: '/dashboard/admin', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/dashboard/contributor') ?: new RoleMenu(url: '/dashboard/contributor', configAttribute: 'ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/dashboard/user') ?: new RoleMenu(url: '/dashboard/user', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrl('/dashboard/contributor_earnings/**') ?: new RoleMenu(url: '/dashboard/contributor_earnings/**', configAttribute: 'ROLE_CONTRIBUTOR').save()
 
 
-        def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save()
-        def userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save()
-        def contributorRole = Role.findByAuthority('ROLE_CONTRIBUTOR') ?: new Role(authority: 'ROLE_CONTRIBUTOR').save()
+        def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save(flush: true)
+        def userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save(flush: true)
+        def contributorRole = Role.findByAuthority('ROLE_CONTRIBUTOR') ?: new Role(authority: 'ROLE_CONTRIBUTOR').save(flush: true)
 
-        def user = User.findByUsername('admin') ?: new User(username: 'admin', password: 'admin123')
-        def ridho = User.findByUsername('ridho') ?: new User(username: 'ridho', password: 'ridho123')
-        def atuanda = User.findByUsername('atuanda') ?: new User(username: 'atuanda', password: 'atuanda123')
-        def contributor = User.findByUsername('contributor') ?: new User(username: 'contributor', password: 'contributor123')
+        def user = User.findByUsername('admin') ?: new User(username: 'admin', password: 'admin123', email: 'admin@picsell.id').save(flush: true)
+        def ridho = User.findByUsername('ridho') ?: new User(username: 'ridho', password: 'ridho123', email: 'asrofiridho@gmail.com').save(flush: true)
+        def atuanda = User.findByUsername('atuanda') ?: new User(username: 'atuanda', password: 'atuanda123', email: 'atuanda@yahoo.com').save(flush: true)
+        def contributor = User.findByUsername('contributor') ?: new User(username: 'contributor', password: 'contributor123', email: 'contributor@picsell.id').save(flush: true)
 
-        user.save(flush: true)
-        ridho.save(flush: true)
-        atuanda.save(flush: true)
-        contributor.save(flush: true)
+//        user.save(flush: true)
+//        ridho.save(flush: true)
+//        atuanda.save(flush: true)
+//        contributor.save(flush: true)
+
+//        def userAdminRole = UserRole.findByUserAndRole(user, adminRole) ?: new UserRole(user: user, role: adminRole).save(flush: true)
+//        def ridhoRole = UserRole.findByUserAndRole(ridho, adminRole) ?: new UserRole(user: ridho, role: adminRole).save(flush: true)
+//        def atuandaRole = UserRole.findByUserAndRole(atuanda, userRole) ?: new UserRole(user: atuanda, role: userRole).save(flush: true)
+//        def contributorUserRole = UserRole.findByUserAndRole(contributor, contributorRole) ?: new UserRole(user: contributor, role: contributorRole).save(flush: true)
+
+
+
 
         UserRole.create user, adminRole
         UserRole.create ridho, adminRole
         UserRole.create atuanda, userRole
         UserRole.create contributor, contributorRole
+
 
         UserRole.withSession {
             it.flush()
@@ -135,6 +153,11 @@ class BootStrap {
 
         Account.findByName('Enterprice') ?: new Account(maxTeamUser: 1000, name: 'Enterprice', type: 'Enterprice', lisence: 'Enterprice', maxImages: 0, price: 700, inCurrency: 'IDR', unlimitedImages: true, allowMoreUser: true).save(flush: true)
 
+
+        ItemGroupSize.findByGroupLabel("S") ?: new ItemGroupSize(groupLabel: "S", minSize: 3, maxSize: 5, price: 20000).save(flush: true)
+        ItemGroupSize.findByGroupLabel("M") ?: new ItemGroupSize(groupLabel: "M", minSize: 6, maxSize: 9, price: 40000).save(flush: true)
+        ItemGroupSize.findByGroupLabel("L") ?: new ItemGroupSize(groupLabel: "L", minSize: 10, maxSize: 15, price: 70000).save(flush: true)
+        ItemGroupSize.findByGroupLabel("Others") ?: new ItemGroupSize(groupLabel: "Others", minSize: 16, maxSize: 100, price: 100000).save(flush: true)
 
         Banner.findByType("big") ?: new Banner(type: "big", isActive: false).save(flush: true)
         Banner.findByType("small") ?: new Banner(type: "small", isActive: false).save(flush: true)

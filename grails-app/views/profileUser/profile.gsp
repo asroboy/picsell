@@ -26,7 +26,7 @@
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
 
-    <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(profileUserInstance?.user)}"/>
+    <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
 </head>
 
 <body>
@@ -92,7 +92,7 @@
                 </g:if>
                 <g:if test="${role?.role?.authority.equals("ROLE_USER")}">
                     <div class="card">
-                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
+                    <div style="margin: 5px"><a href="${createLink(controller: 'dashboard', action: 'user')}" class="btn btn-sm btn-outline-danger"
                                                 style="text-align: left;width: 100%">Dashboard</a></div>
 
                     <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
@@ -101,13 +101,23 @@
                     <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
                                                 style="text-align: left;width: 100%">Billing</a></div>
 
-                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
-                                                style="text-align: left;width: 100%">Purchase History</a></div>
+                    <div style="margin: 5px"><a
+                            href="${createLink(controller: 'purchaseHistory', action: 'index', id: role?.user?.id)}"
+                            class="btn btn-sm btn-outline-danger"
+                            style="text-align: left;width: 100%">Purchase History</a></div>
 
                     <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
                                                 style="text-align: left;width: 100%">Preferences</a></div>
-                </ul>
-                </div>
+                    </ul>
+                    </div>
+                </g:if>
+                <g:if test="${role?.role?.authority.equals("ROLE_ADMIN")}">
+                    <div class="card">
+                    <div style="margin: 5px"><a href="${createLink(controller: 'dashboard', action: 'admin')}" class="btn btn-sm btn-outline-danger"
+                                                style="text-align: left;width: 100%">Dashboard</a></div>
+
+                    </ul>
+                    </div>
                 </g:if>
             </g:each>
 

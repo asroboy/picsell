@@ -1,13 +1,16 @@
 package com.picsell.global
 
 import com.picsell.config.Account
+import com.picsell.data.ImageFile
 import com.picsell.data.Item
 import com.picsell.data.ItemChart
 import com.picsell.data.ItemTags
 import com.picsell.data.ItemViewed
+import com.picsell.data.PaymentMethod
 import com.picsell.data.ProfileUser
 import com.picsell.data.UserAccount
 import com.picsell.data.UserLikeItem
+import com.picsell.data.UserPuchaseItem
 import com.picsell.security.Role
 import com.picsell.security.User
 import com.picsell.security.UserRole
@@ -207,4 +210,55 @@ class ApiController {
         def result = [code: 1, data: "ok"]
         render result as JSON
     }
+
+
+    def purchase() {
+        def user = User.get(params.user_id)
+        def imageFile = ImageFile.get(params.image_id)
+        def item = Item.get(imageFile?.tableId)
+        def payment = PaymentMethod.get(params.payment_id)
+        def totalAmount = params.total_amount
+        def contributor = item?.userOwner
+        print(imageFile?.height)
+        print(item?.name)
+        print(contributor?.username)
+        Date date = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.add(Calendar.DATE, 7); // add 10 days
+
+        Date expDate = cal.getTime();
+
+        def generator = { String alphabet, int n ->
+            new Random().with {
+                (1..n).collect { alphabet[nextInt(alphabet.length())] }.join()
+            }
+        }
+        def token = generator((('A'..'Z') + ('0'..'9')).join(), 15)
+
+        def token_ = user?.username + token
+
+//        def token_ = generateToken(user?.username);
+        def purchase = new UserPuchaseItem(downloadImageToken: token_, tokenExpired: expDate, user: user, imageFile: imageFile, purchaseDate: date, paymentMethod: payment, totalAmount: totalAmount, contributor: contributor).save(flush: true)
+        String url = createLink(controller: 'document', action: 'picsell_image') + "?token=" + token_;
+        print(url);
+        def result = [purchaseDate: purchase, url: url]
+        render result as JSON
+    }
+
+    def generateToken(String username) {
+        def generator = { String alphabet, int n ->
+            new Random().with {
+                (1..n).collect { alphabet[nextInt(alphabet.length())] }.join()
+            }
+        }
+        def token = generator((('A'..'Z') + ('0'..'9')).join(), 15)
+
+        def uTok = username + token
+
+        println "==>${uTok}<=="
+        return uTok
+    }
+
+
 }

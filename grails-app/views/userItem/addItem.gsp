@@ -32,12 +32,17 @@
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${mItemInstance}">
-                <ul class="errors" role="alert">
-                    <g:eachError bean="${mItemInstance}" var="error">
-                        <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message
-                                error="${error}"/></li>
-                    </g:eachError>
-                </ul>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <ul class="errors" role="alert">
+                        <g:eachError bean="${mItemInstance}" var="error">
+                            <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message
+                                    error="${error}"/></li>
+                        </g:eachError>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             </g:hasErrors>
 
             <g:uploadForm url="[action: 'mSaveItem']">
@@ -128,13 +133,17 @@
             var filepath = document.getElementById('imgInp').value;
             var thefile = fso.getFile(filepath);
             var sizeinbytes = thefile.size;
+
+
         } else {
-            var sizeinbytes = document.getElementById('imgInp').files[0].size;
+            var thefile = document.getElementById('imgInp').files[0];
+            var sizeinbytes = thefile.size;
         }
 
         var fSExt = new Array('Bytes', 'KB', 'MB', 'GB');
         fSize = sizeinbytes;
         var currentSize = fSize;
+
         i = 0;
         while (fSize > 900) {
             fSize /= 1024;
@@ -145,7 +154,7 @@
         console.log(i);
         var size = (Math.round(fSize * 100) / 100);
         if (i < 2) {
-            alert(size + ' ' + fSExt[i]);
+            alert('Your file size must be at least 4 MB, your current size is ' + size + ' ' + fSExt[i]);
             document.getElementById("imgInp").value = "";
         } else {
             if (size < 4) {
@@ -153,6 +162,50 @@
                 document.getElementById("imgInp").value = "";
             }
         }
+
+        var img = document.getElementById('blah');
+        img.onload = function () {
+            document.getElementById("original_size").value = 'M';
+
+            console.log("Width", img.naturalWidth);
+            console.log("Height", img.naturalHeight)
+            var h = img.naturalHeight;
+            var w = img.naturalWidth;
+            var dimOrig = w + " x " + h;
+            var dimL = w + "x" + h;
+            var dimElemL = document.getElementById("dim-l");
+            dimElemL.innerHTML = "Dimension : " + dimL;
+            console.log("Dimension : ", dimL);
+            document.getElementById("form-l").innerHTML = '<input type="text" name="group_size_l" value="L"  style="display: none"/>' +
+                    '<input type="text" name="image_dim_l" value="' + dimL + '"style="display: none" />';
+            jQuery("#size-label").show();
+            jQuery("#size-l").show();
+
+
+            var dimM = parseInt((w * 80 / 100)) + "x" + parseInt(h * 80 / 100)
+            var dimElemM = document.getElementById("dim-m");
+            dimElemM.innerHTML = "Dimension : " + dimM;
+            console.log("Dimension : ", dimM);
+            document.getElementById("form-m").innerHTML = '<input type="text" name="group_size_m" value="M" style="display: none"/>'+
+                    '<input type="text" name="image_dim_m" value="' + dimM + '" style="display: none"/>';
+            jQuery("#size-m").show();
+
+            var dimS = parseInt(w * 40 / 100) + "x" + parseInt(h * 40 / 100)
+            var dimElemS = document.getElementById("dim-s");
+            dimElemS.innerHTML = "Dimension : " + dimS;
+            console.log("Dimension : ", dimS);
+            document.getElementById("form-s").innerHTML = '<input type="text" name="group_size_s" value="S" style="display: none"/>' +
+                    '<input type="text" name="image_dim_s" value="' + dimS + '" style="display: none"/>';
+            jQuery("#size-s").show();
+
+
+        }
+//        var poll = setInterval(function () {
+//            if (img.naturalWidth) {
+//                clearInterval(poll);
+//
+//            }
+//        }, 10);
 
     }
 

@@ -21,7 +21,7 @@ class Item {
         name nullable: false
         description size: 1..1000
         userOwner nullable: false
-        currency inList: ['IDR', 'USD', 'SGD']
+        currency inList: ['IDR', 'USD', 'SGD'], nullable: true
         status nullable: true
         statusInfo nullable: true
         createdDate nullable: true

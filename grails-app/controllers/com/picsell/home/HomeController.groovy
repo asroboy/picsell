@@ -1,8 +1,10 @@
 package com.picsell.home
 
 import com.picsell.data.Category
+import com.picsell.data.ImageFile
 import com.picsell.data.Item
 import com.picsell.data.MediaType
+import grails.converters.JSON
 
 class HomeController {
 
@@ -41,12 +43,12 @@ class HomeController {
     }
 
     def main() {
-        params.max = 20
+        params.max = 3
         if (params.key) {
             print('key')
             def c = Item.createCriteria()
             def items = []
-            def results = c.list(max: params.max, offset: params.offset?:0) {
+            def results = c.list(max: params.max, offset: params.offset ?: 0) {
                 like("name", "%" + params.key + "%")
                 and {
                     eq("status", "approved")
@@ -80,7 +82,7 @@ class HomeController {
                 print('media and cat')
                 def c = Item.createCriteria()
                 def mediaType
-                if(!params.media.equals("All media")){
+                if (!params.media.equals("All media")) {
                     mediaType = MediaType.findByName(params.media)
                 }
                 def items = [];
@@ -89,8 +91,8 @@ class HomeController {
                     print("cat " + params.cat)
                     category = Category.findByName(params.cat)
                 }
-                def results = c.list(max: params.max, offset: params.offset?:0) {
-                    if(mediaType){
+                def results = c.list(max: params.max, offset: params.offset ?: 0) {
+                    if (mediaType) {
                         eq("mediaType", mediaType)
                     }
                     and {
@@ -107,7 +109,7 @@ class HomeController {
                 //provide count
                 def d = Item.createCriteria()
                 def resultCount = d.list() {
-                    if(mediaType){
+                    if (mediaType) {
                         eq("mediaType", mediaType)
                     }
                     and {
@@ -127,13 +129,13 @@ class HomeController {
                 }
 
                 [items: items, itemInstanceCount: resultCount.size()]
-            }else{
+            } else {
                 print('media')
                 def c = Item.createCriteria()
                 def mediaType = MediaType.findByName(params.media)
                 def items = []
 
-                def results = c.list(max: params.max, offset: params.offset?:0) {
+                def results = c.list(max: params.max, offset: params.offset ?: 0) {
                     eq("mediaType", mediaType)
                     and {
                         eq("status", "approved")
@@ -174,7 +176,12 @@ class HomeController {
     }
 
     def itemDetail(Item itemInstance) {
-        [itemInstance: itemInstance]
+        def itemImages = ImageFile.findAllByTableIdAndTableName(itemInstance?.id, itemInstance?.class.simpleName)
+        def groupSizes = []
+        itemImages.each {
+            groupSizes.add(it?.groupSize)
+        }
+        [itemInstance: itemInstance, itemImages: itemImages, groupSizes: groupSizes as JSON, itemImagesJson: itemImages as JSON]
     }
 
     def mychart() {
@@ -210,8 +217,9 @@ class HomeController {
 
     }
 
-    def purchase_summary(Item itemInstance) {
-        respond itemInstance
+    def purchase_summary(ImageFile imageFile) {
+        def itemInstance = Item.get(imageFile?.tableId)
+        [itemInstance: itemInstance, imageFile: imageFile]
     }
 
     def subscribe_summary() {}

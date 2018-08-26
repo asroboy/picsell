@@ -8,6 +8,8 @@ class ImageFile {
 
     String tipeFile
     String namaFile
+    int width
+    int height
     Long ukuranFile
     String path
 
@@ -15,6 +17,7 @@ class ImageFile {
     Long tableId
 
 
+    ItemGroupSize groupSize
 
     static constraints = {
         tipeFile(nullable: true, display: false)
@@ -27,6 +30,8 @@ class ImageFile {
         tableName nullable: true
         tableId nullable: true
         lampiran nullable: true
+
+        groupSize nullable: true
 
     }
 }

@@ -27,7 +27,8 @@
         <div class="col-lg-8 align-self-center">
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Earnings</a>
+                    <a class="nav-link active"
+                       href="${createLink(controller: 'dashboard', action: 'contributor_earnings', id: userObject?.id)}">Earnings</a>
                 </li>
                 <li class="nav-item align-self-center">
                     |

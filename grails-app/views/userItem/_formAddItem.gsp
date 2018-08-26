@@ -71,7 +71,7 @@
     <g:textField name="tags" value="${fieldValue(bean: itemInstance, field: 'tags')}" class="form-control"/>
 </div>
 
-<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'price', 'error')} required">
+<div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'price', 'error')} required" style="display: none;">
     <label for="price">
         <g:message code="item.price.label" default="Price"/>
         <span class="required-indicator">*</span>
@@ -85,6 +85,8 @@
                              class="form-control"/></td>
 
         </tr>
+
+
     </table>
 
 </div>

@@ -12,6 +12,8 @@
     <title>picsell.id</title>
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
+    <g:set var="userObject"
+           value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
 </head>
 
 <body>
@@ -54,7 +56,7 @@
 
             <div style="margin-bottom: 15px; margin-top: 50px; width: 100%">
                 <div style="margin: 5px">
-                    <a href="${createLink(action: 'index', params: [status: 'pending'])}"
+                    <a href="${createLink(controller: 'dashboard', action: 'contributor_earnings', id: userObject?.id)}"
                        class="btn btn-sm btn-danger"
                        style="text-align: left;  width: 100%">Earnings</a>
                 </div>

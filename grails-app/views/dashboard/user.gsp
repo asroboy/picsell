@@ -43,8 +43,10 @@
                     <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
                                                 style="text-align: left;width: 100%">Billing</a></div>
 
-                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
-                                                style="text-align: left;width: 100%">Purchase History</a></div>
+                    <div style="margin: 5px"><a
+                            href="${createLink(controller: 'purchaseHistory', action: 'index', id: userObject?.id)}"
+                            class="btn btn-sm btn-outline-danger"
+                            style="text-align: left;width: 100%">Purchase History</a></div>
 
                     <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
                                                 style="text-align: left;width: 100%">Preferences</a></div>

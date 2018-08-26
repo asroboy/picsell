@@ -47,14 +47,8 @@
                     <div style="margin-bottom: 15px">Billing address</div>
 
                     <table style="width: 100%; color: black; font-style: italic">
-                        <colgroup>
-                            <col style="width: 40%"/>
-                            <col style="width: 40%"/>
-                            <col style="width: 18%"/>
-                        </colgroup>
-
                         <tr>
-                            <td>Country</td>
+                            <td width="50%">Country</td>
                             <td>${billingInfo?.country}</td>
                         </tr>
                         <tr>
@@ -81,16 +75,15 @@
 
                     <div style="margin-bottom: 15px;margin-top: 15px">Payment Method</div>
 
-
                     <table style="width: 100%; color: black; font-style: italic">
                         <tr>
-                            <td>First Name</td>
+                            <td width="50%">First Name</td>
                             <td>${paymentMethod?.firstName}</td>
 
                         </tr>
                         <tr>
                             <td>Last Name</td>
-                            <td colspan="2">${paymentMethod?.lastName}</td>
+                            <td>${paymentMethod?.lastName}</td>
 
                         </tr>
                         <tr>
@@ -126,7 +119,7 @@
                 <g:else>
                     <div style="margin-bottom: 15px">Billing address</div>
                     <g:form controller="billing" action="saveBillingPayment">
-                        <input class="form-control" type="text" name="item_id" value="${itemInstance?.id}"
+                        <input class="form-control" type="text" name="item_id" value="${imageFile?.id}"
                                style="display: none"/>
                         <input class="form-control" type="text" name="user_id" value="${userObject?.id}"
                                style="display: none"/>
@@ -195,7 +188,7 @@
                             </tr>
                             <tr>
                                 <td>Security Code</td>
-                                <td colspan="2"><input class="form-control" type="text" name="vcs"/></td>
+                                <td colspan="2"><input class="form-control" type="number" name="mvcs"/></td>
                                 <td style="color: red">*</td>
                             </tr>
                             <tr>
@@ -210,8 +203,8 @@
 
                         <div style="color: #c90000; font-style: italic; margin-top: 15px; margin-bottom: 15px">") required field</div>
 
-                        <div style="color: black;font-style: italic; margin-top: 15px; margin-bottom: 15px">I agree with term and condition <input
-                                type="checkbox"/> <a href="#"><b>read here</b></a></div>
+                        <div style="color: black;font-style: italic;  margin-top: 15px; margin-bottom: 15px">I agree with term and condition  <input
+                                type="checkbox" name="agree"> <a href="#"><b>read here</b></a></div>
 
                         <div>
 
@@ -305,7 +298,7 @@
                                 </div>
 
                                 <div style="text-align: center">
-                                    <u>ID ${itemInstance?.id}</u>
+                                    <u>ID ${itemInstance?.id}.${imageFile?.id}</u>
                                 </div>
                             </div>
 
@@ -318,12 +311,12 @@
 
                             <div style="margin-top: 8px">
                                 <a href="#"
-                                   style="font-size: 24px; color:  white; background-color:   #c90000; border: 3px; border-color: #c90000;border-style: solid; border-width: 1.5px; margin-right: 5px">&nbsp;L&nbsp;</a>
+                                   style="font-size: 24px; color:  white; background-color:   #c90000; border: 3px; border-color: #c90000;border-style: solid; border-width: 1.5px; margin-right: 5px">&nbsp;${imageFile?.groupSize?.groupLabel}&nbsp;</a>
                             </div>
 
                             <div style="margin-top: 8px">${itemInstance?.description}</div>
 
-                            <div style="margin-top: 8px">124 x 321 dpi JPEG</div>
+                            <div style="margin-top: 8px">${imageFile?.width} x ${imageFile?.height} ${imageFile?.tipeFile}</div>
                         </div>
                     </div>
 
@@ -334,7 +327,7 @@
                         <div class="col-md-6"><b>1 IMAGE</b></div>
 
                         <div class="col-md-6"
-                             style="text-align: right"><b>${itemInstance.price} ${itemInstance?.currency}</b></div>
+                             style="text-align: right"><b>${imageFile?.groupSize?.price} IDR</b></div>
                     </div>
 
                 </div>
@@ -345,7 +338,7 @@
                         <div class="col-md-6"><b>TOTAL AMOUNT</b></div>
 
                         <div class="col-md-6"
-                             style="text-align: right"><b>${itemInstance.price * 1} ${itemInstance?.currency}</b></div>
+                             style="text-align: right"><b>${imageFile?.groupSize?.price * 1} IDR</b></div>
                     </div>
 
                 </div>
@@ -366,12 +359,12 @@
 
                         <div style="margin-top: 15px; text-align: right">
                             <g:if test="${params.chart_id}">
-                                <button class="btn button-dark-red"
-                                        onclick="pay_chart_id(${params.chart_id})">COMPLETE CHECKOUT</button>
+                                <button class="btn btn-sm btn-danger"
+                                        onclick="pay_chart_id(${params.chart_id}, ${imageFile?.id}, ${userObject?.id}, ${paymentMethod?.id}, ${imageFile?.groupSize?.price})">COMPLETE CHECKOUT</button>
                             </g:if>
                             <g:else>
-                                <button class="btn button-dark-red"
-                                        onclick="pay_chart(${itemInstance?.id}, ${userObject?.id})">COMPLETE CHECKOUT</button>
+                                <button class="btn btn-sm btn-danger"
+                                        onclick="purchase(${imageFile?.id}, ${userObject?.id}, ${paymentMethod?.id}, ${imageFile?.groupSize?.price})">COMPLETE CHECKOUT</button>
                             </g:else>
 
                         </div>
@@ -387,26 +380,63 @@
 
 </div>
 <!-- /.container -->
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Notice</h5>
+                %{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}%
+                    %{--<span aria-hidden="true">&times;</span>--}%
+                %{--</button>--}%
+            </div>
+
+            <div class="modal-body">
+                <div id="modal_content">
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="toPurchaseHistory()"
+                        data-dismiss="modal">OK</button>
+                %{--<button type="button" class="btn btn-primary">Save changes</button>--}%
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    function pay_chart(item_id, user_id) {
-        var URL = "${createLink(controller: 'api', action: 'chart_staus_paid')}";
+    function purchase(image_id, user_id, payment_id, amount) {
+        var URL = "${createLink(controller: 'api', action: 'purchase')}";
         $.ajax({
             type: "GET",
             url: URL,
             data: {
-                item_id: item_id,
+                image_id: image_id,
                 user_id: user_id,
+                payment_id: payment_id,
+                total_amount: amount,
             },
             success: function (resp) {
                 console.log(resp);
-                window.location =
-                        "${createLink(controller: 'home', action: 'mychart')}";
+                var content = document.getElementById('modal_content');
+                content.innerHTML = 'Thanks for purchasing Picsell image, your download link send to your email, it will expired after 7 days long' +
+                        '<br/><a href="' + resp.url + '">Image Link</a>';
+                $('#infoModal').modal('toggle')
+
+
             }
         });
     }
 
-    function pay_chart_id(chart_id) {
+    function toPurchaseHistory() {
+        window.location =
+                "${createLink(controller: 'purchaseHistory', action: 'index', id: userObject?.id)}";
+    }
+
+    function pay_chart_id(chart_id, image_id, user_id, payment_id, amount) {
         var URL = "${createLink(controller: 'api', action: 'chart_staus_paid')}";
         $.ajax({
             type: "GET",
@@ -415,9 +445,10 @@
                 chart_id: chart_id
             },
             success: function (resp) {
-                console.log(resp);
-                window.location =
-                        "${createLink(controller: 'home', action: 'mychart')}";
+                purchase(image_id, user_id, payment_id, amount);
+                %{--console.log(resp);--}%
+                %{--window.location =--}%
+                %{--"${createLink(controller: 'home', action: 'mychart')}";--}%
             }
         });
     }

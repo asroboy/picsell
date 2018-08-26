@@ -1,5 +1,8 @@
 package com.picsell.data
 
+import javax.imageio.ImageIO
+import java.awt.image.BufferedImage
+
 class DocumentController {
     def burningImageService
 
@@ -135,6 +138,40 @@ class DocumentController {
     }
 
 
+    def picsell_image() {
+//        print(params.token)
+        if (params.token) {
+            UserPuchaseItem userPuchaseItem = UserPuchaseItem.findByDownloadImageToken(params.token)
+            if (userPuchaseItem) {
+                if (userPuchaseItem?.tokenExpired.after(new Date()) && userPuchaseItem?.linkClicked < 1) {
+                    userPuchaseItem.linkClicked = 1;
+                    userPuchaseItem.save(flush: true)
+                    response.setContentType("APPLICATION/OCTET-STREAM")
+                    response.setHeader("Content-Disposition", "Attachment;Filename=\"${userPuchaseItem?.imageFile?.namaFile}\"")
+                    def file = new File(userPuchaseItem?.imageFile?.path)
+                    def fileInputStream = new FileInputStream(file)
+                    def outputStream = response.getOutputStream()
+                    byte[] buffer = new byte[4096];
+                    int len;
+                    while ((len = fileInputStream.read(buffer)) > 0) {
+                        outputStream.write(buffer, 0, len);
+                    }
+                    outputStream.flush()
+                    outputStream.close()
+                    fileInputStream.close()
+                } else {
+                    render "you don't have access"
+                }
+
+            } else {
+                render "you don't have access"
+            }
+        } else {
+            render "you don't have access"
+        }
+    }
+
+
     def downloadVideo(long id) {
         ImageFile documentInstance = ImageFile.get(id)
 
@@ -154,24 +191,53 @@ class DocumentController {
 
     }
 
-    def photoWithWatermaark(long id) {
+
+    def photoWithWatermaarkPreview(long id) {
         ImageFile documentInstance = ImageFile.get(id)
+        def item = Item.get(documentInstance?.tableId);
+
+
+
+        String path = grailsApplication.config.uploadFolder + item?.userOwner?.id + "/tumbnails/" + documentInstance?.namaFile
+        print(path)
+        BufferedImage bimg = ImageIO.read(new File(path));
+        int width = bimg.getWidth();
+        int height = bimg.getHeight();
+
+
+        def watermark = grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png'
+        def watermarktOutPathRoot = grailsApplication.config.uploadFolder + 'watermark/resize/' + item?.userOwner?.id
+        def watermarktOutPath = watermarktOutPathRoot + "/" + documentInstance?.id
+
+        createUserDir(watermarktOutPathRoot)
+        createSizeGroupDir(watermarktOutPath)
+
+        def outPathRoot = grailsApplication.config.uploadFolder + 'watermark/out/' + item?.userOwner?.id
+        def outPath = outPathRoot + "/" + documentInstance?.groupSize?.groupLabel
+
+
+        createUserDir(outPathRoot)
+        createSizeGroupDir(outPath)
+
+        burningImageService.doWith(watermark, watermarktOutPath + "/").execute { it.scaleAccurate(width, height) }
+
         /**
          * MENGGUNAKAN WATERMARK
          */
         response.setContentType("APPLICATION/OCTET-STREAM")
         response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
 
-        def outPath = grailsApplication.config.uploadFolder + 'watermark/out/'
 
-        burningImageService.doWith(documentInstance.path, outPath).execute {
-            it.watermark(grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png',  ['right':10, 'bottom': 10])
+
+        def wtm = watermarktOutPath + "/watermark.png";
+        burningImageService.doWith(path, outPath + "/").execute {
+            it.watermark(wtm, ['right': 10, 'bottom': 10])
         }
 
-        def file = new File(outPath + documentInstance.namaFile)
+        def file = new File(outPath + "/" + documentInstance.namaFile)
         def fileInputStream = new FileInputStream(file)
         def outputStream = response.getOutputStream()
-        byte[] buffer = new byte[4096];
+        byte[] buffer = new byte[100096];
         int len;
         while ((len = fileInputStream.read(buffer)) > 0) {
             outputStream.write(buffer, 0, len);
@@ -179,6 +245,87 @@ class DocumentController {
         outputStream.flush()
         outputStream.close()
         fileInputStream.close()
+    }
+
+
+    def photoWithWatermaark(ImageFile documentInstance) {
+//        ImageFile documentInstance = ImageFile.get(id)
+
+        print(documentInstance.id)
+        print(documentInstance.path)
+        BufferedImage bimg = ImageIO.read(new File(documentInstance.path));
+        int width = bimg.getWidth();
+        int height = bimg.getHeight();
+
+
+        def watermark = grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png'
+        def watermarktOutPath = grailsApplication.config.uploadFolder + 'watermark/resize/'
+        def outPath = grailsApplication.config.uploadFolder + 'watermark/out/'
+
+        burningImageService.doWith(watermark, watermarktOutPath).execute { it.scaleAccurate(width, height) }
+
+        /**
+         * MENGGUNAKAN WATERMARK
+         */
+        response.setContentType("APPLICATION/OCTET-STREAM")
+        response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
+
+
+
+        burningImageService.doWith(documentInstance.path, outPath).execute {
+            it.watermark(watermarktOutPath + "watermark.png", ['right': 10, 'bottom': 10])
+        }
+        def file = new File(outPath + documentInstance.namaFile)
+        def fileInputStream = new FileInputStream(file)
+        def outputStream = response.getOutputStream()
+        byte[] buffer = new byte[100096];
+        int len;
+        while ((len = fileInputStream.read(buffer)) > 0) {
+            outputStream.write(buffer, 0, len);
+        }
+        outputStream.flush()
+        outputStream.close()
+        fileInputStream.close()
+    }
+
+
+    def createUserDir(def dirRoot) {
+
+        File folderPath = new File(dirRoot)
+        // if the directory does not exist, create it
+        if (!folderPath.exists()) {
+            System.out.println("creating directory: " + folderPath.getName());
+            boolean result = false;
+            try {
+                folderPath.mkdir();
+                result = true;
+            }
+            catch (SecurityException se) {
+                System.out.println("gagal: " + se.message);
+            }
+            if (result) {
+                System.out.println("DIR created");
+            }
+        }
+    }
+
+    def createSizeGroupDir(def imagePath) {
+        File folderPath = new File(imagePath)
+        // if the directory does not exist, create it
+        if (!folderPath.exists()) {
+            System.out.println("creating directory: " + folderPath.getName());
+            boolean result = false;
+            try {
+                folderPath.mkdir();
+                result = true;
+            }
+            catch (SecurityException se) {
+                System.out.println("gagal: " + se.message);
+            }
+            if (result) {
+                System.out.println("DIR created");
+            }
+        }
     }
 
 }

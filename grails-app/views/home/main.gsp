@@ -31,40 +31,40 @@
 
 
         <script>
-            var URL = "${createLink(controller: 'api', action: 'check_contrib_has_subs_acc')}";
-            $.ajax({
-                type: "POST",
-                url: URL,
-                data: {
-                    user_id: '${userObject?.id}'
-                },
-                success: function (resp) {
-//                    console.log(resp)
-                    if (resp.data.has_account === false) {
-                        window.location = '${createLink(controller: 'home', action: 'packages')}';
-                    } else {
-                        checkUserItem();
-                    }
-                }
-            });
+            %{--var URL = "${createLink(controller: 'api', action: 'check_contrib_has_subs_acc')}";--}%
+            %{--$.ajax({--}%
+                %{--type: "POST",--}%
+                %{--url: URL,--}%
+                %{--data: {--}%
+                    %{--user_id: '${userObject?.id}'--}%
+                %{--},--}%
+                %{--success: function (resp) {--}%
+%{--//                    console.log(resp)--}%
+                    %{--if (resp.data.has_account === false) {--}%
+                        %{--window.location = '${createLink(controller: 'home', action: 'packages')}';--}%
+                    %{--} else {--}%
+                        %{--checkUserItem();--}%
+                    %{--}--}%
+                %{--}--}%
+            %{--});--}%
 
 
-            function checkUserItem() {
-                var URL = "${createLink(controller: 'api', action: 'cheeck_user_items')}";
-                $.ajax({
-                    type: "GET",
-                    url: URL,
-                    data: {
-                        user_id: '${userObject?.id}'
-                    },
-                    success: function (resp) {
-//                        console.log(resp)
-                        if (resp.data < 5 && resp.contributor == true) {
-                            window.location = '${createLink(controller: 'userItem', action: 'addFirstItem')}';
-                        }
-                    }
-                });
-            }
+            %{--function checkUserItem() {--}%
+                %{--var URL = "${createLink(controller: 'api', action: 'cheeck_user_items')}";--}%
+                %{--$.ajax({--}%
+                    %{--type: "GET",--}%
+                    %{--url: URL,--}%
+                    %{--data: {--}%
+                        %{--user_id: '${userObject?.id}'--}%
+                    %{--},--}%
+                    %{--success: function (resp) {--}%
+%{--//                        console.log(resp)--}%
+                        %{--if (resp.data < 5 && resp.contributor == true) {--}%
+                            %{--window.location = '${createLink(controller: 'userItem', action: 'addFirstItem')}';--}%
+                        %{--}--}%
+                    %{--}--}%
+                %{--});--}%
+            %{--}--}%
 
             function islike(item_id) {
                 var URL = "${createLink(controller: 'api', action: 'is_like', params: [user_id: userObject?.id])}" + "&item_id=" + item_id;
@@ -120,7 +120,7 @@
     </div>
 
     <div class="gallery_container">
-        <div id="gallery" style="margin-bottom: 5px; padding-left: 3px; padding-right: 3px">
+        <div id="gallery" style="margin-bottom: 5px; padding-left: 3px; padding-right: 3px ; border-radius: 10px;">
             <g:each in="${com.picsell.data.Item.findAllByStatus("approved")}" var="item" status="i">
                 <a href="${createLink(controller: 'home', action: 'itemDetail', id: item.id)}">
                     <img src="${createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
@@ -154,7 +154,7 @@
                            style="color: white" onclick="add_to_chart(${item?.id})"><i
                                 class="fa fa-shopping-basket"></i></a>
                     </sec:ifLoggedIn>
-                    <a class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
+                    <a href="${createLink(controller:'document', action:'photoWithWatermaark', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
                        style="color: white"><i class="fa fa-download"></i></a>
                     <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"
                        class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"
@@ -186,9 +186,9 @@
             tile_link_newpage: false,
             tile_border_width: 1,				//tile border width
             tile_border_color: "#F0F0F0",		//tile border color
-            tile_border_radius: 1,
+            tile_border_radius: 10,
             tile_width: 200,						//tile width
-            tile_height: 170//tile height
+            tile_height: 170     //tile height
         });
         api.on("enter_fullscreen", function () {	//on enter fullscreen
             //do something

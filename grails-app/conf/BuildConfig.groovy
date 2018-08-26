@@ -10,9 +10,9 @@ grails.project.source.level = 1.6
 grails.project.fork = [
 
         compile: false,
-        test: false,
-        run: false,
-        war: false,
+        test   : false,
+        run    : false,
+        war    : false,
         console: false,
 
         // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
@@ -57,7 +57,8 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-         runtime 'mysql:mysql-connector-java:5.1.44'
+        runtime 'mysql:mysql-connector-java:5.1.44'
+        compile 'org.imgscalr:imgscalr-lib:4.2'
 //        runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
 //        compile "org.grails.plugins:spring-security-core:2.0.0"
     }
@@ -93,7 +94,10 @@ grails.project.dependency.resolution = {
         //compile ":coffee-asset-pipeline:1.5.0"
         //compile ":handlebars-asset-pipeline:1.0.0.3"
 
+//        compile "org.imgscalr:imgscalr-lib:4.2"
         compile "org.grails.plugins:burning-image:0.5.2"
         compile "org.grails.plugins:email-confirmation:2.0.8"
+        compile "org.grails.plugins:image-builder:0.2"
+
     }
 }

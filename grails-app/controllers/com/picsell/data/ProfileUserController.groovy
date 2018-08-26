@@ -19,10 +19,11 @@ class ProfileUserController {
     @Transactional
     def profile(ProfileUser profileUserInstance) {
         if (profileUserInstance) {
-            respond profileUserInstance
+            [profileUserInstance: profileUserInstance, userObject: profileUserInstance?.user]
         } else {
-            profileUserInstance = new ProfileUser(user: User.get(params.uid))
-            respond profileUserInstance
+            def userObject = User.get(params.uid)
+            profileUserInstance = new ProfileUser(user: userObject)
+            [profileUserInstance: profileUserInstance, userObject: userObject]
         }
 
     }
