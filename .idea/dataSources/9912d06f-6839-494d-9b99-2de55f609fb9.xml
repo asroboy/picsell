@@ -1262,68 +1262,95 @@ user_id</columns>
       <mandatory>1</mandatory>
       <data-type>bigint(20)|0</data-type>
     </column>
-    <index id="345" parent="54" name="FKAD136C7D47F01942">
+    <column id="345" parent="54" name="total_amount">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="346" parent="54" name="contributor_id">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="347" parent="54" name="download_image_token">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="348" parent="54" name="token_expired">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="349" parent="54" name="link_clicked">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="350" parent="54" name="FKAD136C7D47F01942">
       <columns>payment_method_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="346" parent="54" name="FKAD136C7DC6B410A9">
+    <index id="351" parent="54" name="FKAD136C7DAF79C199">
+      <columns>contributor_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="352" parent="54" name="FKAD136C7DC6B410A9">
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="347" parent="54" name="FKAD136C7DDB00634C">
+    <index id="353" parent="54" name="FKAD136C7DDB00634C">
       <columns>image_file_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="348" parent="54" name="PRIMARY">
+    <key id="354" parent="54" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="349" parent="54" name="FKAD136C7DDB00634C">
+    <foreign-key id="355" parent="54" name="FKAD136C7DDB00634C">
       <columns>image_file_id</columns>
       <ref-key>~.image_file.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="350" parent="54" name="FKAD136C7D47F01942">
+    <foreign-key id="356" parent="54" name="FKAD136C7D47F01942">
       <columns>payment_method_id</columns>
       <ref-key>~.payment_method.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="351" parent="54" name="FKAD136C7DC6B410A9">
+    <foreign-key id="357" parent="54" name="FKAD136C7DC6B410A9">
       <columns>user_id</columns>
       <ref-key>~.tbmuser.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="352" parent="55" name="user_id">
+    <foreign-key id="358" parent="54" name="FKAD136C7DAF79C199">
+      <columns>contributor_id</columns>
+      <ref-key>~.tbmuser.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="359" parent="55" name="user_id">
       <mandatory>1</mandatory>
       <data-type>bigint(20)|0</data-type>
     </column>
-    <column id="353" parent="55" name="role_id">
+    <column id="360" parent="55" name="role_id">
       <mandatory>1</mandatory>
       <data-type>bigint(20)|0</data-type>
     </column>
-    <index id="354" parent="55" name="FK143BF46A21894CC9">
+    <index id="361" parent="55" name="FK143BF46A21894CC9">
       <columns>role_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <index id="355" parent="55" name="FK143BF46AC6B410A9">
+    <index id="362" parent="55" name="FK143BF46AC6B410A9">
       <columns>user_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="356" parent="55" name="PRIMARY">
+    <key id="363" parent="55" name="PRIMARY">
       <columns>user_id
 role_id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="357" parent="55" name="FK143BF46AC6B410A9">
+    <foreign-key id="364" parent="55" name="FK143BF46AC6B410A9">
       <columns>user_id</columns>
       <ref-key>~.tbmuser.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="358" parent="55" name="FK143BF46A21894CC9">
+    <foreign-key id="365" parent="55" name="FK143BF46A21894CC9">
       <columns>role_id</columns>
       <ref-key>~.tbmrole.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>

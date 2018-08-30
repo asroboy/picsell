@@ -32,8 +32,10 @@
                                 </g:else>
 
                                 <s2ui:formContainer type='register' focus='username' width='100%'>
-
                                     <s2ui:form beanName='registerCommand'>
+                                        <g:if test="${flash.error}">
+                                            <div class="message" role="status" style="margin-bottom: 10px; color: red;">${flash.error}</div>
+                                        </g:if>
                                         <g:if test='${emailSent}'>
                                             <br/>
 
