@@ -1,10 +1,19 @@
-
 a {
-    color: #fd2e2e;
+    color: #5b5b5b;
+}
+
+.dropdown-item:hover {
+    background-color: #6e6d6c;
+    color: white;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #fd2e2e;
+    color: #5b5b5b;
 }
 
 /*a.nav-link:hover{*/
@@ -91,7 +100,7 @@ div.bottomright {
 
 
 .linkred {
-    color: #fd2e2e;
+    color: #5b5b5b;
     margin-left: 10px;
     margin-right: 10px;
 }

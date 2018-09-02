@@ -106,7 +106,7 @@
                 <div class="card-body">
                     <div class="sub-part1" style="margin-bottom: 15px">Your Earnings</div>
 
-                    <div><h4>Total Earning ${userPurchaseItems*.totalAmount.sum()} IDR</h4></div>
+                    <div><h4>Total Earning ${userPurchaseItems*.totalAmount.sum()?:0} IDR</h4></div>
                     <table class="table table-striped">
                         <thead>
                         <tr>
@@ -123,7 +123,7 @@
                                 </td>
                                 <td><g:formatDate format="yyyy-MM-dd"
                                                   date="${purchasedItem?.purchaseDate}"/></td>
-                                <td>${purchasedItem?.totalAmount} IDR</td>
+                                <td>${purchasedItem?.totalAmount?:0} IDR</td>
                                 <td>
                                     ${purchasedItem?.imageFile?.groupSize?.groupLabel}
                                 </td>

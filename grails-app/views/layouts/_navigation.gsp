@@ -36,11 +36,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-link dropdown" style="margin-right: 5px">
-                <a class="nav-item dropdown-toggle btn  my-2 my-sm-0 " href="#"
+                <a class="nav-item dropdown-toggle btn btn-default  my-2 my-sm-0 " href="#"
                    id="navbarDropdown_mediatype"
                    role="button" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    ${params.media ?: "Media Type"}
+                   aria-haspopup="true" aria-expanded="false" style="">
+                    ${params.media ?: "Media Types"}
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_mediatype">
@@ -84,7 +84,7 @@
 
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item"
-                       href="${createLink(controller: 'home', action: 'main', params: [media: params.media, cat: "All category"])}">All category</a>
+                       href="${createLink(controller: 'home', action: 'main', params: [media: params.media, cat: "All category"])}">All categories</a>
                 </div>
             </li>
 
