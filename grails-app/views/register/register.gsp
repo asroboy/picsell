@@ -34,7 +34,8 @@
                                 <s2ui:formContainer type='register' focus='username' width='100%'>
                                     <s2ui:form beanName='registerCommand'>
                                         <g:if test="${flash.error}">
-                                            <div class="message" role="status" style="margin-bottom: 10px; color: red;">${flash.error}</div>
+                                            <div class="message" role="status"
+                                                 style="margin-bottom: 10px; color: red;">${flash.error}</div>
                                         </g:if>
                                         <g:if test='${emailSent}'>
                                             <br/>
@@ -197,7 +198,13 @@
                                                                 checked/> MEMBER <input
                                                                 type="radio" name="role"
                                                                 value="ROLE_CONTRIBUTOR"/> CONTRIBUTOR</td>
-                                                        <td style="color: red"><i class="fa fa-info-circle"></i></td>
+                                                        <td style="color: red">
+                                                            <a href="#" data-toggle="popover" data-html="true"
+                                                               data-placement="top" title="Info"
+                                                               data-content="<b>Member</b> is user who can get contents trough Picsell.ID. <br/><br/><b>Contributor</b> is user who can get and provide contents by upload and sell them trough Picsell.id'"
+                                                               style="color: red"><i class="fa fa-info-circle"></i></a>
+
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2"
@@ -256,10 +263,14 @@
 </div>
 
 
-
-
-
 <script>
+    jQuery(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+
+    jQuery('.popover-dismiss').popover({
+        trigger: 'focus'
+    });
     function submit() {
         console.log("haloo, im clicked");
         var agree = document.getElementById('agree');

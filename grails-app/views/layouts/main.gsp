@@ -44,7 +44,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<link rel="icon" href="${resource(dir: 'images', file: 'favicon.ico')}">
+	<link rel="shortcut icon" href="${resource(dir: 'images', file: 'ico_picsell.ico')}" />
 	<title>${title ?: 'picsell'}</title>
 
 

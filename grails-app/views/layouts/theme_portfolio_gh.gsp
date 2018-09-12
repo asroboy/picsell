@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'ico_picsell.ico')}"/>
     <title>Picsell.ID</title>
 
 
@@ -39,18 +39,18 @@
     <link href="${resource(dir: 'ebusiness_theme', file: 'lib/nivo-slider/css/nivo-slider.css')}" rel="stylesheet">
     <link href="${resource(dir: 'ebusiness_theme', file: 'lib/owlcarousel/owl.carousel.css')}" rel="stylesheet">
     <link href="${resource(dir: 'ebusiness_theme', file: 'lib/owlcarousel/owl.transitions.css')}" rel="stylesheet">
-    <link href="${resource(dir: 'ebusiness_theme', file: 'lib/font-awesome/css/font-awesome.min.css')}"
-          rel="stylesheet">
+    %{--<link href="${resource(dir: 'ebusiness_theme', file: 'lib/font-awesome/css/font-awesome.min.css')}"--}%
+    %{--rel="stylesheet">--}%
     <link href="${resource(dir: 'ebusiness_theme', file: 'lib/animate/animate.min.css')}" rel="stylesheet">
     <link href="${resource(dir: 'ebusiness_theme', file: 'lib/venobox/venobox.css')}" rel="stylesheet">
 
-    <!-- Nivo Slider Theme -->
+    %{--<!-- Nivo Slider Theme -->--}%
     <link href="${resource(dir: 'ebusiness_theme', file: 'css/nivo-slider-theme.css')}" rel="stylesheet">
 
-    <!-- Main Stylesheet File -->
-    <link href="${resource(dir: 'ebusiness_theme', file: 'css/style.css')}" rel="stylesheet">
+    %{--<!-- Main Stylesheet File -->--}%
+    %{--<link href="${resource(dir: 'ebusiness_theme', file: 'css/style.css')}" rel="stylesheet">--}%
 
-    <!-- Responsive Stylesheet File -->
+    %{--<!-- Responsive Stylesheet File -->--}%
     <link href="${resource(dir: 'ebusiness_theme', file: 'css/responsive.css')}" rel="stylesheet">
 
     <link href="${resource(dir: 'css', file: 'picsell_custom.css')}"
@@ -64,6 +64,7 @@
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
     <g:set var="profileUser" value="${com.picsell.data.ProfileUser.findByUser(userObject)}"/>
     <g:layoutHead/>
+    <r:layoutResources/>
 </head>
 
 <body>

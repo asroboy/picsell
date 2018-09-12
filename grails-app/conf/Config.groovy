@@ -156,3 +156,5 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 ]
 
 plugin.platformCore.events.catchFlushExceptions = true
+grails.plugins.twitterbootstrap.fixtaglib = true
+grails.plugins.twitterbootstrap.defaultBundle = 'bundle_bootstrap'

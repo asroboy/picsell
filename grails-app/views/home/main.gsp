@@ -29,43 +29,7 @@
                value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
         <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
 
-
         <script>
-            %{--var URL = "${createLink(controller: 'api', action: 'check_contrib_has_subs_acc')}";--}%
-            %{--$.ajax({--}%
-                %{--type: "POST",--}%
-                %{--url: URL,--}%
-                %{--data: {--}%
-                    %{--user_id: '${userObject?.id}'--}%
-                %{--},--}%
-                %{--success: function (resp) {--}%
-%{--//                    console.log(resp)--}%
-                    %{--if (resp.data.has_account === false) {--}%
-                        %{--window.location = '${createLink(controller: 'home', action: 'packages')}';--}%
-                    %{--} else {--}%
-                        %{--checkUserItem();--}%
-                    %{--}--}%
-                %{--}--}%
-            %{--});--}%
-
-
-            %{--function checkUserItem() {--}%
-                %{--var URL = "${createLink(controller: 'api', action: 'cheeck_user_items')}";--}%
-                %{--$.ajax({--}%
-                    %{--type: "GET",--}%
-                    %{--url: URL,--}%
-                    %{--data: {--}%
-                        %{--user_id: '${userObject?.id}'--}%
-                    %{--},--}%
-                    %{--success: function (resp) {--}%
-%{--//                        console.log(resp)--}%
-                        %{--if (resp.data < 5 && resp.contributor == true) {--}%
-                            %{--window.location = '${createLink(controller: 'userItem', action: 'addFirstItem')}';--}%
-                        %{--}--}%
-                    %{--}--}%
-                %{--});--}%
-            %{--}--}%
-
             function islike(item_id) {
                 var URL = "${createLink(controller: 'api', action: 'is_like', params: [user_id: userObject?.id])}" + "&item_id=" + item_id;
                 $.ajax({

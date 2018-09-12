@@ -50,7 +50,7 @@
                                href="${createLink(controller: 'home', action: 'main', params: [media: it.name, cat: params.cat])}">${it.name}</a>
                             <ul>
                                 <g:each in="${it.child}">
-                                    <li>
+                                    <li style="list-style-type: none;">
                                         <a class="dropdown-item"
                                            href="${createLink(controller: 'home', action: 'main', params: [media: it.name, cat: params.cat])}">${it.name}</a>
                                     </li>

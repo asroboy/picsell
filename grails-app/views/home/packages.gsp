@@ -18,6 +18,28 @@
 
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
+    <style>
+    .col-add-sel {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .plans-bg {
+        background-color: #e4e4e4;
+        margin: 4px;
+        height: 100%;
+        background-image: url("${resource(dir: 'images', file: 'bg-plans.jpg')}");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: left;
+    }
+
+    .plans-bg-red {
+        background-color: #d00006;
+        margin: 4px;
+        height: 100%;
+    }
+    </style>
 
 </head>
 
@@ -44,23 +66,46 @@
                                 <col width="80">
                                 <tr style="background: white;">
                                     <td align="justify">
-                                        <b>
-                                            Images
-                                            <span><select style="margin-left: 40px;">
-                                                <option value="annually">Annually</option>
-                                                <option value="monthly">Monthly</option>
-                                            </select>
-                                            </span>
-                                        </b>
+                                        <b>Images</b>
+                                        %{--<div class="nav-link dropdown">--}%
+                                        <button class="nav-item dropdown-toggle btn btn-default"
+                                                style="background: white" type="button" id="dropdownMenu2"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Annually
+                                        </button>
+
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <button class="dropdown-item" type="button"
+                                                    onclick="changePacakgeTypeIdividual('dropdownMenu2', 'Annually')">Annually</button>
+                                            <button class="dropdown-item" type="button"
+                                                    onclick="changePacakgeTypeIdividual('dropdownMenu2', 'Monthly')">Monthly</button>
+                                        </div>
+                                        %{--</div>--}%
+                                        %{--<span>--}%
+                                        %{--<select class="form-control" style="margin-left: 40px;">--}%
+                                        %{--<option value="annually">Annually</option>--}%
+                                        %{--<option value="monthly">Monthly</option>--}%
+                                        %{--</select>--}%
+                                        %{--</span>--}%
+
                                     </td>
                                     <td align="right">
                                         <b>
                                             Price
-                                            <span><select style="margin-left: 40px">
-                                                <option value="idr">IDR</option>
-                                                %{--<option value="saab">USD</option>--}%
-                                            </select>
-                                            </span>
+                                            <button class="nav-item dropdown-toggle btn btn-default"
+                                                    style="background: white" type="button" id="dropdownMenu3"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                IDR
+                                            </button>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                                <button class="dropdown-item"
+                                                        onclick="changeCurrency('dropdownMenu3', 'IDR')"
+                                                        type="button">IDR</button>
+                                                <button class="dropdown-item"
+                                                        onclick="changeCurrency('dropdownMenu3', 'USD')"
+                                                        type="button">USD</button>
+                                            </div>
                                         </b>
                                     </td>
 
@@ -88,38 +133,61 @@
                         </div>
 
                         %{--<div class="box-body body-table-plans">--}%
-                            <div class="panel-body body-table-plans">
-                                <table id="table_multi" style="width: 100%; padding-bottom: 10px"
-                                       cellpadding="5px">
-                                    <col width="130">
-                                    <col width="80">
-                                    <tr style="background: white">
-                                        <td><b>Images <span><select style="margin-left: 40px;">
-                                            <option value="annually">Annually</option>
-                                            <option value="monthly">Monthly</option>
-                                        </select>
-                                        </span></b></td>
-                                        <td align="right"><b>Price  <span><select style="margin-left: 40px">
-                                            <option value="idr">IDR</option>
-                                            %{--<option value="saab">USD</option>--}%
-                                        </select>
-                                        </span></b></td>
-                                    </tr>
+                        <div class="panel-body body-table-plans">
+                            <table id="table_multi" style="width: 100%; padding-bottom: 10px"
+                                   cellpadding="5px">
+                                <col width="130">
+                                <col width="80">
+                                <tr style="background: white">
+                                    <td><b>Images</b>
+                                        <button class="nav-item dropdown-toggle btn btn-default"
+                                                style="background: white" type="button" id="dropdownMenu4"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                            Annually
+                                        </button>
 
-                                </table>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                                            <button class="dropdown-item"
+                                                    onclick="changePacakgeTypeIdividual('dropdownMenu4', 'Annually')"
+                                                    type="button">Annually</button>
+                                            <button class="dropdown-item"
+                                                    onclick="changePacakgeTypeIdividual('dropdownMenu4', 'Monthly')"
+                                                    type="button">Monthly</button>
+                                        </div>
+                                    </td>
+                                    <td align="right"><b>Price</b>
+                                        <button class="nav-item dropdown-toggle btn btn-default"
+                                                style="background: white" type="button" id="dropdownMenu5"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            IDR
+                                        </button>
 
-                                <sec:ifLoggedIn>
-                                    <button class="btn btn-sm btn-default btn-block"
-                                            style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
-                                            onclick="subscribe(getPackageValue('multiple_sub'))">Subscribe</button>
-                                </sec:ifLoggedIn>
-                                <sec:ifNotLoggedIn>
-                                    <button class="btn btn-sm btn-default btn-block"
-                                            style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
-                                            onclick="register()">Subscribe</button>
-                                </sec:ifNotLoggedIn>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
+                                            <button class="dropdown-item"
+                                                    onclick="changeCurrency('dropdownMenu5', 'IDR')"
+                                                    type="button">IDR</button>
+                                            <button class="dropdown-item"
+                                                    onclick="changeCurrency('dropdownMenu5', 'USD')"
+                                                    type="button">USD</button>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                            </div>
+                            </table>
+
+                            <sec:ifLoggedIn>
+                                <button class="btn btn-sm btn-default btn-block"
+                                        style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
+                                        onclick="subscribe(getPackageValue('multiple_sub'))">Subscribe</button>
+                            </sec:ifLoggedIn>
+                            <sec:ifNotLoggedIn>
+                                <button class="btn btn-sm btn-default btn-block"
+                                        style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
+                                        onclick="register()">Subscribe</button>
+                            </sec:ifNotLoggedIn>
+
+                        </div>
                         %{--</div>--}%
                     </div>
                     %{--</div>--}%
@@ -133,17 +201,19 @@
                         <col width="250">
                         <col width="100">
                         <tr>
-                            <td>EMAIL : <br/>cs@picsell.id</td>
+                            <td>EMAIL : <br/><a href="mailto:cs.picsell.id">cs@picsell.id</a></td>
                             <td><img src="${resource(dir: 'images', file: 'ic-email.png')}"
                                      style="width: 30px; height: 25px"/></td>
                         </tr>
                         <tr>
-                            <td>LIVE CHAT : <br/>(+62)8567228886</td>
+                            <td>CALL : <br/><a href="tel:+628567228886">(+62)8567228886</a></td>
                             <td><img src="${resource(dir: 'images', file: 'ic-live-chat.png')}"
                                      style="width: 30px; height: 25px"/></td>
                         </tr>
                         <tr>
-                            <td>FAQ <br/>View requently asked questions</td>
+                            <td>FAQ <br/><a
+                                    href="${createLink(controller: 'home', action: 'faq')}">View requently asked questions</a>
+                            </td>
                             <td><img src="${resource(dir: 'images', file: 'ic-ask.png')}"
                                      style="width: 25px; height: 25px"/></td>
                         </tr>
@@ -167,29 +237,52 @@
                 </div>
 
                 <div style="margin-top: 20px">
-                    <table style="width: 100%;">
-                        <tr style="background-color: #e4e4e4;">
-                            <td class="plans-table-left">
-                                <div class="plans"><b>CUSTOMIZED IMAGE BRIEFS</b></div></td>
-                            <td class="plans-table-middle">
-                                <div class="plans"><b>LONGER IMAGE LICENSING</b></div></td>
-                            <td class="plans-table-middle">
-                                <div class="plans-small-font"><b>NO OTHER ORGANIZATION / COMPANY HAS THE SAME IMAGES</b>
-                                </div></td>
-                            <td class="plans-table-right">
-                                <div class="plans-small-font"><b>UNLOCK POSSIBILITIES FOR ALL SPECIAL FEATURE</b></div>
-                            </td>
-                        </tr>
-                        <tr style="background-color: #e4e4e4;">
-                            <td class="plans-table-left"><div class="plans"><b>24 HOURS OF SERVICES FOR YOUR NEEDS</b>
-                            </div></td>
-                            <td class="plans-table-middle"><div class="plans"><b>SPECIAL RATES</b></div></td>
-                            <td class="plans-table-middle"><div class="plans"><b>SPECIAL BANNER IN OUR WEBSITE</b></div>
-                            </td>
-                            <td class="plans-table-end"><div class="plans-end"><b>GET IN TOUCH WITH US NOW</b></div>
-                            </td>
-                        </tr>
-                    </table>
+
+                    <div class="row align-middle">
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans plans-bg"><b>CUSTOMIZED IMAGE BRIEFS</b></div>
+                        </div>
+
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans plans-bg"><b>LONGER IMAGE LICENSING</b></div>
+                        </div>
+
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans-small-font plans-bg">
+                                <b>NO OTHER ORGANIZATION / COMPANY HAS THE SAME IMAGES</b>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans-small-font plans-bg">
+                                <b>UNLOCK POSSIBILITIES FOR ALL SPECIAL FEATURE</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-middle" style="margin-top: 10px">
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans plans-bg"><b>24 HOURS OF SERVICES FOR YOUR NEEDS</b>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans plans-bg"><b>SPECIAL RATES</b></div>
+                        </div>
+
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans plans-bg"><b>SPECIAL BANNER IN OUR WEBSITE</b>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-add-sel">
+                            <div class="plans-end plans-bg-red"><a
+                                    href="${createLink(controller: 'home', action: 'contactUs')}" class="align-middle"
+                                    style="color: white"><b>GET IN TOUCH WITH US NOW</b>
+                            </a></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -198,23 +291,28 @@
     <div class="row">
         <div class="col-md-12">
             <div style="font-size: 14pt; color: #d00006; text-align: center; margin-bottom: 20px; background-image: url(${resource(dir: 'images', file: 'bg-more-1.jpg')});   background-repeat: no-repeat;
-            background-size: 100% 100%;">
+            background-size: 100% 30%; background-position: center">
                 <b>STILL CAN'T FIND THE BEST PLANS FOR YOUR NEEDS? PLEASE CONTACT US</b>
             </div>
 
             <div style="margin-bottom: 30px; text-align: center;">
                 <b><img src="${resource(dir: 'images', file: 'ic-email.png')}"
-                        style="width: 30px; height: 25px"/> EMAIL :cs.picsell.id &nbsp;&nbsp;
+                        style="width: 30px; height: 25px"/> EMAIL :<a
+                        href="mailto:cs.picsell.id">cs.picsell.id</a> &nbsp;&nbsp;
                     <img src="${resource(dir: 'images', file: 'ic-live-chat.png')}"
-                         style="width: 30px; height: 25px"/> LIVE CHAT :(021)8567228886 &nbsp;&nbsp;
+                         style="width: 30px; height: 25px"/> LIVE CHAT :<a
+                        href="tel:+62218567228886">(021)8567228886</a>  &nbsp;&nbsp;
                     <img src="${resource(dir: 'images', file: 'ic-ask.png')}"
-                         style="width: 25px; height: 25px"/> FAQ :View Frequestly Asked Questions</b>
+                         style="width: 25px; height: 25px"/> FAQ :<a
+                        href="${createLink(controller: 'home', action: 'faq')}">View Frequestly Asked Questions</a></b>
             </div>
         </div>
     </div>
 </div>
 
 <script>
+
+
     function getIndividualPackage() {
         var URL = "${createLink(controller: 'api', action: 'get_subs_account')}";
         $.ajax({
@@ -276,6 +374,17 @@
     });
 
 
+    function changePacakgeTypeIdividual(id, license) {
+        var dropdownMenu2 = document.getElementById(id);
+        dropdownMenu2.innerHTML = license;
+    }
+
+    function changeCurrency(id, currency) {
+        var dropdownMenu = document.getElementById(id);
+        dropdownMenu.innerHTML = currency;
+    }
+
+
     function subscribe(package_id) {
         window.location = ' ${createLink(controller: 'home', action: 'subscribe_summary')}' + '?package_id=' + package_id + '&user_id=${userObject?.id}';
     }
@@ -308,10 +417,8 @@
     function getPackageValue(id) {
         var radios = document.getElementsByName(id);
         var value;
-        for (var i = 0, length = radios.length; i < length; i++)
-        {
-            if (radios[i].checked)
-            {
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
                 // do whatever you want with the checked radio
                 value = radios[i].value
                 // only one radio can be logically checked, don't check the rest

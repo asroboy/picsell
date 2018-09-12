@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage
 
 class DocumentController {
     def burningImageService
+    public static int BUFFER_SIZE = 100096;
 
     def list() {
         [images: ImageFile.list()]
@@ -39,7 +40,7 @@ class DocumentController {
             def file = new File(grailsApplication.config.uploadFolder + "/default/" + "blank_image.png")
             def fileInputStream = new FileInputStream(file)
             def outputStream = response.getOutputStream()
-            byte[] buffer = new byte[4096];
+            byte[] buffer = new byte[BUFFER_SIZE];
             int len;
             while ((len = fileInputStream.read(buffer)) > 0) {
                 outputStream.write(buffer, 0, len);
@@ -56,7 +57,7 @@ class DocumentController {
                 def file = new File(documentInstance.path)
                 def fileInputStream = new FileInputStream(file)
                 def outputStream = response.getOutputStream()
-                byte[] buffer = new byte[4096];
+                byte[] buffer = new byte[BUFFER_SIZE];
                 int len;
                 while ((len = fileInputStream.read(buffer)) > 0) {
                     outputStream.write(buffer, 0, len);
@@ -71,7 +72,7 @@ class DocumentController {
                 def file = new File(documentInstance.path)
                 def fileInputStream = new FileInputStream(file)
                 def outputStream = response.getOutputStream()
-                byte[] buffer = new byte[4096];
+                byte[] buffer = new byte[BUFFER_SIZE];
                 int len;
                 while ((len = fileInputStream.read(buffer)) > 0) {
                     outputStream.write(buffer, 0, len);
@@ -79,7 +80,6 @@ class DocumentController {
                 outputStream.flush()
                 outputStream.close()
                 fileInputStream.close()
-
 
             }
         }
@@ -94,7 +94,7 @@ class DocumentController {
             def file = new File(grailsApplication.config.uploadFolder + "/default/" + "blank_image.png")
             def fileInputStream = new FileInputStream(file)
             def outputStream = response.getOutputStream()
-            byte[] buffer = new byte[4096];
+            byte[] buffer = new byte[BUFFER_SIZE];
             int len;
             while ((len = fileInputStream.read(buffer)) > 0) {
                 outputStream.write(buffer, 0, len);
@@ -111,7 +111,7 @@ class DocumentController {
                 def file = new File(documentInstance.path)
                 def fileInputStream = new FileInputStream(file)
                 def outputStream = response.getOutputStream()
-                byte[] buffer = new byte[4096];
+                byte[] buffer = new byte[BUFFER_SIZE];
                 int len;
                 while ((len = fileInputStream.read(buffer)) > 0) {
                     outputStream.write(buffer, 0, len);
@@ -120,19 +120,24 @@ class DocumentController {
                 outputStream.close()
                 fileInputStream.close()
             } else {
-                response.setContentType("APPLICATION/OCTET-STREAM")
-                response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
-                def file = new File(documentInstance.path)
-                def fileInputStream = new FileInputStream(file)
-                def outputStream = response.getOutputStream()
-                byte[] buffer = new byte[4096];
-                int len;
-                while ((len = fileInputStream.read(buffer)) > 0) {
-                    outputStream.write(buffer, 0, len);
+                try {
+                    response.setContentType("APPLICATION/OCTET-STREAM")
+                    response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
+                    def file = new File(documentInstance.path)
+                    def fileInputStream = new FileInputStream(file)
+                    def outputStream = response.getOutputStream()
+                    byte[] buffer = new byte[BUFFER_SIZE];
+                    int len;
+                    while ((len = fileInputStream.read(buffer)) > 0) {
+                        outputStream.write(buffer, 0, len);
+                    }
+                    outputStream.flush()
+                    outputStream.close()
+                    fileInputStream.close()
+                } catch (IOException e) {
+                    e.printStackTrace()
                 }
-                outputStream.flush()
-                outputStream.close()
-                fileInputStream.close()
+
             }
         }
     }
@@ -151,7 +156,7 @@ class DocumentController {
                     def file = new File(userPuchaseItem?.imageFile?.path)
                     def fileInputStream = new FileInputStream(file)
                     def outputStream = response.getOutputStream()
-                    byte[] buffer = new byte[4096];
+                    byte[] buffer = new byte[BUFFER_SIZE];
                     int len;
                     while ((len = fileInputStream.read(buffer)) > 0) {
                         outputStream.write(buffer, 0, len);
@@ -180,7 +185,7 @@ class DocumentController {
         def file = new File(documentInstance.path)
         def fileInputStream = new FileInputStream(file)
         def outputStream = response.getOutputStream()
-        byte[] buffer = new byte[100096];
+        byte[] buffer = new byte[BUFFER_SIZE];
         int len;
         while ((len = fileInputStream.read(buffer)) > 0) {
             outputStream.write(buffer, 0, len);
@@ -237,7 +242,7 @@ class DocumentController {
         def file = new File(outPath + "/" + documentInstance.namaFile)
         def fileInputStream = new FileInputStream(file)
         def outputStream = response.getOutputStream()
-        byte[] buffer = new byte[100096];
+        byte[] buffer = new byte[BUFFER_SIZE];
         int len;
         while ((len = fileInputStream.read(buffer)) > 0) {
             outputStream.write(buffer, 0, len);
@@ -278,7 +283,7 @@ class DocumentController {
         def file = new File(outPath + documentInstance.namaFile)
         def fileInputStream = new FileInputStream(file)
         def outputStream = response.getOutputStream()
-        byte[] buffer = new byte[100096];
+        byte[] buffer = new byte[BUFFER_SIZE];
         int len;
         while ((len = fileInputStream.read(buffer)) > 0) {
             outputStream.write(buffer, 0, len);

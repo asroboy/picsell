@@ -230,4 +230,14 @@ class HomeController {
 
         [itemInstance: itemInstance]
     }
+
+
+    def faq(){
+
+    }
+
+
+    def contactUs(){
+
+    }
 }
