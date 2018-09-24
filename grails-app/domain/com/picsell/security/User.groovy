@@ -16,9 +16,26 @@ class User implements Serializable {
 	boolean beforeInsertRunOnce = false
 	boolean beforeUpdateRunOnce = false
 
+	String firstName
+	String lastName
 	String username
 	String password
 	String email
+
+	String alamat
+	String kecamatan
+	String kotaKabupaten
+	String provinsi
+	String jenisKartuIdentitas
+	String nomorIdIdentitas
+
+	String noTelp
+	String tempatLahir
+	Date tglLahir
+
+	byte[] fotoProfile
+
+
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
@@ -69,6 +86,19 @@ class User implements Serializable {
 		username blank: false, unique: true
 		password blank: false
 		email blank: false, unique: true
+
+		firstName nullable: false
+		lastName nullable: false
+		alamat nullable: true
+		kecamatan nullable: true
+		kotaKabupaten nullable: true
+		provinsi nullable: true
+		jenisKartuIdentitas nullable: true, blank: true,  inList: ["KTP", "SIM", "Passport", "Kartu Pelajar"]
+		nomorIdIdentitas nullable: true
+		noTelp nullable: true
+		tempatLahir nullable: true
+		tglLahir nullable: true
+		fotoProfile nullable: true, maxSize: 1073741824
 	}
 
 	static mapping = {

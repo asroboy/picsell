@@ -4,6 +4,10 @@
     <meta name="layout" content="login"/>
     %{--<meta name="layout" content="register"/>--}%
     %{--<s2ui:title messageCode='spring.security.ui.register.title'/>--}%
+    <style>
+    .prop td {
+    }
+    </style>
 
 </head>
 
@@ -33,10 +37,10 @@
 
                                 <s2ui:formContainer type='register' focus='username' width='100%'>
                                     <s2ui:form beanName='registerCommand'>
-                                        <g:if test="${flash.error}">
-                                            <div class="message" role="status"
-                                                 style="margin-bottom: 10px; color: red;">${flash.error}</div>
-                                        </g:if>
+                                    %{--<g:if test="${flash.error}">--}%
+                                    %{--<div class="message" role="status"--}%
+                                    %{--style="margin-bottom: 10px; color: red;">${flash.error}</div>--}%
+                                    %{--</g:if>--}%
                                         <g:if test='${emailSent}'>
                                             <br/>
 
@@ -119,42 +123,59 @@
                                             <fieldset>
                                                 <table style="color: black">
                                                     <tr>
-                                                        <td align="left"><label for="username">First name</label></td>
-                                                        <td><input type="text" name="first_name" value="" size="40"
-                                                                   class="form-control" id="first_name"/></td>
-                                                        <td style="color: red">&nbsp;*</td>
+                                                        <td align="left"><label for="firstName">First name</label></td>
+                                                        <td>
+                                                            %{--<s2ui:textFieldRow name='firstName' size='40'--}%
+                                                            %{--labelCodeDefault='First Name'--}%
+                                                            %{--class="form-control"/>--}%
+                                                            %{--${registerCommand?.firstName}--}%
+                                                            <input type="text" name="firstName"
+                                                                   value="${registerCommand?.firstName}" size="40"
+                                                                   class="form-control" id="firstName" required/></td>
+                                                        <td valign="top" style="color: red">&nbsp;*</td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left"><label for="username">Last name</label></td>
-                                                        <td><input type="text" name="last_name" value="" size="40"
-                                                                   class="form-control" id="last_name"/></td>
-                                                        <td style="color: red">&nbsp;*</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="left"><label for="username">Username</label></td>
-                                                        <td><input type="text" name="username" value="" size="40"
-                                                                   class="form-control" id="username"
-                                                                   style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                                        <td align="left"><label for="lastName">Last name</label></td>
+                                                        <td>
+                                                            %{--<s2ui:textFieldRow name='lastName' size='40'--}%
+                                                            %{--labelCodeDefault='Last Name'--}%
+                                                            %{--class="form-control"/>--}%
+                                                            %{--${registerCommand?.lastName}--}%
+                                                            <input type="text" name="lastName"
+                                                                   value="${registerCommand?.lastName}" size="40"
+                                                                   class="form-control" id="lastName" required/>
                                                         </td>
-                                                        <td></td>
+                                                        <td valign="top" style="color: red">&nbsp;*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        %{--<td align="left"><label for="username">Username</label></td>--}%
+                                                        <td>
+                                                            %{--<input type="text" name="username" value="" size="40"--}%
+                                                            %{--class="form-control" id="username"--}%
+                                                            %{--style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">--}%
+                                                            <s2ui:textFieldRow name='username' size='40'
+                                                                               labelCodeDefault='Username'
+                                                                               class="form-control" required=""/>
+                                                        </td>
+                                                        %{--<td style="color: red">&nbsp;*</td>--}%
+                                                        %{--<td></td>--}%
                                                         %{--<div class="form-group">--}%
-                                                        %{--<s2ui:textFieldRow name='username' size='40'--}%
-                                                        %{--labelCodeDefault='Username'--}%
-                                                        %{--class="form-control"/>--}%
+
                                                         %{--</div>--}%
                                                     </tr>
 
 
                                                     <tr>
-                                                        <td align="left"><label for="email">E-mail</label></td>
-                                                        <td><input type="text" name="email" value="" size="40"
-                                                                   class="form-control" id="email"></td>
-                                                        <td style="color: red">&nbsp;*</td>
-                                                        %{--<div class="form-group">--}%
-                                                        %{--<s2ui:textFieldRow name='email' size='40'--}%
-                                                        %{--labelCodeDefault='E-mail'--}%
-                                                        %{--class="form-control"/>--}%
-                                                        %{--</div>--}%
+                                                        %{--<td align="left"><label for="email">E-mail</label></td>--}%
+                                                        <td>
+                                                            %{--<input type="text" name="email" value="" size="40"--}%
+                                                            %{--class="form-control" id="email">--}%
+                                                            <s2ui:textFieldRow name='email' size='40'
+                                                                               labelCodeDefault='E-mail'
+                                                                               class="form-control" required=""/>
+                                                        </td>
+                                                        %{--<td style="color: red">&nbsp;*</td>--}%
+                                                        %{--<td style="color: red">&nbsp;*</td>--}%
                                                     </tr>
                                                     %{--<div class="form-group" style="display: none">--}%
                                                     %{--<s2ui:checkboxRow name='accountLocked' checked="false" size='40'--}%
@@ -162,47 +183,55 @@
                                                     %{--class="form-control"/>--}%
                                                     %{--</div>--}%
                                                     <tr>
-                                                        <td align="left"><label for="password">Password</label></td>
-                                                        <td><input type="password" name="password" id="password"
-                                                                   value=""
-                                                                   size="40" class="form-control"
-                                                                   style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                                        %{--<td align="left"><label for="password">Password</label></td>--}%
+                                                        <td>
+                                                            %{--
+                                                            <input type="password" name="password" id="password"--}%
+                                                            %{--value=""--}%
+                                                            %{--size="40" class="form-control"--}%
+                                                            %{--style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">--}%
+                                                            <s2ui:passwordFieldRow name='password' size='40'
+                                                                                   labelCodeDefault='Password'
+                                                                                   class="form-control" required=""/>
                                                         </td>
-                                                        <td style="color: red">&nbsp;*</td>
+                                                        %{--<td style="color: red">&nbsp;*</td>--}%
+                                                        %{--<td style="color: red">&nbsp;*</td>--}%
                                                         %{--<div class="form-group">--}%
-                                                        %{--<s2ui:passwordFieldRow name='password' size='40'--}%
-                                                        %{--labelCodeDefault='Password'--}%
-                                                        %{--class="form-control"/>--}%
+
                                                         %{--</div>--}%
                                                     </tr>
                                                     <tr>
-                                                        <td align="left"><label
-                                                                for="password2">Re-confirm password &nbsp;</label>
+                                                        %{--<td align="left"><label--}%
+                                                        %{--for="password2">Re-confirm password &nbsp;</label>--}%
+                                                        %{--</td>--}%
+                                                        <td>
+                                                            %{--<input type="password" name="password2" id="password2"--}%
+                                                            %{--value=""--}%
+                                                            %{--size="40" class="form-control"--}%
+                                                            %{--style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">--}%
+                                                            <s2ui:passwordFieldRow name='password2' size='40'
+                                                                                   labelCodeDefault='Re-confirm password'
+                                                                                   class="form-control" required=""/>
                                                         </td>
-                                                        <td><input type="password" name="password2" id="password2"
-                                                                   value=""
-                                                                   size="40" class="form-control"
-                                                                   style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                                                        </td>
-                                                        <td style="color: red">&nbsp;*</td>
+                                                        %{--<td style="color: red">&nbsp;*</td>--}%
+                                                        %{--<td style="color: red">&nbsp;*</td>--}%
                                                         %{--<div class="form-group" align="left">--}%
-                                                        %{--<s2ui:passwordFieldRow name='password2' size='40'--}%
-                                                        %{--labelCodeDefault='Re-confirm password'--}%
-                                                        %{--class="form-control"/>--}%
+
                                                         %{--</div>--}%
                                                     </tr>
                                                     <tr>
-                                                        <td align="left"><label>Select your role</label></td>
-                                                        <td align="left"><input
+                                                        <td valign="center" align="left"><label>Select your role</label></td>
+                                                        <td valign="top" align="left"><input
                                                                 type="radio" name="role" value="ROLE_USER"
                                                                 checked/> MEMBER <input
                                                                 type="radio" name="role"
                                                                 value="ROLE_CONTRIBUTOR"/> CONTRIBUTOR</td>
-                                                        <td style="color: red">
-                                                            <a href="#" data-toggle="popover" data-html="true"
-                                                               data-placement="top" title="Info"
-                                                               data-content="<b>Member</b> is user who can get contents trough Picsell.ID. <br/><br/><b>Contributor</b> is user who can get and provide contents by upload and sell them trough Picsell.id'"
-                                                               style="color: red"><i class="fa fa-info-circle"></i></a>
+                                                        <td valign="top" style="color: red">
+                                                            <div data-toggle="popover" data-html="true"
+                                                                 data-placement="top" title="Info"
+                                                                 data-content="<b>Member</b> is user who can get contents trough Picsell.ID. <br/><br/><b>Contributor</b> is user who can get and provide contents by upload and sell them trough Picsell.id'"
+                                                                 style="color: red"><i class="fa fa-info-circle"></i>
+                                                            </div>
 
                                                         </td>
                                                     </tr>
@@ -221,18 +250,20 @@
 
                                                 </table>
 
-                                                <div style="margin-top: 10px; margin-bottom: 5px">
+                                                <div style="margin-top: 10px; margin-bottom: 5px;">
 
                                                     <input type="submit"
                                                            value="Sign up"
                                                            id="submit_submit"
                                                            class="btn btn-sm btn-default btn-block"
-                                                           style="background-color: red; color: white; width: 100px; margin: 0 auto; "
+                                                           style="background-color: red; color: white; width: 100px; margin: 0 auto; display: none"
                                                            hidden/>
                                                 </div>
 
 
-                                                %{--<s2ui:submitButton elementId='submit' messageCode='spring.security.ui.register.submit' />--}%
+                                                %{--<s2ui:submitButton elementId='submit'--}%
+                                                                   %{--messageCode='spring.security.ui.register.submit'--}%
+                                                                   %{--hidden=""/>--}%
                                             </fieldset>
 
                                         </g:else>
@@ -262,6 +293,29 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Attention</h5>
+                %{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}%
+                %{--<span aria-hidden="true">&times;</span>--}%
+                %{--</button>--}%
+            </div>
+
+            <div class="modal-body">
+                You have to agree our term and condition
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                %{--<button type="button" class="btn btn-primary">Save changes</button>--}%
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     jQuery(function () {
@@ -276,11 +330,12 @@
         var agree = document.getElementById('agree');
         var submit = document.getElementById('submit_submit');
         if (agree.checked) {
-            console.log("haloo, im checkked");
+//            console.log("haloo, im checkked");
             submit.click();
         } else {
-            alert('You have to agree our term and condition')
-            console.log("haloo, im not checkked");
+            $('#warningModal').modal('toggle');
+//            alert('You have to agree our term and condition')
+//            console.log("haloo, im not checkked");
         }
     }
 </script>

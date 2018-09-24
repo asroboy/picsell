@@ -16,21 +16,30 @@
                 <a class="footer_black_link"
                    href="${createLink(controller: 'home', action: 'aboutUs')}">About Us</a><br/>
                 <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'main')}">Picsell Image</a><br/>
+                   href="${createLink(controller: 'home', action: 'index', params: [cat: 'careers'])}">Careers</a><br/>
                 <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'policy')}">Privacy Policy</a><br/>
+                   href="${createLink(controller: 'home', action: 'index', params: [cat: 'careers'])}">Subscribe/Renew</a><br/>
                 <a class="footer_black_link"
-                   %{--href="${createLink(controller: 'home', action: 'index')}">Picsell Music</a><br/>--}%
+                   href="${createLink(controller: 'home', action: 'main')}">Picsell Images</a><br/>
                 <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'index')}">Picsell Footage</a><br/>
+                   href="#">Picsell Footage</a><br/>
+                <a class="footer_black_link"
+                   href="#">Picsell Free Images</a><br/>
                 <a class="footer_black_link"
                    href="${createLink(controller: 'home', action: 'contributors')}">Contributors</a><br/>
                 <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'index', params: [cat: 'hot_item'])}">Hot Items</a><br/>
+                   href="#">Trending</a><br/>
                 <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'index', params: [cat: 'careers'])}">Careers</a><br/>
-                <a class="footer_black_link"
-                   href="${createLink(controller: 'home', action: 'index')}">Investor Relations</a><br/>
+                   href="#">Investor Relations</a><br/>
+                %{--<a class="footer_black_link"--}%
+                %{--href="${createLink(controller: 'home', action: 'policy')}">Privacy Policy</a><br/>--}%
+                %{--<a class="footer_black_link"--}%
+                %{--href="${createLink(controller: 'home', action: 'index')}">Picsell Music</a><br/>--}%
+
+
+                %{--<a class="footer_black_link"--}%
+                %{--href="${createLink(controller: 'home', action: 'index', params: [cat: 'hot_item'])}">Hot Items</a><br/>--}%
+
             </div>
 
             <div class="col-sm-2">

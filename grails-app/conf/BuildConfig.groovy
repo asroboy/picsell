@@ -66,6 +66,7 @@ grails.project.dependency.resolution = {
     plugins {
 //        runtime ':twitter-bootstrap:3.3.5' // current: 3.3.5
 
+        compile ":mail:1.0.7"
         // plugins for the build system only
         build ":tomcat:7.0.50.1"
         compile "org.grails.plugins:twitter-bootstrap:3.3.4"

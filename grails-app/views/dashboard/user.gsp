@@ -21,7 +21,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4">
-            <div class="my-4 label-red">Your Accunt</div>
+            <div class="my-4 label-red">Your Account</div>
         </div>
     </div>
 

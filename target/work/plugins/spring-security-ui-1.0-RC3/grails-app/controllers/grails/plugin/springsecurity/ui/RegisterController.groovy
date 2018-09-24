@@ -46,24 +46,19 @@ class RegisterController extends AbstractS2UiController {
         }
 
         if (registerCommand.hasErrors()) {
-            def err = ""
-//                    message(code: 'spring.security.ui.register.miscError')
-            def errors = registerCommand.errors.errorCount
-            for (int i = 0; i < errors; i++) {
-                print registerCommand.errors.fieldError.objectName
-                print registerCommand.errors.fieldError.rejectedValue
-                print registerCommand.errors.allErrors.get(i).defaultMessage
-                err += registerCommand.errors.allErrors.get(i).defaultMessage + "\n"
-            }
             flash.error = registerCommand.errors.allErrors.defaultMessage
             return [registerCommand: registerCommand]
         }
 
+
         def user = uiRegistrationCodeStrategy.createUser(registerCommand)
-        String salt = saltSource instanceof NullSaltSource ? null : registerCommand.username
+
+        String salt = saltSource instanceof NullSaltSource ? registerCommand.username : registerCommand.username
+
         RegistrationCode registrationCode = uiRegistrationCodeStrategy.register(user, registerCommand.password, salt)
 
         if (registrationCode == null || registrationCode.hasErrors()) {
+            print 'error disini ' + registrationCode
             // null means problem creating the user
             flash.error = message(code: 'spring.security.ui.register.miscError')
             return [registerCommand: registerCommand]
@@ -81,7 +76,11 @@ class RegisterController extends AbstractS2UiController {
         if (body.contains('$')) {
             body = evaluate(body, [user: user, url: url])
         }
-
+        sendMail {
+            to "myfriend@gmail.com"
+            subject "This is a test mail"
+            body "Hello, This is a test mail, how are you?"
+        }
         uiMailStrategy.sendVerifyRegistrationMail(
                 to: email,
                 from: registerEmailFrom,
@@ -266,10 +265,25 @@ class RegisterCommand implements CommandObject {
     protected static Class<?> User
     protected static String usernamePropertyName
 
+    String firstName
+    String lastName
     String username
     String email
     String password
     String password2
+
+//    String alamat
+//    String kecamatan
+//    String kotaKabupaten
+//    String provinsi
+//    String jenisKartuIdentitas
+//    String nomorIdIdentitas
+//
+//    String noTelp
+//    String tempatLahir
+//    Date tglLahir
+//
+//    byte[] fotoProfile
 
     static constraints = {
         username validator: { value, command ->
@@ -284,6 +298,19 @@ class RegisterCommand implements CommandObject {
         email email: true
         password validator: RegisterController.passwordValidator
         password2 nullable: true, validator: RegisterController.password2Validator
+
+        firstName nullable: false
+        lastName nullable: false
+//        alamat nullable: true
+//        kecamatan nullable: true
+//        kotaKabupaten nullable: true
+//        provinsi nullable: true
+//        jenisKartuIdentitas nullable: true
+//        nomorIdIdentitas nullable: true
+//        noTelp nullable: true
+//        tempatLahir nullable: true
+//        tglLahir nullable: true
+//        fotoProfile nullable: true
     }
 }
 

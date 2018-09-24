@@ -16,6 +16,8 @@
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
     <g:set var="userAccounts" value="${com.picsell.data.UserAccount.findAllByUser(userObject)}"/>
 
+    <g:set var="billingInfo" value="${com.picsell.data.BillingAddress.findByUser(userObject)}"/>
+    <g:set var="paymentMethod" value="${com.picsell.data.PaymentMethod.findByUser(userObject)}"/>
     <link href="${resource(dir: 'css', file: 'picsell_custom_red.css')}"
           rel="stylesheet">
 </head>
@@ -40,92 +42,22 @@
     <div class="row">
         <div class="col-md-6">
             <div class="gray-box" style="margin-bottom: 30px; padding: 15px;">
-                <div style="margin-bottom: 15px">Billing address</div>
+                <g:if test="${billingInfo}">
+                    <div id="have-billing">
+                        <g:render template="billing_info"/>
+                    </div>
 
-                <form>
-                    <table style="width: 100%; color: black; font-style: italic">
-                        <colgroup>
-                            <col style="width: 40%"/>
-                            <col style="width: 40%"/>
-                            <col style="width: 18%"/>
-                            <col style="width: 2%"/>
-                        </colgroup>
+                    <div id="no-billing" style="display: none">
+                        <g:render template="update_billing_info_form"/>
+                    </div>
+                </g:if>
+                <g:else>
+                    <div id="no-billing">
+                        <g:render template="add_billing_info_form"/>
+                    </div>
 
-                        <tr>
-                            <td>Country</td>
-                            <td colspan="2"><input class="form-control" type="text" name="country"/></td>
-                            <td style="color: red">*</td>
-                        </tr>
-                        <tr>
-                            <td>Address 1</td>
-                            <td colspan="2"><input class="form-control" type="text" name="address_1"/></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Address 2</td>
-                            <td colspan="2"><input class="form-control" type="text" name="address_2"/></td>
-                            <td style="color: red">*</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td colspan="2"><input class="form-control" type="text" name="city"/></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>State/Province</td>
-                            <td><input class="form-control" type="text" name="state"/></td>
-                            <td><input class="form-control" type="text" name="postal_code"/></td>
-                            <td></td>
-                        </tr>
+                </g:else>
 
-                    </table>
-                </form>
-
-                <div style="margin-bottom: 15px;margin-top: 15px">Payment Method</div>
-
-                <form>
-                    <table style="width: 100%; color: black; font-style: italic">
-                        <colgroup>
-                            <col style="width: 40%"/>
-                            <col style="width: 40%"/>
-                            <col style="width: 18%"/>
-                            <col style="width: 2%"/>
-                        </colgroup>
-
-                        <tr>
-                            <td>First Name</td>
-                            <td colspan="2"><input class="form-control" type="text" name="firt_name"/></td>
-                            <td style="color: red">*</td>
-                        </tr>
-                        <tr>
-                            <td>Last Name</td>
-                            <td colspan="2"><input class="form-control" type="text" name="last_name"/></td>
-                            <td style="color: red">*</td>
-                        </tr>
-                        <tr>
-                            <td>Creadit Card Number</td>
-                            <td colspan="2"><input class="form-control" type="text" name="cc_number"/></td>
-                            <td style="color: red">*</td>
-                        </tr>
-                        <tr>
-                            <td>Security Code</td>
-                            <td colspan="2"><input class="form-control" type="text" name="vcs"/></td>
-                            <td style="color: red">*</td>
-                        </tr>
-                        <tr>
-                            <td>Expire Date</td>
-                            <td><input class="form-control" type="text" name="month"/></td>
-                            <td><input class="form-control" type="text" name="year"/></td>
-                            <td style="color: red">*</td>
-                        </tr>
-
-                    </table>
-                </form>
-
-                <div style="color: #c90000; font-style: italic; margin-top: 15px; margin-bottom: 15px">") required field</div>
-
-                <div style="color: black;font-style: italic; margin-top: 15px; margin-bottom: 15px">I agree with term and condition <input
-                        type="checkbox"/> <a href="#"><b>read here</b></a></div>
             </div>
 
         </div>
@@ -241,14 +173,50 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- /.row -->
-
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Attention</h5>
+                %{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}%
+                %{--<span aria-hidden="true">&times;</span>--}%
+                %{--</button>--}%
+            </div>
+
+            <div class="modal-body">
+                You have to agree our term of service
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                %{--<button type="button" class="btn btn-primary">Save changes</button>--}%
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!-- /.container -->
 <script>
+
+    function checkAgrrement() {
+        console.log('saya disini');
+        var agree = document.getElementById('agree');
+        var submit = document.getElementById('submit_info');
+        if (agree.checked) {
+            submit.click();
+        } else {
+            $('#warningModal').modal('toggle');
+        }
+    }
+
     function getPackage() {
         var URL = "${createLink(controller: 'api', action: 'get_account')}";
         $.ajax({
@@ -301,6 +269,13 @@
     }
 
 
+    function changeInfo() {
+        var billingInfo = document.getElementById("have-billing");
+        var billingForm = document.getElementById("no-billing");
+        billingInfo.style.display = "none";
+        billingForm.style.display = "block";
+    }
+
     function buyPacakge() {
 
         var URL = "${createLink(controller: 'api', action: 'save_user_pack_acc')}";
@@ -313,7 +288,7 @@
             },
             success: function (resp) {
                 console.log(resp);
-               window.location = '${createLink(controller: 'home', action: 'index')}';
+                window.location = '${createLink(controller: 'home', action: 'index')}';
             }
         });
     }

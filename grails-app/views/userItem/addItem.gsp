@@ -109,6 +109,34 @@
 
 </div>
 <!-- /.container -->
+
+<script>
+    function fixExifOrientation($img) {
+        $img.on('load', function() {
+            EXIF.getData($img[0], function() {
+                console.log('Exif=', EXIF.getTag(this, "Orientation"));
+                switch(parseInt(EXIF.getTag(this, "Orientation"))) {
+                    case 2:
+                        $img.addClass('flip'); break;
+                    case 3:
+                        $img.addClass('rotate-180'); break;
+                    case 4:
+                        $img.addClass('flip-and-rotate-180'); break;
+                    case 5:
+                        $img.addClass('flip-and-rotate-270'); break;
+                    case 6:
+                        $img.addClass('rotate-90'); break;
+                    case 7:
+                        $img.addClass('flip-and-rotate-90'); break;
+                    case 8:
+                        $img.addClass('rotate-270'); break;
+                }
+            });
+        });
+    }
+</script>
+
+
 <script>
     function readURL(input) {
 
@@ -124,6 +152,7 @@
     }
 
     $("#imgInp").change(function () {
+
         readURL(this);
     });
 
@@ -165,6 +194,7 @@
 
         var img = document.getElementById('blah');
         img.onload = function () {
+            fixExifOrientation($('#blah'));
             document.getElementById("original_size").value = 'M';
 
             console.log("Width", img.naturalWidth);

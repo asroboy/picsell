@@ -47,6 +47,8 @@ class UserController extends AbstractS2UiDomainController {
 		}
 
 		def results = doSearch { ->
+			like 'firstName', delegate
+			like 'lastName', delegate
 			like 'username', delegate
 			eqBoolean 'accountExpired', delegate
 			eqBoolean 'accountLocked', delegate

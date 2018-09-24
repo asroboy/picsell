@@ -2,7 +2,7 @@
 
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light" style="background-color: #ffffff;">
-    <a class="navbar-brand" href="${createLink(controller: 'home', action: 'index')}">
+    <a class="navbar-brand" href="${createLink(controller: 'home', action: 'main')}">
         <img src="${resource(dir: 'images/logo', file: 'logo_no_text.png')}" width="40" height="40" alt=""
              style="margin: 0px">
     </a>
@@ -48,10 +48,10 @@
                         <g:if test="${it.parent == null}">
                             <a class="dropdown-item"
                                href="${createLink(controller: 'home', action: 'main', params: [media: it.name, cat: params.cat])}">${it.name}</a>
-                            <ul>
+                            <ul style="padding-left:0rem;">
                                 <g:each in="${it.child}">
                                     <li style="list-style-type: none;">
-                                        <a class="dropdown-item"
+                                        <a class="dropdown-item" style="padding-left: 2rem"
                                            href="${createLink(controller: 'home', action: 'main', params: [media: it.name, cat: params.cat])}">${it.name}</a>
                                     </li>
                                 </g:each>

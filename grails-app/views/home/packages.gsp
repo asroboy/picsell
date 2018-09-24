@@ -62,8 +62,9 @@
 
                         <div class="panel-body body-table-plans">
                             <table id="table_individual" style="width: 100%;" cellpadding="5px">
-                                <col width="130">
-                                <col width="80">
+                                %{--<col width="130">--}%
+                                %{--<col width="80">--}%
+                                <thead>
                                 <tr style="background: white;">
                                     <td align="justify">
                                         <b>Images</b>
@@ -110,6 +111,10 @@
                                     </td>
 
                                 </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
 
                             </table>
                             <sec:ifLoggedIn>
@@ -136,8 +141,7 @@
                         <div class="panel-body body-table-plans">
                             <table id="table_multi" style="width: 100%; padding-bottom: 10px"
                                    cellpadding="5px">
-                                <col width="130">
-                                <col width="80">
+                                <thead>
                                 <tr style="background: white">
                                     <td><b>Images</b>
                                         <button class="nav-item dropdown-toggle btn btn-default"
@@ -173,6 +177,10 @@
                                         </div>
                                     </td>
                                 </tr>
+                                </thead>
+                                <tbocy>
+
+                                </tbocy>
 
                             </table>
 
@@ -300,7 +308,7 @@
                         style="width: 30px; height: 25px"/> EMAIL :<a
                         href="mailto:cs.picsell.id">cs.picsell.id</a> &nbsp;&nbsp;
                     <img src="${resource(dir: 'images', file: 'ic-live-chat.png')}"
-                         style="width: 30px; height: 25px"/> LIVE CHAT :<a
+                         style="width: 30px; height: 25px"/> CALL :<a
                         href="tel:+62218567228886">(021)8567228886</a>  &nbsp;&nbsp;
                     <img src="${resource(dir: 'images', file: 'ic-ask.png')}"
                          style="width: 25px; height: 25px"/> FAQ :<a
@@ -310,10 +318,39 @@
     </div>
 </div>
 
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Attention</h5>
+                %{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}%
+                %{--<span aria-hidden="true">&times;</span>--}%
+                %{--</button>--}%
+            </div>
+            <div class="modal-body">
+                Please select one of available packages
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                %{--<button type="button" class="btn btn-primary">Save changes</button>--}%
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
 
+    var individualCuurency = 'IDR';
+    var individualLicense = 'Annually';
+    var multiCuurency = 'IDR';
+    var multiLicense = 'Annually';
 
-    function getIndividualPackage() {
+    function getIndividualPackage(license, currency) {
         var URL = "${createLink(controller: 'api', action: 'get_subs_account')}";
         $.ajax({
             type: "GET",
@@ -321,26 +358,45 @@
             data: {
                 type: 'Individual',
                 currency: 'IDR',
-                license: 'Annually'
+                license: license
             },
             success: function (resp) {
                 var table_individual = document.getElementById('table_individual');
+                var new_tbody = document.createElement('tbody');
+                if (resp.length === 0) {
+                    var size = new_tbody.rows.length;
+                    var row = new_tbody.insertRow(size);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell2.align = "right";
+                    cell1.innerHTML = 'Not Available';
+                }
                 var i;
                 for (i = 0; i < resp.length; i++) {
-                    var size = table_individual.rows.length;
-                    console.log(resp.price);
-                    var row = table_individual.insertRow(size);
+                    var size = new_tbody.rows.length;
+                    var row = new_tbody.insertRow(size);
                     var cell1 = row.insertCell(0);
                     var cell2 = row.insertCell(1);
                     cell2.align = "right";
                     cell1.innerHTML = '<input type="radio" name="individual_subs" value="' + resp[i].id + '"/> &nbsp;' + resp[i].maxImages + ' Images';
-                    cell2.innerHTML = formatCurrency(resp[i].price) + ' ' + resp[i].inCurrency;
+                    if (currency === 'IDR') {
+                        cell2.innerHTML = formatCurrency(resp[i].price) + ' ' + resp[i].inCurrency;
+                    } else {
+                        var p = resp[i].price;
+//                        console.log(p);
+                        var price = fx.convert(p, {from: "IDR", to: currency});
+                        cell2.innerHTML = formatCurrency(price) + ' ' + currency;
+                    }
+
+
                 }
+
+                table_individual.replaceChild(new_tbody, table_individual.childNodes[2]);
             }
         });
     }
 
-    function getMultiPackage() {
+    function getMultiPackage(license, currency) {
         var URL = "${createLink(controller: 'api', action: 'get_subs_account')}";
         $.ajax({
             type: "GET",
@@ -348,45 +404,95 @@
             data: {
                 type: 'Team',
                 currency: 'IDR',
-                license: 'Annually'
+                license: license
             },
             success: function (resp) {
                 var table_multi = document.getElementById('table_multi');
+                var new_tbody = document.createElement('tbody');
+
+                if (resp.length === 0) {
+                    var size = new_tbody.rows.length;
+//                    console.log(resp.price);
+                    var row = new_tbody.insertRow(size);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell2.align = "right";
+                    cell1.innerHTML = 'Not available'
+                }
                 var i;
                 for (i = 0; i < resp.length; i++) {
-                    var size = table_multi.rows.length;
-                    console.log(resp.price);
-                    var row = table_multi.insertRow(size);
+                    var size = new_tbody.rows.length;
+//                    console.log(resp.price);
+                    var row = new_tbody.insertRow(size);
                     var cell1 = row.insertCell(0);
                     var cell2 = row.insertCell(1);
                     cell2.align = "right";
                     cell1.innerHTML = '<input type="radio" name="multiple_sub" value="' + resp[i].id + '"/> &nbsp;' + resp[i].maxTeamUser + ' users';
-                    cell2.innerHTML = formatCurrency(resp[i].price) + ' ' + resp[i].inCurrency;
+                    if (currency === 'IDR') {
+                        cell2.innerHTML = formatCurrency(resp[i].price) + ' ' + resp[i].inCurrency;
+                    } else {
+                        var price = fx.convert(resp[i].price, {from: "IDR", to: currency});
+                        cell2.innerHTML = formatCurrency(price) + ' ' + resp[i].inCurrency;
+                    }
+
                 }
+
+                table_multi.replaceChild(new_tbody, table_multi.childNodes[2]);
             }
         });
     }
 
 
     $(document).ready(function () {
-        getIndividualPackage();
-        getMultiPackage()
+        fx.base = "USD";
+        fx.rates = {
+            "EUR": 0.745101, // eg. 1 USD === 0.745101 EUR
+            "GBP": 0.647710, // etc...
+            "HKD": 7.781919,
+            "IDR": 14600,
+            "USD": 1,        // always include the base rate (1:1)
+            /* etc */
+        }
+
+        getIndividualPackage(individualLicense, individualCuurency);
+        getMultiPackage('Annually', multiCuurency)
     });
 
 
     function changePacakgeTypeIdividual(id, license) {
+        console.log('changes ' + id + ' ' + license);
         var dropdownMenu2 = document.getElementById(id);
         dropdownMenu2.innerHTML = license;
+        if (id === 'dropdownMenu2') {
+            individualLicense = license;
+            getIndividualPackage(license, individualCuurency);
+        } else if (id === 'dropdownMenu4') {
+            multiLicense = license
+            getMultiPackage(license, multiCuurency)
+        }
+
     }
 
     function changeCurrency(id, currency) {
         var dropdownMenu = document.getElementById(id);
         dropdownMenu.innerHTML = currency;
+        if (id === 'dropdownMenu3') {
+            individualCuurency = currency
+            getIndividualPackage(individualLicense, individualCuurency);
+        } else {
+            multiCuurency = currency
+            getMultiPackage(multiLicense, multiCuurency)
+        }
+//        getIndividualPackage()
     }
 
 
     function subscribe(package_id) {
-        window.location = ' ${createLink(controller: 'home', action: 'subscribe_summary')}' + '?package_id=' + package_id + '&user_id=${userObject?.id}';
+        if (package_id) {
+            window.location = ' ${createLink(controller: 'home', action: 'subscribe_summary')}' + '?package_id=' + package_id + '&user_id=${userObject?.id}';
+        } else {
+            $('#warningModal').modal('toggle');
+        }
     }
     function register() {
         window.location = ' ${createLink(controller: 'register', action: 'register')}';
@@ -408,7 +514,6 @@
         for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {
             num = num.substring(0, num.length - (4 * i + 3)) + '.' + num.substring(num.length - (4 * i + 3));
         }
-
 //        return (((sign) ? '' : '-') + '$' + num + '.' + cents);
         return num;
     }

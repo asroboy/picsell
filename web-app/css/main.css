@@ -594,3 +594,23 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
+
+a.dropdown-item-sub {
+	display: block;
+	width: 100%;
+	padding-top: 0.25rem;
+	padding-right: 1.5rem;
+	padding-bottom: 0.25rem;
+	padding-left: 0.25rem;
+	clear: both;
+	font-weight: 400;
+	color: #212529;
+	text-align: inherit;
+	white-space: nowrap;
+	background-color: transparent;
+	border: 0;
+}
+
+a.dropdown-item-sub:hover{
+	background-color: #999999;;
+}

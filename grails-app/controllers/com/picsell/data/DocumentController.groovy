@@ -15,6 +15,10 @@ class DocumentController {
 
     }
 
+    def preview(Item item) {
+        [item: item]
+    }
+
     def upload() {
         def file = request.getFile('file')
         if (file.empty) {
@@ -210,7 +214,7 @@ class DocumentController {
         int height = bimg.getHeight();
 
 
-        def watermark = grailsApplication.config.uploadFolder + 'watermark/watermark/watermark.png'
+        def watermark = grailsApplication.config.uploadFolder + 'watermark/watermark/watermark-tengah.png'
         def watermarktOutPathRoot = grailsApplication.config.uploadFolder + 'watermark/resize/' + item?.userOwner?.id
         def watermarktOutPath = watermarktOutPathRoot + "/" + documentInstance?.id
 
@@ -234,7 +238,7 @@ class DocumentController {
 
 
 
-        def wtm = watermarktOutPath + "/watermark.png";
+        def wtm = watermarktOutPath + "/watermark-tengah.png";
         burningImageService.doWith(path, outPath + "/").execute {
             it.watermark(wtm, ['right': 10, 'bottom': 10])
         }
@@ -272,8 +276,10 @@ class DocumentController {
         /**
          * MENGGUNAKAN WATERMARK
          */
-        response.setContentType("APPLICATION/OCTET-STREAM")
+//        response.setContentType("APPLICATION/OCTET-STREAM")
         response.setHeader("Content-Disposition", "Attachment;Filename=\"${documentInstance.namaFile}\"")
+        response.setHeader("Content-Type", "image/*")
+        response.setHeader("accept-ranges", "bytes")
 
 
 
@@ -282,17 +288,17 @@ class DocumentController {
         }
         def file = new File(outPath + documentInstance.namaFile)
         def fileInputStream = new FileInputStream(file)
-        def outputStream = response.getOutputStream()
+        def in_ = new BufferedInputStream(fileInputStream);
+        def outputStream = new BufferedOutputStream(response.getOutputStream())
         byte[] buffer = new byte[BUFFER_SIZE];
         int len;
-        while ((len = fileInputStream.read(buffer)) > 0) {
+        while ((len = in_.read(buffer)) > 0) {
             outputStream.write(buffer, 0, len);
         }
         outputStream.flush()
         outputStream.close()
         fileInputStream.close()
     }
-
 
     def createUserDir(def dirRoot) {
 

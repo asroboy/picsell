@@ -35,6 +35,8 @@ class BootStrap {
         RoleMenu.findByUrl('/home/**') ?: new RoleMenu(url: '/home/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/image/download/**') ?: new RoleMenu(url: '/image/download/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/item/itemDetail/**') ?: new RoleMenu(url: '/item/itemDetail/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/document/preview/*') ?: new RoleMenu(url: '/document/preview/*', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/document/download/**') ?: new RoleMenu(url: '/document/download/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/document/photoWithWatermaarkPreview/**') ?: new RoleMenu(url: '/document/photoWithWatermaarkPreview/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/document/photoWithWatermaark/**') ?: new RoleMenu(url: '/document/photoWithWatermaark/**', configAttribute: 'permitAll').save()
@@ -49,11 +51,10 @@ class BootStrap {
         RoleMenu.findByUrl('/profileUser/saveProfile/**') ?: new RoleMenu(url: '/profileUser/saveProfile/**', configAttribute: 'ROLE_USER,ROLE_ADMIN, ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/profileUser/saveProfileImage/**') ?: new RoleMenu(url: '/profileUser/saveProfileImage/**', configAttribute: 'ROLE_USER,ROLE_ADMIN, ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/userItem/**') ?: new RoleMenu(url: '/userItem/**', configAttribute: 'ROLE_CONTRIBUTOR,ROLE_ADMIN').save()
-        RoleMenu.findByUrl('/document/**') ?: new RoleMenu(url: '/document/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/billing/saveBillingPayment/**') ?: new RoleMenu(url: '/billing/saveBillingPayment/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/billing/updateBillingPayment/**') ?: new RoleMenu(url: '/billing/updateBillingPayment/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/home/purchase_summary/**') ?: new RoleMenu(url: '/home/purchase_summary/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/purchaseHistory/**') ?: new RoleMenu(url: '/purchaseHistory/**', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
-
 
         //ADMIN
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
@@ -88,22 +89,10 @@ class BootStrap {
         def userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save(flush: true)
         def contributorRole = Role.findByAuthority('ROLE_CONTRIBUTOR') ?: new Role(authority: 'ROLE_CONTRIBUTOR').save(flush: true)
 
-        def user = User.findByUsername('admin') ?: new User(username: 'admin', password: 'admin123', email: 'admin@picsell.id').save(flush: true)
-        def ridho = User.findByUsername('ridho') ?: new User(username: 'ridho', password: 'ridho123', email: 'asrofiridho@gmail.com').save(flush: true)
-        def atuanda = User.findByUsername('atuanda') ?: new User(username: 'atuanda', password: 'atuanda123', email: 'atuanda@yahoo.com').save(flush: true)
-        def contributor = User.findByUsername('contributor') ?: new User(username: 'contributor', password: 'contributor123', email: 'contributor@picsell.id').save(flush: true)
-
-//        user.save(flush: true)
-//        ridho.save(flush: true)
-//        atuanda.save(flush: true)
-//        contributor.save(flush: true)
-
-//        def userAdminRole = UserRole.findByUserAndRole(user, adminRole) ?: new UserRole(user: user, role: adminRole).save(flush: true)
-//        def ridhoRole = UserRole.findByUserAndRole(ridho, adminRole) ?: new UserRole(user: ridho, role: adminRole).save(flush: true)
-//        def atuandaRole = UserRole.findByUserAndRole(atuanda, userRole) ?: new UserRole(user: atuanda, role: userRole).save(flush: true)
-//        def contributorUserRole = UserRole.findByUserAndRole(contributor, contributorRole) ?: new UserRole(user: contributor, role: contributorRole).save(flush: true)
-
-
+        def user = User.findByUsername('admin') ?: new User(firstName: 'Admin', lastName: 'Picsell', username: 'admin', password: 'admin123', email: 'admin@picsell.id').save(flush: true)
+        def ridho = User.findByUsername('ridho') ?: new User(firstName: 'Asrofi', lastName: 'Ridho', username: 'ridho', password: 'ridho123', email: 'asrofiridho@gmail.com').save(flush: true)
+        def atuanda = User.findByUsername('atuanda') ?: new User(firstName: 'Achtar', lastName: 'Tuanda', username: 'atuanda', password: 'atuanda123', email: 'atuanda@yahoo.com').save(flush: true)
+        def contributor = User.findByUsername('contributor') ?: new User(firstName: 'Contributor', lastName: 'Picsell', username: 'contributor', password: 'contributor123', email: 'contributor@picsell.id').save(flush: true)
 
 
         UserRole.create user, adminRole

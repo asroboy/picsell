@@ -26,23 +26,18 @@
 <body>
 <!-- Page Content -->
 <div class="container">
-
     %{--<!-- Portfolio Item Heading -->--}%
     %{--<h1 class="my-4">${itemInstance?.name}--}%
     %{--<small>The item sub name or category</small>--}%
     %{--</h1>--}%
-
-
     <!-- Related Projects Row -->
     <div>
         <h3 class="my-4 sub-part1">PURCHASE SUMMARY</h3>
     </div>
 
-
     <div class="row">
         <div class="col-md-6">
             <div class="gray-box" style="margin-bottom: 30px; padding: 15px;">
-
                 <g:if test="${billingInfo}">
                     <div style="margin-bottom: 15px">Billing address</div>
 
@@ -72,7 +67,6 @@
                         </tr>
 
                     </table>
-
                     <div style="margin-bottom: 15px;margin-top: 15px">Payment Method</div>
 
                     <table style="width: 100%; color: black; font-style: italic">
@@ -203,8 +197,12 @@
 
                         <div style="color: #c90000; font-style: italic; margin-top: 15px; margin-bottom: 15px">") required field</div>
 
-                        <div style="color: black;font-style: italic;  margin-top: 15px; margin-bottom: 15px">I agree with term and condition  <input
-                                type="checkbox" name="agree"> <a href="#"><b>read here</b></a></div>
+                        <div style="color: black;font-style: italic;  margin-top: 15px; margin-bottom: 15px">I agree with term and condition
+                            <input type="checkbox" name="agree">
+                                <a target="_blank" href="${createLink(controller: 'home', action: 'tos')}">
+                                   <b>read here</b>
+                                </a>
+                        </div>
 
                         <div>
 
@@ -223,7 +221,6 @@
                         </div>
                     </g:form>
                 </g:else>
-
             </div>
 
         </div>
@@ -373,11 +370,7 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- /.row -->
-
 </div>
 <!-- /.container -->
 <!-- Modal -->

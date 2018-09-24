@@ -118,7 +118,7 @@
                            style="color: white" onclick="add_to_chart(${item?.id})"><i
                                 class="fa fa-shopping-basket"></i></a>
                     </sec:ifLoggedIn>
-                    <a href="${createLink(controller:'document', action:'photoWithWatermaark', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
+                    <a href="${createLink(controller: 'document', action: 'preview', id: item?.id)}" class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Download preview"
                        style="color: white"><i class="fa fa-download"></i></a>
                     <a href="${createLink(cotroller: 'home', action: 'main', params: [cat: item?.category?.name])}"
                        class="btn btn-sm" data-toggle="tooltip" data-placement="bottom" title="Similar item"

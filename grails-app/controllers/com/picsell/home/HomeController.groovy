@@ -43,7 +43,7 @@ class HomeController {
     }
 
     def main() {
-        params.max = 3
+        params.max = 70
         if (params.key) {
             print('key')
             def c = Item.createCriteria()

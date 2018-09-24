@@ -110,10 +110,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6" style="margin-top: 50px">
-            <% int ind = 0; %>
+            <% int indx = 0; %>
             <g:each in="${itemImages}" var="image" status="i">
                 <g:if test="${!image?.groupSize?.groupLabel.equals("Others")}">
-                    <g:if test="${ind == 0}">
+                    <g:if test="${indx == 0}">
                         <div id="image-${image?.groupSize?.groupLabel}" class="image_container" style="display: block">
                             %{--<g:set var="image" value="${com.picsell.data.ImageFile.findByTableIdAndTableName(itemInstance?.id, itemInstance.class.simpleName)}"/>--}%
                             <img class="card-img-top"
@@ -134,7 +134,7 @@
                                        style="color: white"><i class="fa fa-shopping-basket"
                                                                onclick="add_to_chart(${itemInstance?.id})"></i></a>
                                 </sec:ifLoggedIn>
-                                <a href="${createLink(controller: 'document', action: 'photoWithWatermaark', id: image?.id)}"
+                                <a href="${createLink(controller: 'document', action: 'preview', id: itemInstance?.id)}"
                                    class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
                                    title="Download preview"
                                    style="color: white"><i class="fa fa-download"></i></a>
@@ -166,7 +166,7 @@
                                        style="color: white"><i class="fa fa-shopping-basket"
                                                                onclick="add_to_chart(${itemInstance?.id})"></i></a>
                                 </sec:ifLoggedIn>
-                                <a href="${createLink(controller: 'document', action: 'photoWithWatermaark', id: image?.id)}"
+                                <a href="${createLink(controller: 'document', action: 'preview', id: itemInstance?.id)}"
                                    class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
                                    title="Download preview"
                                    style="color: white"><i class="fa fa-download"></i></a>
@@ -177,7 +177,7 @@
                             </div>
                         </div>
                     </g:else>
-                    <% ind++; %>
+                    <% indx++; %>
                 </g:if>
 
             </g:each>
@@ -204,7 +204,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div style="margin-top: 55px; font-size: 16pt; text-align: right; color: #c90000;">
+                        <div style="margin-top: 55px; font-size: 16pt; text-align: right; color: #4b4a4a;">
                             <b><u>ID ${itemInstance?.id}</u></b>
                         </div>
                     </div>
@@ -309,7 +309,8 @@
                                             <td style="vertical-align: bottom; font-size: 24pt"><b>1</b></td>
                                             <td style="vertical-align: bottom; border-bottom: 3px solid #c90000;"><b>images</b>
                                             </td>
-                                            <td style="text-align: right; vertical-align: bottom; border-bottom: 3px solid #c90000;" id="price"><b> IDR</b>
+                                            <td style="text-align: right; vertical-align: bottom; border-bottom: 3px solid #c90000;"
+                                                id="price"><b>IDR</b>
                                             </td>
                                         </tr>
                                         <tr>
@@ -375,7 +376,7 @@
                                        style="color: white"><i class="fa fa-shopping-basket"
                                                                onclick="add_to_chart(${item?.id})"></i></a>
                                 </sec:ifLoggedIn>
-                                <a href="${createLink(controller: 'document', action: 'photoWithWatermaark', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item?.id, item.class.simpleName)?.id)}"
+                                <a href="${createLink(controller: 'document', action: 'preview', id: item?.id)}"
                                    class="btn btn-sm" data-toggle="tooltip" data-placement="bottom"
                                    title="Download preview"
                                    style="color: white"><i class="fa fa-download"></i></a>
@@ -441,7 +442,7 @@
             console.log(sizeGroup);
 
             var price = document.getElementById('price');
-            price.innerHTML = "<b>"+sizeGroup.price+"</b>"
+            price.innerHTML = "<b>" + sizeGroup.price + "</b>"
 
             var downloadPage = document.getElementById("download_page");
             var detailItemPage = document.getElementById("item_page");

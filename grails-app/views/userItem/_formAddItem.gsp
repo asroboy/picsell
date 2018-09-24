@@ -44,7 +44,7 @@
 
 <div class="form-group fieldcontain ${hasErrors(bean: itemInstance, field: 'mediaType', 'error')} ">
     <label for="category">
-        <g:message code="item.mediaType.label" default="Meia Type"/>
+        <g:message code="item.mediaType.label" default="Media Type"/>
 
     </label>
     <g:select name="mediaType" from="${com.picsell.data.MediaType.list()}" optionKey="id" optionValue="name"
@@ -90,4 +90,5 @@
     </table>
 
 </div>
+
 

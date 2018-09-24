@@ -33,6 +33,8 @@
     <!-- Custom styles for this template -->
     %{--<link href="${resource(dir: 'portfolio-gh-pages', file: 'css/3-col-portfolio.css')}" rel="stylesheet">--}%
     <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/jquery/jquery.min.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'exif.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'money.min.js')}"></script>
     <script src="${resource(dir: 'portfolio-gh-pages', file: 'vendor/bootstrap/js/bootstrap.bundle.min.js')}"></script>
 
     <!-- Libraries CSS Files -->
