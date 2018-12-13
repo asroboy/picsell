@@ -38,7 +38,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="gray-box" style="margin-bottom: 30px; padding: 15px;">
-                <g:if test="${billingInfo}">
+                <div id="has_info" style="display: none">
                     <div style="margin-bottom: 15px">Billing address</div>
 
                     <table style="width: 100%; color: black; font-style: italic">
@@ -67,6 +67,7 @@
                         </tr>
 
                     </table>
+
                     <div style="margin-bottom: 15px;margin-top: 15px">Payment Method</div>
 
                     <table style="width: 100%; color: black; font-style: italic">
@@ -103,14 +104,14 @@
                     <div style=" margin-top: 30px">
 
                         <div class="text-right">
-                            <button class="btn btn-sm btn-danger">
-                                Change Info</button>
+                            <button class="myButton" onclick="changeInfo()">Change Info</button>
                             %{--</g:submitButton>--}%
                         </div>
 
                     </div>
-                </g:if>
-                <g:else>
+                </div>
+
+                <div id="no_info" style="display: none">
                     <div style="margin-bottom: 15px">Billing address</div>
                     <g:form controller="billing" action="saveBillingPayment">
                         <input class="form-control" type="text" name="item_id" value="${imageFile?.id}"
@@ -127,28 +128,34 @@
 
                             <tr>
                                 <td>Country</td>
-                                <td colspan="2"><input class="form-control" type="text" name="country"/></td>
+                                <td colspan="2"><input class="form-control" type="text" name="country"
+                                                       value="${billingInfo?.country}" required/></td>
                                 <td style="color: red">*</td>
                             </tr>
                             <tr>
                                 <td>Address 1</td>
-                                <td colspan="2"><input class="form-control" type="text" name="address_1"/></td>
+                                <td colspan="2"><input class="form-control" type="text" name="address_1"
+                                                       value="${billingInfo?.address1}"/></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>Address 2</td>
-                                <td colspan="2"><input class="form-control" type="text" name="address_2"/></td>
+                                <td colspan="2"><input class="form-control" type="text" name="address_2"
+                                                       value="${billingInfo?.address2}" required/></td>
                                 <td style="color: red">*</td>
                             </tr>
                             <tr>
                                 <td>City</td>
-                                <td colspan="2"><input class="form-control" type="text" name="city"/></td>
+                                <td colspan="2"><input class="form-control" type="text" name="city"
+                                                       value="${billingInfo?.city}"/></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>State/Province</td>
-                                <td><input class="form-control" type="text" name="state"/></td>
-                                <td><input class="form-control" type="text" name="postal_code"/></td>
+                                <td><input class="form-control" type="text" name="state"
+                                           value="${billingInfo?.stateProvince}"/></td>
+                                <td><input class="form-control" type="text" name="postal_code"
+                                           value="${billingInfo?.postalCode}"/></td>
                                 <td></td>
                             </tr>
 
@@ -167,28 +174,34 @@
 
                             <tr>
                                 <td>First Name</td>
-                                <td colspan="2"><input class="form-control" type="text" name="firt_name"/></td>
+                                <td colspan="2"><input class="form-control" type="text" name="first_name"
+                                                       value="${paymentMethod?.firstName}" required/></td>
                                 <td style="color: red">*</td>
                             </tr>
                             <tr>
                                 <td>Last Name</td>
-                                <td colspan="2"><input class="form-control" type="text" name="last_name"/></td>
+                                <td colspan="2"><input class="form-control" type="text" name="last_name"
+                                                       value="${paymentMethod?.lastName}" required/></td>
                                 <td style="color: red">*</td>
                             </tr>
                             <tr>
                                 <td>Creadit Card Number</td>
-                                <td colspan="2"><input class="form-control" type="text" name="cc_number"/></td>
+                                <td colspan="2"><input class="form-control" type="text" name="cc_number"
+                                                       value="${paymentMethod?.creaditCardNumber}" required/></td>
                                 <td style="color: red">*</td>
                             </tr>
                             <tr>
                                 <td>Security Code</td>
-                                <td colspan="2"><input class="form-control" type="number" name="mvcs"/></td>
+                                <td colspan="2"><input class="form-control" type="number" name="mvcs"
+                                                       value="${paymentMethod?.securityCode}" required/></td>
                                 <td style="color: red">*</td>
                             </tr>
                             <tr>
                                 <td>Expire Date</td>
-                                <td><input class="form-control" type="text" name="month"/></td>
-                                <td><input class="form-control" type="text" name="year"/></td>
+                                <td><input class="form-control" type="text" name="month"
+                                           value="${paymentMethod?.expiredDate?.split('/')[0]}" required/></td>
+                                <td><input class="form-control" type="text" name="year"
+                                           value="${paymentMethod?.expiredDate?.split('/')[1]}" required/></td>
                                 <td style="color: red">*</td>
                             </tr>
 
@@ -198,10 +211,10 @@
                         <div style="color: #c90000; font-style: italic; margin-top: 15px; margin-bottom: 15px">") required field</div>
 
                         <div style="color: black;font-style: italic;  margin-top: 15px; margin-bottom: 15px">I agree with term and condition
-                            <input type="checkbox" name="agree">
-                                <a target="_blank" href="${createLink(controller: 'home', action: 'tos')}">
-                                   <b>read here</b>
-                                </a>
+                            <input id="check_agree" type="checkbox" name="agree" required>
+                            <a target="_blank" href="${createLink(controller: 'home', action: 'tos')}">
+                                <b>read here</b>
+                            </a>
                         </div>
 
                         <div>
@@ -214,15 +227,14 @@
                             </div>
 
                             <div class="text-right">
-                                <g:submitButton name="submit" class="btn btn-sm btn-danger" title="Submit"/>
+                                <g:submitButton name="submit" class="myButton" title="Submit"/>
                                 %{--</g:submitButton>--}%
                             </div>
 
                         </div>
                     </g:form>
-                </g:else>
+                </div>
             </div>
-
         </div>
 
         <div id="test">
@@ -287,6 +299,15 @@
             <div class="white-box" style="margin-bottom: 30px; padding: 15px">
                 <div style="padding: 5px">
                     <div class="row">
+                        <div class="col-md-12">
+                            <b>Billing no. : ${billing?.invoiceNumber}</b><br/>
+                            Created at : <g:formatDate format="yyyy-MM-dd" date="${billing?.invoicedAt}"/><br/>
+                            Status : ${billing.status}
+                            <hr/>
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-md-5">
                             <div class="white-box" style="margin: 0px; padding: 0px">
                                 <div>
@@ -320,8 +341,11 @@
                 </div>
 
                 <div style="border-top: solid 1px gray; color: black; padding-left: 5px;padding-right: 5px; padding-top: 30px; padding-bottom: 30px">
+
                     <div class="row">
-                        <div class="col-md-6"><b>1 IMAGE</b></div>
+                        <div class="col-md-6">
+                            <b>1 IMAGE</b>
+                        </div>
 
                         <div class="col-md-6"
                              style="text-align: right"><b>${imageFile?.groupSize?.price} IDR</b></div>
@@ -355,13 +379,14 @@
                         </div>
 
                         <div style="margin-top: 15px; text-align: right">
+                            <img id="loading" src="${resource(dir: 'images/loading', file: 'loading_indicator.gif')}" style="height: 30px; width: 30px; margin-right: 20px; display: none;"/>
                             <g:if test="${params.chart_id}">
-                                <button class="btn btn-sm btn-danger"
+                                <button class="myButton"
                                         onclick="pay_chart_id(${params.chart_id}, ${imageFile?.id}, ${userObject?.id}, ${paymentMethod?.id}, ${imageFile?.groupSize?.price})">COMPLETE CHECKOUT</button>
                             </g:if>
                             <g:else>
-                                <button class="btn btn-sm btn-danger"
-                                        onclick="purchase(${imageFile?.id}, ${userObject?.id}, ${paymentMethod?.id}, ${imageFile?.groupSize?.price})">COMPLETE CHECKOUT</button>
+                                <button class="myButton"
+                                        onclick="purchase(${imageFile?.id}, ${userObject?.id}, ${paymentMethod?.id}, ${imageFile?.groupSize?.price}, ${billing?.id})">COMPLETE CHECKOUT</button>
                             </g:else>
 
                         </div>
@@ -381,7 +406,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Notice</h5>
                 %{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}%
-                    %{--<span aria-hidden="true">&times;</span>--}%
+                %{--<span aria-hidden="true">&times;</span>--}%
                 %{--</button>--}%
             </div>
 
@@ -401,7 +426,30 @@
 </div>
 
 <script>
-    function purchase(image_id, user_id, payment_id, amount) {
+    $(document).ready(function () {
+        var has_info = document.getElementById("has_info");
+        var no_info = document.getElementById("no_info");
+        var billingInfo = ${billingInfo?.id}
+            console.log(billingInfo);
+        if (billingInfo !== undefined) {
+            has_info.style.display = "block";
+        } else {
+            no_info.style.display = "block";
+        }
+
+    });
+
+    function changeInfo() {
+        var has_info = document.getElementById("has_info");
+        var no_info = document.getElementById("no_info");
+        no_info.style.display = "block";
+        has_info.style.display = "none";
+    }
+
+    function purchase(image_id, user_id, payment_id, amount, billingId) {
+        %{--console.log("Billing id ${billing?.id}")--}%
+        var loadingAnim = document.getElementById("loading");
+        loadingAnim.style.display = "inline";
         var URL = "${createLink(controller: 'api', action: 'purchase')}";
         $.ajax({
             type: "GET",
@@ -411,12 +459,14 @@
                 user_id: user_id,
                 payment_id: payment_id,
                 total_amount: amount,
+                billing_id: billingId,
             },
             success: function (resp) {
                 console.log(resp);
                 var content = document.getElementById('modal_content');
-                content.innerHTML = 'Thanks for purchasing Picsell image, your download link send to your email, it will expired after 7 days long' +
-                        '<br/><a href="' + resp.url + '">Image Link</a>';
+                content.innerHTML = 'Thanks for purchasing Picsell image, your download link send to your email, it will expired after 7 days long';
+//                        '<br/><a href="' + resp.url + '">Image Link</a>';
+                loadingAnim.style.display = "none";
                 $('#infoModal').modal('toggle')
 
 
@@ -426,7 +476,7 @@
 
     function toPurchaseHistory() {
         window.location =
-                "${createLink(controller: 'purchaseHistory', action: 'index', id: userObject?.id)}";
+            "${createLink(controller: 'purchaseHistory', action: 'index', id: userObject?.id)}";
     }
 
     function pay_chart_id(chart_id, image_id, user_id, payment_id, amount) {
@@ -438,7 +488,7 @@
                 chart_id: chart_id
             },
             success: function (resp) {
-                purchase(image_id, user_id, payment_id, amount);
+                purchase(image_id, user_id, payment_id, amount, ${billing?.id});
                 %{--console.log(resp);--}%
                 %{--window.location =--}%
                 %{--"${createLink(controller: 'home', action: 'mychart')}";--}%

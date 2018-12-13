@@ -39,15 +39,24 @@
                             </g:eachError>
                         </ul>
                     </g:hasErrors>
-                    <g:form url="[controller: 'customerMessage', resource: customerMessageInstance, action: 'save']">
-                        <fieldset class="form">
-                            <g:render template="contact_us_form"/>
-                        </fieldset>
-                        <fieldset class="buttons" style="margin-bottom: 15px">
-                            <g:submitButton name="create" class="save btn btn-danger btn-sm"
-                                            value="${message(code: 'default.button.create.label', default: 'Create')}"/>
-                        </fieldset>
-                    </g:form>
+                    <div id="user_message_content">
+                        <g:formRemote name="saveExternal"
+                                      url="[controller: 'home', resource: customerMessageInstance, action: 'saveExternal']"
+                                      update="user_message_content">
+                            <fieldset class="form">
+                                <g:render template="contact_us_form"/>
+                            </fieldset>
+                            <fieldset class="buttons" style="margin-bottom: 15px">
+                                <input class="myButton" type="submit" value="Send"/>
+                                %{--<g:submitToRemote--}%
+                                %{--url="[controller: 'home', resource: customerMessageInstance, action: 'saveExternal']"--}%
+                                %{--update="user_message_content"/>--}%
+                                %{--<g:submit name="create" class="save btn btn-danger btn-sm"--}%
+                                          %{--value="${message(code: 'default.button.create.label', default: 'Create')}"/>--}%
+                            </fieldset>
+                        </g:formRemote>
+                    </div>
+
                 </div>
             </div>
         </div>

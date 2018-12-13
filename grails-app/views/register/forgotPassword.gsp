@@ -1,6 +1,8 @@
 <html>
 <head>
     <meta name="layout" content="login"/>
+    <link href="${resource(dir: 'css', file: 'button_red.css')}"
+          rel="stylesheet">
     %{--<s2ui:title messageCode='spring.security.ui.forgotPassword.title'/>--}%
 </head>
 
@@ -15,7 +17,7 @@
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading" style="text-align: center">
                         <img src="${resource(dir: 'images/logo', file: 'logo_small.png')}"
-                             style="height: 65px; width: 65px; margin-bottom: 15px">
+                             style="height: 65px; width: 65px; margin-bottom: 15px;  margin-top: 15px">
 
                     </div>
 
@@ -26,29 +28,33 @@
                             <s2ui:formContainer type='forgotPassword' focus='username' width='100%'>
                                 <s2ui:form beanName='forgotPasswordCommand'>
                                     <g:if test='${emailSent}'>
-                                        <br/>
-                                        <g:message code='spring.security.ui.forgotPassword.sent'/>
+                                        <div style="margin-bottom: 35px">
+                                            <div class="alert alert-secondary" role="alert">
+                                                <h4 class="alert-heading">Success!</h4>
+                                                <g:message code='spring.security.ui.forgotPassword.sent'/>
+                                            </div>
+
+                                        </div>
                                     </g:if>
                                     <g:else>
                                     %{--<br/>--}%
 
                                         <h5>Forgot Your Password?</h5>
-                                        <g:message code='spring.security.ui.forgotPassword.description'/>
-                                        <br/>
-                                        <br/>
+                                        %{--<g:message code='spring.security.ui.forgotPassword.description'/>--}%
+                                        <p>Enter your <b><i>username</i></b> and we'll send a link to reset your password to the email address related to your account</p>
                                         <table>
                                             <div class="form-group">
-                                                <input type="text" name='username' size='25' labelCodeDefault='Username'
+                                                <input placeholder="Username" type="text" name='username' size='25' labelCodeDefault='Username'
                                                        class="form-control"/>
                                             </div>
 
                                         </table>
-                                        <br/>
 
                                         <div style="align: center; margin-bottom: 30px">
                                             <input type="submit" align="center" value="Reset"
                                                    id="submit_submit"
-                                                   class="btn btn-sm btn-default btn-block" style="background-color: red; color: white; width: 100px; margin: 0 auto;"/>
+                                                   class="myButton"
+                                                   style="background-color: red; color: white; width: 100px; margin: 0 auto;"/>
                                         </div>
 
                                     %{--<s2ui:submitButton class="btn btn-default btn-outline" elementId='submit'--}%

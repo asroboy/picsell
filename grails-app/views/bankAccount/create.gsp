@@ -23,8 +23,23 @@
 
     <div class="row">
         <div class="col-md-3">
-            <div class="label-red" style="width: 100%">
-                Summary
+
+            <div style="width: 100%; margin-top: 15px">
+                <button class="myButtonGrey" style="width: 100%;"
+                        onclick="go_to_dashboard()">Dashboard</button>
+            </div>
+
+            <div style="width: 100%; margin-top: 15px">
+                <button class="myButtonGrey" style="width: 100%;"
+                        onclick="go_to_profile()">Profile</button>
+            </div>
+
+            <div style="width: 100%; margin-top: 15px">
+                <button class="myButtonGrey" style="width: 100%;"
+                        onclick="go_to_my_item()">My Items</button>
+            </div>
+            <div class="label-red" style="width: 100%; margin-top: 25px">
+                Item Summary
             </div>
 
             <div class="card" style="margin-bottom: 15px">
@@ -34,22 +49,6 @@
                     <li class="list-group-item">Pending :  ${com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "pending")} images</li>
                     <li class="list-group-item">Rejected :${com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "rejected")} images</li>
                 </ul>
-            </div>
-
-
-            <div style="width: 100%; margin-top: 15px">
-                <button class="btn btn-sm btn-outline-danger" style="width: 100%;"
-                        onclick="go_to_dashboard()">Dashboard</button>
-            </div>
-
-            <div style="width: 100%; margin-top: 15px">
-                <button class="btn btn-sm btn-outline-danger" style="width: 100%;"
-                        onclick="go_to_profile()">Profile</button>
-            </div>
-
-            <div style="width: 100%; margin-top: 15px">
-                <button class="btn btn-sm btn-outline-danger" style="width: 100%;"
-                        onclick="go_to_my_item()">My Items</button>
             </div>
         </div>
 
@@ -70,7 +69,7 @@
                     <g:render template="form"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="create" class="save btn btn-danger"
+                    <g:submitButton name="create" class="myButton"
                                     value="${message(code: 'default.button.create.label', default: 'Create')}"/>
                 </fieldset>
             </g:form>

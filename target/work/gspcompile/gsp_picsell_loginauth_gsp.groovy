@@ -16,43 +16,51 @@ printHtmlPart(0)
 createTagBody(1, {->
 printHtmlPart(1)
 invokeTag('captureMeta','sitemesh',4,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':("login")],-1)
-printHtmlPart(1)
-invokeTag('title','s2ui',5,['messageCode':("spring.security.ui.login.title")],-1)
-printHtmlPart(1)
-invokeTag('stylesheet','asset',6,['src':("spring-security-ui-auth.css")],-1)
 printHtmlPart(2)
-})
-invokeTag('captureHead','sitemesh',7,[:],1)
+expressionOut.print(resource(dir: 'css', file: 'button_red.css'))
 printHtmlPart(3)
-createTagBody(1, {->
+invokeTag('title','s2ui',7,['messageCode':("spring.security.ui.login.title")],-1)
+printHtmlPart(1)
+invokeTag('stylesheet','asset',8,['src':("spring-security-ui-auth.css")],-1)
 printHtmlPart(4)
-expressionOut.print(resource(dir: 'images/logo', file: 'logo_small.png'))
+})
+invokeTag('captureHead','sitemesh',9,[:],1)
 printHtmlPart(5)
-createTagBody(2, {->
+createTagBody(1, {->
 printHtmlPart(6)
-expressionOut.print(securityConfig.apf.usernameParameter)
+expressionOut.print(resource(dir: 'images/logo', file: 'logo_small.png'))
 printHtmlPart(7)
-expressionOut.print(securityConfig.apf.passwordParameter)
+createTagBody(2, {->
 printHtmlPart(8)
-createClosureForHtmlPart(9, 3)
-invokeTag('link','g',67,['controller':("register"),'action':("register")],3)
+if(true && (flash.message)) {
+printHtmlPart(9)
+expressionOut.print(flash.message)
 printHtmlPart(10)
-createClosureForHtmlPart(11, 3)
-invokeTag('link','g',72,['controller':("register"),'action':("forgotPassword")],3)
+}
+printHtmlPart(11)
+expressionOut.print(securityConfig.apf.usernameParameter)
 printHtmlPart(12)
-})
-invokeTag('form','s2ui',78,['role':("form"),'type':("login"),'focus':("username")],2)
+expressionOut.print(securityConfig.apf.passwordParameter)
 printHtmlPart(13)
+createClosureForHtmlPart(14, 3)
+invokeTag('link','g',70,['controller':("register"),'action':("register")],3)
+printHtmlPart(15)
+createClosureForHtmlPart(16, 3)
+invokeTag('link','g',78,['controller':("register"),'action':("forgotPassword")],3)
+printHtmlPart(17)
 })
-invokeTag('captureBody','sitemesh',79,[:],1)
-printHtmlPart(14)
+invokeTag('form','s2ui',82,['role':("form"),'type':("login"),'focus':("username")],2)
+printHtmlPart(18)
+})
+invokeTag('captureBody','sitemesh',84,[:],1)
+printHtmlPart(19)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1530715367054L
+public static final long LAST_MODIFIED = 1542537670234L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

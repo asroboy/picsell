@@ -35,7 +35,7 @@ invokeTag('render','g',34,['template':("formAddImageItem")],-1)
 printHtmlPart(7)
 invokeTag('render','g',43,['template':("formAddItem")],-1)
 printHtmlPart(8)
-invokeTag('submitButton','g',47,['name':("create"),'class':("save btn button-red"),'value':(message(code: 'default.button.submit_now.label', default: 'Submit now'))],-1)
+invokeTag('submitButton','g',47,['name':("create"),'class':("myButton"),'value':(message(code: 'default.button.submit_now.label', default: 'Submit now'))],-1)
 printHtmlPart(9)
 expressionOut.print(createLink(action: 'index'))
 printHtmlPart(10)
@@ -51,7 +51,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1527955432435L
+public static final long LAST_MODIFIED = 1542536902166L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

@@ -167,7 +167,7 @@
                     </div>
 
                     <div style="margin-top: 40px; text-align: right">
-                        <button class="button-dark-red" onclick="buyPacakge()">COMPLETE CHECKOUT</button>
+                        <button class="btn btn-sm btn-danger" onclick="buyPacakge()">COMPLETE CHECKOUT</button>
                     </div>
                 </div>
             </div>

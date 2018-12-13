@@ -8,7 +8,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class CustomerMessageController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [saveExternal: "POST", save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -21,6 +21,24 @@ class CustomerMessageController {
 
     def create() {
         respond new CustomerMessage(params)
+    }
+
+
+    @Transactional
+    def saveExternal(CustomerMessage customerMessageInstance) {
+        print 'saya dipanggil'
+        if (customerMessageInstance == null) {
+            notFound()
+            return
+        }
+
+        if (customerMessageInstance.hasErrors()) {
+            respond customerMessageInstance.errors
+            return
+        }
+
+        customerMessageInstance.save flush: true
+        []
     }
 
     @Transactional

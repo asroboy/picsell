@@ -58,9 +58,11 @@
     <link href="${resource(dir: 'css', file: 'picsell_custom.css')}"
           rel="stylesheet">
 
+    <link href="${resource(dir: 'css', file: 'button_red.css')}"
+          rel="stylesheet">
 
     <g:set var="categories" value="${com.picsell.data.Category.list()}"/>
-    <g:set var="mediaTypes" value="${com.picsell.data.MediaType.list()}"/>
+    <g:set var="mediaTypes" value="${com.picsell.data.MediaType.list(order: 'id')}"/>
     <g:set var="userObject"
            value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>

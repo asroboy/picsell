@@ -286,7 +286,7 @@
                 </div>
 
                 <div style="margin-top: 20px">
-                    <button class="btn btn-sm btn-danger" onclick="readyDownload()">Download</button>
+                    <button class="myButton" onclick="readyDownload()">Download</button>
                 </div>
 
             </div>
@@ -331,8 +331,8 @@
                                 %{--<a class="btn btn-sm btn-danger"--}%
                                 %{--href="${createLink(controller: 'home', action: 'purchase_summary', id: itemInstance?.id)}">Buy now</a>--}%
                                 %{--<button class="btn button-dark-red">More Images</button>--}%
-                                <button class="btn btn-sm btn-danger" onclick="buyNow()">Buy now</button>
-                                <button class="btn btn-sm btn-info" onclick="viewDetails()">Back</button>
+                                <button class="myButton" onclick="buyNow()">Buy now</button>
+                                <button class="myButtonGrey" onclick="viewDetails()">Back</button>
                             </div>
                         </div>
 

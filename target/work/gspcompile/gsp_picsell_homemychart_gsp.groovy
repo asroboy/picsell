@@ -43,44 +43,30 @@ for( itemChart in (itemCharts) ) {
 printHtmlPart(6)
 if(true && (itemChart.status == null)) {
 printHtmlPart(7)
-expressionOut.print(itemChart?.id)
+expressionOut.print(createLink(controller: 'document', action: 'photoWithWatermaark', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemChart.item?.id, itemChart.item.class.simpleName)?.id, params: [table_id: itemChart.item?.id, table_name: 'Item']))
 printHtmlPart(8)
-expressionOut.print(createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(itemChart.item?.id, itemChart.item.class.simpleName)?.id, params: [s: '238h9uhh3', table_id: itemChart.item?.id, table_name: 'Item']))
+expressionOut.print(itemChart.item?.name)
 printHtmlPart(9)
 expressionOut.print(itemChart.item?.userOwner?.username)
 printHtmlPart(10)
-expressionOut.print(itemChart.item?.price)
+expressionOut.print(itemChart.item?.description)
 printHtmlPart(11)
-expressionOut.print(itemChart.item?.currency)
+expressionOut.print(itemChart.item?.tags)
 printHtmlPart(12)
-expressionOut.print(itemChart.id)
+expressionOut.print(itemChart.item?.price)
 printHtmlPart(13)
-expressionOut.print(createLink(controller: 'home', action: 'purchase_summary', id: itemChart?.item?.id, params:[chart_id: itemChart?.id]))
+expressionOut.print(itemChart.item?.currency)
 printHtmlPart(14)
-}
+expressionOut.print(createLink(controller: 'home', action: 'purchase_summary', id: itemChart?.item?.id, params: [chart_id: itemChart?.id]))
 printHtmlPart(15)
-}
+expressionOut.print(itemChart.id)
 printHtmlPart(16)
-for( item in (itemCharts) ) {
-printHtmlPart(6)
-if(true && (item?.status?.equals("paid"))) {
-printHtmlPart(7)
-expressionOut.print(item?.id)
-printHtmlPart(8)
-expressionOut.print(createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(item.item?.id, item.item.class.simpleName)?.id, params: [s: '238h9uhh3', table_id: item.item?.id, table_name: 'Item']))
-printHtmlPart(9)
-expressionOut.print(item.item?.userOwner?.username)
-printHtmlPart(10)
-expressionOut.print(item.item?.price)
-printHtmlPart(11)
-expressionOut.print(item.item?.currency)
-printHtmlPart(17)
 }
-printHtmlPart(15)
+printHtmlPart(17)
 }
 printHtmlPart(18)
 })
-invokeTag('captureBody','sitemesh',114,[:],1)
+invokeTag('captureBody','sitemesh',97,[:],1)
 printHtmlPart(19)
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -88,7 +74,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1532234105159L
+public static final long LAST_MODIFIED = 1542537442498L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

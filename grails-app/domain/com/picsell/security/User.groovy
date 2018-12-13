@@ -77,7 +77,6 @@ class User implements Serializable {
 
 	protected void encodePassword() {
 		password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
-
 	}
 
 	static transients = ['springSecurityService']

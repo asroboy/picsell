@@ -46,7 +46,7 @@ expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, 
 printHtmlPart(12)
 expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "rejected"))
 printHtmlPart(13)
-invokeTag('set','g',113,['var':("profilePicture"),'value':(com.picsell.data.ImageFile.findByTableNameAndTableId("ProfileUser", profileUserInstance?.id))],-1)
+invokeTag('set','g',113,['var':("profilePicture"),'value':(com.picsell.data.ImageFile.findByTableNameAndTableId("User", userObject?.id))],-1)
 printHtmlPart(14)
 if(true && (profilePicture)) {
 printHtmlPart(15)
@@ -70,7 +70,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1535256443801L
+public static final long LAST_MODIFIED = 1542537013717L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

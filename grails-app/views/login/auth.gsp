@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta name="layout" content="login"/>
+    <link href="${resource(dir: 'css', file: 'button_red.css')}"
+          rel="stylesheet">
     <s2ui:title messageCode='spring.security.ui.login.title'/>
     <asset:stylesheet src='spring-security-ui-auth.css'/>
 </head>
@@ -28,7 +30,18 @@
                                 </div>
 
                                 <s2ui:form role="form" type='login' focus='username'>
+
                                     <div class="sign-in" style="padding-left: 20px; padding-right: 20px">
+                                        <g:if test='${flash.message}'>
+                                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                <div class='login_message'>${flash.message}</div>
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                        </g:if>
                                         <fieldset>
 
                                             %{--<h2><g:message code='spring.security.ui.login.signin'/></h2>--}%
@@ -48,25 +61,10 @@
                                                        size="20"/>
                                             </div>
 
-                                            %{--<div class="checkbox">--}%
-                                            %{--<label>--}%
-                                            %{--<input name="${securityConfig.rememberMe.parameter}" id="remember_me"--}%
-                                            %{--checked="checked" type="checkbox" value="Remember Me">Remember Me--}%
-                                            %{--</label>--}%
-                                            %{--</div>--}%
 
-                                            %{--<div class="checkbox">--}%
-                                            %{--<input type="checkbox" class="checkbox" name="${securityConfig.rememberMe.parameter}" id="remember_me"--}%
-                                            %{--checked="checked"/>--}%
-                                            %{--<label for='remember_me'><g:message code='spring.security.ui.login.rememberme'/></label> |--}%
-                                            %{--</div>--}%
-
-
-
-
-                                            <div style="align: center; margin-bottom: 30px">
+                                            <div style="text-align:center; align: center; margin-bottom: 30px">
                                                 <input type="submit" value="Sign In" id="loginButton_submit"
-                                                       class="btn btn-sm btn-default btn-block"
+                                                       class="center btn-block myButton"
                                                        style="background-color: red; color: white; width: 100px; margin: 0 auto;"/>
 
                                                 %{--<s2ui:submitButton class="btn btn-lg btn-default btn-block" elementId='loginButton' messageCode='spring.security.ui.login.login'/>--}%
@@ -100,10 +98,5 @@
     </div>
 </div>
 
-
-
-
-%{--</div>--}%
-%{--</div>--}%
 </body>
 </html>

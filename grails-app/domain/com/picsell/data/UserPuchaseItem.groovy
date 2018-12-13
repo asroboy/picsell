@@ -14,6 +14,7 @@ class UserPuchaseItem {
     String downloadImageToken
     int linkClicked
     Date tokenExpired
+    Billing invoice
 
     static constraints = {
         user nullable: false
@@ -23,5 +24,6 @@ class UserPuchaseItem {
         paymentMethod nullable: false
         downloadImageToken nullable: true
         tokenExpired nullable: true
+        invoice nullable: true
     }
 }

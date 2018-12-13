@@ -33,11 +33,18 @@
 
 <!-- Page Content -->
 <div class="container">
-    <!-- Portfolio Item Heading -->
-    <div class="my-4 ">
-        %{--<small>The item sub name or category</small>--}%
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="my-4 label-red">Your Account</div>
+        </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <h4>This is your account page. Set your preferences and option here</h4>
+            <hr/>
+        </div>
+    </div>
     <!-- Portfolio Item Row -->
     <div class="row">
 
@@ -92,17 +99,37 @@
                 </g:if>
                 <g:if test="${role?.role?.authority.equals("ROLE_USER")}">
                     <div class="card">
-                    <div style="margin: 5px"><a href="${createLink(controller: 'dashboard', action: 'user')}" class="btn btn-sm btn-outline-danger"
+                    <div style="margin: 5px">
+                        <a href="${createLink(controller: 'dashboard', action: 'user')}" class="myButtonGrey"
                                                 style="text-align: left;width: 100%">Profile</a></div>
 
-                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
-                                                style="text-align: left;width: 100%">Plans</a></div>
+                    <div style="margin: 5px">
+                        <a href="${createLink(controller: 'dashboard', action: 'user_plans')}"
+                           class="myButtonGrey"
+                           style="text-align: left;width: 100%">Plans</a></div>
 
-                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
-                                                style="text-align: left;width: 100%">Billing</a></div>
+                    <div style="margin: 5px">
+                        <a href="${createLink(controller: 'dashboard', action: 'billing_info')}"
+                           class="myButtonGrey"
+                           style="text-align: left;width: 100%">Billing</a></div>
 
-                    <div style="margin: 5px"><a href="#" class="btn btn-sm btn-outline-danger"
-                                                style="text-align: left;width: 100%">Preferences</a></div>
+                    <div style="margin: 5px"><a
+                            href="${createLink(controller: 'purchaseHistory', action: 'index', id: userInstance?.id)}"
+                            class="myButton"
+                            style="text-align: left;width: 100%">Purchase History</a></div>
+
+
+                    <div style="margin: 5px">
+                        <a href="${createLink(controller: 'dashboard', action: 'preferences')}"
+                           class="myButtonGrey"
+                           style="text-align: left;width: 100%">Preferences</a></div>
+
+                    <div style="margin: 5px">
+
+                        <a href="${createLink(controller: 'dashboard', action: 'upgrade_to_cotributor')}"
+                           class="myButtonGrey"
+                           style="text-align: left;width: 100%">Become Contributor</a>
+                    </div>
                     </ul>
                     </div>
                 </g:if>
@@ -112,40 +139,54 @@
 
         <div class="col-md-9">
             <div class="card">
-                <div class="label-red">
-                    Purchase History
-                </div>
-
-                <div class="row" style="margin: 20px;">
-                    <div class="col-md-12">
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <td>Item ID</td>
-                                <td>Date</td>
-                                <td>Total Amount</td>
-                                <td>Status</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <g:each in="${userPuchaseItems}" var="purchasedItem">
+                <div class="card-body">
+                    <div class="sub-part1" style="margin-bottom: 20px">Purchase History</div>
+                    <div class="row" style="margin: 20px;">
+                        <div class="col-md-12">
+                            <table class="table table-striped">
+                                <thead>
                                 <tr>
-                                    <td>${purchasedItem?.imageFile?.tableId}.${purchasedItem?.imageFile?.id}</td>
-                                    <td><g:formatDate format="yyyy-MM-dd" date="${purchasedItem?.purchaseDate}"/></td>
-                                    <td>${purchasedItem?.totalAmount} IDR</td>
-                                    <td>
-                                        <g:if test="${purchasedItem?.linkClicked > 0}">Downloaded</g:if>
-                                        <g:elseif
-                                                test="${purchasedItem?.tokenExpired?.after(new Date())}">Link expired</g:elseif>
-                                        <g:else>Active</g:else>
-                                    </td>
+                                    <td width="25%">Billing ID</td>
+                                    <td>Invoiced At</td>
+                                    <td>Total Amount</td>
+                                    <td>Billing Status</td>
+                                    %{--<td>Paid At</td>--}%
+                                    <td>Link Status</td>
                                 </tr>
-                            </g:each>
+                                </thead>
+                                <tbody>
+                                <g:each in="${userPuchaseItems}" var="purchasedItem">
+                                    <tr>
+                                        %{--<td>${purchasedItem?.imageFile?.tableId}.${purchasedItem?.imageFile?.id}</td>--}%
+                                        <td>${purchasedItem?.invoice?.invoiceNumber}</td>
+                                        <td>${purchasedItem?.invoice?.invoicedAt}</td>
+                                        <td>${purchasedItem?.invoice?.amount}</td>
+                                        <td>${purchasedItem?.invoice?.status}</td>
+                                        %{--<td>${purchasedItem?.invoice?.paidAt}</td>--}%
+                                        %{--<td><g:formatDate format="yyyy-MM-dd" date="${purchasedItem?.purchaseDate}"/></td>--}%
+                                        %{--<td><g:formatDate format="yyyy-MM-dd" date="${purchasedItem?.tokenExpired}"/></td>--}%
+                                        %{--<td>${purchasedItem?.totalAmount} IDR</td>--}%
+                                        <td>
+                                            <g:if test="${purchasedItem?.linkClicked > 0}"><font
+                                                    color="#808080"><b>Downloaded</b></font></g:if>
+                                            <g:elseif
+                                                    test="${purchasedItem?.tokenExpired?.before(new Date())}"><font
+                                                    color="red"><b>Link expired</b></font></g:elseif>
+                                            <g:else><font color="green"><b>Link Active</b></font></g:else>
+                                        </td>
+                                    </tr>
+                                </g:each>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
+                %{--<div class="label-red">--}%
+                    %{--Purchase History--}%
+                %{--</div>--}%
+
+
             </div>
 
         </div>

@@ -63,7 +63,7 @@ invokeTag('hasErrors','g',60,['bean':(itemInstance)],3)
 printHtmlPart(20)
 invokeTag('render','g',62,['template':("formAddItem")],-1)
 printHtmlPart(21)
-invokeTag('submitButton','g',73,['name':("updateItem"),'class':("update btn btn-sm btn-danger"),'value':(message(code: 'default.button.submit_now.label', default: 'Submit now'))],-1)
+invokeTag('submitButton','g',73,['name':("updateItem"),'class':("myButton"),'value':(message(code: 'default.button.submit_now.label', default: 'Submit now'))],-1)
 printHtmlPart(22)
 expressionOut.print(createLink(action: 'index'))
 printHtmlPart(23)
@@ -79,7 +79,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1534956591782L
+public static final long LAST_MODIFIED = 1542536873320L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

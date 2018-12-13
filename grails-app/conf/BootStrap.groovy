@@ -5,6 +5,7 @@ import com.picsell.data.Category
 import com.picsell.data.Item
 import com.picsell.data.ItemGroupSize
 import com.picsell.data.ItemHasCategory
+import com.picsell.data.MediaType
 import com.picsell.security.Role
 import com.picsell.security.RoleMenu
 import com.picsell.security.User
@@ -31,6 +32,7 @@ class BootStrap {
 
         //GLOBAL
         RoleMenu.findByUrl('/forgotPassword/**') ?: new RoleMenu(url: '/forgotPassword/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/picsellLogout/**') ?: new RoleMenu(url: '/picsellLogout/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/register/**') ?: new RoleMenu(url: '/register/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/home/**') ?: new RoleMenu(url: '/home/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/image/download/**') ?: new RoleMenu(url: '/image/download/**', configAttribute: 'permitAll').save()
@@ -42,6 +44,7 @@ class BootStrap {
         RoleMenu.findByUrl('/document/photoWithWatermaark/**') ?: new RoleMenu(url: '/document/photoWithWatermaark/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/document/downloadVideo/**') ?: new RoleMenu(url: '/document/downloadVideo/**', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/document/picsell_image/**') ?: new RoleMenu(url: '/document/picsell_image/**', configAttribute: 'permitAll').save()
+        RoleMenu.findByUrl('/customerMessage/saveExternal') ?: new RoleMenu(url: '/customerMessage/saveExternal', configAttribute: 'permitAll').save()
         RoleMenu.findByUrlAndConfigAttribute('/subcribtion/*', 'permitAll') ?: new RoleMenu(url: '/subcribtion/*', configAttribute: 'permitAll').save()
         RoleMenu.findByUrl('/api/**') ?: new RoleMenu(url: '/api/**', configAttribute: 'permitAll').save()
 //        RoleMenu.findByUrl('/billing/**') ?: new RoleMenu(url: '/billing/**', configAttribute: 'permitAll').save()
@@ -59,6 +62,7 @@ class BootStrap {
         //ADMIN
         RoleMenu.findByUrl('/admin/**') ?: new RoleMenu(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/requestmap/**') ?: new RoleMenu(url: '/requestmap/**', configAttribute: 'ROLE_ADMIN').save()
+        RoleMenu.findByUrl('/user/profile/**') ?: new RoleMenu(url: '/user/**', configAttribute: 'ROLE_USER,ROLE_ADMIN,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/user/**') ?: new RoleMenu(url: '/user/**', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/user/show/**') ?: new RoleMenu(url: '/user/show/**', configAttribute: 'ROLE_ADMIN, ROLE_USER').save()
         RoleMenu.findByUrl('/role/**') ?: new RoleMenu(url: '/role/**', configAttribute: 'ROLE_ADMIN').save()
@@ -81,8 +85,15 @@ class BootStrap {
 
         RoleMenu.findByUrl('/dashboard/admin') ?: new RoleMenu(url: '/dashboard/admin', configAttribute: 'ROLE_ADMIN').save()
         RoleMenu.findByUrl('/dashboard/contributor') ?: new RoleMenu(url: '/dashboard/contributor', configAttribute: 'ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/dashboard/contributor/**') ?: new RoleMenu(url: '/dashboard/contributor/**', configAttribute: 'ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/dashboard/user') ?: new RoleMenu(url: '/dashboard/user', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrl('/dashboard/upgrade_to_cotributor') ?: new RoleMenu(url: '/dashboard/upgrade_to_cotributor', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrl('/dashboard/upgrade_account/**') ?: new RoleMenu(url: '/dashboard/upgrade_account/**', configAttribute: 'ROLE_USER').save()
+        RoleMenu.findByUrl('/dashboard/user_plans') ?: new RoleMenu(url: '/dashboard/user_plans', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/dashboard/billing_info') ?: new RoleMenu(url: '/dashboard/billing_info', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/dashboard/preferences') ?: new RoleMenu(url: '/dashboard/preferences', configAttribute: 'ROLE_USER,ROLE_CONTRIBUTOR').save()
         RoleMenu.findByUrl('/dashboard/contributor_earnings/**') ?: new RoleMenu(url: '/dashboard/contributor_earnings/**', configAttribute: 'ROLE_CONTRIBUTOR').save()
+        RoleMenu.findByUrl('/dashboard/portfolio/**') ?: new RoleMenu(url: '/dashboard/portfolio/**', configAttribute: 'ROLE_CONTRIBUTOR').save()
 
 
         def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save(flush: true)
@@ -106,11 +117,18 @@ class BootStrap {
             it.clear()
         }
 
-        def environtment = Category.findByName('Environment') ?: new Category(name: 'Environment').save()
-        def building = Category.findByName('Building') ?: new Category(name: 'Building').save()
-        def transport = Category.findByName('Transport') ?: new Category(name: 'Transport').save()
-        def outfit = Category.findByName('Outfit') ?: new Category(name: 'Outfit').save()
-        def lifestyle = Category.findByName('Lifestyle') ?: new Category(name: 'Lifestyle').save()
+        Category.findByName('Environment') ?: new Category(name: 'Environment').save()
+        Category.findByName('Building') ?: new Category(name: 'Building').save()
+        Category.findByName('Transport') ?: new Category(name: 'Transport').save()
+        Category.findByName('Outfit') ?: new Category(name: 'Outfit').save()
+        Category.findByName('Lifestyle') ?: new Category(name: 'Lifestyle').save()
+
+        def mtImages = MediaType.findByName("Images") ?: new MediaType(name: 'Images').save(flush: true)
+        MediaType.findByName("Illustration") ?: new MediaType(name: 'Illustration', parent: mtImages).save(flush: true)
+        MediaType.findByName("Photos") ?: new MediaType(name: 'Photos', parent: mtImages).save(flush: true)
+        MediaType.findByName("Footages") ?: new MediaType(name: 'Footages').save(flush: true)
+        MediaType.findByName("After Effect") ?: new MediaType(name: 'After Effect').save(flush: true)
+        MediaType.findByName("Photoshop PSD") ?: new MediaType(name: 'Photoshop PSD').save(flush: true)
 
         //Account
         Account.findByName('Subscription 1') ?: new Account(maxTeamUser: 1, name: 'Individual 1', type: 'Individual', lisence: 'Monthly', maxImages: 10, price: 10000, inCurrency: 'IDR', unlimitedImages: false, allowMoreUser: false).save(flush: true)

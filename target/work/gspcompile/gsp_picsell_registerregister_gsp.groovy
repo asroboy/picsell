@@ -16,86 +16,88 @@ createTagBody(1, {->
 printHtmlPart(1)
 invokeTag('captureMeta','sitemesh',4,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':("login")],-1)
 printHtmlPart(2)
-})
-invokeTag('captureHead','sitemesh',5,[:],1)
+expressionOut.print(resource(dir: 'css', file: 'button_red.css'))
 printHtmlPart(3)
-createTagBody(1, {->
+})
+invokeTag('captureHead','sitemesh',6,[:],1)
 printHtmlPart(4)
-expressionOut.print(resource(dir: 'images/logo', file: 'logo_small.png'))
+createTagBody(1, {->
 printHtmlPart(5)
-if(true && (emailSent)) {
-}
-else {
+expressionOut.print(resource(dir: 'images/logo', file: 'logo_small.png'))
 printHtmlPart(6)
+if(true && (emailSent)) {
 }
+else {
 printHtmlPart(7)
+}
+printHtmlPart(8)
 createTagBody(2, {->
-printHtmlPart(8)
-createTagBody(3, {->
 printHtmlPart(9)
-if(true && (emailSent)) {
+createTagBody(3, {->
 printHtmlPart(10)
-invokeTag('message','g',43,['code':("spring.security.ui.register.sent")],-1)
+if(true && (emailSent)) {
 printHtmlPart(11)
-expressionOut.print(createLink(controller: 'api', action: 'createProfile'))
+invokeTag('message','g',44,['code':("spring.security.ui.register.sent")],-1)
 printHtmlPart(12)
-expressionOut.print(first_name)
+expressionOut.print(createLink(controller: 'api', action: 'createProfile'))
 printHtmlPart(13)
-expressionOut.print(last_name)
+expressionOut.print(first_name)
 printHtmlPart(14)
-expressionOut.print(user_id)
+expressionOut.print(last_name)
 printHtmlPart(15)
-expressionOut.print(new java.util.Date().getTime())
-printHtmlPart(16)
-expressionOut.print(createLink(controller: 'api', action: 'setUserRole'))
-printHtmlPart(17)
 expressionOut.print(user_id)
+printHtmlPart(16)
+expressionOut.print(new java.util.Date().getTime())
+printHtmlPart(17)
+expressionOut.print(createLink(controller: 'api', action: 'setUserRole'))
 printHtmlPart(18)
-expressionOut.print(role)
+expressionOut.print(user_id)
 printHtmlPart(19)
-expressionOut.print(activateUrl)
+expressionOut.print(role)
 printHtmlPart(20)
+expressionOut.print(activateUrl)
+printHtmlPart(21)
 }
 else {
-printHtmlPart(21)
-expressionOut.print(registerCommand?.firstName)
 printHtmlPart(22)
-expressionOut.print(registerCommand?.lastName)
+expressionOut.print(registerCommand?.firstName)
 printHtmlPart(23)
-invokeTag('textFieldRow','s2ui',138,['name':("username"),'size':("40"),'labelCodeDefault':("Username"),'class':("form-control"),'required':("")],-1)
+expressionOut.print(registerCommand?.lastName)
 printHtmlPart(24)
-invokeTag('textFieldRow','s2ui',148,['name':("email"),'size':("40"),'labelCodeDefault':("E-mail"),'class':("form-control"),'required':("")],-1)
+invokeTag('textFieldRow','s2ui',140,['name':("username"),'size':("40"),'labelCodeDefault':("Username"),'class':("form-control"),'required':("")],-1)
 printHtmlPart(25)
-invokeTag('passwordFieldRow','s2ui',161,['name':("password"),'size':("40"),'labelCodeDefault':("Password"),'class':("form-control"),'required':("")],-1)
+invokeTag('textFieldRow','s2ui',151,['name':("email"),'size':("40"),'labelCodeDefault':("E-mail"),'class':("form-control"),'required':("")],-1)
 printHtmlPart(26)
-invokeTag('passwordFieldRow','s2ui',178,['name':("password2"),'size':("40"),'labelCodeDefault':("Re-confirm password"),'class':("form-control"),'required':("")],-1)
+invokeTag('passwordFieldRow','s2ui',163,['name':("password"),'size':("40"),'labelCodeDefault':("Password"),'class':("form-control"),'required':("")],-1)
 printHtmlPart(27)
-expressionOut.print(createLink(controller: 'home', action: 'tos'))
+invokeTag('passwordFieldRow','s2ui',180,['name':("password2"),'size':("40"),'labelCodeDefault':("Retype password&nbsp&nbsp&nbsp&nbsp"),'class':("form-control"),'required':("")],-1)
 printHtmlPart(28)
-}
-printHtmlPart(8)
-})
-invokeTag('form','s2ui',220,['beanName':("registerCommand")],3)
-printHtmlPart(7)
-})
-invokeTag('formContainer','s2ui',220,['type':("register"),'focus':("username"),'width':("100%")],2)
+expressionOut.print(createLink(controller: 'home', action: 'tos'))
 printHtmlPart(29)
+}
+printHtmlPart(9)
+})
+invokeTag('form','s2ui',223,['beanName':("registerCommand")],3)
+printHtmlPart(30)
+})
+invokeTag('formContainer','s2ui',223,['type':("register"),'focus':("username"),'width':("100%")],2)
+printHtmlPart(31)
 if(true && (emailSent)) {
 }
 else {
-printHtmlPart(30)
-}
-printHtmlPart(31)
-})
-invokeTag('captureBody','sitemesh',244,[:],1)
 printHtmlPart(32)
+}
+printHtmlPart(33)
+})
+invokeTag('captureBody','sitemesh',245,[:],1)
+printHtmlPart(34)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1537465925808L
+public static final long LAST_MODIFIED = 1542538768552L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

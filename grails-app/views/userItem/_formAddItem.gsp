@@ -7,7 +7,7 @@
         <g:message code="item.name.label" default="Name"/>
 
     </label>
-    <g:textField name="name" value="${itemInstance?.name}" class="form-control"/>
+    <g:textField name="name" value="${itemInstance?.name}" class="form-control" required=""/>
 
 </div>
 
@@ -49,7 +49,7 @@
     </label>
     <g:select name="mediaType" from="${com.picsell.data.MediaType.list()}" optionKey="id" optionValue="name"
               value="${itemInstance?.mediaType?.id}" noSelection="['': '']"
-              class="form-control"/>
+              class="form-control" required=""/>
 
 </div>
 
@@ -60,7 +60,7 @@
     </label>
     <g:select name="category" from="${com.picsell.data.Category.list()}" optionKey="id" optionValue="name"
               value="${itemInstance?.category?.id}" noSelection="['': '']"
-              class="form-control"/>
+              class="form-control" required=""/>
 
 </div>
 

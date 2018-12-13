@@ -75,9 +75,9 @@
 
 
                         <fieldset class="buttons">
-                            <g:submitButton name="updateItem" class="update btn btn-sm btn-danger"
+                            <g:submitButton name="updateItem" class="myButton"
                                             value="${message(code: 'default.button.submit_now.label', default: 'Submit now')}"/>
-                            <a href="${createLink(action: 'index')}" class="btn btn-sm btn-danger"
+                            <a href="${createLink(action: 'index')}" class="myButtonGrey"
                                style="text-align: left">Cancel</a>
                         </fieldset>
 

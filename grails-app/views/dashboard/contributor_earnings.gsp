@@ -34,7 +34,7 @@
                     |
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portofolio</a>
+                    <a class="nav-link" href="${createLink(controller: 'dashboard', action: 'portfolio', id: userObject?.id)}">Portofolio</a>
                 </li>
                 <li class="nav-item align-self-center">
                     |

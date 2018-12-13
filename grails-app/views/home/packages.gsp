@@ -118,13 +118,13 @@
 
                             </table>
                             <sec:ifLoggedIn>
-                                <button class="btn btn-sm btn-default btn-block"
-                                        style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
+                                <button class="myButton"
+                                        style="background-color: #d00006; color: white; width: 120px; margin-top: 15px"
                                         onclick="subscribe(getPackageValue('individual_subs'))">Subscribe</button>
                             </sec:ifLoggedIn>
                             <sec:ifNotLoggedIn>
-                                <button class="btn btn-sm btn-default btn-block"
-                                        style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
+                                <button class="myButton"
+                                        style="background-color: #d00006; color: white; width: 120px; margin-top: 15px"
                                         onclick="register()">Subscribe</button>
                             </sec:ifNotLoggedIn>
 
@@ -185,13 +185,13 @@
                             </table>
 
                             <sec:ifLoggedIn>
-                                <button class="btn btn-sm btn-default btn-block"
-                                        style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
+                                <button class="myButton"
+                                        style="background-color: #d00006; color: white; width: 120px; margin-top: 15px"
                                         onclick="subscribe(getPackageValue('multiple_sub'))">Subscribe</button>
                             </sec:ifLoggedIn>
                             <sec:ifNotLoggedIn>
-                                <button class="btn btn-sm btn-default btn-block"
-                                        style="background-color: #d00006; color: white; width: 100px; margin-top: 15px"
+                                <button class="myButton"
+                                        style="background-color: #d00006; color: white; width: 120px; margin-top: 15px"
                                         onclick="register()">Subscribe</button>
                             </sec:ifNotLoggedIn>
 
@@ -286,7 +286,7 @@
                         <div class="col-md-3 col-add-sel">
                             <div class="plans-end plans-bg-red"><a
                                     href="${createLink(controller: 'home', action: 'contactUs')}" class="align-middle"
-                                    style="color: white"><b>GET IN TOUCH WITH US NOW</b>
+                                    style="color: white; font-size: 18px"><b>GET IN TOUCH WITH US NOW</b>
                             </a></div>
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                 Please select one of available packages
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                <button type="button" class="myButton" data-dismiss="modal">OK</button>
                 %{--<button type="button" class="btn btn-primary">Save changes</button>--}%
             </div>
         </div>

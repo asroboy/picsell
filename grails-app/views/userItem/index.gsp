@@ -30,25 +30,25 @@
         <div class="col-lg-3">
             <div class="card">
                 <div style="margin: 5px">
-                    <a href="${createLink(action: 'addItem')}" class="btn btn-sm btn-outline-info"
+                    <a href="${createLink(action: 'addItem')}" class="myButtonGrey"
                        style="text-align: left; width: 100%">Upload item</a>
                 </div>
 
                 <div style="margin: 5px">
                     <a href="${createLink(action: 'index', params: [status: 'approved'])}"
-                       class="btn btn-sm btn-outline-success"
+                       class="myButtonGrey"
                        style="text-align: left; width: 100%">Approved items</a>
                 </div>
 
                 <div style="margin: 5px">
                     <a href="${createLink(action: 'index', params: [status: 'rejected'])}"
-                       class="btn btn-sm btn-outline-danger"
+                       class="myButtonGrey"
                        style="text-align: left;  width: 100%">Rejected items</a>
                 </div>
 
                 <div style="margin: 5px">
                     <a href="${createLink(action: 'index', params: [status: 'pending'])}"
-                       class="btn btn-sm btn-outline-warning"
+                       class="myButtonGrey"
                        style="text-align: left;  width: 100%">Pending items</a>
                 </div>
 
@@ -57,8 +57,7 @@
             <div style="margin-bottom: 15px; margin-top: 50px; width: 100%">
                 <div style="margin: 5px">
                     <a href="${createLink(controller: 'dashboard', action: 'contributor_earnings', id: userObject?.id)}"
-                       class="btn btn-sm btn-danger"
-                       style="text-align: left;  width: 100%">Earnings</a>
+                       class="btn myButton" style="text-align: center;  width: 100%">Earnings</a>
                 </div>
             </div>
         </div>
@@ -79,25 +78,27 @@
                                 <h5 class="card-title">
                                     <a href="${createLink(controller: 'userItem', action: 'itemDetail', id: item?.id)}">${item?.name}</a>
                                 </h5>
+                                <div><i>${item?.description}</i></div>
                                 <hr style="color: red; height: 1.5px"/>
                                 %{--<div>ID: ${item?.id}</div>--}%
                                 <table>
+                                    %{--<tr>--}%
+                                    %{--<td valign="top">Desc.</td>--}%
+                                    %{--<td valign="top">:</td>--}%
+                                    %{--<td valign="top" colspan="3"><p class="text-justify"><i>${item?.description}</i>--}%
+                                    %{--</p></td>--}%
+                                    %{--</tr>--}%
                                     <tr>
-                                        <td valign="top" style="width: 80px">Up Date</td>
+                                        <td valign="top" style="width: 80px">Created</td>
                                         <td valign="top">:</td>
                                         <td valign="top"><g:formatDate format="dd MMM yyyy"
                                                                        date="${item?.createdDate}"/></td>
                                     </tr>
-                                    <tr>
-                                        <td valign="top">Price</td>
-                                        <td valign="top">:</td>
-                                        <td valign="top"><strong>${item?.price} ${item?.currency}</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top">Desc.</td>
-                                        <td valign="top">:</td>
-                                        <td valign="top">${item?.description}</td>
-                                    </tr>
+                                    %{--<tr>--}%
+                                    %{--<td valign="top">Price</td>--}%
+                                    %{--<td valign="top">:</td>--}%
+                                    %{--<td valign="top"><strong>${item?.price} ${item?.currency}</strong></td>--}%
+                                    %{--</tr>--}%
                                     <tr>
                                         <td valign="top">Tags</td>
                                         <td valign="top">:</td>
@@ -123,7 +124,6 @@
                                             <td></td>
                                             <td></td>
                                             <td>
-
                                                 <p class="font-italic" style="color: darkgray; font-size: 11pt">
                                                     <g:formatDate format="dd MMM yyyy" date="${item?.statusCgDate}"/>
                                                 </p>
@@ -132,7 +132,19 @@
                                     </g:if>
                                     <g:if test="${item?.statusInfo}">
                                         <tr>
-                                            <td colspan="3">${item?.statusInfo}</td>
+                                            <td colspan="3">
+                                                <g:if test="${item?.status.equals("approved")}">
+                                                    <div class="alert alert-success show" style="margin-bottom: 0px">
+                                                        ${item?.statusInfo}
+                                                    </div>
+                                                </g:if>
+                                                <g:else>
+                                                    <div class="alert alert-danger show" style="margin-bottom: 0px">
+                                                        ${item?.statusInfo}
+                                                    </div>
+                                                </g:else>
+
+                                            </td>
                                         </tr>
                                     </g:if>
                                 </table>

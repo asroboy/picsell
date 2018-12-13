@@ -36,44 +36,46 @@ createTagBody(1, {->
 printHtmlPart(7)
 expressionOut.print(createLink(controller: 'dashboard', action: 'contributor_earnings', id: userObject?.id))
 printHtmlPart(8)
-expressionOut.print(createLink(controller: 'userItem', action: 'index'))
+expressionOut.print(createLink(controller: 'dashboard', action: 'portfolio', id: userObject?.id))
 printHtmlPart(9)
-expressionOut.print(com.picsell.data.Item.countByUserOwner(userObject))
+expressionOut.print(createLink(controller: 'userItem', action: 'index'))
 printHtmlPart(10)
-expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "approved"))
+expressionOut.print(com.picsell.data.Item.countByUserOwner(userObject))
 printHtmlPart(11)
-expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "pending"))
+expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "approved"))
 printHtmlPart(12)
-expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "rejected"))
+expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "pending"))
 printHtmlPart(13)
-expressionOut.print(userPurchaseItems*.totalAmount.sum()?:0)
+expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(userObject, "rejected"))
 printHtmlPart(14)
-for( purchasedItem in (userPurchaseItems) ) {
+expressionOut.print(userPurchaseItems*.totalAmount.sum()?:0)
 printHtmlPart(15)
-expressionOut.print(createLink(controller: 'home', action: 'itemDetail', id: purchasedItem?.imageFile?.tableId))
+for( purchasedItem in (userPurchaseItems) ) {
 printHtmlPart(16)
-expressionOut.print(purchasedItem?.imageFile?.tableId)
+expressionOut.print(createLink(controller: 'home', action: 'itemDetail', id: purchasedItem?.imageFile?.tableId))
 printHtmlPart(17)
-expressionOut.print(purchasedItem?.imageFile?.id)
+expressionOut.print(purchasedItem?.imageFile?.tableId)
 printHtmlPart(18)
-invokeTag('formatDate','g',124,['format':("yyyy-MM-dd"),'date':(purchasedItem?.purchaseDate)],-1)
+expressionOut.print(purchasedItem?.imageFile?.id)
 printHtmlPart(19)
-expressionOut.print(purchasedItem?.totalAmount?:0)
+invokeTag('formatDate','g',124,['format':("yyyy-MM-dd"),'date':(purchasedItem?.purchaseDate)],-1)
 printHtmlPart(20)
-expressionOut.print(purchasedItem?.imageFile?.groupSize?.groupLabel)
+expressionOut.print(purchasedItem?.totalAmount?:0)
 printHtmlPart(21)
-}
+expressionOut.print(purchasedItem?.imageFile?.groupSize?.groupLabel)
 printHtmlPart(22)
+}
+printHtmlPart(23)
 })
 invokeTag('captureBody','sitemesh',135,[:],1)
-printHtmlPart(23)
+printHtmlPart(24)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1535721313973L
+public static final long LAST_MODIFIED = 1540608249658L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

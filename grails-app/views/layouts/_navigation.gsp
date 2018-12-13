@@ -1,5 +1,5 @@
+<%@ page import="com.picsell.data.MediaType" %>
 <!-- Navigation -->
-
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light" style="background-color: #ffffff;">
     <a class="navbar-brand" href="${createLink(controller: 'home', action: 'main')}">
@@ -49,10 +49,16 @@
                             <a class="dropdown-item"
                                href="${createLink(controller: 'home', action: 'main', params: [media: it.name, cat: params.cat])}">${it.name}</a>
                             <ul style="padding-left:0rem;">
-                                <g:each in="${it.child}">
+                                <% ArrayList<String> childMt = new ArrayList<>()
+                                for (int i = 0; i < it.child.size(); i++){
+                                    childMt.add(it.child[i].name)
+                                }
+                                Collections.sort(childMt)
+                                %>
+                                <g:each in="${childMt}" var="child" status="i">
                                     <li style="list-style-type: none;">
                                         <a class="dropdown-item" style="padding-left: 2rem"
-                                           href="${createLink(controller: 'home', action: 'main', params: [media: it.name, cat: params.cat])}">${it.name}</a>
+                                           href="${createLink(controller: 'home', action: 'main', params: [media: child, cat: params.cat])}">${child}</a>
                                     </li>
                                 </g:each>
                             </ul>
@@ -62,7 +68,7 @@
 
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item"
-                       href="${createLink(controller: 'home', action: 'main', params: [media: "All media", cat: params.cat])}">All media</a>
+                       href="${createLink(controller: 'home', action: 'main', params: [media: "All Media", cat: params.cat])}">All Media</a>
                 </div>
             </li>
 
@@ -84,7 +90,7 @@
 
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item"
-                       href="${createLink(controller: 'home', action: 'main', params: [media: params.media, cat: "All category"])}">All categories</a>
+                       href="${createLink(controller: 'home', action: 'main', params: [media: params.media, cat: "All Categories"])}">All Categories</a>
                 </div>
             </li>
 
@@ -111,7 +117,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="${createLink(controller: 'register', action: 'register')}">Sign up</a>
+                    <a class="nav-link" href="${createLink(controller: 'register', action: 'register')}">Sign Up</a>
                 </li>
             </sec:ifNotLoggedIn>
             <sec:ifLoggedIn>
@@ -123,7 +129,7 @@
                 </li>
                 <li class="nav-item">
                     <g:set var="profilePicture_"
-                           value="${com.picsell.data.ImageFile.findByTableNameAndTableId("ProfileUser", profileUser?.id)}"></g:set>
+                           value="${com.picsell.data.ImageFile.findByTableNameAndTableId("User", userObject?.id)}"></g:set>
                     <g:if test="${profilePicture_}">
                         <img class="profile-pic"
                              src="${createLink(controller: 'image', action: 'download', id: profilePicture_?.id)}"
@@ -155,31 +161,45 @@
                             <g:if test="${userRole?.role?.authority.equals("ROLE_CONTRIBUTOR")}">
                                 <a class="dropdown-item"
                                    href="${createLink(controller: 'dashboard', action: 'contributor')}">Dashboard</a>
+
+                                <div class="dropdown-divider" style="border-color:red;"></div>
+                                %{--<g:if test="${profileUser}">--}%
+                                    <a class="dropdown-item"
+                                       href="${createLink(controller: 'profileUser', action: 'profile', id: userObject?.id)}">Profile</a>
+
+                                %{--</g:if>--}%
+                                %{--<g:else>--}%
+                                    %{--<a class="dropdown-item"--}%
+                                       %{--href="${createLink(controller: 'profileUser', action: 'profile', params: [uid: userObject?.id])}">Profile</a>--}%
+
+                                %{--</g:else>--}%
                             </g:if>
                             <g:if test="${userRole?.role?.authority.equals("ROLE_ADMIN")}">
                                 <a class="dropdown-item"
                                    href="${createLink(controller: 'dashboard', action: 'admin')}">Dashboard</a>
+
+                                <div class="dropdown-divider" style="border-color:red;"></div>
+                                %{--<g:if test="${profileUser}">--}%
+                                    %{--<a class="dropdown-item"--}%
+                                       %{--href="${createLink(controller: 'profileUser', action: 'profile', id: profileUser?.id)}">Profile</a>--}%
+
+                                %{--</g:if>--}%
+                                %{--<g:else>--}%
+                                    <a class="dropdown-item"
+                                       href="${createLink(controller: 'profileUser', action: 'profile', params: [id: userObject?.id])}">Profile</a>
+
+                                %{--</g:else>--}%
                             </g:if>
                             <g:if test="${userRole?.role?.authority.equals("ROLE_USER")}">
                             %{--params: [id: profileUser?.id]--}%
                                 <a class="dropdown-item"
-                                   href="${createLink(controller: 'dashboard', action: 'user')}">Dashboard</a>
+                                   href="${createLink(controller: 'dashboard', action: 'user')}">Profile</a>
 
                             </g:if>
                         </g:each>
 
 
-                        <div class="dropdown-divider" style="border-color:red;"></div>
-                        <g:if test="${profileUser}">
-                            <a class="dropdown-item"
-                               href="${createLink(controller: 'profileUser', action: 'profile', id: profileUser?.id)}">Profile</a>
 
-                        </g:if>
-                        <g:else>
-                            <a class="dropdown-item"
-                               href="${createLink(controller: 'profileUser', action: 'profile', params: [uid: userObject?.id])}">Profile</a>
-
-                        </g:else>
 
                         <g:each in="${userRoles}" var="userRole">
                             <g:if test="${userRole?.role?.authority.equals("ROLE_CONTRIBUTOR")}">
@@ -226,13 +246,13 @@
     <ul class="navbar-nav ml-auto" style="flex-direction: row">
         <li class="nav-item" style="margin-left: 10px">
             <a class="linkred"
-               href="${createLink(controller: 'home', action: 'main', params: [top: 1])}">Show top search</a>
+               href="${createLink(controller: 'home', action: 'main', params: [top: 1])}">Show Top Search</a>
         </li>
         <li class="nav-item" style="margin-left: 10px">
-            <a class="linkred" href="${createLink(controller: 'home', action: 'packages')}">Package and pricing</a>
+            <a class="linkred" href="${createLink(controller: 'home', action: 'packages')}">Package and Pricing</a>
         </li>
         <li class="nav-item" style="margin-left: 10px">
-            <a class="linkred" href="${createLink(controller: 'home', action: 'hotItems')}">Hot item</a>
+            <a class="linkred" href="${createLink(controller: 'home', action: 'hotItems')}">Hot Items</a>
         </li>
     </ul>
 

@@ -13,19 +13,23 @@ Writer expressionOut = getExpressionOut()
 registerSitemeshPreprocessMode()
 invokeTag('set','g',1,['var':("big_banner"),'value':(com.picsell.data.Banner.findByType("big"))],-1)
 printHtmlPart(0)
-invokeTag('set','g',3,['var':("video_resource"),'value':(createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(big_banner?.id, big_banner.class.simpleName)?.id))],-1)
+if(true && (big_banner?.isActive)) {
 printHtmlPart(1)
-expressionOut.print(video_resource)
+invokeTag('set','g',4,['var':("video_resource"),'value':(createLink(controller: 'document', action: 'download', id: com.picsell.data.ImageFile.findByTableIdAndTableName(big_banner?.id, big_banner.class.simpleName)?.id))],-1)
 printHtmlPart(2)
-expressionOut.print(big_banner?.description)
+expressionOut.print(video_resource)
 printHtmlPart(3)
+expressionOut.print(big_banner?.description)
+printHtmlPart(4)
+}
+printHtmlPart(0)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1534424054262L
+public static final long LAST_MODIFIED = 1540603506550L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

@@ -5,7 +5,7 @@ class MediaType {
     String name
 
     static hasMany = [child: MediaType]
-    static  belongsTo = [parent: MediaType]
+    static belongsTo = [parent: MediaType]
 
     static constraints = {
         name nullable: false
@@ -13,6 +13,6 @@ class MediaType {
     }
 
     static mapping = {
-        child cascade: false
+        child cascade: false, lazy: false
     }
 }

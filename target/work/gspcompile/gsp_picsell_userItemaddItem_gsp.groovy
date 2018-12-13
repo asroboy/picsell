@@ -59,7 +59,7 @@ invokeTag('render','g',51,['template':("formAddImageItem")],-1)
 printHtmlPart(18)
 invokeTag('render','g',61,['template':("formAddItem")],-1)
 printHtmlPart(19)
-invokeTag('submitButton','g',65,['name':("create"),'class':("save btn btn-sm btn-danger"),'value':(message(code: 'default.button.submit_now.label', default: 'Submit now'))],-1)
+invokeTag('submitButton','g',65,['name':("create"),'class':("myButton"),'value':(message(code: 'default.button.submit_now.label', default: 'Submit now'))],-1)
 printHtmlPart(20)
 expressionOut.print(createLink(action: 'index'))
 printHtmlPart(21)
@@ -67,7 +67,7 @@ printHtmlPart(21)
 invokeTag('uploadForm','g',67,['url':([action: 'mSaveItem'])],2)
 printHtmlPart(22)
 })
-invokeTag('captureBody','sitemesh',197,[:],1)
+invokeTag('captureBody','sitemesh',227,[:],1)
 printHtmlPart(23)
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -75,7 +75,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1534956782917L
+public static final long LAST_MODIFIED = 1542536818859L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

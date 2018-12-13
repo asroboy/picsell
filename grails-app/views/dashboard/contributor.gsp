@@ -110,7 +110,7 @@
                                     <div class="col-sm-4 text-center">
                                         <div style="margin-bottom: 10px">
                                             <g:set var="profilePicture"
-                                                   value="${com.picsell.data.ImageFile.findByTableNameAndTableId("ProfileUser", profileUserInstance?.id)}"></g:set>
+                                                   value="${com.picsell.data.ImageFile.findByTableNameAndTableId("User", userObject?.id)}"></g:set>
                                             <g:if test="${profilePicture}">
                                                 <img class="profile-pic"
                                                      src="${createLink(controller: 'image', action: 'download', id: profilePicture?.id)}"
@@ -148,7 +148,7 @@
                                     <div class="col-sm-5 text-center">
                                         <div style="margin-bottom: 15px">Unpaid Earning</div>
                                         <h6 class="linkred"><strong>IDR 500.000</strong></h6>
-                                        <a href="#" class="btn btn-md btn-danger">Claim now!</a>
+                                        <a href="#" class="myButton" style="font-size: 12px">Claim now!</a>
                                     </div>
 
                                     <div class="col-sm-7">

@@ -45,7 +45,7 @@ expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(profileUserI
 printHtmlPart(11)
 expressionOut.print(com.picsell.data.Item.countByUserOwnerAndStatus(profileUserInstance?.user, "rejected"))
 printHtmlPart(12)
-invokeTag('set','g',66,['var':("bankAccount"),'value':(com.picsell.data.BankAccount.findByUser(profileUserInstance?.user))],-1)
+invokeTag('set','g',74,['var':("bankAccount"),'value':(com.picsell.data.BankAccount.findByUser(profileUserInstance?.user))],-1)
 printHtmlPart(13)
 if(true && (bankAccount)) {
 printHtmlPart(14)
@@ -72,46 +72,58 @@ if(true && (role?.role?.authority.equals("ROLE_USER"))) {
 printHtmlPart(23)
 expressionOut.print(createLink(controller: 'dashboard', action: 'user'))
 printHtmlPart(24)
-}
+expressionOut.print(createLink(controller: 'dashboard', action: 'user_plans'))
 printHtmlPart(25)
+expressionOut.print(createLink(controller: 'dashboard', action: 'billing_info'))
+printHtmlPart(26)
+expressionOut.print(createLink(controller: 'purchaseHistory', action: 'index', id: userObject?.id))
+printHtmlPart(27)
+expressionOut.print(createLink(controller: 'dashboard', action: 'preferences'))
+printHtmlPart(28)
+expressionOut.print(createLink(controller: 'dashboard', action: 'upgrade_to_cotributor'))
+printHtmlPart(29)
+}
+printHtmlPart(30)
 i++
 }
 }
-printHtmlPart(26)
-for( purchasedItem in (userPuchaseItems) ) {
-printHtmlPart(27)
-expressionOut.print(purchasedItem?.imageFile?.tableId)
-printHtmlPart(28)
-expressionOut.print(purchasedItem?.imageFile?.id)
-printHtmlPart(29)
-invokeTag('formatDate','g',133,['format':("yyyy-MM-dd"),'date':(purchasedItem?.purchaseDate)],-1)
-printHtmlPart(29)
-expressionOut.print(purchasedItem?.totalAmount)
-printHtmlPart(30)
-if(true && (purchasedItem?.linkClicked > 0)) {
 printHtmlPart(31)
-}
-else if(true && (purchasedItem?.tokenExpired?.after(new Date()))) {
+for( purchasedItem in (userPuchaseItems) ) {
 printHtmlPart(32)
+expressionOut.print(purchasedItem?.imageFile?.tableId)
+printHtmlPart(33)
+expressionOut.print(purchasedItem?.imageFile?.id)
+printHtmlPart(34)
+invokeTag('formatDate','g',160,['format':("yyyy-MM-dd"),'date':(purchasedItem?.purchaseDate)],-1)
+printHtmlPart(34)
+invokeTag('formatDate','g',161,['format':("yyyy-MM-dd"),'date':(purchasedItem?.tokenExpired)],-1)
+printHtmlPart(34)
+expressionOut.print(purchasedItem?.totalAmount)
+printHtmlPart(35)
+if(true && (purchasedItem?.linkClicked > 0)) {
+printHtmlPart(36)
+}
+else if(true && (purchasedItem?.tokenExpired?.before(new Date()))) {
+printHtmlPart(37)
 }
 else {
-printHtmlPart(33)
+printHtmlPart(38)
 }
-printHtmlPart(34)
+printHtmlPart(39)
 }
-printHtmlPart(35)
+printHtmlPart(40)
 expressionOut.print(createLink(controller: 'userItem', action: 'index'))
-printHtmlPart(36)
+printHtmlPart(41)
 })
-invokeTag('captureBody','sitemesh',168,[:],1)
-printHtmlPart(37)
+invokeTag('captureBody','sitemesh',202,[:],1)
+printHtmlPart(42)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1535255430257L
+public static final long LAST_MODIFIED = 1542541355806L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

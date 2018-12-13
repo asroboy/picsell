@@ -14,45 +14,45 @@ registerSitemeshPreprocessMode()
 printHtmlPart(0)
 createTagBody(1, {->
 printHtmlPart(1)
-invokeTag('captureMeta','sitemesh',3,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':(layoutRegister)],-1)
-printHtmlPart(1)
-invokeTag('title','s2ui',4,['messageCode':("spring.security.ui.resetPassword.title")],-1)
+invokeTag('captureMeta','sitemesh',3,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':("login")],-1)
 printHtmlPart(2)
-})
-invokeTag('captureHead','sitemesh',5,[:],1)
-printHtmlPart(2)
-createTagBody(1, {->
-printHtmlPart(1)
-createTagBody(2, {->
+expressionOut.print(resource(dir: 'css', file: 'button_red.css'))
 printHtmlPart(3)
-createTagBody(3, {->
+})
+invokeTag('captureHead','sitemesh',6,[:],1)
 printHtmlPart(4)
-invokeTag('hiddenField','g',9,['name':("t"),'value':(token)],-1)
+createTagBody(1, {->
 printHtmlPart(5)
-invokeTag('message','g',12,['code':("spring.security.ui.resetPassword.description")],-1)
+expressionOut.print(resource(dir: 'images/logo', file: 'logo_small.png'))
 printHtmlPart(6)
-invokeTag('passwordFieldRow','s2ui',14,['name':("password"),'labelCodeDefault':("Password")],-1)
+createTagBody(2, {->
 printHtmlPart(7)
-invokeTag('passwordFieldRow','s2ui',15,['name':("password2"),'labelCodeDefault':("Password (again)")],-1)
+createTagBody(3, {->
 printHtmlPart(8)
-invokeTag('submitButton','s2ui',17,['elementId':("submit"),'messageCode':("spring.security.ui.resetPassword.submit")],-1)
+invokeTag('hiddenField','g',31,['name':("t"),'value':(token)],-1)
 printHtmlPart(9)
-})
-invokeTag('form','s2ui',19,['beanName':("resetPasswordCommand")],3)
-printHtmlPart(1)
-})
-invokeTag('formContainer','s2ui',20,['type':("resetPassword"),'focus':("password"),'width':("475px")],2)
-printHtmlPart(2)
-})
-invokeTag('captureBody','sitemesh',21,[:],1)
+invokeTag('message','g',32,['code':("spring.security.ui.resetPassword.description")],-1)
 printHtmlPart(10)
+invokeTag('passwordFieldRow','s2ui',43,['name':("password"),'size':("40"),'labelCodeDefault':("Password"),'class':("form-control"),'required':("")],-1)
+printHtmlPart(11)
+invokeTag('passwordFieldRow','s2ui',51,['name':("password2"),'size':("40"),'labelCodeDefault':("Password (again)"),'class':("form-control"),'required':("")],-1)
+printHtmlPart(12)
+})
+invokeTag('form','s2ui',56,['beanName':("resetPasswordCommand")],3)
+printHtmlPart(13)
+})
+invokeTag('formContainer','s2ui',56,['type':("resetPassword"),'focus':("password"),'width':("100%"),'style':("text-align: center")],2)
+printHtmlPart(14)
+})
+invokeTag('captureBody','sitemesh',58,[:],1)
+printHtmlPart(15)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1524965736000L
+public static final long LAST_MODIFIED = 1542537984080L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

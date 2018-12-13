@@ -139,7 +139,8 @@ class DocumentController {
                     outputStream.close()
                     fileInputStream.close()
                 } catch (IOException e) {
-                    e.printStackTrace()
+                    print(e.getMessage())
+//                    e.printStackTrace()
                 }
 
             }
@@ -208,7 +209,7 @@ class DocumentController {
 
 
         String path = grailsApplication.config.uploadFolder + item?.userOwner?.id + "/tumbnails/" + documentInstance?.namaFile
-        print(path)
+        print("Path : " + path)
         BufferedImage bimg = ImageIO.read(new File(path));
         int width = bimg.getWidth();
         int height = bimg.getHeight();

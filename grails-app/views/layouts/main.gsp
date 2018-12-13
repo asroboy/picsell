@@ -45,6 +45,7 @@
 
     <g:set var="userObject"
            value="${com.picsell.security.User.findByUsername(sec.loggedInUserInfo(field: 'username'))}"/>
+    
     <g:set var="userRoles" value="${com.picsell.security.UserRole.findAllByUser(userObject)}"/>
 
     <g:layoutHead/>

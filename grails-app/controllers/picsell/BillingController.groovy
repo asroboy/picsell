@@ -13,15 +13,14 @@ class BillingController {
     def saveBillingPayment() {
         def user = User.get(params.user_id) ?: User.findByUsername(sec.loggedInUserInfo(field: 'username'))
         print(user)
-        def billing = new BillingAddress(
-                user: user,
-                address1: params.address_1,
-                address2: params.address_2,
-                city: params.city,
-                country: params.country,
-                stateProvince: params.state,
-                postalCode: params.postal_code,
-        )
+        def billing = BillingAddress.findByUser(user) ?: new BillingAddress()
+        billing.user = user
+        billing.address1 = params.address_1
+        billing.address2 = params.address_2
+        billing.city = params.city
+        billing.country = params.country
+        billing.stateProvince = params.state
+        billing.postalCode = params.postal_code
 
         if (billing.hasErrors()) {
             print(billing.errors)
@@ -29,15 +28,15 @@ class BillingController {
         }
         billing.save(flush: true)
 
-        print(params.mvcs)
-        def payment = new PaymentMethod(
-                user: user,
-                creaditCardNumber: params.cc_number,
-                firstName: params.first_name,
-                lastName: params.last_name,
-                expiredDate: params.month + "/" + params.year,
-                securityCode: 0
-        )
+        print(params.first_name)
+        def payment = PaymentMethod.findByUser(user) ?: new PaymentMethod()
+
+        payment.user = user
+        payment.creaditCardNumber = params.cc_number
+        payment.firstName = params.first_name
+        payment.lastName = params.last_name
+        payment.expiredDate = params.month + "/" + params.year
+        payment.securityCode = Integer.parseInt(params.mvcs)
 
         if (payment.hasErrors()) {
             print(payment.errors)
@@ -53,9 +52,9 @@ class BillingController {
     def updateBillingPayment() {
         def user = User.get(params.user_id) ?: User.findByUsername(sec.loggedInUserInfo(field: 'username'))
         def billing = BillingAddress.get(params.billing_id)
-        print "USER ID "+params.user_id
-        print "BILLING ADDRESS ID "+params.billing_id
-        print "PAYMENT ID "+params.id_payment
+        print "USER ID " + params.user_id
+        print "BILLING ADDRESS ID " + params.billing_id
+        print "PAYMENT ID " + params.id_payment
         billing.user = user;
         billing.address1 = params.address_1;
         billing.address2 = params.address_2;

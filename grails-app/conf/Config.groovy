@@ -66,7 +66,7 @@ grails {
         host = "smtp.gmail.com"
         port = 465
         username = "picsell.service@gmail.com"
-        password = "Kacangijopanjang"
+        password = "Tempursar1"
         props = ["mail.smtp.auth":"true",
                  "mail.smtp.socketFactory.port":"465",
                  "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
@@ -99,13 +99,16 @@ environments {
         grails.logging.jul.usebridge = false
 //        grails.serverURL =  "http://localhost:8081/${appName}"
 
-        uploadFolder = "c:/temp/upload/"
+        uploadFolder = "c:/temp/upload/" //Windows Dev Env.
+//        uploadFolder = "/picsell/upload/" //Linux (Ubuntu) Dev Env.
     }
     production {
 
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
-        uploadFolder = "/tmp/upload/"
+//        uploadFolder = "c:/picsell/upload/"
+//        uploadFolder = "/picsell/upload/"
+        uploadFolder = "/opt/picsell/upload/"
     }
 }
 

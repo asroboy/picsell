@@ -16,7 +16,7 @@ expressionOut.print(hasErrors(bean: itemInstance, field: 'name', 'error'))
 printHtmlPart(1)
 invokeTag('message','g',7,['code':("item.name.label"),'default':("Name")],-1)
 printHtmlPart(2)
-invokeTag('textField','g',10,['name':("name"),'value':(itemInstance?.name),'class':("form-control")],-1)
+invokeTag('textField','g',10,['name':("name"),'value':(itemInstance?.name),'class':("form-control"),'required':("")],-1)
 printHtmlPart(3)
 expressionOut.print(hasErrors(bean: itemInstance, field: 'description', 'error'))
 printHtmlPart(4)
@@ -32,15 +32,15 @@ invokeTag('textField','g',30,['name':("userOwner.id"),'value':(sec.loggedInUserI
 printHtmlPart(7)
 expressionOut.print(hasErrors(bean: itemInstance, field: 'mediaType', 'error'))
 printHtmlPart(8)
-invokeTag('message','g',31,['code':("item.mediaType.label"),'default':("Meia Type")],-1)
+invokeTag('message','g',31,['code':("item.mediaType.label"),'default':("Media Type")],-1)
 printHtmlPart(2)
-invokeTag('select','g',39,['name':("mediaType"),'from':(com.picsell.data.MediaType.list()),'optionKey':("id"),'optionValue':("name"),'value':(itemInstance?.mediaType?.id),'noSelection':(['': '']),'class':("form-control")],-1)
+invokeTag('select','g',40,['name':("mediaType"),'from':(com.picsell.data.MediaType.list()),'optionKey':("id"),'optionValue':("name"),'value':(itemInstance?.mediaType?.id),'noSelection':(['': '']),'class':("form-control"),'required':("")],-1)
 printHtmlPart(3)
 expressionOut.print(hasErrors(bean: itemInstance, field: 'category', 'error'))
 printHtmlPart(8)
-invokeTag('message','g',45,['code':("item.category.label"),'default':("Category")],-1)
+invokeTag('message','g',46,['code':("item.category.label"),'default':("Category")],-1)
 printHtmlPart(2)
-invokeTag('select','g',51,['name':("category"),'from':(com.picsell.data.Category.list()),'optionKey':("id"),'optionValue':("name"),'value':(itemInstance?.category?.id),'noSelection':(['': '']),'class':("form-control")],-1)
+invokeTag('select','g',51,['name':("category"),'from':(com.picsell.data.Category.list()),'optionKey':("id"),'optionValue':("name"),'value':(itemInstance?.category?.id),'noSelection':(['': '']),'class':("form-control"),'required':("")],-1)
 printHtmlPart(3)
 expressionOut.print(hasErrors(bean: itemInstance, field: 'category', 'error'))
 printHtmlPart(9)
@@ -62,7 +62,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1534933014012L
+public static final long LAST_MODIFIED = 1542682988353L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

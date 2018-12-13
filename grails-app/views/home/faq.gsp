@@ -40,7 +40,7 @@
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
                         <button class="btn btn-link linkmerah" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           How do we download images?
+                            <b>How do we download images?</b>
                         </button>
                     </h5>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed linkmerah" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How to upgrade from user to contributor?
+                            <b>How to upgrade from user to contributor?</b>
                         </button>
                     </h5>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="card-header" id="headingThree">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed linkmerah" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What is contributor?
+                            <b>What is contributor?</b>
                         </button>
                     </h5>
                 </div>
@@ -83,7 +83,7 @@
                 <div class="card-header" id="headingFour">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed linkmerah" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            How long my uploaded image get approval?
+                            <b>How long my uploaded image get approval?</b>
                         </button>
                     </h5>
                 </div>
@@ -97,7 +97,7 @@
                 <div class="card-header" id="headingFive">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed linkmerah" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            How to upload images?
+                            <b>How to upload images?</b>
                         </button>
                     </h5>
                 </div>
@@ -111,7 +111,7 @@
                 <div class="card-header" id="headingSix">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed linkmerah" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            How I can claim my earning money?
+                            <b>How I can claim my earning money?</b>
                         </button>
                     </h5>
                 </div>

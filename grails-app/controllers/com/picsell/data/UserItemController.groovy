@@ -56,6 +56,8 @@ class UserItemController {
 
     def contributorItems(Integer max) {
         params.max = Math.min(max ?: 10, 100)
+        params.sort = "id"
+        params.order = "desc"
 
         def items = params.status ? Item.findAllByStatus(params.status, params) : Item.list(params)
         print("size : " + items.size());

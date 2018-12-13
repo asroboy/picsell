@@ -59,22 +59,22 @@ expressionOut.print(error.field)
 printHtmlPart(17)
 }
 printHtmlPart(18)
-invokeTag('message','g',64,['error':(error)],-1)
+invokeTag('message','g',63,['error':(error)],-1)
 printHtmlPart(19)
 })
-invokeTag('eachError','g',65,['bean':(bankAccountInstance),'var':("error")],3)
+invokeTag('eachError','g',64,['bean':(bankAccountInstance),'var':("error")],3)
 printHtmlPart(20)
 })
-invokeTag('hasErrors','g',67,['bean':(bankAccountInstance)],2)
+invokeTag('hasErrors','g',66,['bean':(bankAccountInstance)],2)
 printHtmlPart(13)
 createTagBody(2, {->
 printHtmlPart(21)
-invokeTag('render','g',70,['template':("form")],-1)
+invokeTag('render','g',69,['template':("form")],-1)
 printHtmlPart(22)
-invokeTag('submitButton','g',74,['name':("create"),'class':("save btn btn-danger"),'value':(message(code: 'default.button.create.label', default: 'Create'))],-1)
+invokeTag('submitButton','g',73,['name':("create"),'class':("myButton"),'value':(message(code: 'default.button.create.label', default: 'Create'))],-1)
 printHtmlPart(23)
 })
-invokeTag('form','g',76,['url':([resource: bankAccountInstance, action: 'save'])],2)
+invokeTag('form','g',75,['url':([resource: bankAccountInstance, action: 'save'])],2)
 printHtmlPart(24)
 expressionOut.print(createLink(controller: 'userItem', action: 'index'))
 printHtmlPart(25)
@@ -83,7 +83,7 @@ printHtmlPart(26)
 expressionOut.print(createLink(controller: 'dashboard', action: 'contributor' ))
 printHtmlPart(27)
 })
-invokeTag('captureBody','sitemesh',96,[:],1)
+invokeTag('captureBody','sitemesh',95,[:],1)
 printHtmlPart(28)
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -91,7 +91,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1534508392824L
+public static final long LAST_MODIFIED = 1542591593218L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

@@ -41,7 +41,7 @@ environments {
     development {
         dataSource {
             dbCreate = 'update'// one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://localhost:3306/picsell"
+            url = "jdbc:mysql://localhost:3306/picsell_dev"
             username = "root"
             password = "root123"
         }
@@ -66,7 +66,8 @@ environments {
             driverClassName = "com.mysql.jdbc.Driver"
             dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
             username = "root"
-            password = "Tempursar_1"
+            password = "root123"
+//            password = "Tempursar_1"
 
 
 //            properties {// Documentation for Tomcat JDBC Pool

@@ -1,8 +1,11 @@
 package com.picsell.global
 
 import com.picsell.config.Account
+import com.picsell.data.Billing
+import com.picsell.data.BillingAddress
 import com.picsell.data.ImageFile
 import com.picsell.data.Item
+import com.picsell.data.ItemApprovalStatus
 import com.picsell.data.ItemChart
 import com.picsell.data.ItemTags
 import com.picsell.data.ItemViewed
@@ -20,6 +23,7 @@ import grails.transaction.Transactional
 class ApiController {
     def sessionFactory
     static allowedMethods = [createProfile: "POST", setUserRole: "POST", save_user_pack_acc: "POST"]
+    def grailsLinkGenerator
 
     @Transactional
     def createProfile() {
@@ -218,6 +222,16 @@ class ApiController {
         def item = Item.get(imageFile?.tableId)
         def payment = PaymentMethod.get(params.payment_id)
         def totalAmount = params.total_amount
+        def billing = Billing.get(params.billing_id)
+
+        print params.billing_id
+
+        billing.status = 'Paid'
+        billing.paidAt = new Date()
+        billing.paymentMethod = "Credit Card"
+        billing.save(flush: true)
+
+
         def contributor = item?.userOwner
         print(imageFile?.height)
         print(item?.name)
@@ -239,9 +253,18 @@ class ApiController {
         def token_ = user?.username + token
 
 //        def token_ = generateToken(user?.username);
-        def purchase = new UserPuchaseItem(downloadImageToken: token_, tokenExpired: expDate, user: user, imageFile: imageFile, purchaseDate: date, paymentMethod: payment, totalAmount: totalAmount, contributor: contributor).save(flush: true)
-        String url = createLink(controller: 'document', action: 'picsell_image') + "?token=" + token_;
+        def purchase = new UserPuchaseItem(invoice: billing,  downloadImageToken: token_, tokenExpired: expDate, user: user, imageFile: imageFile, purchaseDate: date, paymentMethod: payment, totalAmount: totalAmount, contributor: contributor).save(flush: true)
+//        String url = createLink(controller: 'document', action: 'picsell_image') + "?token=" + token_;
+        String url = grailsLinkGenerator.serverBaseURL + "/document/picsell_image?token=" + token_;
         print(url);
+        def content = "Thanks for purchasing Picsell image, this link will expired after 7 days long." +
+                "<br/><h1><a href=\"" + url + "\">Download Image</a></h1>";
+        sendMail {
+            to user?.email
+            subject "Picsell Image Purchase"
+            html content
+        }
+
         def result = [purchaseDate: purchase, url: url]
         render result as JSON
     }
@@ -260,5 +283,62 @@ class ApiController {
         return uTok
     }
 
+    def updateBillingInfo(User user) {
+        def billingAddress = BillingAddress.findByUser(user) ?: new BillingAddress()
+        billingAddress.user = user
+        billingAddress.address1 = params.address_1
+        billingAddress.address2 = params.address_2
+        billingAddress.city = params.city
+        billingAddress.country = params.country
+        billingAddress.postalCode = params.postal_code
+        billingAddress.stateProvince = params.province
+        billingAddress.save(flush: true)
+        if (billingAddress.hasErrors()) {
+            def message = "Sorry, Problem when updating your profile"
+            render "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">\n" +
+                    message +
+                    "  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n" +
+                    "    <span aria-hidden=\"true\">&times;</span>\n" +
+                    "  </button>\n" +
+                    "</div>" +
+                    "<script>" +
+                    " \$('#update_billing_info').modal('hide');</script>"
+        } else {
+            def message = "Your profile successfully updated"
+            render "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">\n" +
+                    "  <div style=\"margin-top:10px;margin-bottom:10px;\">" + message + "<span>&nbsp&nbsp</span><button type=\"button\" class=\"btn btn-sm btn-success\" onclick=\"location.reload();\">Refresh page</button></div>" +
+                    "  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n" +
+                    "    <span aria-hidden=\"true\">&times;</span>\n" +
+                    "  </button>\n" +
+                    "</div>" +
+                    "<script>" +
+                    " \$('#update_billing_info').modal('hide');" +
+                    "</script>"
+        }
+
+    }
+
+    @Transactional
+    def updateItemStatus() {
+        def itemApprovalStatus = new ItemApprovalStatus()
+        itemApprovalStatus.status = params.status
+        def admin = User.get(params.user_id)
+        def item = Item.get(params.item_id)
+        itemApprovalStatus.item = item
+        itemApprovalStatus.message = params.message
+        itemApprovalStatus.signedBy = admin
+        Date date_ = new Date()
+        itemApprovalStatus.statusChangeAt = date_
+        itemApprovalStatus.save(flush: true)
+        print params.message
+        item.status = params.status
+        item.statusCgDate = date_
+        item.statusInfo = params.message
+        item.statusCgBy = admin?.username
+        item.save(flush: true)
+
+        def result = [status: "ok", data: item]
+        render result as JSON
+    }
 
 }

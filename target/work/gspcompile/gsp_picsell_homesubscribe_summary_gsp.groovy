@@ -29,44 +29,61 @@ printHtmlPart(2)
 invokeTag('set','g',16,['var':("userRoles"),'value':(com.picsell.security.UserRole.findAllByUser(userObject))],-1)
 printHtmlPart(2)
 invokeTag('set','g',17,['var':("userAccounts"),'value':(com.picsell.data.UserAccount.findAllByUser(userObject))],-1)
+printHtmlPart(3)
+invokeTag('set','g',19,['var':("billingInfo"),'value':(com.picsell.data.BillingAddress.findByUser(userObject))],-1)
+printHtmlPart(2)
+invokeTag('set','g',20,['var':("paymentMethod"),'value':(com.picsell.data.PaymentMethod.findByUser(userObject))],-1)
 printHtmlPart(4)
 expressionOut.print(resource(dir: 'css', file: 'picsell_custom_red.css'))
 printHtmlPart(5)
 })
-invokeTag('captureHead','sitemesh',19,[:],1)
+invokeTag('captureHead','sitemesh',21,[:],1)
 printHtmlPart(0)
 createTagBody(1, {->
 printHtmlPart(6)
-expressionOut.print(resource(dir: 'images', file: 'ic_camera.jpg'))
+if(true && (billingInfo)) {
 printHtmlPart(7)
-expressionOut.print(resource(dir: 'images', file: 'ic_search.jpg'))
-printHtmlPart(7)
-expressionOut.print(resource(dir: 'images', file: 'ic_document.jpg'))
+invokeTag('render','g',43,['template':("billing_info")],-1)
 printHtmlPart(8)
-expressionOut.print(resource(dir: 'images', file: 'ic_images.jpg'))
+invokeTag('render','g',46,['template':("update_billing_info_form")],-1)
 printHtmlPart(9)
-expressionOut.print(createLink(controller: 'api', action: 'get_account'))
+}
+else {
 printHtmlPart(10)
-expressionOut.print(params.package_id)
+invokeTag('render','g',51,['template':("add_billing_info_form")],-1)
 printHtmlPart(11)
-expressionOut.print(createLink(controller: 'api', action: 'save_user_pack_acc'))
+}
 printHtmlPart(12)
-expressionOut.print(params.package_id)
+expressionOut.print(resource(dir: 'images', file: 'ic_camera.jpg'))
 printHtmlPart(13)
-expressionOut.print(params.user_id)
+expressionOut.print(resource(dir: 'images', file: 'ic_search.jpg'))
+printHtmlPart(13)
+expressionOut.print(resource(dir: 'images', file: 'ic_document.jpg'))
 printHtmlPart(14)
-expressionOut.print(createLink(controller: 'home', action: 'index'))
+expressionOut.print(resource(dir: 'images', file: 'ic_images.jpg'))
 printHtmlPart(15)
-})
-invokeTag('captureBody','sitemesh',306,[:],1)
+expressionOut.print(createLink(controller: 'api', action: 'get_account'))
 printHtmlPart(16)
+expressionOut.print(params.package_id)
+printHtmlPart(17)
+expressionOut.print(createLink(controller: 'api', action: 'save_user_pack_acc'))
+printHtmlPart(18)
+expressionOut.print(params.package_id)
+printHtmlPart(19)
+expressionOut.print(params.user_id)
+printHtmlPart(20)
+expressionOut.print(createLink(controller: 'home', action: 'index'))
+printHtmlPart(21)
+})
+invokeTag('captureBody','sitemesh',274,[:],1)
+printHtmlPart(22)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1527927841186L
+public static final long LAST_MODIFIED = 1538473613543L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'
