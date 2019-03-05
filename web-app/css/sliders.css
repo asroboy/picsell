@@ -1,0 +1,136 @@
+/* tombol */
+
+.btn-floating{
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    width: 47px;
+    height: 47px;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.btn-floating i {
+    font-size: 1.25rem;
+    line-height: 47px;
+}
+
+.carousel-multi-item .controls-top .btn-floating {
+    background: #4285f4;
+}
+
+
+element.style {
+}
+.carousel-multi-item .carousel-indicators li {
+    height: 1.25rem;
+    width: 1.25rem;
+    max-width: 1.25rem;
+    background-color: #4285f4;
+    margin-bottom: -3.75rem;
+}
+.carousel .carousel-indicators li {
+    width: .625rem;
+    height: .625rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.carousel-indicators li {
+    position: relative;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,.5);
+}
+.secondary-color {
+    background-color: #a6c!important;
+}
+
+
+.carousel-multi-item .controls-top {
+    text-align: center;
+}
+
+.rm-pd{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.rm-col-pd{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.img-radius{
+    border-radius: 10px;
+    height: 200px;
+    width: 255px;
+}
+
+/* Hover Image */
+* {box-sizing: border-box;}
+
+.containers {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.containers:hover .overlay {
+    opacity: 1;
+}
+
+.container-fluid .modif-container-fluid{
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.carousel-control-next, .carousel-control-prev, .mdf-padding{
+    width: 3%;
+}
+
+/*
+#boxshadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+*/
+
